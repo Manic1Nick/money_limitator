@@ -10,6 +10,7 @@ import FlatButton from 'material-ui/FlatButton'
 const HeadMoney = (props) => {
 
 	const { 
+		period={},
 		incomes={}, 
 		expenses={}, 
 		notIncluded={}, 
@@ -18,9 +19,13 @@ const HeadMoney = (props) => {
 		deleteSumm=f=>f
 	} = props
 
-	let labelIncomes = `incomes: ${ summs.incomes - summs.notIncluded }`,
+	let daysRest = CalcUtil.getDaysInPeriod({ 
+    	    begin: CalcUtil.getLastDate(expenses), 
+    	    end: period.end,  
+    	}),
+		labelIncomes = `incomes: ${ summs.incomes - summs.notIncluded }`,
 		labelExpenses = `expenses: ${ summs.expenses }`,
-		labelSumm = `rest of money: ${ summs.incomes - summs.notIncluded - summs.expenses }`
+		labelSumm = `balance: ${ summs.incomes - summs.notIncluded - summs.expenses } / days: ${ --daysRest }`
 
 	return (
 		<Paper className='HeadMoney' zDepth={1}>
@@ -51,6 +56,7 @@ const HeadMoney = (props) => {
 }
 
 HeadMoney.propTypes = {
+	period: PropTypes.object,
 	incomes: PropTypes.object,
 	expenses: PropTypes.object,
 	notIncluded: PropTypes.object,

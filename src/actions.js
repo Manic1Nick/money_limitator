@@ -14,13 +14,12 @@ export const addNewIncome = income => {
 
 export const addNewExpense = expense => {
     return dispatch => {
-        dispatch(fillGaps(expense.date))
-
         dispatch({
             type: C.ADD_EXPENSE,
             payload: expense
         })      
 
+        dispatch(fillGaps())
         dispatch(updateSumms())
         dispatch(updateLimits())
     }
@@ -57,6 +56,7 @@ export const deleteExpense = expense => {
             payload: expense
         })      
 
+        dispatch(fillGaps())
         dispatch(updateSumms())
         dispatch(updateLimits())
     }
@@ -74,10 +74,16 @@ export const deleteNotIncluded = expense => {
     }
 }
 
-export const fillGaps = lastDate => ({
-    type: C.FILL_GAPS,
-    payload: lastDate
-})
+export const fillGaps = () => {
+    return (dispatch, getState) => {
+        const state = getState()
+
+        dispatch({
+            type: C.FILL_GAPS,
+            payload: state
+        })
+    }
+}
 
 export const updateSumms = () => {
     return (dispatch, getState) => {

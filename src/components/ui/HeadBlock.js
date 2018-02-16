@@ -32,6 +32,7 @@ const HeadBlock = (props) => {
 				/>
 			</div>
 			<HeadMoney
+				period={ period }
 				incomes={ incomes }
 				expenses={ expenses }
 				notIncluded={ notIncluded }

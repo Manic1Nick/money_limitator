@@ -2,39 +2,36 @@ import CalcUtil from './CalcUtil'
 
 export default class LimitsUtil {
 
-    static calcLimitBase(period, incomes) {
+    static calcLimitBase(period, summs) {
 
-        let daysInPeriod = CalcUtil.getDaysInPeriod(period),
-            summIncomes = CalcUtil.calcSumm(incomes)
+        let daysTotal = CalcUtil.getDaysInPeriod(period),
+            summNetIncomes = summs.incomes - summs.notIncluded
 
-        let result = summIncomes / daysInPeriod
+        let result = summNetIncomes / daysTotal
 
         return Math.round(result)
     }
 
-    static calcLimitCorrected(period, totals) {
+    static calcLimitCorrected(period, lastDateWithExpense, summs) {
 
-        let lastDateWithExpense = CalcUtil.getLastDay(totals),
-            daysRest = CalcUtil.getDaysInPeriod({ 
+        let daysRest = CalcUtil.getDaysInPeriod({ 
                 begin: lastDateWithExpense, end: period.end,  
             }),
-            summTotals = CalcUtil.calcSumm(totals)
+            summRestMoney = summs.incomes - summs.notIncluded - summs.expenses
 
-        let result = summTotals / --daysRest
+        let result = summRestMoney / --daysRest
 
         return Math.round(result)
     }
 
-    static calcLimitFact(period, incomes, totals) {
+    static calcLimitFact(period, lastDateWithExpense, summs) {
 
-        let lastDateWithExpense = CalcUtil.getLastDay(totals),
-            daysDone = CalcUtil.getDaysInPeriod({ 
+        let daysDone = CalcUtil.getDaysInPeriod({ 
                 begin: period.begin, end: lastDateWithExpense,  
             }),
-            summIncomes = CalcUtil.calcSumm(incomes),
-            summTotals = CalcUtil.calcSumm(totals)
+            summAllExpenses = summs.notIncluded + summs.expenses
 
-        let result = (summIncomes - summTotals) / ++daysDone
+        let result = summAllExpenses / ++daysDone
 
         return Math.round(result)
     }

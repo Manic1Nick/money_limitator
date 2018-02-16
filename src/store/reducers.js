@@ -29,6 +29,8 @@ export const incomes = (state={}, action) => {
 
 export const expenses = (state={}, action) => {
 
+	let newState = Object.assign({}, state)
+
 	switch(action.type) {
 		case C.ADD_EXPENSE:
 			let data = {}
@@ -36,24 +38,24 @@ export const expenses = (state={}, action) => {
 			return Object.assign({}, state, data)
 
 		case C.DELETE_EXPENSE:
-			let newState = Object.assign({}, state)
 			delete newState[action.payload.date]
 			return newState
 
 		case C.FILL_GAPS:
 			let expenses = Object.keys(state)
-			if (expenses.length > 0 && !expenses.includes(action.payload)) {
 
-				let newState = Object.assign({}, state),
-					lastDate = action.payload,
-				 	firstDate = expenses[0],
-					arrayDates = DateUtil.createArrayDates(firstDate, lastDate)
+			if (expenses.length > 0) {
+				newState = CalcUtil.sortObjectByKeysDates(state)
 
-				arrayDates.forEach(date => {
-					newState[date] = state[date] ? state[date] : 0
-				})
-				return newState
+				let firstDate = action.payload.period.begin,
+        			lastDate = CalcUtil.getLastDate(newState),
+		        	arrayDates = DateUtil.createArrayDates(firstDate, lastDate)
+		
+        		arrayDates.forEach(date => {
+        			if (!state[date]) newState[date] = 0
+        		})				
 			}
+			return newState
 
 		default:
 			return state
@@ -99,14 +101,13 @@ export const limits = (state={}, action) => {
 
 	switch(action.type) {
 		case C.UPDATE_LIMITS:
-			const { period, incomes, expenses, notIncluded } = action.payload
+			const { period, expenses, summs } = action.payload
 
-			let summsIncomes = CalcUtil.concatIncomesAndExpenses(incomes, notIncluded),
-				summsTotals = CalcUtil.concatIncomesAndExpenses(incomes, expenses)
+			let lastDateWithExpense = CalcUtil.getLastDate(expenses)
 
-			newState.base = LimitsUtil.calcLimitBase(period, summsIncomes)
-			newState.corrected = LimitsUtil.calcLimitCorrected(period, summsTotals)
-			newState.fact = LimitsUtil.calcLimitFact(period, summsIncomes, summsTotals)
+			newState.base = LimitsUtil.calcLimitBase(period, summs)
+			newState.corrected = LimitsUtil.calcLimitCorrected(period, lastDateWithExpense, summs)
+			newState.fact = LimitsUtil.calcLimitFact(period, lastDateWithExpense, summs)
 
 		default:
 			return newState

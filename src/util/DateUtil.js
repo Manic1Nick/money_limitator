@@ -35,4 +35,15 @@ export default class DateUtil {
     
         return [year, month, day].join('-');
     }
+
+    static sortObjectByKeysDates(obj) {
+        let dates = Object.keys(obj).sort((a, b) => { 
+            return new Date(a) - new Date(b)
+        })
+
+        let sortedObj = {}
+        dates.forEach(date => { sortedObj[date] = obj[date] })
+
+        return sortedObj
+    }
 }

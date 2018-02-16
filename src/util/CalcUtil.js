@@ -1,11 +1,15 @@
+import DateUtil from './DateUtil'
+
 export default class CalcUtil {
 
     static calcSumm(datesObj) {
         if (!datesObj) return 0
 
-        return Object.values(datesObj).reduce((result, summ) => {
-            return result + summ
-        }, 0)
+        let summ = 0
+        Object.keys(datesObj).forEach(date => {
+            summ += datesObj[date]
+        })
+        return summ
     }
 
     static concatIncomesAndExpenses(incomesObj, expensesObj) {
@@ -34,10 +38,9 @@ export default class CalcUtil {
         return result
     }
 
-    static calcExpectedResult({ period, incomes, expenses, summs, limits }) {
+    static calcExpectedResult({ period, expenses, summs, limits }) {
 
-        let summsTotals = CalcUtil.concatIncomesAndExpenses(incomes, expenses),
-            lastDateWithExpense = CalcUtil.getLastDay(summsTotals),
+        let lastDateWithExpense = CalcUtil.getLastDate(expenses),
             daysRest = CalcUtil.getDaysInPeriod({ 
                 begin: lastDateWithExpense, end: period.end,  
             }),
@@ -48,15 +51,34 @@ export default class CalcUtil {
         return Math.round(result)
     }
 
-    static getLastDay(obj) {
+    static getLastDate(obj) {
         if (!obj) return -1
 
-        return Object.keys(obj).slice(-1)[0]
+        let dates = Object.keys(obj)
+        dates.sort((a, b) => {
+            return new Date(a) - new Date(b)
+        })
+
+        return dates[dates.length - 1]
     }
 
     static getDaysInPeriod(period) {
         if (!period) return -1
 
         return (new Date(period.end) - new Date(period.begin))/(1000*60*60*24)
+    }
+
+    static sortObjectByKeysDates(obj) {
+        let sortedObj = {}
+
+        let dates = Object.keys(obj)
+            .sort((a, b) => { 
+                return new Date(a) - new Date(b)
+            })
+            .forEach(date => { 
+                sortedObj[date] = obj[date] 
+            })
+
+        return sortedObj
     }
 }

@@ -22,8 +22,15 @@ export default class ChartUtil {
             )
             
             summBase -= limits.base
-            summCorrected -= expense >= 0 ? expense : limits.corrected
-            summFact -= expense >= 0 ? expense : limits.fact
+            
+            if (expense >= 0) {
+                summCorrected -= expense
+                summFact -= expense
+
+            } else {
+                summCorrected -= limits.corrected
+                summFact -= limits.fact
+            }
         })
         return dates
     }
