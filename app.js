@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "0f599d1c7a7a4b22ff29"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "4e80472e0dccbcb93c37"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -109094,9 +109094,11 @@ var CalcUtil = function () {
         value: function calcSumm(datesObj) {
             if (!datesObj) return 0;
 
-            return Object.values(datesObj).reduce(function (result, summ) {
-                return result + summ;
-            }, 0);
+            var summ = 0;
+            Object.keys(datesObj).forEach(function (date) {
+                summ += datesObj[date];
+            });
+            return summ;
         }
     }, {
         key: "concatIncomesAndExpenses",
