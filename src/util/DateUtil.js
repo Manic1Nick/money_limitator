@@ -36,14 +36,42 @@ export default class DateUtil {
         return [year, month, day].join('-');
     }
 
-    static sortObjectByKeysDates(obj) {
-        let dates = Object.keys(obj).sort((a, b) => { 
+    static getLastDate(obj) {
+        if (!obj) return -1
+
+        let dates = Object.keys(obj)
+        dates.sort((a, b) => {
             return new Date(a) - new Date(b)
         })
 
+        return dates[dates.length - 1]
+    }
+
+    static getDaysInPeriod(period) {
+        if (!period) return -1
+
+        return (new Date(period.end) - new Date(period.begin))/(1000*60*60*24)
+    }
+
+    static sortObjectByKeysDates(obj) {
         let sortedObj = {}
-        dates.forEach(date => { sortedObj[date] = obj[date] })
+
+        let dates = Object.keys(obj)
+            .sort((a, b) => { 
+                return new Date(a) - new Date(b)
+            })
+            .forEach(date => { 
+                sortedObj[date] = obj[date] 
+            })
 
         return sortedObj
+    }
+
+    static changeDate(dateString, changer) {
+
+        let dateMs = new Date(dateString).getTime()
+        dateMs += (changer * (1000*60*60*24))
+
+        return new Date(dateMs)
     }
 }

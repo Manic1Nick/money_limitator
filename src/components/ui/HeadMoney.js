@@ -2,6 +2,7 @@ import { PropTypes } from 'prop-types'
 
 import HeadMoneyAction from './HeadMoneyAction'
 import CalcUtil from '../../util/CalcUtil'
+import DateUtil from '../../util/DateUtil'
 
 import Paper from 'material-ui/Paper'
 import Divider from 'material-ui/Divider'
@@ -19,8 +20,8 @@ const HeadMoney = (props) => {
 		deleteSumm=f=>f
 	} = props
 
-	let daysRest = CalcUtil.getDaysInPeriod({ 
-    	    begin: CalcUtil.getLastDate(expenses), 
+	let daysRest = DateUtil.getDaysInPeriod({ 
+    	    begin: DateUtil.getLastDate(expenses), 
     	    end: period.end,  
     	}),
 		labelIncomes = `incomes: ${ summs.incomes - summs.notIncluded }`,

@@ -87,7 +87,10 @@ export default class DrawerListSumms extends Component {
 
     renderListItemEditing(key, index) {
         return (
-            <ListItem key={index}>
+            <ListItem 
+                key={index}
+                className='ListItem'
+            >
                 <div className='ListItem__input'>
                     <div className='ListItem__data'>
                         { key }: 
@@ -155,6 +158,7 @@ export default class DrawerListSumms extends Component {
 
         return (
             <Drawer
+                className='Drawer'
                 title={ listName }
                 docked={ false }
                 open={ open }

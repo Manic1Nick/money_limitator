@@ -45,10 +45,10 @@ export const expenses = (state={}, action) => {
 			let expenses = Object.keys(state)
 
 			if (expenses.length > 0) {
-				newState = CalcUtil.sortObjectByKeysDates(state)
+				newState = DateUtil.sortObjectByKeysDates(state)
 
 				let firstDate = action.payload.period.begin,
-        			lastDate = CalcUtil.getLastDate(newState),
+        			lastDate = DateUtil.getLastDate(newState),
 		        	arrayDates = DateUtil.createArrayDates(firstDate, lastDate)
 		
         		arrayDates.forEach(date => {
@@ -103,7 +103,7 @@ export const limits = (state={}, action) => {
 		case C.UPDATE_LIMITS:
 			const { period, expenses, summs } = action.payload
 
-			let lastDateWithExpense = CalcUtil.getLastDate(expenses)
+			let lastDateWithExpense = DateUtil.getLastDate(expenses)
 
 			newState.base = LimitsUtil.calcLimitBase(period, summs)
 			newState.corrected = LimitsUtil.calcLimitCorrected(period, lastDateWithExpense, summs)

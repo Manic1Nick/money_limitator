@@ -108,44 +108,62 @@ input {
     }
 }
 
-.ListItem__input {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 
-    .ListItem__data {
-        width: 60%;
-    }
-    .ListItem__actions {
+.Drawer {
+    .Drawer__head {
         display: flex;
-        justify-content: space-around;
-        width: 40%;
+        justify-content: space-between;
+
+        .Drawer__title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+        }
+
+        .Drawer__buttons {
+            display: flex;
+            justify-content: flex-end;
+            width: 50%;
+        }
     }
-}
 
-.Drawer__head {
-    display: flex;
-    justify-content: space-between;
+    .ListItem {
+        .ListItem__input {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
 
-    .Drawer__title {
+            .ListItem__data {
+                width: 60%;
+            }
+            .ListItem__actions {
+                display: flex;
+                justify-content: space-around;
+                width: 40%;
+            }
+        }    
+    }
+
+    .Drawer__foot {
         display: flex;
-        align-items: center;
         justify-content: center;
-        width: 50%;
-    }
+        width: 100%;
+    }    
+}
 
-    .Drawer__buttons {
+.DialogInputSumm {
+    .InputSumm__date {
         display: flex;
-        justify-content: flex-end;
-        width: 50%;
-    }
+        justify-content: space-between;
+
+        .InputSumm__icon {
+            margin: auto;
+            cursor: pointer;
+        }
+    }    
 }
 
-.Drawer__foot {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
 
 div.show-errors {
 

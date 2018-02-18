@@ -7,6 +7,9 @@ import FlatButton from 'material-ui/FlatButton'
 import TextField from 'material-ui/TextField'
 import Checkbox from 'material-ui/Checkbox'
 import DatePicker from 'material-ui/DatePicker'
+import ArrowLeftIcon from 'react-material-icons/icons/hardware/keyboard-arrow-left'
+import ArrowRightIcon from 'react-material-icons/icons/hardware/keyboard-arrow-right'
+import IconButton from 'material-ui/IconButton'
 
 export default class DialogInputSumm extends Component {
 	constructor(props) {
@@ -27,12 +30,11 @@ export default class DialogInputSumm extends Component {
         })
     }
 
-    onChangeDate = (e, date) => {
+    onEditDate = (e, date) => {
+        let summ = this.props.listSumms[DateUtil.formatDate(date)]
+        summ = summ >= 0 ? summ : ''
 
-        const summ = this.props.listSumms[DateUtil.formatDate(date)]
-        if (summ >= 0) this.setState({ summ })
-
-    	this.setState({	date })
+    	this.setState({ date, summ })
     }
 
     onInputSumm = (e) => {
@@ -47,17 +49,31 @@ export default class DialogInputSumm extends Component {
         data.summ = summ ? parseInt(summ) : 0
         
     	this.props.addSumm(data)
+    	this.clearState()
+    }
 
-    	this.setState({
-    		date: new Date(),
-			summ: '',
-			notIncluded: false
-    	})
+    onChangeDate = (changer) => {
+        const date = DateUtil.changeDate(this.state.date, changer)
+
+        this.onEditDate(null, date)
+    }
+
+    closeDialog = () => {
+        this.clearState()
+        this.props.onClose()
+    }   
+
+    clearState = () => {
+        this.setState({
+            date: new Date(),
+            summ: '',
+            notIncluded: false
+        })
     }
 
 	render() {
 
-		const { open, isExpense, onClose } = this.props
+		const { open, isExpense } = this.props
 
 		const styles = {
 		    block: {
@@ -72,7 +88,7 @@ export default class DialogInputSumm extends Component {
     	    <FlatButton
     	        label="Close"
     	        primary={ true }
-    	        onClick={ () => onClose() }
+    	        onClick={ this.closeDialog }
     	    />,
     	    <FlatButton
     	        label="Add"
@@ -81,15 +97,28 @@ export default class DialogInputSumm extends Component {
     	    />
     	]
 
-    	const inputDate = 
-    		<DatePicker
-          	  	defaultDate={ this.state.date }
-                onChange={ this.onChangeDate }
-                autoOk={ true }
-          	/>
+    	const inputDate =
+            <div className='InputSumm__date'>
+                <IconButton>
+                    <ArrowLeftIcon 
+                        onClick={ () => this.onChangeDate(-1) }
+                    />
+                </IconButton>
+        		<DatePicker
+              	  	value={ this.state.date }
+                    onChange={ this.onEditDate }
+                    autoOk={ true }
+              	/>
+                <IconButton>
+                    <ArrowRightIcon 
+                        onClick={ () => this.onChangeDate(1) }
+                    />
+                </IconButton>
+            </div>
 
     	const inputSumm =
     		<TextField
+                className='InputSumm__summ'
                 value={ this.state.summ }
     		  	onChange={ this.onInputSumm }
                 autoFocus
@@ -111,12 +140,13 @@ export default class DialogInputSumm extends Component {
 
     	return (
     	    <Dialog
+                className='DialogInputSumm'
                 title={ isExpense ? 'Input new expense' : 'Input new income' }
     	        open={ open }
                 actions={ actions }
                 modal={ false }
                 contentStyle={{ width: '400px' }}
-    	        onRequestClose={ () => onClose() }
+    	        onRequestClose={ this.closeDialog }
     	        autoScrollBodyContent={ true }
     	    >
     	        Date: { inputDate } <br />

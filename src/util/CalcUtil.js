@@ -40,8 +40,8 @@ export default class CalcUtil {
 
     static calcExpectedResult({ period, expenses, summs, limits }) {
 
-        let lastDateWithExpense = CalcUtil.getLastDate(expenses),
-            daysRest = CalcUtil.getDaysInPeriod({ 
+        let lastDateWithExpense = DateUtil.getLastDate(expenses),
+            daysRest = DateUtil.getDaysInPeriod({ 
                 begin: lastDateWithExpense, end: period.end,  
             }),
             restOfMoney = summs.incomes - summs.notIncluded - summs.expenses
@@ -49,36 +49,5 @@ export default class CalcUtil {
         let result = restOfMoney - (--daysRest * limits.fact)
 
         return Math.round(result)
-    }
-
-    static getLastDate(obj) {
-        if (!obj) return -1
-
-        let dates = Object.keys(obj)
-        dates.sort((a, b) => {
-            return new Date(a) - new Date(b)
-        })
-
-        return dates[dates.length - 1]
-    }
-
-    static getDaysInPeriod(period) {
-        if (!period) return -1
-
-        return (new Date(period.end) - new Date(period.begin))/(1000*60*60*24)
-    }
-
-    static sortObjectByKeysDates(obj) {
-        let sortedObj = {}
-
-        let dates = Object.keys(obj)
-            .sort((a, b) => { 
-                return new Date(a) - new Date(b)
-            })
-            .forEach(date => { 
-                sortedObj[date] = obj[date] 
-            })
-
-        return sortedObj
     }
 }
