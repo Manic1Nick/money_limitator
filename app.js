@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "8cbbf735b25067c5764a"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "13ba333e972d760dc092"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -5342,7 +5342,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Arimo);", ""]);
 
 // module
-exports.push([module.i, "body {\n  margin: 0;\n  padding: 0;\n  font-family: sans-serif;\n  background-color: #F8F8FF; }\n\n.App {\n  background-color: #F8F8FF;\n  max-width: 800px;\n  margin: auto;\n  height: 100%;\n  padding: 16px;\n  box-sizing: border-box; }\n  .App .HeadBlock {\n    display: flex;\n    justify-content: space-between;\n    width: 100%;\n    height: 100%; }\n    .App .HeadBlock .HeadControl {\n      display: flex;\n      flex-direction: column;\n      width: 66%; }\n      .App .HeadBlock .HeadControl .HeadPeriod {\n        display: flex;\n        justify-content: space-between;\n        align-items: center;\n        width: 100%;\n        height: 30%; }\n      .App .HeadBlock .HeadControl .HeadResult {\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        width: 100%;\n        height: 70%;\n        font-size: 36px; }\n    .App .HeadBlock .HeadMoney {\n      display: flex;\n      flex-direction: column;\n      width: 33%;\n      height: 100%; }\n      .App .HeadBlock .HeadMoney .HeadMoney__action {\n        display: flex;\n        width: 100%; }\n        .App .HeadBlock .HeadMoney .HeadMoney__action .HeadMoney__button {\n          width: 80%; }\n        .App .HeadBlock .HeadMoney .HeadMoney__action .HeadMoney__icon {\n          margin: auto;\n          width: 20%;\n          height: 100%;\n          cursor: pointer; }\n  .App .LimitsBlock {\n    padding: 16px;\n    display: flex;\n    justify-content: space-between; }\n    .App .LimitsBlock .limits__title {\n      color: #A9A9A9;\n      display: flex;\n      align-items: center;\n      justify-content: center; }\n  .App .Chart {\n    min-height: 400px;\n    padding: 16px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    height: 100%; }\n\ninput {\n  font-size: 16px;\n  width: 30%; }\n  input:focus {\n    outline: 0; }\n\n.ListItem__input {\n  display: flex;\n  align-items: center;\n  justify-content: space-between; }\n  .ListItem__input .ListItem__data {\n    width: 60%; }\n  .ListItem__input .ListItem__actions {\n    display: flex;\n    justify-content: space-around;\n    width: 40%; }\n\n.Drawer__head {\n  display: flex;\n  justify-content: space-between; }\n  .Drawer__head .Drawer__title {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 50%; }\n  .Drawer__head .Drawer__buttons {\n    display: flex;\n    justify-content: flex-end;\n    width: 50%; }\n\n.Drawer__foot {\n  display: flex;\n  justify-content: center;\n  width: 100%; }\n\ndiv.show-errors {\n  width: 100%;\n  font-size: 1.5em; }\n  div.show-errors div {\n    position: absolute;\n    width: 100%;\n    text-align: center;\n    bottom: 0;\n    color: red;\n    font-family: verdana, sans-serif;\n    display: flex;\n    justify-content: space-between;\n    align-items: center; }\n    div.show-errors div p {\n      margin-left: 1em; }\n    div.show-errors div svg {\n      font-size: 2em; }\n", ""]);
+exports.push([module.i, "body {\n  margin: 0;\n  padding: 0;\n  font-family: sans-serif;\n  background-color: #F8F8FF; }\n\n.App {\n  background-color: #F8F8FF;\n  max-width: 800px;\n  margin: auto;\n  height: 100%;\n  padding: 16px;\n  box-sizing: border-box; }\n  .App .HeadBlock {\n    display: flex;\n    justify-content: space-between;\n    width: 100%;\n    height: 100%; }\n    .App .HeadBlock .HeadControl {\n      display: flex;\n      flex-direction: column;\n      width: 66%; }\n      .App .HeadBlock .HeadControl .HeadPeriod {\n        display: flex;\n        justify-content: space-between;\n        align-items: center;\n        width: 100%;\n        height: 30%; }\n      .App .HeadBlock .HeadControl .HeadResult {\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        width: 100%;\n        height: 70%;\n        font-size: 36px; }\n    .App .HeadBlock .HeadMoney {\n      display: flex;\n      flex-direction: column;\n      width: 33%;\n      height: 100%; }\n      .App .HeadBlock .HeadMoney .HeadMoney__action {\n        display: flex;\n        width: 100%; }\n        .App .HeadBlock .HeadMoney .HeadMoney__action .HeadMoney__button {\n          width: 80%; }\n        .App .HeadBlock .HeadMoney .HeadMoney__action .HeadMoney__icon {\n          margin: auto;\n          width: 20%;\n          height: 100%;\n          cursor: pointer; }\n  .App .LimitsBlock {\n    padding: 16px;\n    display: flex;\n    justify-content: space-between; }\n    .App .LimitsBlock .limits__title {\n      color: #A9A9A9;\n      display: flex;\n      align-items: center;\n      justify-content: center; }\n  .App .Chart {\n    min-height: 400px;\n    padding: 16px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    height: 100%; }\n\ninput {\n  font-size: 16px;\n  width: 30%; }\n  input:focus {\n    outline: 0; }\n\n.Drawer .Drawer__head {\n  display: flex;\n  justify-content: space-between; }\n  .Drawer .Drawer__head .Drawer__title {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 50%; }\n  .Drawer .Drawer__head .Drawer__buttons {\n    display: flex;\n    justify-content: flex-end;\n    width: 50%; }\n\n.Drawer .ListItem .ListItem__input {\n  display: flex;\n  align-items: center;\n  justify-content: space-between; }\n  .Drawer .ListItem .ListItem__input .ListItem__data {\n    width: 60%; }\n  .Drawer .ListItem .ListItem__input .ListItem__actions {\n    display: flex;\n    justify-content: space-around;\n    width: 40%; }\n\n.Drawer .Drawer__foot {\n  display: flex;\n  justify-content: center;\n  width: 100%; }\n\n.DialogInputSumm .InputSumm__date {\n  display: flex;\n  justify-content: space-between; }\n  .DialogInputSumm .InputSumm__date .InputSumm__icon {\n    margin: auto;\n    cursor: pointer; }\n\ndiv.show-errors {\n  width: 100%;\n  font-size: 1.5em; }\n  div.show-errors div {\n    position: absolute;\n    width: 100%;\n    text-align: center;\n    bottom: 0;\n    color: red;\n    font-family: verdana, sans-serif;\n    display: flex;\n    justify-content: space-between;\n    align-items: center; }\n    div.show-errors div p {\n      margin-left: 1em; }\n    div.show-errors div svg {\n      font-size: 2em; }\n", ""]);
 
 // exports
 
@@ -78434,6 +78434,64 @@ module.exports = ContentSave;
 
 /***/ }),
 
+/***/ "./node_modules/react-material-icons/icons/hardware/keyboard-arrow-left.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var React = __webpack_require__("./node_modules/react/index.js");
+var mui = __webpack_require__("./node_modules/material-ui/index.es.js");
+var SvgIcon = mui.SvgIcon;
+
+var createClass = __webpack_require__("./node_modules/create-react-class/index.js");
+
+var HardwareKeyboardArrowLeft = createClass({
+  displayName: 'HardwareKeyboardArrowLeft',
+
+  render: function render() {
+    return React.createElement(
+      SvgIcon,
+      this.props,
+      React.createElement('path', { d: 'M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z' })
+    );
+  }
+
+});
+
+module.exports = HardwareKeyboardArrowLeft;
+
+/***/ }),
+
+/***/ "./node_modules/react-material-icons/icons/hardware/keyboard-arrow-right.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var React = __webpack_require__("./node_modules/react/index.js");
+var mui = __webpack_require__("./node_modules/material-ui/index.es.js");
+var SvgIcon = mui.SvgIcon;
+
+var createClass = __webpack_require__("./node_modules/create-react-class/index.js");
+
+var HardwareKeyboardArrowRight = createClass({
+  displayName: 'HardwareKeyboardArrowRight',
+
+  render: function render() {
+    return React.createElement(
+      SvgIcon,
+      this.props,
+      React.createElement('path', { d: 'M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z' })
+    );
+  }
+
+});
+
+module.exports = HardwareKeyboardArrowRight;
+
+/***/ }),
+
 /***/ "./node_modules/react-material-icons/icons/image/edit.js":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -107042,20 +107100,33 @@ module.exports = function(module) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return addNewIncome; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return addNewExpense; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return addNotIncluded; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return deleteIncome; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return deleteExpense; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return deleteNotIncluded; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return activateApp; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return addNewIncome; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return addNewExpense; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return addNotIncluded; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return deleteIncome; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return deleteExpense; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return deleteNotIncluded; });
 /* unused harmony export fillGaps */
 /* unused harmony export updateSumms */
 /* unused harmony export updateLimits */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return addError; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return clearError; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return clearAllErrors; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return addError; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return clearError; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return clearAllErrors; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__constants__ = __webpack_require__("./src/constants.js");
 
+
+var activateApp = function activateApp() {
+    return function (dispatch, getState) {
+        var state = getState();
+
+        if (Object.keys(state.expenses).length > 0 && state.summs.expenses === 0) {
+
+            dispatch(updateSumms());
+            dispatch(updateLimits());
+        }
+    };
+};
 
 var addNewIncome = function addNewIncome(income) {
     return function (dispatch) {
@@ -107270,10 +107341,10 @@ var mapStateToProps = function mapStateToProps(state, ownProps) {
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 	return {
 		addSumm: function addSumm(summ) {
-			if (!summ.isExpense) dispatch(Object(__WEBPACK_IMPORTED_MODULE_3__actions__["c" /* addNewIncome */])(summ));else if (!summ.notIncluded) dispatch(Object(__WEBPACK_IMPORTED_MODULE_3__actions__["b" /* addNewExpense */])(summ));else dispatch(Object(__WEBPACK_IMPORTED_MODULE_3__actions__["d" /* addNotIncluded */])(summ));
+			if (!summ.isExpense) dispatch(Object(__WEBPACK_IMPORTED_MODULE_3__actions__["d" /* addNewIncome */])(summ));else if (!summ.notIncluded) dispatch(Object(__WEBPACK_IMPORTED_MODULE_3__actions__["c" /* addNewExpense */])(summ));else dispatch(Object(__WEBPACK_IMPORTED_MODULE_3__actions__["e" /* addNotIncluded */])(summ));
 		},
 		deleteSumm: function deleteSumm(summ) {
-			if (!summ.isExpense) dispatch(Object(__WEBPACK_IMPORTED_MODULE_3__actions__["h" /* deleteIncome */])(summ));else if (!summ.notIncluded) dispatch(Object(__WEBPACK_IMPORTED_MODULE_3__actions__["g" /* deleteExpense */])(summ));else dispatch(Object(__WEBPACK_IMPORTED_MODULE_3__actions__["i" /* deleteNotIncluded */])(summ));
+			if (!summ.isExpense) dispatch(Object(__WEBPACK_IMPORTED_MODULE_3__actions__["i" /* deleteIncome */])(summ));else if (!summ.notIncluded) dispatch(Object(__WEBPACK_IMPORTED_MODULE_3__actions__["h" /* deleteExpense */])(summ));else dispatch(Object(__WEBPACK_IMPORTED_MODULE_3__actions__["j" /* deleteNotIncluded */])(summ));
 		}
 	};
 };
@@ -107324,8 +107395,8 @@ var mapStateToProps = function mapStateToProps(state) {
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 	return {
-		onClearError: Object(__WEBPACK_IMPORTED_MODULE_2_redux__["b" /* bindActionCreators */])(__WEBPACK_IMPORTED_MODULE_3__actions__["f" /* clearError */], dispatch),
-		onClearAllErrors: Object(__WEBPACK_IMPORTED_MODULE_2_redux__["b" /* bindActionCreators */])(__WEBPACK_IMPORTED_MODULE_3__actions__["e" /* clearAllErrors */], dispatch)
+		onClearError: Object(__WEBPACK_IMPORTED_MODULE_2_redux__["b" /* bindActionCreators */])(__WEBPACK_IMPORTED_MODULE_3__actions__["g" /* clearError */], dispatch),
+		onClearAllErrors: Object(__WEBPACK_IMPORTED_MODULE_2_redux__["b" /* bindActionCreators */])(__WEBPACK_IMPORTED_MODULE_3__actions__["f" /* clearAllErrors */], dispatch)
 	};
 };
 
@@ -107337,92 +107408,27 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_nick_dev_JS_react_redux_money_limitator_node_modules_redbox_react_lib_index_js__ = __webpack_require__("./node_modules/redbox-react/lib/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_nick_dev_JS_react_redux_money_limitator_node_modules_redbox_react_lib_index_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__home_nick_dev_JS_react_redux_money_limitator_node_modules_redbox_react_lib_index_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_catch_errors_lib_index_js__ = __webpack_require__("./node_modules/react-transform-catch-errors/lib/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_catch_errors_lib_index_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_catch_errors_lib_index_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__("./node_modules/react/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js__ = __webpack_require__("./node_modules/react-transform-hmr/lib/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__containers_HeadBlock__ = __webpack_require__("./src/components/containers/HeadBlock.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__containers_LimitsBlock__ = __webpack_require__("./src/components/containers/LimitsBlock.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__containers_Chart__ = __webpack_require__("./src/components/containers/Chart.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__containers_ShowErrors__ = __webpack_require__("./src/components/containers/ShowErrors.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__containers_HeadBlock__ = __webpack_require__("./src/components/containers/HeadBlock.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__containers_LimitsBlock__ = __webpack_require__("./src/components/containers/LimitsBlock.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__containers_Chart__ = __webpack_require__("./src/components/containers/Chart.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__containers_ShowErrors__ = __webpack_require__("./src/components/containers/ShowErrors.js");
 
 
 
 
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var _components = {
-	MainPage: {
-		displayName: 'MainPage'
-	}
+var MainPage = function MainPage() {
+	return React.createElement(
+		'div',
+		{ className: 'App' },
+		React.createElement(__WEBPACK_IMPORTED_MODULE_0__containers_HeadBlock__["a" /* default */], null),
+		React.createElement(__WEBPACK_IMPORTED_MODULE_1__containers_LimitsBlock__["a" /* default */], null),
+		React.createElement(__WEBPACK_IMPORTED_MODULE_2__containers_Chart__["a" /* default */], null),
+		React.createElement(__WEBPACK_IMPORTED_MODULE_3__containers_ShowErrors__["a" /* default */], null)
+	);
 };
 
-var _homeNickDevJSReact_reduxMoney_limitatorNode_modulesReactTransformHmrLibIndexJs2 = __WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js___default()({
-	filename: '/home/nick/dev/JS/react_redux/money_limitator/src/components/index.js',
-	components: _components,
-	locals: [module],
-	imports: [__WEBPACK_IMPORTED_MODULE_2_react___default.a]
-});
-
-var _homeNickDevJSReact_reduxMoney_limitatorNode_modulesReactTransformCatchErrorsLibIndexJs2 = __WEBPACK_IMPORTED_MODULE_1__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_catch_errors_lib_index_js___default()({
-	filename: '/home/nick/dev/JS/react_redux/money_limitator/src/components/index.js',
-	components: _components,
-	locals: [],
-	imports: [__WEBPACK_IMPORTED_MODULE_2_react___default.a, __WEBPACK_IMPORTED_MODULE_0__home_nick_dev_JS_react_redux_money_limitator_node_modules_redbox_react_lib_index_js___default.a]
-});
-
-function _wrapComponent(id) {
-	return function (Component) {
-		return _homeNickDevJSReact_reduxMoney_limitatorNode_modulesReactTransformHmrLibIndexJs2(_homeNickDevJSReact_reduxMoney_limitatorNode_modulesReactTransformCatchErrorsLibIndexJs2(Component, id), id);
-	};
-}
-
-
-
-
-
-
-
-
-var MainPage = _wrapComponent('MainPage')(function (_Component) {
-	_inherits(MainPage, _Component);
-
-	function MainPage() {
-		_classCallCheck(this, MainPage);
-
-		return _possibleConstructorReturn(this, (MainPage.__proto__ || Object.getPrototypeOf(MainPage)).apply(this, arguments));
-	}
-
-	_createClass(MainPage, [{
-		key: 'render',
-		value: function render() {
-			return __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(
-				'div',
-				{ className: 'App' },
-				__WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__containers_HeadBlock__["a" /* default */], null),
-				__WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__containers_LimitsBlock__["a" /* default */], null),
-				__WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__containers_Chart__["a" /* default */], null),
-				__WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__containers_ShowErrors__["a" /* default */], null)
-			);
-		}
-	}]);
-
-	return MainPage;
-}(__WEBPACK_IMPORTED_MODULE_2_react__["Component"]));
-
 /* harmony default export */ __webpack_exports__["a"] = (MainPage);
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/webpack/buildin/harmony-module.js")(module)))
 
 /***/ }),
 
@@ -107495,6 +107501,12 @@ Chart.propTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_material_ui_Checkbox___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_material_ui_Checkbox__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_material_ui_DatePicker__ = __webpack_require__("./node_modules/material-ui/DatePicker/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_material_ui_DatePicker___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_material_ui_DatePicker__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_react_material_icons_icons_hardware_keyboard_arrow_left__ = __webpack_require__("./node_modules/react-material-icons/icons/hardware/keyboard-arrow-left.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_react_material_icons_icons_hardware_keyboard_arrow_left___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_react_material_icons_icons_hardware_keyboard_arrow_left__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_react_material_icons_icons_hardware_keyboard_arrow_right__ = __webpack_require__("./node_modules/react-material-icons/icons/hardware/keyboard-arrow-right.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_react_material_icons_icons_hardware_keyboard_arrow_right___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_react_material_icons_icons_hardware_keyboard_arrow_right__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_material_ui_IconButton__ = __webpack_require__("./node_modules/material-ui/IconButton/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_material_ui_IconButton___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12_material_ui_IconButton__);
 
 
 
@@ -107509,29 +107521,29 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var _components = {
-  DialogInputSumm: {
-    displayName: 'DialogInputSumm'
-  }
+    DialogInputSumm: {
+        displayName: 'DialogInputSumm'
+    }
 };
 
 var _homeNickDevJSReact_reduxMoney_limitatorNode_modulesReactTransformHmrLibIndexJs2 = __WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js___default()({
-  filename: '/home/nick/dev/JS/react_redux/money_limitator/src/components/ui/DialogInputSumm.js',
-  components: _components,
-  locals: [module],
-  imports: [__WEBPACK_IMPORTED_MODULE_2_react___default.a]
+    filename: '/home/nick/dev/JS/react_redux/money_limitator/src/components/ui/DialogInputSumm.js',
+    components: _components,
+    locals: [module],
+    imports: [__WEBPACK_IMPORTED_MODULE_2_react___default.a]
 });
 
 var _homeNickDevJSReact_reduxMoney_limitatorNode_modulesReactTransformCatchErrorsLibIndexJs2 = __WEBPACK_IMPORTED_MODULE_1__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_catch_errors_lib_index_js___default()({
-  filename: '/home/nick/dev/JS/react_redux/money_limitator/src/components/ui/DialogInputSumm.js',
-  components: _components,
-  locals: [],
-  imports: [__WEBPACK_IMPORTED_MODULE_2_react___default.a, __WEBPACK_IMPORTED_MODULE_0__home_nick_dev_JS_react_redux_money_limitator_node_modules_redbox_react_lib_index_js___default.a]
+    filename: '/home/nick/dev/JS/react_redux/money_limitator/src/components/ui/DialogInputSumm.js',
+    components: _components,
+    locals: [],
+    imports: [__WEBPACK_IMPORTED_MODULE_2_react___default.a, __WEBPACK_IMPORTED_MODULE_0__home_nick_dev_JS_react_redux_money_limitator_node_modules_redbox_react_lib_index_js___default.a]
 });
 
 function _wrapComponent(id) {
-  return function (Component) {
-    return _homeNickDevJSReact_reduxMoney_limitatorNode_modulesReactTransformHmrLibIndexJs2(_homeNickDevJSReact_reduxMoney_limitatorNode_modulesReactTransformCatchErrorsLibIndexJs2(Component, id), id);
-  };
+    return function (Component) {
+        return _homeNickDevJSReact_reduxMoney_limitatorNode_modulesReactTransformHmrLibIndexJs2(_homeNickDevJSReact_reduxMoney_limitatorNode_modulesReactTransformCatchErrorsLibIndexJs2(Component, id), id);
+    };
 }
 
 
@@ -107544,142 +107556,197 @@ function _wrapComponent(id) {
 
 
 
+
+
+
 var DialogInputSumm = _wrapComponent('DialogInputSumm')(function (_Component) {
-  _inherits(DialogInputSumm, _Component);
+    _inherits(DialogInputSumm, _Component);
 
-  function DialogInputSumm(props) {
-    _classCallCheck(this, DialogInputSumm);
+    function DialogInputSumm(props) {
+        _classCallCheck(this, DialogInputSumm);
 
-    var _this = _possibleConstructorReturn(this, (DialogInputSumm.__proto__ || Object.getPrototypeOf(DialogInputSumm)).call(this));
+        var _this = _possibleConstructorReturn(this, (DialogInputSumm.__proto__ || Object.getPrototypeOf(DialogInputSumm)).call(this));
 
-    _this.updateCheck = function () {
-      _this.setState(function (oldState) {
-        return {
-          notIncluded: !oldState.notIncluded
+        _this.componentWillUpdate = function (nextProps, nextState) {
+            if (_this.refs.inputSumm) _this.refs.inputSumm.focus();
         };
-      });
-    };
 
-    _this.onChangeDate = function (e, date) {
+        _this.updateCheck = function () {
+            _this.setState(function (oldState) {
+                return {
+                    notIncluded: !oldState.notIncluded
+                };
+            });
+        };
 
-      var summ = _this.props.listSumms[__WEBPACK_IMPORTED_MODULE_4__util_DateUtil__["a" /* default */].formatDate(date)];
-      if (summ >= 0) _this.setState({ summ: summ });
+        _this.onEditDate = function (e, date) {
+            var summ = _this.props.listSumms[__WEBPACK_IMPORTED_MODULE_4__util_DateUtil__["a" /* default */].formatDate(date)];
+            summ = summ >= 0 ? summ : '';
 
-      _this.setState({ date: date });
-    };
+            _this.setState({ date: date, summ: summ });
+        };
 
-    _this.onInputSumm = function (e) {
-      _this.setState({ summ: e.target.value });
-    };
+        _this.onInputSumm = function (e) {
+            _this.setState({ summ: e.target.value });
+        };
 
-    _this.handleAddSumm = function () {
-      var _this$state = _this.state,
-          date = _this$state.date,
-          summ = _this$state.summ;
-
-
-      var data = _this.state;
-      data.date = __WEBPACK_IMPORTED_MODULE_4__util_DateUtil__["a" /* default */].formatDate(date);
-      data.summ = summ ? parseInt(summ) : 0;
-
-      _this.props.addSumm(data);
-
-      _this.setState({
-        date: new Date(),
-        summ: '',
-        notIncluded: false
-      });
-    };
-
-    _this.state = {
-      isExpense: props.isExpense,
-      date: new Date(),
-      summ: '',
-      notIncluded: false
-    };
-    return _this;
-  }
-
-  _createClass(DialogInputSumm, [{
-    key: 'render',
-    value: function render() {
-      var _props = this.props,
-          open = _props.open,
-          isExpense = _props.isExpense,
-          onClose = _props.onClose;
+        _this.onAddSumm = function () {
+            var _this$state = _this.state,
+                date = _this$state.date,
+                summ = _this$state.summ;
 
 
-      var styles = {
-        block: {
-          maxWidth: 250
-        },
-        checkbox: {
-          marginBottom: 16
-        }
-      };
+            var data = _this.state;
+            data.date = __WEBPACK_IMPORTED_MODULE_4__util_DateUtil__["a" /* default */].formatDate(date);
+            data.summ = summ ? parseInt(summ) : 0;
 
-      var actions = [React.createElement(__WEBPACK_IMPORTED_MODULE_6_material_ui_FlatButton___default.a, {
-        label: 'Close',
-        primary: true,
-        onClick: function onClick() {
-          return onClose();
-        }
-      }), React.createElement(__WEBPACK_IMPORTED_MODULE_6_material_ui_FlatButton___default.a, {
-        label: 'Add',
-        primary: true,
-        onClick: this.handleAddSumm
-      })];
+            _this.props.addSumm(data);
+        };
 
-      var inputDate = React.createElement(__WEBPACK_IMPORTED_MODULE_9_material_ui_DatePicker___default.a, {
-        defaultDate: this.state.date,
-        onChange: this.onChangeDate,
-        autoOk: true
-      });
+        _this.handleAddSummAndCloseDialog = function () {
+            _this.onAddSumm();
+            _this.closeDialog();
+        };
 
-      var inputSumm = React.createElement(__WEBPACK_IMPORTED_MODULE_7_material_ui_TextField___default.a, {
-        value: this.state.summ,
-        onChange: this.onInputSumm,
-        autoFocus: true
-      });
+        _this.handleAddSummAndGoNextDate = function () {
+            _this.onAddSumm();
+            _this.shiftDate(1);
+        };
 
-      var notIncluded = isExpense ? React.createElement(
-        'div',
-        { style: styles.block },
-        React.createElement(__WEBPACK_IMPORTED_MODULE_8_material_ui_Checkbox___default.a, {
-          label: 'Not included to limits',
-          checked: this.state.notIncluded,
-          onCheck: this.updateCheck.bind(this),
-          style: styles.checkbox
-        })
-      ) : null;
+        _this.shiftDate = function (shift) {
+            var date = __WEBPACK_IMPORTED_MODULE_4__util_DateUtil__["a" /* default */].shiftDate(_this.state.date, shift);
 
-      return React.createElement(
-        __WEBPACK_IMPORTED_MODULE_5_material_ui_Dialog___default.a,
-        {
-          title: isExpense ? 'Input new expense' : 'Input new income',
-          open: open,
-          actions: actions,
-          modal: false,
-          contentStyle: { width: '400px' },
-          onRequestClose: function onRequestClose() {
-            return onClose();
-          },
-          autoScrollBodyContent: true
-        },
-        'Date: ',
-        inputDate,
-        ' ',
-        React.createElement('br', null),
-        'Summ: ',
-        inputSumm,
-        ' ',
-        React.createElement('br', null),
-        notIncluded
-      );
+            _this.onEditDate(null, date);
+        };
+
+        _this.closeDialog = function () {
+            _this.clearState();
+            _this.props.onClose();
+        };
+
+        _this.clearState = function () {
+            _this.setState({
+                date: new Date(),
+                summ: '',
+                notIncluded: false
+            });
+        };
+
+        _this.state = {
+            isExpense: props.isExpense,
+            date: new Date(),
+            summ: '',
+            notIncluded: false
+        };
+        return _this;
     }
-  }]);
 
-  return DialogInputSumm;
+    _createClass(DialogInputSumm, [{
+        key: 'render',
+        value: function render() {
+            var _this2 = this;
+
+            var _props = this.props,
+                open = _props.open,
+                isExpense = _props.isExpense;
+
+
+            var styles = {
+                block: {
+                    maxWidth: 250
+                },
+                checkbox: {
+                    marginBottom: 16
+                }
+            };
+
+            var actions = [React.createElement(__WEBPACK_IMPORTED_MODULE_6_material_ui_FlatButton___default.a, {
+                label: 'Close',
+                primary: true,
+                onClick: this.closeDialog
+            }), React.createElement(__WEBPACK_IMPORTED_MODULE_6_material_ui_FlatButton___default.a, {
+                label: 'Add & Next',
+                primary: true,
+                onClick: this.handleAddSummAndGoNextDate
+            }), React.createElement(__WEBPACK_IMPORTED_MODULE_6_material_ui_FlatButton___default.a, {
+                label: 'Add',
+                primary: true,
+                onClick: this.handleAddSummAndCloseDialog
+            })];
+
+            var inputDate = React.createElement(
+                'div',
+                { className: 'InputSumm__date' },
+                React.createElement(
+                    __WEBPACK_IMPORTED_MODULE_12_material_ui_IconButton___default.a,
+                    null,
+                    React.createElement(__WEBPACK_IMPORTED_MODULE_10_react_material_icons_icons_hardware_keyboard_arrow_left___default.a, {
+                        onClick: function onClick() {
+                            return _this2.shiftDate(-1);
+                        }
+                    })
+                ),
+                React.createElement(__WEBPACK_IMPORTED_MODULE_9_material_ui_DatePicker___default.a, {
+                    value: this.state.date,
+                    onChange: this.onEditDate,
+                    autoOk: true
+                }),
+                React.createElement(
+                    __WEBPACK_IMPORTED_MODULE_12_material_ui_IconButton___default.a,
+                    null,
+                    React.createElement(__WEBPACK_IMPORTED_MODULE_11_react_material_icons_icons_hardware_keyboard_arrow_right___default.a, {
+                        onClick: function onClick() {
+                            return _this2.shiftDate(1);
+                        }
+                    })
+                )
+            );
+
+            var inputSumm = React.createElement(__WEBPACK_IMPORTED_MODULE_7_material_ui_TextField___default.a, {
+                className: 'InputSumm__summ',
+                value: this.state.summ,
+                onChange: this.onInputSumm,
+                autoFocus: true,
+                refs: 'inputSumm'
+            });
+
+            var notIncluded = isExpense ? React.createElement(
+                'div',
+                { style: styles.block },
+                React.createElement(__WEBPACK_IMPORTED_MODULE_8_material_ui_Checkbox___default.a, {
+                    label: 'Not included to limits',
+                    checked: this.state.notIncluded,
+                    onCheck: this.updateCheck.bind(this),
+                    style: styles.checkbox
+                })
+            ) : null;
+
+            return React.createElement(
+                __WEBPACK_IMPORTED_MODULE_5_material_ui_Dialog___default.a,
+                {
+                    className: 'DialogInputSumm',
+                    title: isExpense ? 'Input new expense' : 'Input new income',
+                    open: open,
+                    actions: actions,
+                    modal: false,
+                    contentStyle: { width: '400px' },
+                    onRequestClose: this.closeDialog,
+                    autoScrollBodyContent: true
+                },
+                'Date: ',
+                inputDate,
+                ' ',
+                React.createElement('br', null),
+                'Summ: ',
+                inputSumm,
+                ' ',
+                React.createElement('br', null),
+                notIncluded
+            );
+        }
+    }]);
+
+    return DialogInputSumm;
 }(__WEBPACK_IMPORTED_MODULE_2_react__["Component"]));
 
 /* harmony default export */ __webpack_exports__["a"] = (DialogInputSumm);
@@ -107863,7 +107930,10 @@ var DrawerListSumms = _wrapComponent('DrawerListSumms')(function (_Component) {
 
             return React.createElement(
                 __WEBPACK_IMPORTED_MODULE_8_material_ui_List__["ListItem"],
-                { key: index },
+                {
+                    key: index,
+                    className: 'ListItem'
+                },
                 React.createElement(
                     'div',
                     { className: 'ListItem__input' },
@@ -107960,6 +108030,7 @@ var DrawerListSumms = _wrapComponent('DrawerListSumms')(function (_Component) {
             return React.createElement(
                 __WEBPACK_IMPORTED_MODULE_6_material_ui_Drawer___default.a,
                 {
+                    className: 'Drawer',
                     title: listName,
                     docked: false,
                     open: open,
@@ -108123,12 +108194,14 @@ HeadBlock.propTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__HeadMoneyAction__ = __webpack_require__("./src/components/ui/HeadMoneyAction.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_CalcUtil__ = __webpack_require__("./src/util/CalcUtil.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_material_ui_Paper__ = __webpack_require__("./node_modules/material-ui/Paper/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_material_ui_Paper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_material_ui_Paper__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_material_ui_Divider__ = __webpack_require__("./node_modules/material-ui/Divider/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_material_ui_Divider___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_material_ui_Divider__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_material_ui_FlatButton__ = __webpack_require__("./node_modules/material-ui/FlatButton/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_material_ui_FlatButton___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_material_ui_FlatButton__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util_DateUtil__ = __webpack_require__("./src/util/DateUtil.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_material_ui_Paper__ = __webpack_require__("./node_modules/material-ui/Paper/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_material_ui_Paper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_material_ui_Paper__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_material_ui_Divider__ = __webpack_require__("./node_modules/material-ui/Divider/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_material_ui_Divider___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_material_ui_Divider__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_material_ui_FlatButton__ = __webpack_require__("./node_modules/material-ui/FlatButton/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_material_ui_FlatButton___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_material_ui_FlatButton__);
+
 
 
 
@@ -108159,8 +108232,8 @@ var HeadMoney = function HeadMoney(props) {
 	} : _props$deleteSumm;
 
 
-	var daysRest = __WEBPACK_IMPORTED_MODULE_2__util_CalcUtil__["a" /* default */].getDaysInPeriod({
-		begin: __WEBPACK_IMPORTED_MODULE_2__util_CalcUtil__["a" /* default */].getLastDate(expenses),
+	var daysRest = __WEBPACK_IMPORTED_MODULE_3__util_DateUtil__["a" /* default */].getDaysInPeriod({
+		begin: __WEBPACK_IMPORTED_MODULE_3__util_DateUtil__["a" /* default */].getLastDate(expenses),
 		end: period.end
 	}),
 	    labelIncomes = 'incomes: ' + (summs.incomes - summs.notIncluded),
@@ -108168,7 +108241,7 @@ var HeadMoney = function HeadMoney(props) {
 	    labelSumm = 'balance: ' + (summs.incomes - summs.notIncluded - summs.expenses) + ' / days: ' + --daysRest;
 
 	return React.createElement(
-		__WEBPACK_IMPORTED_MODULE_3_material_ui_Paper___default.a,
+		__WEBPACK_IMPORTED_MODULE_4_material_ui_Paper___default.a,
 		{ className: 'HeadMoney', zDepth: 1 },
 		React.createElement(__WEBPACK_IMPORTED_MODULE_1__HeadMoneyAction__["a" /* default */], {
 			listName: 'Incomes',
@@ -108177,7 +108250,7 @@ var HeadMoney = function HeadMoney(props) {
 			addSumm: addSumm,
 			deleteSumm: deleteSumm
 		}),
-		React.createElement(__WEBPACK_IMPORTED_MODULE_4_material_ui_Divider___default.a, null),
+		React.createElement(__WEBPACK_IMPORTED_MODULE_5_material_ui_Divider___default.a, null),
 		React.createElement(__WEBPACK_IMPORTED_MODULE_1__HeadMoneyAction__["a" /* default */], {
 			listName: 'Expenses',
 			label: labelExpenses,
@@ -108185,8 +108258,8 @@ var HeadMoney = function HeadMoney(props) {
 			addSumm: addSumm,
 			deleteSumm: deleteSumm
 		}),
-		React.createElement(__WEBPACK_IMPORTED_MODULE_4_material_ui_Divider___default.a, null),
-		React.createElement(__WEBPACK_IMPORTED_MODULE_5_material_ui_FlatButton___default.a, {
+		React.createElement(__WEBPACK_IMPORTED_MODULE_5_material_ui_Divider___default.a, null),
+		React.createElement(__WEBPACK_IMPORTED_MODULE_6_material_ui_FlatButton___default.a, {
 			className: 'HeadMoney__button',
 			label: labelSumm
 		})
@@ -108311,8 +108384,6 @@ var HeadMoneyAction = _wrapComponent('HeadMoneyAction')(function (_Component) {
 
         _this.onAddSumm = function (data) {
             _this.props.addSumm(data);
-
-            _this.closeInputSumm();
 
             var message = 'Summ ' + data.summ + ' from ' + data.date + ' was saved succesfully.';
             _this.openSnackbar(message);
@@ -108818,11 +108889,12 @@ var saveState = function saveState() {
 };
 
 var handleError = function handleError(error) {
-	store.dispatch(Object(__WEBPACK_IMPORTED_MODULE_6__actions__["a" /* addError */])(error.message));
+	store.dispatch(Object(__WEBPACK_IMPORTED_MODULE_6__actions__["b" /* addError */])(error.message));
 };
 
 var store = Object(__WEBPACK_IMPORTED_MODULE_3__store__["a" /* default */])(initialState);
 store.subscribe(saveState);
+store.dispatch(Object(__WEBPACK_IMPORTED_MODULE_6__actions__["a" /* activateApp */])());
 
 window.React = __WEBPACK_IMPORTED_MODULE_0_react___default.a;
 window.store = store;
@@ -108971,10 +109043,10 @@ var expenses = function expenses() {
 			var _expenses = Object.keys(state);
 
 			if (_expenses.length > 0) {
-				newState = __WEBPACK_IMPORTED_MODULE_3__util_CalcUtil__["a" /* default */].sortObjectByKeysDates(state);
+				newState = __WEBPACK_IMPORTED_MODULE_2__util_DateUtil__["a" /* default */].sortObjectByKeysDates(state);
 
 				var firstDate = action.payload.period.begin,
-				    lastDate = __WEBPACK_IMPORTED_MODULE_3__util_CalcUtil__["a" /* default */].getLastDate(newState),
+				    lastDate = __WEBPACK_IMPORTED_MODULE_2__util_DateUtil__["a" /* default */].getLastDate(newState),
 				    arrayDates = __WEBPACK_IMPORTED_MODULE_2__util_DateUtil__["a" /* default */].createArrayDates(firstDate, lastDate);
 
 				arrayDates.forEach(function (date) {
@@ -109042,7 +109114,7 @@ var limits = function limits() {
 			    _summs = _action$payload.summs;
 
 
-			var lastDateWithExpense = __WEBPACK_IMPORTED_MODULE_3__util_CalcUtil__["a" /* default */].getLastDate(_expenses2);
+			var lastDateWithExpense = __WEBPACK_IMPORTED_MODULE_2__util_DateUtil__["a" /* default */].getLastDate(_expenses2);
 
 			newState.base = __WEBPACK_IMPORTED_MODULE_4__util_LimitsUtil__["a" /* default */].calcLimitBase(_period, _summs);
 			newState.corrected = __WEBPACK_IMPORTED_MODULE_4__util_LimitsUtil__["a" /* default */].calcLimitCorrected(_period, lastDateWithExpense, _summs);
@@ -109158,8 +109230,8 @@ var CalcUtil = function () {
                 limits = _ref.limits;
 
 
-            var lastDateWithExpense = CalcUtil.getLastDate(expenses),
-                daysRest = CalcUtil.getDaysInPeriod({
+            var lastDateWithExpense = __WEBPACK_IMPORTED_MODULE_0__DateUtil__["a" /* default */].getLastDate(expenses),
+                daysRest = __WEBPACK_IMPORTED_MODULE_0__DateUtil__["a" /* default */].getDaysInPeriod({
                 begin: lastDateWithExpense, end: period.end
             }),
                 restOfMoney = summs.incomes - summs.notIncluded - summs.expenses;
@@ -109167,38 +109239,6 @@ var CalcUtil = function () {
             var result = restOfMoney - --daysRest * limits.fact;
 
             return Math.round(result);
-        }
-    }, {
-        key: 'getLastDate',
-        value: function getLastDate(obj) {
-            if (!obj) return -1;
-
-            var dates = Object.keys(obj);
-            dates.sort(function (a, b) {
-                return new Date(a) - new Date(b);
-            });
-
-            return dates[dates.length - 1];
-        }
-    }, {
-        key: 'getDaysInPeriod',
-        value: function getDaysInPeriod(period) {
-            if (!period) return -1;
-
-            return (new Date(period.end) - new Date(period.begin)) / (1000 * 60 * 60 * 24);
-        }
-    }, {
-        key: 'sortObjectByKeysDates',
-        value: function sortObjectByKeysDates(obj) {
-            var sortedObj = {};
-
-            var dates = Object.keys(obj).sort(function (a, b) {
-                return new Date(a) - new Date(b);
-            }).forEach(function (date) {
-                sortedObj[date] = obj[date];
-            });
-
-            return sortedObj;
         }
     }]);
 
@@ -109327,18 +109367,45 @@ var DateUtil = function () {
             return [year, month, day].join('-');
         }
     }, {
-        key: 'sortObjectByKeysDates',
-        value: function sortObjectByKeysDates(obj) {
-            var dates = Object.keys(obj).sort(function (a, b) {
+        key: 'getLastDate',
+        value: function getLastDate(obj) {
+            if (!obj) return -1;
+
+            var dates = Object.keys(obj);
+            dates.sort(function (a, b) {
                 return new Date(a) - new Date(b);
             });
 
+            return dates[dates.length - 1];
+        }
+    }, {
+        key: 'getDaysInPeriod',
+        value: function getDaysInPeriod(period) {
+            if (!period) return -1;
+
+            return (new Date(period.end) - new Date(period.begin)) / (1000 * 60 * 60 * 24);
+        }
+    }, {
+        key: 'sortObjectByKeysDates',
+        value: function sortObjectByKeysDates(obj) {
             var sortedObj = {};
-            dates.forEach(function (date) {
+
+            var dates = Object.keys(obj).sort(function (a, b) {
+                return new Date(a) - new Date(b);
+            }).forEach(function (date) {
                 sortedObj[date] = obj[date];
             });
 
             return sortedObj;
+        }
+    }, {
+        key: 'shiftDate',
+        value: function shiftDate(dateString, shift) {
+
+            var dateMs = new Date(dateString).getTime();
+            dateMs += shift * (1000 * 60 * 60 * 24);
+
+            return new Date(dateMs);
         }
     }]);
 
@@ -109353,7 +109420,7 @@ var DateUtil = function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__CalcUtil__ = __webpack_require__("./src/util/CalcUtil.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__DateUtil__ = __webpack_require__("./src/util/DateUtil.js");
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -109369,7 +109436,7 @@ var LimitsUtil = function () {
         key: 'calcLimitBase',
         value: function calcLimitBase(period, summs) {
 
-            var daysTotal = __WEBPACK_IMPORTED_MODULE_0__CalcUtil__["a" /* default */].getDaysInPeriod(period),
+            var daysTotal = __WEBPACK_IMPORTED_MODULE_0__DateUtil__["a" /* default */].getDaysInPeriod(period),
                 summNetIncomes = summs.incomes - summs.notIncluded;
 
             var result = summNetIncomes / daysTotal;
@@ -109380,7 +109447,7 @@ var LimitsUtil = function () {
         key: 'calcLimitCorrected',
         value: function calcLimitCorrected(period, lastDateWithExpense, summs) {
 
-            var daysRest = __WEBPACK_IMPORTED_MODULE_0__CalcUtil__["a" /* default */].getDaysInPeriod({
+            var daysRest = __WEBPACK_IMPORTED_MODULE_0__DateUtil__["a" /* default */].getDaysInPeriod({
                 begin: lastDateWithExpense, end: period.end
             }),
                 summRestMoney = summs.incomes - summs.notIncluded - summs.expenses;
@@ -109393,7 +109460,7 @@ var LimitsUtil = function () {
         key: 'calcLimitFact',
         value: function calcLimitFact(period, lastDateWithExpense, summs) {
 
-            var daysDone = __WEBPACK_IMPORTED_MODULE_0__CalcUtil__["a" /* default */].getDaysInPeriod({
+            var daysDone = __WEBPACK_IMPORTED_MODULE_0__DateUtil__["a" /* default */].getDaysInPeriod({
                 begin: period.begin, end: lastDateWithExpense
             }),
                 summAllExpenses = summs.notIncluded + summs.expenses;
