@@ -4,7 +4,7 @@ import dataState from './initialState'
 import storeFactory from './store'
 import { Provider } from 'react-redux'
 import MainPage from './components'
-import { addError } from './actions'
+import { addError, activateApp } from './actions'
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import './assets/styles/style.scss'
@@ -24,6 +24,7 @@ const handleError = error => {
 
 const store = storeFactory(initialState)
 store.subscribe(saveState)
+store.dispatch(activateApp())
 
 window.React = React
 window.store = store

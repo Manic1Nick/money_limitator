@@ -1,5 +1,18 @@
 import C from './constants'
 
+export const activateApp = () => {
+    return (dispatch, getState) => {
+        const state = getState()
+
+        if (Object.keys(state.expenses).length > 0 
+            && state.summs.expenses === 0) {
+                
+            dispatch(updateSumms())
+            dispatch(updateLimits())            
+        }
+    }
+}
+
 export const addNewIncome = income => {
     return dispatch => {
         dispatch({
