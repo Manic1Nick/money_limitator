@@ -67,10 +67,10 @@ export default class DateUtil {
         return sortedObj
     }
 
-    static changeDate(dateString, changer) {
+    static shiftDate(dateString, shift) {
 
         let dateMs = new Date(dateString).getTime()
-        dateMs += (changer * (1000*60*60*24))
+        dateMs += (shift * (1000*60*60*24))
 
         return new Date(dateMs)
     }

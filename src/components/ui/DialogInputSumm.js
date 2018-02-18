@@ -22,6 +22,10 @@ export default class DialogInputSumm extends Component {
 		}
 	}
 
+    componentWillUpdate = (nextProps, nextState) => {
+        if (this.refs.inputSumm) this.refs.inputSumm.focus()
+    }
+
 	updateCheck = () => {
         this.setState((oldState) => {
             return {
@@ -41,19 +45,28 @@ export default class DialogInputSumm extends Component {
     	this.setState({ summ: e.target.value })
     }
 
-    handleAddSumm = () => {
+    onAddSumm = () => {
         const { date, summ } = this.state
 
         let data = this.state
         data.date = DateUtil.formatDate(date)
         data.summ = summ ? parseInt(summ) : 0
         
-    	this.props.addSumm(data)
-    	this.clearState()
+        this.props.addSumm(data)
     }
 
-    onChangeDate = (changer) => {
-        const date = DateUtil.changeDate(this.state.date, changer)
+    handleAddSummAndCloseDialog = () => {
+        this.onAddSumm()
+        this.closeDialog()
+    }
+
+    handleAddSummAndGoNextDate = () => {
+        this.onAddSumm()
+        this.shiftDate(1)
+    }
+
+    shiftDate = (shift) => {
+        const date = DateUtil.shiftDate(this.state.date, shift)
 
         this.onEditDate(null, date)
     }
@@ -90,10 +103,15 @@ export default class DialogInputSumm extends Component {
     	        primary={ true }
     	        onClick={ this.closeDialog }
     	    />,
+            <FlatButton
+                label="Add & Next"
+                primary={ true }
+                onClick={ this.handleAddSummAndGoNextDate }
+            />,
     	    <FlatButton
     	        label="Add"
     	        primary={ true }
-    	        onClick={ this.handleAddSumm }
+    	        onClick={ this.handleAddSummAndCloseDialog }
     	    />
     	]
 
@@ -101,7 +119,7 @@ export default class DialogInputSumm extends Component {
             <div className='InputSumm__date'>
                 <IconButton>
                     <ArrowLeftIcon 
-                        onClick={ () => this.onChangeDate(-1) }
+                        onClick={ () => this.shiftDate(-1) }
                     />
                 </IconButton>
         		<DatePicker
@@ -111,7 +129,7 @@ export default class DialogInputSumm extends Component {
               	/>
                 <IconButton>
                     <ArrowRightIcon 
-                        onClick={ () => this.onChangeDate(1) }
+                        onClick={ () => this.shiftDate(1) }
                     />
                 </IconButton>
             </div>
@@ -122,6 +140,7 @@ export default class DialogInputSumm extends Component {
                 value={ this.state.summ }
     		  	onChange={ this.onInputSumm }
                 autoFocus
+                refs='inputSumm'
     		/>
 
     	const notIncluded =

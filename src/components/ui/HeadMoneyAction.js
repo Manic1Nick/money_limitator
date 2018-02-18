@@ -50,8 +50,6 @@ export default class HeadMoneyAction extends Component {
     onAddSumm = (data) => {
         this.props.addSumm(data)
 
-        this.closeInputSumm()
-
         let message = `Summ ${data.summ} from ${data.date} was saved succesfully.`
         this.openSnackbar(message)
     }
