@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "4e80472e0dccbcb93c37"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "8cbbf735b25067c5764a"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -107071,13 +107071,12 @@ var addNewIncome = function addNewIncome(income) {
 
 var addNewExpense = function addNewExpense(expense) {
     return function (dispatch) {
-        dispatch(fillGaps(expense.date));
-
         dispatch({
             type: __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].ADD_EXPENSE,
             payload: expense
         });
 
+        dispatch(fillGaps());
         dispatch(updateSumms());
         dispatch(updateLimits());
     };
@@ -107114,6 +107113,7 @@ var deleteExpense = function deleteExpense(expense) {
             payload: expense
         });
 
+        dispatch(fillGaps());
         dispatch(updateSumms());
         dispatch(updateLimits());
     };
@@ -107131,10 +107131,14 @@ var deleteNotIncluded = function deleteNotIncluded(expense) {
     };
 };
 
-var fillGaps = function fillGaps(lastDate) {
-    return {
-        type: __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].FILL_GAPS,
-        payload: lastDate
+var fillGaps = function fillGaps() {
+    return function (dispatch, getState) {
+        var state = getState();
+
+        dispatch({
+            type: __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].FILL_GAPS,
+            payload: state
+        });
     };
 };
 
@@ -108085,6 +108089,7 @@ var HeadBlock = function HeadBlock(props) {
 			})
 		),
 		React.createElement(__WEBPACK_IMPORTED_MODULE_3__HeadMoney__["a" /* default */], {
+			period: period,
 			incomes: incomes,
 			expenses: expenses,
 			notIncluded: notIncluded,
@@ -108134,7 +108139,9 @@ HeadBlock.propTypes = {
 
 
 var HeadMoney = function HeadMoney(props) {
-	var _props$incomes = props.incomes,
+	var _props$period = props.period,
+	    period = _props$period === undefined ? {} : _props$period,
+	    _props$incomes = props.incomes,
 	    incomes = _props$incomes === undefined ? {} : _props$incomes,
 	    _props$expenses = props.expenses,
 	    expenses = _props$expenses === undefined ? {} : _props$expenses,
@@ -108152,9 +108159,13 @@ var HeadMoney = function HeadMoney(props) {
 	} : _props$deleteSumm;
 
 
-	var labelIncomes = 'incomes: ' + (summs.incomes - summs.notIncluded),
+	var daysRest = __WEBPACK_IMPORTED_MODULE_2__util_CalcUtil__["a" /* default */].getDaysInPeriod({
+		begin: __WEBPACK_IMPORTED_MODULE_2__util_CalcUtil__["a" /* default */].getLastDate(expenses),
+		end: period.end
+	}),
+	    labelIncomes = 'incomes: ' + (summs.incomes - summs.notIncluded),
 	    labelExpenses = 'expenses: ' + summs.expenses,
-	    labelSumm = 'rest of money: ' + (summs.incomes - summs.notIncluded - summs.expenses);
+	    labelSumm = 'balance: ' + (summs.incomes - summs.notIncluded - summs.expenses) + ' / days: ' + --daysRest;
 
 	return React.createElement(
 		__WEBPACK_IMPORTED_MODULE_3_material_ui_Paper___default.a,
@@ -108183,6 +108194,7 @@ var HeadMoney = function HeadMoney(props) {
 };
 
 HeadMoney.propTypes = {
+	period: __WEBPACK_IMPORTED_MODULE_0_prop_types__["PropTypes"].object,
 	incomes: __WEBPACK_IMPORTED_MODULE_0_prop_types__["PropTypes"].object,
 	expenses: __WEBPACK_IMPORTED_MODULE_0_prop_types__["PropTypes"].object,
 	notIncluded: __WEBPACK_IMPORTED_MODULE_0_prop_types__["PropTypes"].object,
@@ -108943,6 +108955,8 @@ var expenses = function expenses() {
 	var action = arguments[1];
 
 
+	var newState = Object.assign({}, state);
+
 	switch (action.type) {
 		case __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].ADD_EXPENSE:
 			var data = {};
@@ -108950,24 +108964,24 @@ var expenses = function expenses() {
 			return Object.assign({}, state, data);
 
 		case __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].DELETE_EXPENSE:
-			var newState = Object.assign({}, state);
 			delete newState[action.payload.date];
 			return newState;
 
 		case __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].FILL_GAPS:
 			var _expenses = Object.keys(state);
-			if (_expenses.length > 0 && !_expenses.includes(action.payload)) {
 
-				var _newState = Object.assign({}, state),
-				    lastDate = action.payload,
-				    firstDate = _expenses[0],
+			if (_expenses.length > 0) {
+				newState = __WEBPACK_IMPORTED_MODULE_3__util_CalcUtil__["a" /* default */].sortObjectByKeysDates(state);
+
+				var firstDate = action.payload.period.begin,
+				    lastDate = __WEBPACK_IMPORTED_MODULE_3__util_CalcUtil__["a" /* default */].getLastDate(newState),
 				    arrayDates = __WEBPACK_IMPORTED_MODULE_2__util_DateUtil__["a" /* default */].createArrayDates(firstDate, lastDate);
 
 				arrayDates.forEach(function (date) {
-					_newState[date] = state[date] ? state[date] : 0;
+					if (!state[date]) newState[date] = 0;
 				});
-				return _newState;
 			}
+			return newState;
 
 		default:
 			return state;
@@ -109024,17 +109038,15 @@ var limits = function limits() {
 		case __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].UPDATE_LIMITS:
 			var _action$payload = action.payload,
 			    _period = _action$payload.period,
-			    _incomes = _action$payload.incomes,
 			    _expenses2 = _action$payload.expenses,
-			    _notIncluded = _action$payload.notIncluded;
+			    _summs = _action$payload.summs;
 
 
-			var summsIncomes = __WEBPACK_IMPORTED_MODULE_3__util_CalcUtil__["a" /* default */].concatIncomesAndExpenses(_incomes, _notIncluded),
-			    summsTotals = __WEBPACK_IMPORTED_MODULE_3__util_CalcUtil__["a" /* default */].concatIncomesAndExpenses(_incomes, _expenses2);
+			var lastDateWithExpense = __WEBPACK_IMPORTED_MODULE_3__util_CalcUtil__["a" /* default */].getLastDate(_expenses2);
 
-			newState.base = __WEBPACK_IMPORTED_MODULE_4__util_LimitsUtil__["a" /* default */].calcLimitBase(_period, summsIncomes);
-			newState.corrected = __WEBPACK_IMPORTED_MODULE_4__util_LimitsUtil__["a" /* default */].calcLimitCorrected(_period, summsTotals);
-			newState.fact = __WEBPACK_IMPORTED_MODULE_4__util_LimitsUtil__["a" /* default */].calcLimitFact(_period, summsIncomes, summsTotals);
+			newState.base = __WEBPACK_IMPORTED_MODULE_4__util_LimitsUtil__["a" /* default */].calcLimitBase(_period, _summs);
+			newState.corrected = __WEBPACK_IMPORTED_MODULE_4__util_LimitsUtil__["a" /* default */].calcLimitCorrected(_period, lastDateWithExpense, _summs);
+			newState.fact = __WEBPACK_IMPORTED_MODULE_4__util_LimitsUtil__["a" /* default */].calcLimitFact(_period, lastDateWithExpense, _summs);
 
 		default:
 			return newState;
@@ -109080,9 +109092,12 @@ var errors = function errors() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__DateUtil__ = __webpack_require__("./src/util/DateUtil.js");
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
 
 var CalcUtil = function () {
     function CalcUtil() {
@@ -109090,7 +109105,7 @@ var CalcUtil = function () {
     }
 
     _createClass(CalcUtil, null, [{
-        key: "calcSumm",
+        key: 'calcSumm',
         value: function calcSumm(datesObj) {
             if (!datesObj) return 0;
 
@@ -109101,7 +109116,7 @@ var CalcUtil = function () {
             return summ;
         }
     }, {
-        key: "concatIncomesAndExpenses",
+        key: 'concatIncomesAndExpenses',
         value: function concatIncomesAndExpenses(incomesObj, expensesObj) {
             var newExpensesObj = {};
             Object.keys(expensesObj).forEach(function (key) {
@@ -109110,7 +109125,7 @@ var CalcUtil = function () {
             return CalcUtil.concatListsSumms(incomesObj, newExpensesObj);
         }
     }, {
-        key: "concatListsSumms",
+        key: 'concatListsSumms',
         value: function concatListsSumms() {
             var result = {};
 
@@ -109126,7 +109141,7 @@ var CalcUtil = function () {
             return result;
         }
     }, {
-        key: "deleteZeroDates",
+        key: 'deleteZeroDates',
         value: function deleteZeroDates(listSumms) {
             var result = {};
             for (var key in listSumms) {
@@ -109135,17 +109150,15 @@ var CalcUtil = function () {
             return result;
         }
     }, {
-        key: "calcExpectedResult",
+        key: 'calcExpectedResult',
         value: function calcExpectedResult(_ref) {
             var period = _ref.period,
-                incomes = _ref.incomes,
                 expenses = _ref.expenses,
                 summs = _ref.summs,
                 limits = _ref.limits;
 
 
-            var summsTotals = CalcUtil.concatIncomesAndExpenses(incomes, expenses),
-                lastDateWithExpense = CalcUtil.getLastDay(summsTotals),
+            var lastDateWithExpense = CalcUtil.getLastDate(expenses),
                 daysRest = CalcUtil.getDaysInPeriod({
                 begin: lastDateWithExpense, end: period.end
             }),
@@ -109156,18 +109169,36 @@ var CalcUtil = function () {
             return Math.round(result);
         }
     }, {
-        key: "getLastDay",
-        value: function getLastDay(obj) {
+        key: 'getLastDate',
+        value: function getLastDate(obj) {
             if (!obj) return -1;
 
-            return Object.keys(obj).slice(-1)[0];
+            var dates = Object.keys(obj);
+            dates.sort(function (a, b) {
+                return new Date(a) - new Date(b);
+            });
+
+            return dates[dates.length - 1];
         }
     }, {
-        key: "getDaysInPeriod",
+        key: 'getDaysInPeriod',
         value: function getDaysInPeriod(period) {
             if (!period) return -1;
 
             return (new Date(period.end) - new Date(period.begin)) / (1000 * 60 * 60 * 24);
+        }
+    }, {
+        key: 'sortObjectByKeysDates',
+        value: function sortObjectByKeysDates(obj) {
+            var sortedObj = {};
+
+            var dates = Object.keys(obj).sort(function (a, b) {
+                return new Date(a) - new Date(b);
+            }).forEach(function (date) {
+                sortedObj[date] = obj[date];
+            });
+
+            return sortedObj;
         }
     }]);
 
@@ -109223,8 +109254,14 @@ var ChartUtil = function () {
                 Object.assign(date, { "base": summBase >= 0 ? summBase : 0 }, { "corrected": summCorrected >= 0 ? summCorrected : 0 }, { "fact": summFact >= 0 ? summFact : null }, { "expense": expense });
 
                 summBase -= limits.base;
-                summCorrected -= expense >= 0 ? expense : limits.corrected;
-                summFact -= expense >= 0 ? expense : limits.fact;
+
+                if (expense >= 0) {
+                    summCorrected -= expense;
+                    summFact -= expense;
+                } else {
+                    summCorrected -= limits.corrected;
+                    summFact -= limits.fact;
+                }
             });
             return dates;
         }
@@ -109289,6 +109326,20 @@ var DateUtil = function () {
 
             return [year, month, day].join('-');
         }
+    }, {
+        key: 'sortObjectByKeysDates',
+        value: function sortObjectByKeysDates(obj) {
+            var dates = Object.keys(obj).sort(function (a, b) {
+                return new Date(a) - new Date(b);
+            });
+
+            var sortedObj = {};
+            dates.forEach(function (date) {
+                sortedObj[date] = obj[date];
+            });
+
+            return sortedObj;
+        }
     }]);
 
     return DateUtil;
@@ -109316,41 +109367,38 @@ var LimitsUtil = function () {
 
     _createClass(LimitsUtil, null, [{
         key: 'calcLimitBase',
-        value: function calcLimitBase(period, incomes) {
+        value: function calcLimitBase(period, summs) {
 
-            var daysInPeriod = __WEBPACK_IMPORTED_MODULE_0__CalcUtil__["a" /* default */].getDaysInPeriod(period),
-                summIncomes = __WEBPACK_IMPORTED_MODULE_0__CalcUtil__["a" /* default */].calcSumm(incomes);
+            var daysTotal = __WEBPACK_IMPORTED_MODULE_0__CalcUtil__["a" /* default */].getDaysInPeriod(period),
+                summNetIncomes = summs.incomes - summs.notIncluded;
 
-            var result = summIncomes / daysInPeriod;
+            var result = summNetIncomes / daysTotal;
 
             return Math.round(result);
         }
     }, {
         key: 'calcLimitCorrected',
-        value: function calcLimitCorrected(period, totals) {
+        value: function calcLimitCorrected(period, lastDateWithExpense, summs) {
 
-            var lastDateWithExpense = __WEBPACK_IMPORTED_MODULE_0__CalcUtil__["a" /* default */].getLastDay(totals),
-                daysRest = __WEBPACK_IMPORTED_MODULE_0__CalcUtil__["a" /* default */].getDaysInPeriod({
+            var daysRest = __WEBPACK_IMPORTED_MODULE_0__CalcUtil__["a" /* default */].getDaysInPeriod({
                 begin: lastDateWithExpense, end: period.end
             }),
-                summTotals = __WEBPACK_IMPORTED_MODULE_0__CalcUtil__["a" /* default */].calcSumm(totals);
+                summRestMoney = summs.incomes - summs.notIncluded - summs.expenses;
 
-            var result = summTotals / --daysRest;
+            var result = summRestMoney / --daysRest;
 
             return Math.round(result);
         }
     }, {
         key: 'calcLimitFact',
-        value: function calcLimitFact(period, incomes, totals) {
+        value: function calcLimitFact(period, lastDateWithExpense, summs) {
 
-            var lastDateWithExpense = __WEBPACK_IMPORTED_MODULE_0__CalcUtil__["a" /* default */].getLastDay(totals),
-                daysDone = __WEBPACK_IMPORTED_MODULE_0__CalcUtil__["a" /* default */].getDaysInPeriod({
+            var daysDone = __WEBPACK_IMPORTED_MODULE_0__CalcUtil__["a" /* default */].getDaysInPeriod({
                 begin: period.begin, end: lastDateWithExpense
             }),
-                summIncomes = __WEBPACK_IMPORTED_MODULE_0__CalcUtil__["a" /* default */].calcSumm(incomes),
-                summTotals = __WEBPACK_IMPORTED_MODULE_0__CalcUtil__["a" /* default */].calcSumm(totals);
+                summAllExpenses = summs.notIncluded + summs.expenses;
 
-            var result = (summIncomes - summTotals) / ++daysDone;
+            var result = summAllExpenses / ++daysDone;
 
             return Math.round(result);
         }
