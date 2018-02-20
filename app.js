@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "13ba333e972d760dc092"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "f3cce53c5c7987992e41"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -107360,13 +107360,32 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ui_LimitsBlock__ = __webpack_require__("./src/components/ui/LimitsBlock.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_redux__ = __webpack_require__("./node_modules/redux/es/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_redux__ = __webpack_require__("./node_modules/react-redux/es/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util_DateUtil__ = __webpack_require__("./src/util/DateUtil.js");
+
+
 
 
 
 
 var mapStateToProps = function mapStateToProps(state, ownProps) {
+
+    var lastDateWithExpense = __WEBPACK_IMPORTED_MODULE_3__util_DateUtil__["a" /* default */].getLastDate(state.expenses),
+        daysTotal = __WEBPACK_IMPORTED_MODULE_3__util_DateUtil__["a" /* default */].getDaysInPeriod(state.period),
+        daysDone = __WEBPACK_IMPORTED_MODULE_3__util_DateUtil__["a" /* default */].getDaysInPeriod({
+        begin: state.period.begin, end: lastDateWithExpense
+    }),
+        daysRest = __WEBPACK_IMPORTED_MODULE_3__util_DateUtil__["a" /* default */].getDaysInPeriod({
+        begin: lastDateWithExpense, end: state.period.end
+    });
+
     return {
-        limits: state.limits
+        limits: state.limits,
+        summs: state.summs,
+        period: state.period,
+        daysTotal: daysTotal,
+        daysDone: daysDone,
+        daysRest: daysRest - 1,
+        lastDateWithExpense: lastDateWithExpense
     };
 };
 
@@ -108707,60 +108726,353 @@ var HeadResult = _wrapComponent('HeadResult')(function (_Component) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_prop_types__ = __webpack_require__("./node_modules/prop-types/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_material_ui_RaisedButton__ = __webpack_require__("./node_modules/material-ui/RaisedButton/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_material_ui_RaisedButton___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_material_ui_RaisedButton__);
+/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_nick_dev_JS_react_redux_money_limitator_node_modules_redbox_react_lib_index_js__ = __webpack_require__("./node_modules/redbox-react/lib/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_nick_dev_JS_react_redux_money_limitator_node_modules_redbox_react_lib_index_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__home_nick_dev_JS_react_redux_money_limitator_node_modules_redbox_react_lib_index_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_catch_errors_lib_index_js__ = __webpack_require__("./node_modules/react-transform-catch-errors/lib/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_catch_errors_lib_index_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_catch_errors_lib_index_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__("./node_modules/react/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js__ = __webpack_require__("./node_modules/react-transform-hmr/lib/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_material_ui_RaisedButton__ = __webpack_require__("./node_modules/material-ui/RaisedButton/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_material_ui_RaisedButton___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_material_ui_RaisedButton__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_material_ui_Dialog__ = __webpack_require__("./node_modules/material-ui/Dialog/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_material_ui_Dialog___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_material_ui_Dialog__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_material_ui_FlatButton__ = __webpack_require__("./node_modules/material-ui/FlatButton/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_material_ui_FlatButton___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_material_ui_FlatButton__);
 
 
 
 
-var LimitsBlock = function LimitsBlock(_ref) {
-	var _ref$limits = _ref.limits,
-	    limits = _ref$limits === undefined ? {} : _ref$limits;
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var labelBase = 'Base ' + limits.base + ' in day',
-	    labelCorrected = 'Corrected ' + limits.corrected + ' in day',
-	    labelFact = 'Fact ' + limits.fact + ' in day';
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	return React.createElement(
-		'div',
-		{ className: 'LimitsBlock' },
-		React.createElement(
-			'div',
-			{ className: 'limits__title' },
-			React.createElement(
-				'span',
-				null,
-				'LIMITS:'
-			)
-		),
-		React.createElement(__WEBPACK_IMPORTED_MODULE_1_material_ui_RaisedButton___default.a, {
-			className: 'limits__button',
-			label: labelBase,
-			primary: true
-		}),
-		React.createElement(__WEBPACK_IMPORTED_MODULE_1_material_ui_RaisedButton___default.a, {
-			className: 'limits__button',
-			label: labelCorrected,
-			backgroundColor: '#9932CC',
-			labelColor: '#FFFFFF'
-		}),
-		React.createElement(__WEBPACK_IMPORTED_MODULE_1_material_ui_RaisedButton___default.a, {
-			className: 'limits__button',
-			label: labelFact,
-			backgroundColor: '#FF6347',
-			labelColor: '#FFFFFF'
-		})
-	);
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _components = {
+	LimitsBlock: {
+		displayName: 'LimitsBlock'
+	}
 };
 
-LimitsBlock.propTypes = {
-	limits: __WEBPACK_IMPORTED_MODULE_0_prop_types__["PropTypes"].object
-};
+var _homeNickDevJSReact_reduxMoney_limitatorNode_modulesReactTransformHmrLibIndexJs2 = __WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js___default()({
+	filename: '/home/nick/dev/JS/react_redux/money_limitator/src/components/ui/LimitsBlock.js',
+	components: _components,
+	locals: [module],
+	imports: [__WEBPACK_IMPORTED_MODULE_2_react___default.a]
+});
+
+var _homeNickDevJSReact_reduxMoney_limitatorNode_modulesReactTransformCatchErrorsLibIndexJs2 = __WEBPACK_IMPORTED_MODULE_1__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_catch_errors_lib_index_js___default()({
+	filename: '/home/nick/dev/JS/react_redux/money_limitator/src/components/ui/LimitsBlock.js',
+	components: _components,
+	locals: [],
+	imports: [__WEBPACK_IMPORTED_MODULE_2_react___default.a, __WEBPACK_IMPORTED_MODULE_0__home_nick_dev_JS_react_redux_money_limitator_node_modules_redbox_react_lib_index_js___default.a]
+});
+
+function _wrapComponent(id) {
+	return function (Component) {
+		return _homeNickDevJSReact_reduxMoney_limitatorNode_modulesReactTransformHmrLibIndexJs2(_homeNickDevJSReact_reduxMoney_limitatorNode_modulesReactTransformCatchErrorsLibIndexJs2(Component, id), id);
+	};
+}
+
+
+
+
+
+
+
+var LimitsBlock = _wrapComponent('LimitsBlock')(function (_Component) {
+	_inherits(LimitsBlock, _Component);
+
+	function LimitsBlock(props) {
+		_classCallCheck(this, LimitsBlock);
+
+		var _this = _possibleConstructorReturn(this, (LimitsBlock.__proto__ || Object.getPrototypeOf(LimitsBlock)).call(this));
+
+		_this.state = {
+			limits: props.limits,
+			activeLimit: ''
+		};
+		return _this;
+	}
+
+	_createClass(LimitsBlock, [{
+		key: 'handleOpenDialog',
+		value: function handleOpenDialog(limitName) {
+			this.setState({
+				activeLimit: limitName
+			});
+		}
+	}, {
+		key: 'handleCloseDialog',
+		value: function handleCloseDialog() {
+			this.setState({
+				activeLimit: ''
+			});
+		}
+	}, {
+		key: 'renderDialog',
+		value: function renderDialog() {
+			var activeLimit = this.state.activeLimit,
+			    limitInfoTitle = 'Limit ' + activeLimit + ' info';
+
+
+			var actions = [React.createElement(__WEBPACK_IMPORTED_MODULE_6_material_ui_FlatButton___default.a, {
+				label: 'Ok',
+				primary: true,
+				onClick: this.handleCloseDialog.bind(this)
+			})];
+
+			return React.createElement(
+				__WEBPACK_IMPORTED_MODULE_5_material_ui_Dialog___default.a,
+				{
+					title: limitInfoTitle,
+					actions: actions,
+					modal: false,
+					open: activeLimit !== '',
+					onRequestClose: this.handleCloseDialog.bind(this)
+				},
+				this._generateDialogText(activeLimit)
+			);
+		}
+	}, {
+		key: 'render',
+		value: function render() {
+			var _this2 = this;
+
+			return React.createElement(
+				'div',
+				{ className: 'LimitsBlock' },
+				React.createElement(
+					'div',
+					{ className: 'limits__title' },
+					React.createElement(
+						'span',
+						null,
+						'LIMITS:'
+					)
+				),
+				React.createElement(__WEBPACK_IMPORTED_MODULE_4_material_ui_RaisedButton___default.a, {
+					className: 'limits__button',
+					label: this._generateLimitLable('base'),
+					primary: true,
+					onClick: function onClick() {
+						return _this2.handleOpenDialog('base');
+					}
+				}),
+				React.createElement(__WEBPACK_IMPORTED_MODULE_4_material_ui_RaisedButton___default.a, {
+					className: 'limits__button',
+					label: this._generateLimitLable('corrected'),
+					backgroundColor: '#9932CC',
+					labelColor: '#FFFFFF',
+					onClick: function onClick() {
+						return _this2.handleOpenDialog('corrected');
+					}
+				}),
+				React.createElement(__WEBPACK_IMPORTED_MODULE_4_material_ui_RaisedButton___default.a, {
+					className: 'limits__button',
+					label: this._generateLimitLable('fact'),
+					backgroundColor: '#FF6347',
+					labelColor: '#FFFFFF',
+					onClick: function onClick() {
+						return _this2.handleOpenDialog('fact');
+					}
+				}),
+				this.renderDialog()
+			);
+		}
+	}, {
+		key: '_generateLimitLable',
+		value: function _generateLimitLable(limitName) {
+			var _state$limits = this.state.limits,
+			    base = _state$limits.base,
+			    corrected = _state$limits.corrected,
+			    fact = _state$limits.fact;
+
+
+			switch (limitName) {
+				case 'base':
+					return 'Base ' + base + ' in day';
+
+				case 'corrected':
+					return 'Corrected ' + corrected + ' in day';
+
+				case 'fact':
+					return 'Fact ' + fact + ' in day';
+
+				default:
+					return '';
+			}
+		}
+	}, {
+		key: '_generateDialogText',
+		value: function _generateDialogText(limitName) {
+			var _state$limits2 = this.state.limits,
+			    base = _state$limits2.base,
+			    corrected = _state$limits2.corrected,
+			    fact = _state$limits2.fact,
+			    _props = this.props,
+			    period = _props.period,
+			    summs = _props.summs,
+			    daysTotal = _props.daysTotal,
+			    daysDone = _props.daysDone,
+			    daysRest = _props.daysRest,
+			    lastDateWithExpense = _props.lastDateWithExpense,
+			    summNetIncome = summs.incomes - summs.notIncluded,
+			    currentBalance = summNetIncome - summs.expenses,
+			    result = currentBalance - daysRest * fact;
+
+
+			switch (limitName) {
+				case 'base':
+					return React.createElement(
+						'div',
+						null,
+						React.createElement(
+							'p',
+							null,
+							'Your income is ',
+							summNetIncome,
+							' for the selected period.'
+						),
+						React.createElement(
+							'p',
+							null,
+							'The full period includes ',
+							daysTotal,
+							' days.'
+						),
+						React.createElement(
+							'p',
+							null,
+							'You should have spent no more than ',
+							base,
+							' a day.'
+						),
+						React.createElement(
+							'p',
+							null,
+							'This is your base limit for a full period.'
+						)
+					);
+
+				/*`
+    	Your income is ${ summNetIncome } for the selected period.
+    	The full period includes ${ daysTotal } days.
+    	You should have spent no more than ${ base } a day.
+    	This is your base limit for a full period.
+    `*/
+
+				case 'corrected':
+					return React.createElement(
+						'div',
+						null,
+						React.createElement(
+							'p',
+							null,
+							'You spent ',
+							summs.expenses,
+							' for the past period from ',
+							period.begin,
+							' to ',
+							lastDateWithExpense,
+							'.'
+						),
+						React.createElement(
+							'p',
+							null,
+							'Your current balance is ',
+							currentBalance,
+							' for remaining period ',
+							daysRest,
+							' days.'
+						),
+						React.createElement(
+							'p',
+							null,
+							'Now you can not spend more than ',
+							corrected,
+							' a day.'
+						),
+						React.createElement(
+							'p',
+							null,
+							'This is your corrected limit which should be followed in the remainder of the period.'
+						)
+					);
+
+				/*`
+    	You spent ${ summs.expenses } for the past period from ${ period.begin } to ${ lastDateWithExpense }.
+    	Your current balance is ${ currentBalance } for remaining period ${ daysRest } days.
+    	Now you can not spend more than ${ corrected } a day.
+    	This is your corrected limit which should be followed in the remainder of the period.
+    `*/
+
+				case 'fact':
+					return React.createElement(
+						'div',
+						null,
+						React.createElement(
+							'p',
+							null,
+							'You spent ',
+							summs.expenses,
+							' for the past period from ',
+							period.begin,
+							' to ',
+							lastDateWithExpense,
+							'.'
+						),
+						React.createElement(
+							'p',
+							null,
+							'It is ',
+							fact,
+							' for a day in average.'
+						),
+						React.createElement(
+							'p',
+							null,
+							'If you will spend ',
+							fact,
+							' in day for remaining period ',
+							daysRest,
+							' days, expected balance wil be ',
+							result,
+							' on end of period.'
+						),
+						React.createElement(
+							'p',
+							null,
+							'It is recommended to adhere to the corrected limit ',
+							corrected,
+							' for a day.'
+						)
+					);
+
+				/*`
+    	You spent ${ summs.expenses } for the past period from ${ period.begin } to ${ lastDateWithExpense }.
+    	It is ${ fact } for a day in average.
+    	If you will spend ${ fact } in day for remaining period ${ daysRest } days,
+    	expected balance wil be ${ result } on end of period.
+    	It is recommended to adhere to the corrected limit ${ corrected } for a day.
+    `*/
+
+				default:
+					return '';
+			}
+		}
+	}]);
+
+	return LimitsBlock;
+}(__WEBPACK_IMPORTED_MODULE_2_react__["Component"]));
 
 /* harmony default export */ __webpack_exports__["a"] = (LimitsBlock);
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/webpack/buildin/harmony-module.js")(module)))
 
 /***/ }),
 
