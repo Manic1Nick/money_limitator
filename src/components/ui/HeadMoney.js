@@ -1,8 +1,8 @@
 import { PropTypes } from 'prop-types'
 
 import HeadMoneyAction from './HeadMoneyAction'
-import CalcUtil from '../../util/CalcUtil'
-import DateUtil from '../../util/DateUtil'
+import { concatIncomesAndExpenses } from '../../util/CalcUtil'
+import { getDaysInPeriod, getLastDateWithSumm } from '../../util/DateUtil'
 
 import Paper from 'material-ui/Paper'
 import Divider from 'material-ui/Divider'
@@ -15,25 +15,27 @@ const HeadMoney = (props) => {
 		incomes={}, 
 		expenses={}, 
 		notIncluded={}, 
-		summs={},
+		summs: {
+			summIncomes, summExpenses, summNotIncluded
+		},
 		addSumm=f=>f,
 		deleteSumm=f=>f
 	} = props
 
-	let daysRest = DateUtil.getDaysInPeriod({ 
-    	    begin: DateUtil.getLastDate(expenses), 
+	let daysRest = getDaysInPeriod({ 
+    	    begin: getLastDateWithSumm(expenses), 
     	    end: period.end,  
     	}),
-		labelIncomes = `incomes: ${ summs.incomes - summs.notIncluded }`,
-		labelExpenses = `expenses: ${ summs.expenses }`,
-		labelSumm = `balance: ${ summs.incomes - summs.notIncluded - summs.expenses } / days: ${ --daysRest }`
+		labelIncomes = `incomes: ${ summIncomes - summNotIncluded }`,
+		labelExpenses = `expenses: ${ summExpenses }`,
+		labelSumm = `balance: ${ summIncomes - summNotIncluded - summExpenses } / days: ${ daysRest }`
 
 	return (
 		<Paper className='HeadMoney' zDepth={1}>
 			<HeadMoneyAction
 				listName="Incomes"
 				label={ labelIncomes }
-				listSumms={ CalcUtil.concatIncomesAndExpenses(incomes, notIncluded) }
+				listSumms={ concatIncomesAndExpenses(incomes, notIncluded) }
 				addSumm={ addSumm }
 				deleteSumm={ deleteSumm }
 			/>

@@ -2,8 +2,6 @@ import appReducer from './reducers'
 import { createStore, applyMiddleware } from 'redux'
 import reduxThunk from 'redux-thunk'
 import C from '../constants'
-import DateUtil from '../util/DateUtil'
-import CalcUtil from '../util/CalcUtil'
 
 const consoleMessages = store => next => action => {
 
@@ -12,13 +10,19 @@ const consoleMessages = store => next => action => {
 	console.groupCollapsed(`dispatching action => ${action.type}`)
 	result = next(action)
 
-	let { incomes, expenses, summs, limits, errors } = store.getState()
+	let { 
+		incomes, 
+		expenses, 
+		limits, 
+		errors, 
+		summs: { summIncomes, summExpenses, summNotIncluded } 
+	} = store.getState()
 
 	console.log(`
 
 		incomes: ${Object.keys(incomes).length}
 		expenses: ${Object.keys(expenses).length}
-		summs: ${summs.incomes} ${summs.expenses} ${summs.notIncluded}
+		summs: ${summIncomes} ${summExpenses} ${summNotIncluded}
 		limits: ${limits.base} ${limits.corrected} ${limits.fact}
 		errors: ${errors.length}
 

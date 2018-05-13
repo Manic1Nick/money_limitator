@@ -2,16 +2,19 @@ import LimitsBlock from '../ui/LimitsBlock'
 import { bindActionCreators as action } from 'redux'
 import { connect } from 'react-redux'
 
-import DateUtil from '../../util/DateUtil'
+import {
+	getLastDate,
+	getDaysInPeriod
+} from '../../util/DateUtil'
 
 const mapStateToProps = (state, ownProps) => {
 
-	const lastDateWithExpense = DateUtil.getLastDate(state.expenses),
-		daysTotal = DateUtil.getDaysInPeriod(state.period),
-        daysDone = DateUtil.getDaysInPeriod({ 
+	const lastDateWithExpense = getLastDate(state.expenses),
+		daysTotal = getDaysInPeriod(state.period),
+        daysDone = getDaysInPeriod({ 
             begin: state.period.begin, end: lastDateWithExpense,  
         }),
-		daysRest = DateUtil.getDaysInPeriod({ 
+		daysRest = getDaysInPeriod({ 
             begin: lastDateWithExpense, end: state.period.end,  
         })
 

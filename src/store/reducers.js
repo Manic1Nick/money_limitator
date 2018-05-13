@@ -1,9 +1,9 @@
 import C from '../constants'
 import { combineReducers } from 'redux'
 
-import DateUtil from '../util/DateUtil'
-import CalcUtil from '../util/CalcUtil'
-import LimitsUtil from '../util/LimitsUtil'
+import { getLastDate } from '../util/DateUtil'
+import { calcSumm, formatListSumms } from '../util/CalcUtil'
+import { calcLimitBase, calcLimitCorrected, calcLimitFact } from '../util/LimitsUtil'
 
 export const period = (state={}, action) => {
 	return state
@@ -11,14 +11,14 @@ export const period = (state={}, action) => {
 
 export const incomes = (state={}, action) => {
 
+	let newState = Object.assign({}, state)
+
 	switch(action.type) {
 		case C.ADD_INCOME:
-			let data = {}
-			data[action.payload.date] = action.payload.summ
-			return Object.assign({}, state, data)
+			newState[action.payload.date] = action.payload.summ
+			return newState
 
 		case C.DELETE_INCOME:
-			let newState = Object.assign({}, state)
 			delete newState[action.payload.date]
 			return newState
 
@@ -33,28 +33,18 @@ export const expenses = (state={}, action) => {
 
 	switch(action.type) {
 		case C.ADD_EXPENSE:
-			let data = {}
-			data[action.payload.date] = action.payload.summ
-			return Object.assign({}, state, data)
+			newState[action.payload.date] = action.payload.summ
+			return newState
 
 		case C.DELETE_EXPENSE:
 			delete newState[action.payload.date]
 			return newState
 
 		case C.FILL_GAPS:
-			let expenses = Object.keys(state)
-
-			if (expenses.length > 0) {
-				newState = DateUtil.sortObjectByKeysDates(state)
-
-				let firstDate = action.payload.period.begin,
-        			lastDate = DateUtil.getLastDate(newState),
-		        	arrayDates = DateUtil.createArrayDates(firstDate, lastDate)
-		
-        		arrayDates.forEach(date => {
-        			if (!state[date]) newState[date] = 0
-        		})				
+			if (Object.keys(newState).length > 0) {
+				newState = formatListSumms(newState)
 			}
+
 			return newState
 
 		default:
@@ -64,14 +54,14 @@ export const expenses = (state={}, action) => {
 
 export const notIncluded = (state={}, action) => {
 
+	let newState = Object.assign({}, state)
+
 	switch(action.type) {
 		case C.ADD_NOT_INCLUDED:
-			let data = {}
-			data[action.payload.date] = action.payload.summ
-			return Object.assign({}, state, data)
+			newState[action.payload.date] = action.payload.summ
+			return newState
 
 		case C.DELETE_NOT_INCLUDED:
-			let newState = Object.assign({}, state)
 			delete newState[action.payload.date]
 			return newState
 
@@ -86,9 +76,9 @@ export const summs = (state={}, action) => {
 
 	switch(action.type) {
 		case C.UPDATE_SUMMS:
-			newState.incomes = CalcUtil.calcSumm(action.payload.incomes)
-			newState.expenses = CalcUtil.calcSumm(action.payload.expenses)
-			newState.notIncluded = CalcUtil.calcSumm(action.payload.notIncluded)
+			newState.summIncomes = calcSumm(action.payload.incomes)
+			newState.summExpenses = calcSumm(action.payload.expenses)
+			newState.summNotIncluded = calcSumm(action.payload.notIncluded)
 
 		default:
 			return newState
@@ -103,11 +93,11 @@ export const limits = (state={}, action) => {
 		case C.UPDATE_LIMITS:
 			const { period, expenses, summs } = action.payload
 
-			let lastDateWithExpense = DateUtil.getLastDate(expenses)
+			let lastDateWithExpense = getLastDate(expenses)
 
-			newState.base = LimitsUtil.calcLimitBase(period, summs)
-			newState.corrected = LimitsUtil.calcLimitCorrected(period, lastDateWithExpense, summs)
-			newState.fact = LimitsUtil.calcLimitFact(period, lastDateWithExpense, summs)
+			newState.base = calcLimitBase(period, summs)
+			newState.corrected = calcLimitCorrected(period, lastDateWithExpense, summs)
+			newState.fact = calcLimitFact(period, lastDateWithExpense, summs)
 
 		default:
 			return newState

@@ -5,7 +5,7 @@ export const activateApp = () => {
         const state = getState()
 
         if (Object.keys(state.expenses).length > 0 
-            && state.summs.expenses === 0) {
+            && state.summs.summExpenses === 0) {
                 
             dispatch(updateSumms())
             dispatch(updateLimits())            

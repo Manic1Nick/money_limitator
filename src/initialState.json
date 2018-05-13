@@ -30,9 +30,9 @@
 		"2018-01-20": 0
 	},
 	"summs": {
-		"incomes": 0,
-		"expenses": 0,
-		"notIncluded": 0
+		"summIncomes": 0,
+		"summExpenses": 0,
+		"summNotIncluded": 0
 	},
 	"limits": {
 		"base": 0,

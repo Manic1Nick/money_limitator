@@ -1,37 +1,42 @@
-import CalcUtil from './CalcUtil'
-import DateUtil from './DateUtil'
+import {
+    createChartArrayDates
+} from './DateUtil'
 
-export default class ChartUtil {
+export function createDataChart(obj) {
 
-    static createDataChart({ period={}, expenses={}, limits={}, summs={} }) {
+    const {
+        period: { begin, end },
+        expenses,
+        limits: { base, corrected, fact },
+        summs: { summIncomes, summExpenses, summNotIncluded }
+    } = obj
 
-        let dates = DateUtil.createChartArrayDates(period.begin, period.end),
-            expense, summBase, summCorrected, summFact
+    let dates = createChartArrayDates(begin, end),
+        expense, summBase, summCorrected, summFact
+    
+    summBase = summCorrected = summFact = (summIncomes - summNotIncluded)
+
+    dates.forEach(date => {
+        expense = expenses[date.name]
+
+        Object.assign(
+            date, 
+            { "base": summBase >= 0 ? summBase : 0 }, 
+            { "corrected": summCorrected >= 0 ? summCorrected : 0 }, 
+            { "fact": summFact >= 0 ? summFact : null },
+            { "expense": expense }
+        )
         
-        summBase = summCorrected = summFact = (summs.incomes - summs.notIncluded)
+        summBase -= base
+        
+        if (expense >= 0) {
+            summCorrected -= expense
+            summFact -= expense
 
-        dates.forEach(date => {
-            expense = expenses[date.name]
-
-            Object.assign(
-                date, 
-                { "base": summBase >= 0 ? summBase : 0 }, 
-                { "corrected": summCorrected >= 0 ? summCorrected : 0 }, 
-                { "fact": summFact >= 0 ? summFact : null },
-                { "expense": expense }
-            )
-            
-            summBase -= limits.base
-            
-            if (expense >= 0) {
-                summCorrected -= expense
-                summFact -= expense
-
-            } else {
-                summCorrected -= limits.corrected
-                summFact -= limits.fact
-            }
-        })
-        return dates
-    }
+        } else {
+            summCorrected -= corrected
+            summFact -= fact
+        }
+    })
+    return dates
 }

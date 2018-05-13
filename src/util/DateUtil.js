@@ -1,77 +1,95 @@
-export default class DateUtil {
+export function createChartArrayDates(dateBegin, dateEnd) {
+    let currDate = new Date(dateBegin),
+        endDate = new Date(dateEnd),
+        days = []
 
-    static createChartArrayDates(dateBegin, dateEnd) {
-        let currDate = new Date(dateBegin),
-            endDate = new Date(dateEnd),
-            days = []
-
-        while(currDate <= endDate) {
-            days.push({ "name": DateUtil.formatDate(currDate) })
-            currDate.setDate(currDate.getDate() + 1)
-        }
-        return days
+    while(currDate <= endDate) {
+        days.push({ "name": formatDate(currDate) })
+        currDate.setDate(currDate.getDate() + 1)
     }
+    return days
+}
 
-    static createArrayDates(dateBegin, dateEnd) {
-        let currDate = new Date(dateBegin),
-            endDate = new Date(dateEnd),
-            days = []
+export function createArrayDates(dateBegin, dateEnd) {
+    let currDate = new Date(dateBegin),
+        endDate = new Date(dateEnd),
+        days = []
 
-        while(currDate <= endDate) {
-            days.push(DateUtil.formatDate(currDate))
-            currDate.setDate(currDate.getDate() + 1)
-        }
-        return days
+    while(currDate <= endDate) {
+        days.push(formatDate(currDate))
+        currDate.setDate(currDate.getDate() + 1)
     }
+    return days
+}
 
-    static formatDate(date) {
-        let d = new Date(date),
-            month = '' + (d.getMonth() + 1),
-            day = '' + d.getDate(),
-            year = d.getFullYear();
+export function formatDate(date) {
+    let d = new Date(date),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
+
+    if (month.length < 2) month = '0' + month;
+    if (day.length < 2) day = '0' + day;
+
+    return [year, month, day].join('-');
+}
+
+export function getLastDate(obj) {
+    if (!obj) return -1
+
+    let dates = sortDates(Object.keys(obj))
+
+    return dates[dates.length - 1]
+}
+
+export function getLastDateWithSumm(expenses) {
+    if (!expenses) return -1
     
-        if (month.length < 2) month = '0' + month;
-        if (day.length < 2) day = '0' + day;
+    let dates = sortDates(Object.keys(expenses)),
+        i = dates.length - 1,
+        lastDate = dates[i]
     
-        return [year, month, day].join('-');
+    while (i >= 0 && expenses[lastDate] === 0) {
+        lastDate = dates[--i]
     }
+    return lastDate
+}
 
-    static getLastDate(obj) {
-        if (!obj) return -1
+export function getNextFreeDate(obj) {
+    let lastDateString = getLastDateWithSumm(obj),
+        date = shiftDate(lastDateString, 1)
+        
+    return date
+}
 
-        let dates = Object.keys(obj)
-        dates.sort((a, b) => {
-            return new Date(a) - new Date(b)
+export function getDaysInPeriod(period) {
+    if (!period) return -1
+
+    return (new Date(period.end) - new Date(period.begin))/(1000*60*60*24)
+}
+
+export function sortObjectByDates(obj) {
+    let sortedObj = {}
+
+    let dates = sortDates(Object.keys(obj))
+        .forEach(date => { 
+            sortedObj[date] = obj[date] 
         })
 
-        return dates[dates.length - 1]
-    }
+    return sortedObj
+}
 
-    static getDaysInPeriod(period) {
-        if (!period) return -1
+export function shiftDate(dateString, shift) {
 
-        return (new Date(period.end) - new Date(period.begin))/(1000*60*60*24)
-    }
+    let date = new Date(dateString)
+    date.setDate(date.getDate() + shift)
+    return date
+}
 
-    static sortObjectByKeysDates(obj) {
-        let sortedObj = {}
+export function sortDates(dates) {
+    dates.sort((a, b) => {
+        return new Date(a) - new Date(b)
+    })
 
-        let dates = Object.keys(obj)
-            .sort((a, b) => { 
-                return new Date(a) - new Date(b)
-            })
-            .forEach(date => { 
-                sortedObj[date] = obj[date] 
-            })
-
-        return sortedObj
-    }
-
-    static shiftDate(dateString, shift) {
-
-        let dateMs = new Date(dateString).getTime()
-        dateMs += (shift * (1000*60*60*24))
-
-        return new Date(dateMs)
-    }
+    return dates
 }

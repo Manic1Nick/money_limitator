@@ -1,7 +1,7 @@
 import { Component } from 'react'
 
-import DateUtil from '../../util/DateUtil'
-import CalcUtil from '../../util/CalcUtil'
+import { deleteZeroDates } from '../../util/CalcUtil'
+import { formatDate } from '../../util/DateUtil'
 
 import Drawer from 'material-ui/Drawer'
 import FlatButton from 'material-ui/FlatButton'
@@ -145,7 +145,7 @@ export default class DrawerListSumms extends Component {
 
         const showingListSumms = this.state.showEmptyDates 
             ? listSumms 
-            : CalcUtil.deleteZeroDates(listSumms)
+            : deleteZeroDates(listSumms)
 
         const styles = {
             block: {
@@ -204,7 +204,7 @@ export default class DrawerListSumms extends Component {
 
     _createDataFromState() {
         let data = {}
-        data.date = DateUtil.formatDate(this.state.editingDate)
+        data.date = formatDate(this.state.editingDate)
         data.summ = this.fieldSumm.value ? parseInt(this.fieldSumm.value) : 0
         data.isExpense = this.props.isExpense
 

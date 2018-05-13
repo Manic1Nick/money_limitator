@@ -1,6 +1,10 @@
 import { Component } from 'react'
 
-import DateUtil from '../../util/DateUtil'
+import { 
+    getNextFreeDate, 
+    formatDate, 
+    shiftDate 
+} from '../../util/DateUtil'
 
 import Dialog from 'material-ui/Dialog'
 import FlatButton from 'material-ui/FlatButton'
@@ -16,7 +20,7 @@ export default class DialogInputSumm extends Component {
 		super()
 		this.state = {
 			isExpense: props.isExpense,
-			date: new Date(),
+			date: new Date(getNextFreeDate(props.listSumms)),
 			summ: '',
 			notIncluded: false
 		}
@@ -25,6 +29,13 @@ export default class DialogInputSumm extends Component {
     componentWillUpdate = (nextProps, nextState) => {
         if (this.refs.inputSumm) this.refs.inputSumm.focus()
     }
+
+    componentDidUpdate(prevProps) {
+		if (prevProps.listSumms !== this.props.listSumms) {
+            let date = new Date(getNextFreeDate(this.props.listSumms))
+			this.setState({ date })
+        }
+	}
 
 	updateCheck = () => {
         this.setState((oldState) => {
@@ -35,8 +46,8 @@ export default class DialogInputSumm extends Component {
     }
 
     onEditDate = (e, date) => {
-        let summ = this.props.listSumms[DateUtil.formatDate(date)]
-        summ = summ >= 0 ? summ : ''
+        let summ = this.props.listSumms[formatDate(date)]
+        summ = summ >= 0 ? summ : this.state.summ
 
     	this.setState({ date, summ })
     }
@@ -49,8 +60,8 @@ export default class DialogInputSumm extends Component {
         const { date, summ } = this.state
 
         let data = this.state
-        data.date = DateUtil.formatDate(date)
-        data.summ = summ ? parseInt(summ) : 0
+        data.date = formatDate(date)
+        data.summ = summ ? parseInt(summ) : ''
         
         this.props.addSumm(data)
     }
@@ -66,7 +77,7 @@ export default class DialogInputSumm extends Component {
     }
 
     shiftDate = (shift) => {
-        const date = DateUtil.shiftDate(this.state.date, shift)
+        const date = shiftDate(this.state.date, shift)
 
         this.onEditDate(null, date)
     }
@@ -78,9 +89,8 @@ export default class DialogInputSumm extends Component {
 
     clearState = () => {
         this.setState({
-            date: new Date(),
-            summ: '',
-            notIncluded: false
+            date: new Date(getNextFreeDate(this.props.listSumms)),
+            summ: ''
         })
     }
 
@@ -89,12 +99,8 @@ export default class DialogInputSumm extends Component {
 		const { open, isExpense } = this.props
 
 		const styles = {
-		    block: {
-		        maxWidth: 250,
-		    },
-		    checkbox: {
-		        marginBottom: 16,
-		    },
+		    block: { maxWidth: 250 },
+		    checkbox: { marginBottom: 16 },
 		}
 
 		const actions = [
@@ -143,7 +149,7 @@ export default class DialogInputSumm extends Component {
                 refs='inputSumm'
     		/>
 
-    	const notIncluded =
+    	const checkboxNotIncluded =
     		(isExpense) ?
 
     			<div style={styles.block}>
@@ -170,8 +176,8 @@ export default class DialogInputSumm extends Component {
     	    >
     	        Date: { inputDate } <br />
     			Summ: { inputSumm } <br />
-    			{ notIncluded }
+    			{ checkboxNotIncluded }
     	    </Dialog>
     	)
-	}
+    }
 }

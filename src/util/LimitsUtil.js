@@ -1,38 +1,38 @@
-import DateUtil from './DateUtil'
+import { getDaysInPeriod } from './DateUtil'
 
-export default class LimitsUtil {
+export function calcLimitBase(period, summs) {
 
-    static calcLimitBase(period, summs) {
+    let { summIncomes, summExpenses, summNotIncluded } = summs,
+        daysTotal = getDaysInPeriod(period),
+        summNetIncomes = summIncomes - summNotIncluded,
+        
+        result = summNetIncomes / daysTotal
 
-        let daysTotal = DateUtil.getDaysInPeriod(period),
-            summNetIncomes = summs.incomes - summs.notIncluded
+    return Math.round(result)
+}
 
-        let result = summNetIncomes / daysTotal
+export function calcLimitCorrected(period, lastDateWithExpense, summs) {
 
-        return Math.round(result)
-    }
+    let { summIncomes, summExpenses, summNotIncluded } = summs,
+        daysRest = getDaysInPeriod({ 
+            begin: lastDateWithExpense, end: period.end,  
+        }) - 1,
+        summRestMoney = summIncomes - summNotIncluded - summExpenses,
+        
+        result = summRestMoney / daysRest
 
-    static calcLimitCorrected(period, lastDateWithExpense, summs) {
+    return Math.round(result)
+}
 
-        let daysRest = DateUtil.getDaysInPeriod({ 
-                begin: lastDateWithExpense, end: period.end,  
-            }),
-            summRestMoney = summs.incomes - summs.notIncluded - summs.expenses
+export function calcLimitFact(period, lastDateWithExpense, summs) {
 
-        let result = summRestMoney / --daysRest
+    let { summIncomes, summExpenses, summNotIncluded } = summs,
+        daysDone = getDaysInPeriod({ 
+            begin: period.begin, end: lastDateWithExpense,  
+        }) + 1,
+        summAllExpenses = summNotIncluded + summExpenses,
+        
+        result = summAllExpenses / daysDone
 
-        return Math.round(result)
-    }
-
-    static calcLimitFact(period, lastDateWithExpense, summs) {
-
-        let daysDone = DateUtil.getDaysInPeriod({ 
-                begin: period.begin, end: lastDateWithExpense,  
-            }),
-            summAllExpenses = summs.notIncluded + summs.expenses
-
-        let result = summAllExpenses / ++daysDone
-
-        return Math.round(result)
-    }
+    return Math.round(result)
 }
