@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "f3cce53c5c7987992e41"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "243d2bb59e34855bf4b5"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -5342,7 +5342,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Arimo);", ""]);
 
 // module
-exports.push([module.i, "body {\n  margin: 0;\n  padding: 0;\n  font-family: sans-serif;\n  background-color: #F8F8FF; }\n\n.App {\n  background-color: #F8F8FF;\n  max-width: 800px;\n  margin: auto;\n  height: 100%;\n  padding: 16px;\n  box-sizing: border-box; }\n  .App .HeadBlock {\n    display: flex;\n    justify-content: space-between;\n    width: 100%;\n    height: 100%; }\n    .App .HeadBlock .HeadControl {\n      display: flex;\n      flex-direction: column;\n      width: 66%; }\n      .App .HeadBlock .HeadControl .HeadPeriod {\n        display: flex;\n        justify-content: space-between;\n        align-items: center;\n        width: 100%;\n        height: 30%; }\n      .App .HeadBlock .HeadControl .HeadResult {\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        width: 100%;\n        height: 70%;\n        font-size: 36px; }\n    .App .HeadBlock .HeadMoney {\n      display: flex;\n      flex-direction: column;\n      width: 33%;\n      height: 100%; }\n      .App .HeadBlock .HeadMoney .HeadMoney__action {\n        display: flex;\n        width: 100%; }\n        .App .HeadBlock .HeadMoney .HeadMoney__action .HeadMoney__button {\n          width: 80%; }\n        .App .HeadBlock .HeadMoney .HeadMoney__action .HeadMoney__icon {\n          margin: auto;\n          width: 20%;\n          height: 100%;\n          cursor: pointer; }\n  .App .LimitsBlock {\n    padding: 16px;\n    display: flex;\n    justify-content: space-between; }\n    .App .LimitsBlock .limits__title {\n      color: #A9A9A9;\n      display: flex;\n      align-items: center;\n      justify-content: center; }\n  .App .Chart {\n    min-height: 400px;\n    padding: 16px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    height: 100%; }\n\ninput {\n  font-size: 16px;\n  width: 30%; }\n  input:focus {\n    outline: 0; }\n\n.Drawer .Drawer__head {\n  display: flex;\n  justify-content: space-between; }\n  .Drawer .Drawer__head .Drawer__title {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 50%; }\n  .Drawer .Drawer__head .Drawer__buttons {\n    display: flex;\n    justify-content: flex-end;\n    width: 50%; }\n\n.Drawer .ListItem .ListItem__input {\n  display: flex;\n  align-items: center;\n  justify-content: space-between; }\n  .Drawer .ListItem .ListItem__input .ListItem__data {\n    width: 60%; }\n  .Drawer .ListItem .ListItem__input .ListItem__actions {\n    display: flex;\n    justify-content: space-around;\n    width: 40%; }\n\n.Drawer .Drawer__foot {\n  display: flex;\n  justify-content: center;\n  width: 100%; }\n\n.DialogInputSumm .InputSumm__date {\n  display: flex;\n  justify-content: space-between; }\n  .DialogInputSumm .InputSumm__date .InputSumm__icon {\n    margin: auto;\n    cursor: pointer; }\n\ndiv.show-errors {\n  width: 100%;\n  font-size: 1.5em; }\n  div.show-errors div {\n    position: absolute;\n    width: 100%;\n    text-align: center;\n    bottom: 0;\n    color: red;\n    font-family: verdana, sans-serif;\n    display: flex;\n    justify-content: space-between;\n    align-items: center; }\n    div.show-errors div p {\n      margin-left: 1em; }\n    div.show-errors div svg {\n      font-size: 2em; }\n", ""]);
+exports.push([module.i, "body {\n  margin: 0;\n  padding: 0;\n  font-family: sans-serif;\n  background-color: #F8F8FF; }\n\n.App {\n  max-width: 800px;\n  margin: auto;\n  height: 100%;\n  padding: 16px;\n  box-sizing: border-box; }\n  .App .HeadBlock {\n    display: flex;\n    justify-content: space-between;\n    width: 100%;\n    height: 100%; }\n    .App .HeadBlock .HeadControl {\n      display: flex;\n      flex-direction: column;\n      width: 66%; }\n      .App .HeadBlock .HeadControl .HeadPeriod {\n        display: flex;\n        justify-content: space-between;\n        align-items: center;\n        width: 100%;\n        height: 30%; }\n      .App .HeadBlock .HeadControl .HeadResult {\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        width: 100%;\n        height: 70%;\n        font-size: 36px; }\n    .App .HeadBlock .HeadMoney {\n      display: flex;\n      flex-direction: column;\n      width: 33%;\n      height: 100%; }\n      .App .HeadBlock .HeadMoney .HeadMoney__action {\n        display: flex;\n        width: 100%; }\n        .App .HeadBlock .HeadMoney .HeadMoney__action .HeadMoney__button {\n          width: 80%; }\n        .App .HeadBlock .HeadMoney .HeadMoney__action .HeadMoney__icon {\n          margin: auto;\n          width: 20%;\n          height: 100%;\n          cursor: pointer; }\n  .App .LimitsBlock {\n    padding: 16px;\n    display: flex;\n    justify-content: space-between; }\n    .App .LimitsBlock .limits__title {\n      color: #A9A9A9;\n      display: flex;\n      align-items: center;\n      justify-content: center; }\n  .App .Chart {\n    min-height: 400px;\n    padding: 16px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    height: 100%; }\n\ninput {\n  font-size: 16px;\n  width: 30%; }\n  input:focus {\n    outline: 0; }\n\n.Drawer .Drawer__head {\n  display: flex;\n  justify-content: space-between; }\n  .Drawer .Drawer__head .Drawer__title {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 50%; }\n  .Drawer .Drawer__head .Drawer__buttons {\n    display: flex;\n    justify-content: flex-end;\n    width: 50%; }\n\n.Drawer .ListItem .ListItem__input {\n  display: flex;\n  align-items: center;\n  justify-content: space-between; }\n  .Drawer .ListItem .ListItem__input .ListItem__data {\n    width: 60%; }\n  .Drawer .ListItem .ListItem__input .ListItem__actions {\n    display: flex;\n    justify-content: space-around;\n    width: 40%; }\n\n.Drawer .Drawer__foot {\n  display: flex;\n  justify-content: center;\n  width: 100%; }\n\n.DialogInputSumm .InputSumm__date {\n  display: flex;\n  justify-content: space-between; }\n  .DialogInputSumm .InputSumm__date .InputSumm__icon {\n    margin: auto;\n    cursor: pointer; }\n\ndiv.show-errors {\n  width: 100%;\n  font-size: 1.5em; }\n  div.show-errors div {\n    position: absolute;\n    width: 100%;\n    text-align: center;\n    bottom: 0;\n    color: red;\n    font-family: verdana, sans-serif;\n    display: flex;\n    justify-content: space-between;\n    align-items: center; }\n    div.show-errors div p {\n      margin-left: 1em; }\n    div.show-errors div svg {\n      font-size: 2em; }\n", ""]);
 
 // exports
 
@@ -107120,7 +107120,7 @@ var activateApp = function activateApp() {
     return function (dispatch, getState) {
         var state = getState();
 
-        if (Object.keys(state.expenses).length > 0 && state.summs.expenses === 0) {
+        if (Object.keys(state.expenses).length > 0 && state.summs.summExpenses === 0) {
 
             dispatch(updateSumms());
             dispatch(updateLimits());
@@ -107306,7 +107306,7 @@ if(true) {
 var mapStateToProps = function mapStateToProps(state, ownProps) {
 
     return {
-        data: __WEBPACK_IMPORTED_MODULE_3__util_ChartUtil__["a" /* default */].createDataChart(state)
+        data: Object(__WEBPACK_IMPORTED_MODULE_3__util_ChartUtil__["a" /* createDataChart */])(state)
     };
 };
 
@@ -107369,12 +107369,12 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 
 var mapStateToProps = function mapStateToProps(state, ownProps) {
 
-    var lastDateWithExpense = __WEBPACK_IMPORTED_MODULE_3__util_DateUtil__["a" /* default */].getLastDate(state.expenses),
-        daysTotal = __WEBPACK_IMPORTED_MODULE_3__util_DateUtil__["a" /* default */].getDaysInPeriod(state.period),
-        daysDone = __WEBPACK_IMPORTED_MODULE_3__util_DateUtil__["a" /* default */].getDaysInPeriod({
+    var lastDateWithExpense = Object(__WEBPACK_IMPORTED_MODULE_3__util_DateUtil__["e" /* getLastDate */])(state.expenses),
+        daysTotal = Object(__WEBPACK_IMPORTED_MODULE_3__util_DateUtil__["d" /* getDaysInPeriod */])(state.period),
+        daysDone = Object(__WEBPACK_IMPORTED_MODULE_3__util_DateUtil__["d" /* getDaysInPeriod */])({
         begin: state.period.begin, end: lastDateWithExpense
     }),
-        daysRest = __WEBPACK_IMPORTED_MODULE_3__util_DateUtil__["a" /* default */].getDaysInPeriod({
+        daysRest = Object(__WEBPACK_IMPORTED_MODULE_3__util_DateUtil__["d" /* getDaysInPeriod */])({
         begin: lastDateWithExpense, end: state.period.end
     });
 
@@ -107599,8 +107599,8 @@ var DialogInputSumm = _wrapComponent('DialogInputSumm')(function (_Component) {
         };
 
         _this.onEditDate = function (e, date) {
-            var summ = _this.props.listSumms[__WEBPACK_IMPORTED_MODULE_4__util_DateUtil__["a" /* default */].formatDate(date)];
-            summ = summ >= 0 ? summ : '';
+            var summ = _this.props.listSumms[Object(__WEBPACK_IMPORTED_MODULE_4__util_DateUtil__["c" /* formatDate */])(date)];
+            summ = summ >= 0 ? summ : _this.state.summ;
 
             _this.setState({ date: date, summ: summ });
         };
@@ -107616,8 +107616,8 @@ var DialogInputSumm = _wrapComponent('DialogInputSumm')(function (_Component) {
 
 
             var data = _this.state;
-            data.date = __WEBPACK_IMPORTED_MODULE_4__util_DateUtil__["a" /* default */].formatDate(date);
-            data.summ = summ ? parseInt(summ) : 0;
+            data.date = Object(__WEBPACK_IMPORTED_MODULE_4__util_DateUtil__["c" /* formatDate */])(date);
+            data.summ = summ ? parseInt(summ) : '';
 
             _this.props.addSumm(data);
         };
@@ -107633,7 +107633,7 @@ var DialogInputSumm = _wrapComponent('DialogInputSumm')(function (_Component) {
         };
 
         _this.shiftDate = function (shift) {
-            var date = __WEBPACK_IMPORTED_MODULE_4__util_DateUtil__["a" /* default */].shiftDate(_this.state.date, shift);
+            var date = Object(__WEBPACK_IMPORTED_MODULE_4__util_DateUtil__["h" /* shiftDate */])(_this.state.date, shift);
 
             _this.onEditDate(null, date);
         };
@@ -107645,15 +107645,14 @@ var DialogInputSumm = _wrapComponent('DialogInputSumm')(function (_Component) {
 
         _this.clearState = function () {
             _this.setState({
-                date: new Date(),
-                summ: '',
-                notIncluded: false
+                date: new Date(Object(__WEBPACK_IMPORTED_MODULE_4__util_DateUtil__["g" /* getNextFreeDate */])(_this.props.listSumms)),
+                summ: ''
             });
         };
 
         _this.state = {
             isExpense: props.isExpense,
-            date: new Date(),
+            date: new Date(Object(__WEBPACK_IMPORTED_MODULE_4__util_DateUtil__["g" /* getNextFreeDate */])(props.listSumms)),
             summ: '',
             notIncluded: false
         };
@@ -107661,6 +107660,14 @@ var DialogInputSumm = _wrapComponent('DialogInputSumm')(function (_Component) {
     }
 
     _createClass(DialogInputSumm, [{
+        key: 'componentDidUpdate',
+        value: function componentDidUpdate(prevProps) {
+            if (prevProps.listSumms !== this.props.listSumms) {
+                var date = new Date(Object(__WEBPACK_IMPORTED_MODULE_4__util_DateUtil__["g" /* getNextFreeDate */])(this.props.listSumms));
+                this.setState({ date: date });
+            }
+        }
+    }, {
         key: 'render',
         value: function render() {
             var _this2 = this;
@@ -107671,12 +107678,8 @@ var DialogInputSumm = _wrapComponent('DialogInputSumm')(function (_Component) {
 
 
             var styles = {
-                block: {
-                    maxWidth: 250
-                },
-                checkbox: {
-                    marginBottom: 16
-                }
+                block: { maxWidth: 250 },
+                checkbox: { marginBottom: 16 }
             };
 
             var actions = [React.createElement(__WEBPACK_IMPORTED_MODULE_6_material_ui_FlatButton___default.a, {
@@ -107729,7 +107732,7 @@ var DialogInputSumm = _wrapComponent('DialogInputSumm')(function (_Component) {
                 refs: 'inputSumm'
             });
 
-            var notIncluded = isExpense ? React.createElement(
+            var checkboxNotIncluded = isExpense ? React.createElement(
                 'div',
                 { style: styles.block },
                 React.createElement(__WEBPACK_IMPORTED_MODULE_8_material_ui_Checkbox___default.a, {
@@ -107760,7 +107763,7 @@ var DialogInputSumm = _wrapComponent('DialogInputSumm')(function (_Component) {
                 inputSumm,
                 ' ',
                 React.createElement('br', null),
-                notIncluded
+                checkboxNotIncluded
             );
         }
     }]);
@@ -107785,8 +107788,8 @@ var DialogInputSumm = _wrapComponent('DialogInputSumm')(function (_Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js__ = __webpack_require__("./node_modules/react-transform-hmr/lib/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__util_DateUtil__ = __webpack_require__("./src/util/DateUtil.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__util_CalcUtil__ = __webpack_require__("./src/util/CalcUtil.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__util_CalcUtil__ = __webpack_require__("./src/util/CalcUtil.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__util_DateUtil__ = __webpack_require__("./src/util/DateUtil.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_material_ui_Drawer__ = __webpack_require__("./node_modules/material-ui/Drawer/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_material_ui_Drawer___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_material_ui_Drawer__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_material_ui_FlatButton__ = __webpack_require__("./node_modules/material-ui/FlatButton/index.js");
@@ -108035,7 +108038,7 @@ var DrawerListSumms = _wrapComponent('DrawerListSumms')(function (_Component) {
                 listSumms = _props$listSumms === undefined ? {} : _props$listSumms;
 
 
-            var showingListSumms = this.state.showEmptyDates ? listSumms : __WEBPACK_IMPORTED_MODULE_5__util_CalcUtil__["a" /* default */].deleteZeroDates(listSumms);
+            var showingListSumms = this.state.showEmptyDates ? listSumms : Object(__WEBPACK_IMPORTED_MODULE_4__util_CalcUtil__["d" /* deleteZeroDates */])(listSumms);
 
             var styles = {
                 block: {
@@ -108107,7 +108110,7 @@ var DrawerListSumms = _wrapComponent('DrawerListSumms')(function (_Component) {
         key: '_createDataFromState',
         value: function _createDataFromState() {
             var data = {};
-            data.date = __WEBPACK_IMPORTED_MODULE_4__util_DateUtil__["a" /* default */].formatDate(this.state.editingDate);
+            data.date = Object(__WEBPACK_IMPORTED_MODULE_5__util_DateUtil__["c" /* formatDate */])(this.state.editingDate);
             data.summ = this.fieldSumm.value ? parseInt(this.fieldSumm.value) : 0;
             data.isExpense = this.props.isExpense;
 
@@ -108240,7 +108243,9 @@ var HeadMoney = function HeadMoney(props) {
 	    _props$notIncluded = props.notIncluded,
 	    notIncluded = _props$notIncluded === undefined ? {} : _props$notIncluded,
 	    _props$summs = props.summs,
-	    summs = _props$summs === undefined ? {} : _props$summs,
+	    summIncomes = _props$summs.summIncomes,
+	    summExpenses = _props$summs.summExpenses,
+	    summNotIncluded = _props$summs.summNotIncluded,
 	    _props$addSumm = props.addSumm,
 	    addSumm = _props$addSumm === undefined ? function (f) {
 		return f;
@@ -108251,13 +108256,13 @@ var HeadMoney = function HeadMoney(props) {
 	} : _props$deleteSumm;
 
 
-	var daysRest = __WEBPACK_IMPORTED_MODULE_3__util_DateUtil__["a" /* default */].getDaysInPeriod({
-		begin: __WEBPACK_IMPORTED_MODULE_3__util_DateUtil__["a" /* default */].getLastDate(expenses),
+	var daysRest = Object(__WEBPACK_IMPORTED_MODULE_3__util_DateUtil__["d" /* getDaysInPeriod */])({
+		begin: Object(__WEBPACK_IMPORTED_MODULE_3__util_DateUtil__["f" /* getLastDateWithSumm */])(expenses),
 		end: period.end
 	}),
-	    labelIncomes = 'incomes: ' + (summs.incomes - summs.notIncluded),
-	    labelExpenses = 'expenses: ' + summs.expenses,
-	    labelSumm = 'balance: ' + (summs.incomes - summs.notIncluded - summs.expenses) + ' / days: ' + --daysRest;
+	    labelIncomes = 'incomes: ' + (summIncomes - summNotIncluded),
+	    labelExpenses = 'expenses: ' + summExpenses,
+	    labelSumm = 'balance: ' + (summIncomes - summNotIncluded - summExpenses) + ' / days: ' + daysRest;
 
 	return React.createElement(
 		__WEBPACK_IMPORTED_MODULE_4_material_ui_Paper___default.a,
@@ -108265,7 +108270,7 @@ var HeadMoney = function HeadMoney(props) {
 		React.createElement(__WEBPACK_IMPORTED_MODULE_1__HeadMoneyAction__["a" /* default */], {
 			listName: 'Incomes',
 			label: labelIncomes,
-			listSumms: __WEBPACK_IMPORTED_MODULE_2__util_CalcUtil__["a" /* default */].concatIncomesAndExpenses(incomes, notIncluded),
+			listSumms: Object(__WEBPACK_IMPORTED_MODULE_2__util_CalcUtil__["c" /* concatIncomesAndExpenses */])(incomes, notIncluded),
 			addSumm: addSumm,
 			deleteSumm: deleteSumm
 		}),
@@ -108575,7 +108580,8 @@ var HeadPeriod = _wrapComponent('HeadPeriod')(function (_Component) {
 		value: function render() {
 			var _props$period = this.props.period,
 			    begin = _props$period.begin,
-			    end = _props$period.end;
+			    end = _props$period.end,
+			    message = "It's demo version. Please pay 10 dollars if you want use full version of app. (It's a joke ;)";
 
 
 			return React.createElement(
@@ -108584,11 +108590,11 @@ var HeadPeriod = _wrapComponent('HeadPeriod')(function (_Component) {
 				React.createElement(BtnPeriod, {
 					label: 'Previous',
 					onClick: function onClick() {
-						return console.log('go previuos period');
+						return alert(message);
 					}
 				}),
 				React.createElement(
-					'span',
+					'div',
 					null,
 					'from ',
 					begin,
@@ -108598,7 +108604,7 @@ var HeadPeriod = _wrapComponent('HeadPeriod')(function (_Component) {
 				React.createElement(BtnPeriod, {
 					label: 'Next',
 					onClick: function onClick() {
-						return console.log('go next period');
+						return alert(message);
 					}
 				})
 			);
@@ -108680,37 +108686,55 @@ function _wrapComponent(id) {
 var HeadResult = _wrapComponent('HeadResult')(function (_Component) {
 	_inherits(HeadResult, _Component);
 
-	function HeadResult() {
+	function HeadResult(props) {
 		_classCallCheck(this, HeadResult);
 
-		return _possibleConstructorReturn(this, (HeadResult.__proto__ || Object.getPrototypeOf(HeadResult)).apply(this, arguments));
+		var _this = _possibleConstructorReturn(this, (HeadResult.__proto__ || Object.getPrototypeOf(HeadResult)).call(this, props));
+
+		_this.state = {
+			result: Object(__WEBPACK_IMPORTED_MODULE_4__util_CalcUtil__["a" /* calcExpectedResult */])(props)
+		};
+		return _this;
 	}
 
 	_createClass(HeadResult, [{
+		key: 'componentDidUpdate',
+		value: function componentDidUpdate(prevProps) {
+			if (prevProps.summs !== this.props.summs) {
+				this.setState({ result: Object(__WEBPACK_IMPORTED_MODULE_4__util_CalcUtil__["a" /* calcExpectedResult */])(this.props) });
+			}
+		}
+	}, {
 		key: 'render',
 		value: function render() {
+			var result = this.state.result,
+			    style = this._genResultStyle(result),
+			    text = this._genResultText(result);
 
-			var result = __WEBPACK_IMPORTED_MODULE_4__util_CalcUtil__["a" /* default */].calcExpectedResult(this.props);
-
-			var style = void 0,
-			    text = void 0;
-
-			if (result === 0) {
-				style = {};
-				text = 'Expected result is: ' + result;
-			} else if (result > 0) {
-				style = { 'color': 'green' };
-				text = 'Expected economy is: +' + result;
-			} else if (result < 0) {
-				style = { 'color': 'red' };
-				text = 'Expected shortage is: ' + result;
-			}
 
 			return React.createElement(
 				'div',
 				{ className: 'HeadResult', style: style },
 				text
 			);
+		}
+	}, {
+		key: '_genResultStyle',
+		value: function _genResultStyle(result) {
+			var style = {};
+
+			if (result > 0) style = { 'color': 'green' };else if (result < 0) style = { 'color': 'red' };
+
+			return style;
+		}
+	}, {
+		key: '_genResultText',
+		value: function _genResultText(result) {
+			var text = 'Expected result is: ' + result;
+
+			if (result > 0) text = 'Expected economy is: +' + result;else if (result < 0) text = 'Expected shortage is: ' + result;
+
+			return text;
 		}
 	}]);
 
@@ -108788,13 +108812,12 @@ function _wrapComponent(id) {
 var LimitsBlock = _wrapComponent('LimitsBlock')(function (_Component) {
 	_inherits(LimitsBlock, _Component);
 
-	function LimitsBlock(props) {
+	function LimitsBlock() {
 		_classCallCheck(this, LimitsBlock);
 
 		var _this = _possibleConstructorReturn(this, (LimitsBlock.__proto__ || Object.getPrototypeOf(LimitsBlock)).call(this));
 
 		_this.state = {
-			limits: props.limits,
 			activeLimit: ''
 		};
 		return _this;
@@ -108813,6 +108836,63 @@ var LimitsBlock = _wrapComponent('LimitsBlock')(function (_Component) {
 			this.setState({
 				activeLimit: ''
 			});
+		}
+	}, {
+		key: 'render',
+		value: function render() {
+			var _this2 = this;
+
+			var _props$limits = this.props.limits,
+			    base = _props$limits.base,
+			    corrected = _props$limits.corrected,
+			    fact = _props$limits.fact,
+			    limitLabel = {
+				'base': 'Base ' + base + ' in day',
+				'corrected': 'Corrected ' + corrected + ' in day',
+				'fact': 'Fact ' + fact + ' in day'
+			};
+
+
+			return React.createElement(
+				'div',
+				{ className: 'LimitsBlock' },
+				React.createElement(
+					'div',
+					{ className: 'limits__title' },
+					React.createElement(
+						'span',
+						null,
+						'LIMITS:'
+					)
+				),
+				React.createElement(__WEBPACK_IMPORTED_MODULE_4_material_ui_RaisedButton___default.a, {
+					className: 'limits__button',
+					label: limitLabel.base,
+					primary: true,
+					onClick: function onClick() {
+						return _this2.handleOpenDialog('base');
+					}
+				}),
+				React.createElement(__WEBPACK_IMPORTED_MODULE_4_material_ui_RaisedButton___default.a, {
+					className: 'limits__button',
+					label: limitLabel.corrected,
+					backgroundColor: '#9932CC',
+					labelColor: '#FFFFFF',
+					onClick: function onClick() {
+						return _this2.handleOpenDialog('corrected');
+					}
+				}),
+				React.createElement(__WEBPACK_IMPORTED_MODULE_4_material_ui_RaisedButton___default.a, {
+					className: 'limits__button',
+					label: limitLabel.fact,
+					backgroundColor: '#FF6347',
+					labelColor: '#FFFFFF',
+					onClick: function onClick() {
+						return _this2.handleOpenDialog('fact');
+					}
+				}),
+				this.renderDialog()
+			);
 		}
 	}, {
 		key: 'renderDialog',
@@ -108836,96 +108916,31 @@ var LimitsBlock = _wrapComponent('LimitsBlock')(function (_Component) {
 					open: activeLimit !== '',
 					onRequestClose: this.handleCloseDialog.bind(this)
 				},
-				this._generateDialogText(activeLimit)
+				this.renderDialogText(activeLimit)
 			);
 		}
 	}, {
-		key: 'render',
-		value: function render() {
-			var _this2 = this;
-
-			return React.createElement(
-				'div',
-				{ className: 'LimitsBlock' },
-				React.createElement(
-					'div',
-					{ className: 'limits__title' },
-					React.createElement(
-						'span',
-						null,
-						'LIMITS:'
-					)
-				),
-				React.createElement(__WEBPACK_IMPORTED_MODULE_4_material_ui_RaisedButton___default.a, {
-					className: 'limits__button',
-					label: this._generateLimitLable('base'),
-					primary: true,
-					onClick: function onClick() {
-						return _this2.handleOpenDialog('base');
-					}
-				}),
-				React.createElement(__WEBPACK_IMPORTED_MODULE_4_material_ui_RaisedButton___default.a, {
-					className: 'limits__button',
-					label: this._generateLimitLable('corrected'),
-					backgroundColor: '#9932CC',
-					labelColor: '#FFFFFF',
-					onClick: function onClick() {
-						return _this2.handleOpenDialog('corrected');
-					}
-				}),
-				React.createElement(__WEBPACK_IMPORTED_MODULE_4_material_ui_RaisedButton___default.a, {
-					className: 'limits__button',
-					label: this._generateLimitLable('fact'),
-					backgroundColor: '#FF6347',
-					labelColor: '#FFFFFF',
-					onClick: function onClick() {
-						return _this2.handleOpenDialog('fact');
-					}
-				}),
-				this.renderDialog()
-			);
-		}
-	}, {
-		key: '_generateLimitLable',
-		value: function _generateLimitLable(limitName) {
-			var _state$limits = this.state.limits,
-			    base = _state$limits.base,
-			    corrected = _state$limits.corrected,
-			    fact = _state$limits.fact;
-
-
-			switch (limitName) {
-				case 'base':
-					return 'Base ' + base + ' in day';
-
-				case 'corrected':
-					return 'Corrected ' + corrected + ' in day';
-
-				case 'fact':
-					return 'Fact ' + fact + ' in day';
-
-				default:
-					return '';
-			}
-		}
-	}, {
-		key: '_generateDialogText',
-		value: function _generateDialogText(limitName) {
-			var _state$limits2 = this.state.limits,
-			    base = _state$limits2.base,
-			    corrected = _state$limits2.corrected,
-			    fact = _state$limits2.fact,
-			    _props = this.props,
-			    period = _props.period,
-			    summs = _props.summs,
+		key: 'renderDialogText',
+		value: function renderDialogText(limitName) {
+			var _props = this.props,
+			    begin = _props.period.begin,
 			    daysTotal = _props.daysTotal,
 			    daysDone = _props.daysDone,
 			    daysRest = _props.daysRest,
 			    lastDateWithExpense = _props.lastDateWithExpense,
-			    summNetIncome = summs.incomes - summs.notIncluded,
-			    currentBalance = summNetIncome - summs.expenses,
-			    result = currentBalance - daysRest * fact;
+			    _props$summs = _props.summs,
+			    summIncomes = _props$summs.summIncomes,
+			    summExpenses = _props$summs.summExpenses,
+			    summNotIncluded = _props$summs.summNotIncluded,
+			    _props$limits2 = _props.limits,
+			    base = _props$limits2.base,
+			    corrected = _props$limits2.corrected,
+			    fact = _props$limits2.fact;
 
+
+			var summNetIncome = summIncomes - summNotIncluded,
+			    currentBalance = summNetIncome - summExpenses,
+			    result = currentBalance - daysRest * fact;
 
 			switch (limitName) {
 				case 'base':
@@ -108935,7 +108950,7 @@ var LimitsBlock = _wrapComponent('LimitsBlock')(function (_Component) {
 						React.createElement(
 							'p',
 							null,
-							'Your income is ',
+							'Your income is $',
 							summNetIncome,
 							' for the selected period.'
 						),
@@ -108949,7 +108964,7 @@ var LimitsBlock = _wrapComponent('LimitsBlock')(function (_Component) {
 						React.createElement(
 							'p',
 							null,
-							'You should have spent no more than ',
+							'You should have spent no more than $',
 							base,
 							' a day.'
 						),
@@ -108960,13 +108975,6 @@ var LimitsBlock = _wrapComponent('LimitsBlock')(function (_Component) {
 						)
 					);
 
-				/*`
-    	Your income is ${ summNetIncome } for the selected period.
-    	The full period includes ${ daysTotal } days.
-    	You should have spent no more than ${ base } a day.
-    	This is your base limit for a full period.
-    `*/
-
 				case 'corrected':
 					return React.createElement(
 						'div',
@@ -108974,10 +108982,10 @@ var LimitsBlock = _wrapComponent('LimitsBlock')(function (_Component) {
 						React.createElement(
 							'p',
 							null,
-							'You spent ',
-							summs.expenses,
+							'You spent $',
+							summExpenses,
 							' for the past period from ',
-							period.begin,
+							begin,
 							' to ',
 							lastDateWithExpense,
 							'.'
@@ -108985,7 +108993,7 @@ var LimitsBlock = _wrapComponent('LimitsBlock')(function (_Component) {
 						React.createElement(
 							'p',
 							null,
-							'Your current balance is ',
+							'Your current balance is $',
 							currentBalance,
 							' for remaining period ',
 							daysRest,
@@ -108994,7 +109002,7 @@ var LimitsBlock = _wrapComponent('LimitsBlock')(function (_Component) {
 						React.createElement(
 							'p',
 							null,
-							'Now you can not spend more than ',
+							'Now you can not spend more than $',
 							corrected,
 							' a day.'
 						),
@@ -109005,13 +109013,6 @@ var LimitsBlock = _wrapComponent('LimitsBlock')(function (_Component) {
 						)
 					);
 
-				/*`
-    	You spent ${ summs.expenses } for the past period from ${ period.begin } to ${ lastDateWithExpense }.
-    	Your current balance is ${ currentBalance } for remaining period ${ daysRest } days.
-    	Now you can not spend more than ${ corrected } a day.
-    	This is your corrected limit which should be followed in the remainder of the period.
-    `*/
-
 				case 'fact':
 					return React.createElement(
 						'div',
@@ -109019,10 +109020,10 @@ var LimitsBlock = _wrapComponent('LimitsBlock')(function (_Component) {
 						React.createElement(
 							'p',
 							null,
-							'You spent ',
-							summs.expenses,
+							'You spent $',
+							summExpenses,
 							' for the past period from ',
-							period.begin,
+							begin,
 							' to ',
 							lastDateWithExpense,
 							'.'
@@ -109030,37 +109031,29 @@ var LimitsBlock = _wrapComponent('LimitsBlock')(function (_Component) {
 						React.createElement(
 							'p',
 							null,
-							'It is ',
+							'It is $',
 							fact,
 							' for a day in average.'
 						),
 						React.createElement(
 							'p',
 							null,
-							'If you will spend ',
+							'If you will spend $',
 							fact,
 							' in day for remaining period ',
 							daysRest,
-							' days, expected balance wil be ',
+							' days, expected balance wil be $',
 							result,
 							' on end of period.'
 						),
 						React.createElement(
 							'p',
 							null,
-							'It is recommended to adhere to the corrected limit ',
+							'It is recommended to adhere to the corrected limit $',
 							corrected,
 							' for a day.'
 						)
 					);
-
-				/*`
-    	You spent ${ summs.expenses } for the past period from ${ period.begin } to ${ lastDateWithExpense }.
-    	It is ${ fact } for a day in average.
-    	If you will spend ${ fact } in day for remaining period ${ daysRest } days,
-    	expected balance wil be ${ result } on end of period.
-    	It is recommended to adhere to the corrected limit ${ corrected } for a day.
-    `*/
 
 				default:
 					return '';
@@ -109228,7 +109221,7 @@ Object(__WEBPACK_IMPORTED_MODULE_1_react_dom__["render"])(__WEBPACK_IMPORTED_MOD
 /***/ "./src/initialState.json":
 /***/ (function(module, exports) {
 
-module.exports = {"period":{"begin":"2018-01-20","end":"2018-02-20"},"incomes":{"2018-01-20":4500},"expenses":{"2018-01-20":390,"2018-01-21":115,"2018-01-22":276,"2018-01-23":150,"2018-01-24":100,"2018-01-25":350,"2018-01-26":0,"2018-01-27":0,"2018-01-28":180,"2018-01-29":130,"2018-01-30":220,"2018-01-31":62,"2018-02-01":110,"2018-02-02":250,"2018-02-03":0,"2018-02-04":500,"2018-02-05":222,"2018-02-06":60},"notIncluded":{"2018-01-20":0},"summs":{"incomes":0,"expenses":0,"notIncluded":0},"limits":{"base":0,"corrected":0,"fact":0},"errors":[]}
+module.exports = {"period":{"begin":"2018-01-20","end":"2018-02-20"},"incomes":{"2018-01-20":4500},"expenses":{"2018-01-20":390,"2018-01-21":115,"2018-01-22":276,"2018-01-23":150,"2018-01-24":100,"2018-01-25":350,"2018-01-26":0,"2018-01-27":0,"2018-01-28":180,"2018-01-29":130,"2018-01-30":220,"2018-01-31":62,"2018-02-01":110,"2018-02-02":250,"2018-02-03":0,"2018-02-04":500,"2018-02-05":222,"2018-02-06":60},"notIncluded":{"2018-01-20":0},"summs":{"summIncomes":0,"summExpenses":0,"summNotIncluded":0},"limits":{"base":0,"corrected":0,"fact":0},"errors":[]}
 
 /***/ }),
 
@@ -109241,10 +109234,6 @@ module.exports = {"period":{"begin":"2018-01-20","end":"2018-02-20"},"incomes":{
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_redux_thunk__ = __webpack_require__("./node_modules/redux-thunk/lib/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_redux_thunk___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_redux_thunk__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__constants__ = __webpack_require__("./src/constants.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__util_DateUtil__ = __webpack_require__("./src/util/DateUtil.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__util_CalcUtil__ = __webpack_require__("./src/util/CalcUtil.js");
-
-
 
 
 
@@ -109262,11 +109251,14 @@ var consoleMessages = function consoleMessages(store) {
 			var _store$getState = store.getState(),
 			    incomes = _store$getState.incomes,
 			    expenses = _store$getState.expenses,
-			    summs = _store$getState.summs,
 			    limits = _store$getState.limits,
-			    errors = _store$getState.errors;
+			    errors = _store$getState.errors,
+			    _store$getState$summs = _store$getState.summs,
+			    summIncomes = _store$getState$summs.summIncomes,
+			    summExpenses = _store$getState$summs.summExpenses,
+			    summNotIncluded = _store$getState$summs.summNotIncluded;
 
-			console.log('\n\n\t\tincomes: ' + Object.keys(incomes).length + '\n\t\texpenses: ' + Object.keys(expenses).length + '\n\t\tsumms: ' + summs.incomes + ' ' + summs.expenses + ' ' + summs.notIncluded + '\n\t\tlimits: ' + limits.base + ' ' + limits.corrected + ' ' + limits.fact + '\n\t\terrors: ' + errors.length + '\n\n\t');
+			console.log('\n\n\t\tincomes: ' + Object.keys(incomes).length + '\n\t\texpenses: ' + Object.keys(expenses).length + '\n\t\tsumms: ' + summIncomes + ' ' + summExpenses + ' ' + summNotIncluded + '\n\t\tlimits: ' + limits.base + ' ' + limits.corrected + ' ' + limits.fact + '\n\t\terrors: ' + errors.length + '\n\n\t');
 
 			console.groupEnd();
 
@@ -109318,14 +109310,14 @@ var incomes = function incomes() {
 	var action = arguments[1];
 
 
+	var newState = Object.assign({}, state);
+
 	switch (action.type) {
 		case __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].ADD_INCOME:
-			var data = {};
-			data[action.payload.date] = action.payload.summ;
-			return Object.assign({}, state, data);
+			newState[action.payload.date] = action.payload.summ;
+			return newState;
 
 		case __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].DELETE_INCOME:
-			var newState = Object.assign({}, state);
 			delete newState[action.payload.date];
 			return newState;
 
@@ -109343,28 +109335,18 @@ var expenses = function expenses() {
 
 	switch (action.type) {
 		case __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].ADD_EXPENSE:
-			var data = {};
-			data[action.payload.date] = action.payload.summ;
-			return Object.assign({}, state, data);
+			newState[action.payload.date] = action.payload.summ;
+			return newState;
 
 		case __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].DELETE_EXPENSE:
 			delete newState[action.payload.date];
 			return newState;
 
 		case __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].FILL_GAPS:
-			var _expenses = Object.keys(state);
-
-			if (_expenses.length > 0) {
-				newState = __WEBPACK_IMPORTED_MODULE_2__util_DateUtil__["a" /* default */].sortObjectByKeysDates(state);
-
-				var firstDate = action.payload.period.begin,
-				    lastDate = __WEBPACK_IMPORTED_MODULE_2__util_DateUtil__["a" /* default */].getLastDate(newState),
-				    arrayDates = __WEBPACK_IMPORTED_MODULE_2__util_DateUtil__["a" /* default */].createArrayDates(firstDate, lastDate);
-
-				arrayDates.forEach(function (date) {
-					if (!state[date]) newState[date] = 0;
-				});
+			if (Object.keys(newState).length > 0) {
+				newState = Object(__WEBPACK_IMPORTED_MODULE_3__util_CalcUtil__["e" /* formatListSumms */])(newState);
 			}
+
 			return newState;
 
 		default:
@@ -109377,14 +109359,14 @@ var notIncluded = function notIncluded() {
 	var action = arguments[1];
 
 
+	var newState = Object.assign({}, state);
+
 	switch (action.type) {
 		case __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].ADD_NOT_INCLUDED:
-			var data = {};
-			data[action.payload.date] = action.payload.summ;
-			return Object.assign({}, state, data);
+			newState[action.payload.date] = action.payload.summ;
+			return newState;
 
 		case __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].DELETE_NOT_INCLUDED:
-			var newState = Object.assign({}, state);
 			delete newState[action.payload.date];
 			return newState;
 
@@ -109402,9 +109384,9 @@ var summs = function summs() {
 
 	switch (action.type) {
 		case __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].UPDATE_SUMMS:
-			newState.incomes = __WEBPACK_IMPORTED_MODULE_3__util_CalcUtil__["a" /* default */].calcSumm(action.payload.incomes);
-			newState.expenses = __WEBPACK_IMPORTED_MODULE_3__util_CalcUtil__["a" /* default */].calcSumm(action.payload.expenses);
-			newState.notIncluded = __WEBPACK_IMPORTED_MODULE_3__util_CalcUtil__["a" /* default */].calcSumm(action.payload.notIncluded);
+			newState.summIncomes = Object(__WEBPACK_IMPORTED_MODULE_3__util_CalcUtil__["b" /* calcSumm */])(action.payload.incomes);
+			newState.summExpenses = Object(__WEBPACK_IMPORTED_MODULE_3__util_CalcUtil__["b" /* calcSumm */])(action.payload.expenses);
+			newState.summNotIncluded = Object(__WEBPACK_IMPORTED_MODULE_3__util_CalcUtil__["b" /* calcSumm */])(action.payload.notIncluded);
 
 		default:
 			return newState;
@@ -109422,15 +109404,15 @@ var limits = function limits() {
 		case __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].UPDATE_LIMITS:
 			var _action$payload = action.payload,
 			    _period = _action$payload.period,
-			    _expenses2 = _action$payload.expenses,
+			    _expenses = _action$payload.expenses,
 			    _summs = _action$payload.summs;
 
 
-			var lastDateWithExpense = __WEBPACK_IMPORTED_MODULE_2__util_DateUtil__["a" /* default */].getLastDate(_expenses2);
+			var lastDateWithExpense = Object(__WEBPACK_IMPORTED_MODULE_2__util_DateUtil__["e" /* getLastDate */])(_expenses);
 
-			newState.base = __WEBPACK_IMPORTED_MODULE_4__util_LimitsUtil__["a" /* default */].calcLimitBase(_period, _summs);
-			newState.corrected = __WEBPACK_IMPORTED_MODULE_4__util_LimitsUtil__["a" /* default */].calcLimitCorrected(_period, lastDateWithExpense, _summs);
-			newState.fact = __WEBPACK_IMPORTED_MODULE_4__util_LimitsUtil__["a" /* default */].calcLimitFact(_period, lastDateWithExpense, _summs);
+			newState.base = Object(__WEBPACK_IMPORTED_MODULE_4__util_LimitsUtil__["a" /* calcLimitBase */])(_period, _summs);
+			newState.corrected = Object(__WEBPACK_IMPORTED_MODULE_4__util_LimitsUtil__["b" /* calcLimitCorrected */])(_period, lastDateWithExpense, _summs);
+			newState.fact = Object(__WEBPACK_IMPORTED_MODULE_4__util_LimitsUtil__["c" /* calcLimitFact */])(_period, lastDateWithExpense, _summs);
 
 		default:
 			return newState;
@@ -109476,88 +109458,109 @@ var errors = function errors() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (immutable) */ __webpack_exports__["b"] = calcSumm;
+/* harmony export (immutable) */ __webpack_exports__["c"] = concatIncomesAndExpenses;
+/* unused harmony export concatListsSumms */
+/* harmony export (immutable) */ __webpack_exports__["e"] = formatListSumms;
+/* unused harmony export fillEmptyDates */
+/* harmony export (immutable) */ __webpack_exports__["d"] = deleteZeroDates;
+/* harmony export (immutable) */ __webpack_exports__["a"] = calcExpectedResult;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__DateUtil__ = __webpack_require__("./src/util/DateUtil.js");
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 
+function calcSumm(datesObj) {
+    if (!datesObj) return 0;
 
-var CalcUtil = function () {
-    function CalcUtil() {
-        _classCallCheck(this, CalcUtil);
+    var summ = 0;
+    Object.keys(datesObj).forEach(function (date) {
+        summ += datesObj[date];
+    });
+    return summ;
+}
+
+function concatIncomesAndExpenses(incomesObj, expensesObj) {
+    var newExpensesObj = {};
+    Object.keys(expensesObj).forEach(function (key) {
+        newExpensesObj[key] = expensesObj[key] * -1;
+    });
+    return concatListsSumms(incomesObj, newExpensesObj);
+}
+
+function concatListsSumms() {
+    var result = {};
+
+    for (var _len = arguments.length, listsSumms = Array(_len), _key = 0; _key < _len; _key++) {
+        listsSumms[_key] = arguments[_key];
     }
 
-    _createClass(CalcUtil, null, [{
-        key: 'calcSumm',
-        value: function calcSumm(datesObj) {
-            if (!datesObj) return 0;
-
-            var summ = 0;
-            Object.keys(datesObj).forEach(function (date) {
-                summ += datesObj[date];
-            });
-            return summ;
+    listsSumms.forEach(function (list) {
+        for (var key in list) {
+            result[key] = result[key] ? result[key] + list[key] : list[key];
         }
-    }, {
-        key: 'concatIncomesAndExpenses',
-        value: function concatIncomesAndExpenses(incomesObj, expensesObj) {
-            var newExpensesObj = {};
-            Object.keys(expensesObj).forEach(function (key) {
-                newExpensesObj[key] = expensesObj[key] * -1;
-            });
-            return CalcUtil.concatListsSumms(incomesObj, newExpensesObj);
-        }
-    }, {
-        key: 'concatListsSumms',
-        value: function concatListsSumms() {
-            var result = {};
+    });
+    return result;
+}
 
-            for (var _len = arguments.length, listsSumms = Array(_len), _key = 0; _key < _len; _key++) {
-                listsSumms[_key] = arguments[_key];
-            }
+function formatListSumms(listSumms) {
+    var formattedSumms = Object(__WEBPACK_IMPORTED_MODULE_0__DateUtil__["i" /* sortObjectByDates */])(listSumms),
+        firstDate = Object.keys(formattedSumms)[0],
+        lastDateWithSumm = Object(__WEBPACK_IMPORTED_MODULE_0__DateUtil__["f" /* getLastDateWithSumm */])(formattedSumms);
 
-            listsSumms.forEach(function (list) {
-                for (var key in list) {
-                    result[key] = result[key] ? result[key] + list[key] : list[key];
-                }
-            });
-            return result;
-        }
-    }, {
-        key: 'deleteZeroDates',
-        value: function deleteZeroDates(listSumms) {
-            var result = {};
-            for (var key in listSumms) {
-                if (listSumms[key] > 0) result[key] = listSumms[key];
-            }
-            return result;
-        }
-    }, {
-        key: 'calcExpectedResult',
-        value: function calcExpectedResult(_ref) {
-            var period = _ref.period,
-                expenses = _ref.expenses,
-                summs = _ref.summs,
-                limits = _ref.limits;
+    formattedSumms = fillEmptyDates(formattedSumms, firstDate, lastDateWithSumm);
+    formattedSumms = deleteZeroDates(formattedSumms, lastDateWithSumm, null);
+
+    return formattedSumms;
+}
+
+function fillEmptyDates(listSumms, begin, end) {
+    var dates = Object.keys(listSumms);
+
+    if (!begin) begin = dates[0];
+    if (!end) end = dates[dates.length - 1];
+
+    dates = Object(__WEBPACK_IMPORTED_MODULE_0__DateUtil__["a" /* createArrayDates */])(begin, end);
+    dates.forEach(function (date) {
+        if (!listSumms[date]) listSumms[date] = 0;
+    });
+    return listSumms;
+}
+
+function deleteZeroDates(listSumms, begin, end) {
+    var dates = Object.keys(listSumms);
+
+    if (!begin) begin = dates[0];
+    if (!end) end = dates[dates.length - 1];
+
+    dates = Object(__WEBPACK_IMPORTED_MODULE_0__DateUtil__["a" /* createArrayDates */])(begin, end);
+    dates.forEach(function (date) {
+        if (listSumms[date] === 0) delete listSumms[date];
+    });
+    return listSumms;
+}
+
+function calcExpectedResult(_ref) {
+    var period = _ref.period,
+        expenses = _ref.expenses,
+        summs = _ref.summs,
+        limits = _ref.limits;
+    var _summs$summIncomes = summs.summIncomes,
+        summIncomes = _summs$summIncomes === undefined ? {} : _summs$summIncomes,
+        _summs$summExpenses = summs.summExpenses,
+        summExpenses = _summs$summExpenses === undefined ? {} : _summs$summExpenses,
+        _summs$summNotInclude = summs.summNotIncluded,
+        summNotIncluded = _summs$summNotInclude === undefined ? {} : _summs$summNotInclude;
 
 
-            var lastDateWithExpense = __WEBPACK_IMPORTED_MODULE_0__DateUtil__["a" /* default */].getLastDate(expenses),
-                daysRest = __WEBPACK_IMPORTED_MODULE_0__DateUtil__["a" /* default */].getDaysInPeriod({
-                begin: lastDateWithExpense, end: period.end
-            }),
-                restOfMoney = summs.incomes - summs.notIncluded - summs.expenses;
+    var lastDateWithExpense = Object(__WEBPACK_IMPORTED_MODULE_0__DateUtil__["e" /* getLastDate */])(expenses),
+        restOfDays = Object(__WEBPACK_IMPORTED_MODULE_0__DateUtil__["d" /* getDaysInPeriod */])({
+        begin: lastDateWithExpense, end: period.end
+    }) - 1,
+        restOfMoney = summIncomes - summNotIncluded - summExpenses;
 
-            var result = restOfMoney - --daysRest * limits.fact;
+    var result = restOfMoney - restOfDays * limits.fact;
 
-            return Math.round(result);
-        }
-    }]);
-
-    return CalcUtil;
-}();
-
-/* harmony default export */ __webpack_exports__["a"] = (CalcUtil);
+    return Math.round(result);
+}
 
 /***/ }),
 
@@ -109565,64 +109568,50 @@ var CalcUtil = function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__CalcUtil__ = __webpack_require__("./src/util/CalcUtil.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__DateUtil__ = __webpack_require__("./src/util/DateUtil.js");
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+/* harmony export (immutable) */ __webpack_exports__["a"] = createDataChart;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__DateUtil__ = __webpack_require__("./src/util/DateUtil.js");
 
 
+function createDataChart(obj) {
+    var _obj$period = obj.period,
+        begin = _obj$period.begin,
+        end = _obj$period.end,
+        expenses = obj.expenses,
+        _obj$limits = obj.limits,
+        base = _obj$limits.base,
+        corrected = _obj$limits.corrected,
+        fact = _obj$limits.fact,
+        _obj$summs = obj.summs,
+        summIncomes = _obj$summs.summIncomes,
+        summExpenses = _obj$summs.summExpenses,
+        summNotIncluded = _obj$summs.summNotIncluded;
 
 
-var ChartUtil = function () {
-    function ChartUtil() {
-        _classCallCheck(this, ChartUtil);
-    }
+    var dates = Object(__WEBPACK_IMPORTED_MODULE_0__DateUtil__["b" /* createChartArrayDates */])(begin, end),
+        expense = void 0,
+        summBase = void 0,
+        summCorrected = void 0,
+        summFact = void 0;
 
-    _createClass(ChartUtil, null, [{
-        key: 'createDataChart',
-        value: function createDataChart(_ref) {
-            var _ref$period = _ref.period,
-                period = _ref$period === undefined ? {} : _ref$period,
-                _ref$expenses = _ref.expenses,
-                expenses = _ref$expenses === undefined ? {} : _ref$expenses,
-                _ref$limits = _ref.limits,
-                limits = _ref$limits === undefined ? {} : _ref$limits,
-                _ref$summs = _ref.summs,
-                summs = _ref$summs === undefined ? {} : _ref$summs;
+    summBase = summCorrected = summFact = summIncomes - summNotIncluded;
 
+    dates.forEach(function (date) {
+        expense = expenses[date.name];
 
-            var dates = __WEBPACK_IMPORTED_MODULE_1__DateUtil__["a" /* default */].createChartArrayDates(period.begin, period.end),
-                expense = void 0,
-                summBase = void 0,
-                summCorrected = void 0,
-                summFact = void 0;
+        Object.assign(date, { "base": summBase >= 0 ? summBase : 0 }, { "corrected": summCorrected >= 0 ? summCorrected : 0 }, { "fact": summFact >= 0 ? summFact : null }, { "expense": expense });
 
-            summBase = summCorrected = summFact = summs.incomes - summs.notIncluded;
+        summBase -= base;
 
-            dates.forEach(function (date) {
-                expense = expenses[date.name];
-
-                Object.assign(date, { "base": summBase >= 0 ? summBase : 0 }, { "corrected": summCorrected >= 0 ? summCorrected : 0 }, { "fact": summFact >= 0 ? summFact : null }, { "expense": expense });
-
-                summBase -= limits.base;
-
-                if (expense >= 0) {
-                    summCorrected -= expense;
-                    summFact -= expense;
-                } else {
-                    summCorrected -= limits.corrected;
-                    summFact -= limits.fact;
-                }
-            });
-            return dates;
+        if (expense >= 0) {
+            summCorrected -= expense;
+            summFact -= expense;
+        } else {
+            summCorrected -= corrected;
+            summFact -= fact;
         }
-    }]);
-
-    return ChartUtil;
-}();
-
-/* harmony default export */ __webpack_exports__["a"] = (ChartUtil);
+    });
+    return dates;
+}
 
 /***/ }),
 
@@ -109630,101 +109619,110 @@ var ChartUtil = function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+/* harmony export (immutable) */ __webpack_exports__["b"] = createChartArrayDates;
+/* harmony export (immutable) */ __webpack_exports__["a"] = createArrayDates;
+/* harmony export (immutable) */ __webpack_exports__["c"] = formatDate;
+/* harmony export (immutable) */ __webpack_exports__["e"] = getLastDate;
+/* harmony export (immutable) */ __webpack_exports__["f"] = getLastDateWithSumm;
+/* harmony export (immutable) */ __webpack_exports__["g"] = getNextFreeDate;
+/* harmony export (immutable) */ __webpack_exports__["d"] = getDaysInPeriod;
+/* harmony export (immutable) */ __webpack_exports__["i"] = sortObjectByDates;
+/* harmony export (immutable) */ __webpack_exports__["h"] = shiftDate;
+/* unused harmony export sortDates */
+function createChartArrayDates(dateBegin, dateEnd) {
+    var currDate = new Date(dateBegin),
+        endDate = new Date(dateEnd),
+        days = [];
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var DateUtil = function () {
-    function DateUtil() {
-        _classCallCheck(this, DateUtil);
+    while (currDate <= endDate) {
+        days.push({ "name": formatDate(currDate) });
+        currDate.setDate(currDate.getDate() + 1);
     }
+    return days;
+}
 
-    _createClass(DateUtil, null, [{
-        key: 'createChartArrayDates',
-        value: function createChartArrayDates(dateBegin, dateEnd) {
-            var currDate = new Date(dateBegin),
-                endDate = new Date(dateEnd),
-                days = [];
+function createArrayDates(dateBegin, dateEnd) {
+    var currDate = new Date(dateBegin),
+        endDate = new Date(dateEnd),
+        days = [];
 
-            while (currDate <= endDate) {
-                days.push({ "name": DateUtil.formatDate(currDate) });
-                currDate.setDate(currDate.getDate() + 1);
-            }
-            return days;
-        }
-    }, {
-        key: 'createArrayDates',
-        value: function createArrayDates(dateBegin, dateEnd) {
-            var currDate = new Date(dateBegin),
-                endDate = new Date(dateEnd),
-                days = [];
+    while (currDate <= endDate) {
+        days.push(formatDate(currDate));
+        currDate.setDate(currDate.getDate() + 1);
+    }
+    return days;
+}
 
-            while (currDate <= endDate) {
-                days.push(DateUtil.formatDate(currDate));
-                currDate.setDate(currDate.getDate() + 1);
-            }
-            return days;
-        }
-    }, {
-        key: 'formatDate',
-        value: function formatDate(date) {
-            var d = new Date(date),
-                month = '' + (d.getMonth() + 1),
-                day = '' + d.getDate(),
-                year = d.getFullYear();
+function formatDate(date) {
+    var d = new Date(date),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
 
-            if (month.length < 2) month = '0' + month;
-            if (day.length < 2) day = '0' + day;
+    if (month.length < 2) month = '0' + month;
+    if (day.length < 2) day = '0' + day;
 
-            return [year, month, day].join('-');
-        }
-    }, {
-        key: 'getLastDate',
-        value: function getLastDate(obj) {
-            if (!obj) return -1;
+    return [year, month, day].join('-');
+}
 
-            var dates = Object.keys(obj);
-            dates.sort(function (a, b) {
-                return new Date(a) - new Date(b);
-            });
+function getLastDate(obj) {
+    if (!obj) return -1;
 
-            return dates[dates.length - 1];
-        }
-    }, {
-        key: 'getDaysInPeriod',
-        value: function getDaysInPeriod(period) {
-            if (!period) return -1;
+    var dates = sortDates(Object.keys(obj));
 
-            return (new Date(period.end) - new Date(period.begin)) / (1000 * 60 * 60 * 24);
-        }
-    }, {
-        key: 'sortObjectByKeysDates',
-        value: function sortObjectByKeysDates(obj) {
-            var sortedObj = {};
+    return dates[dates.length - 1];
+}
 
-            var dates = Object.keys(obj).sort(function (a, b) {
-                return new Date(a) - new Date(b);
-            }).forEach(function (date) {
-                sortedObj[date] = obj[date];
-            });
+function getLastDateWithSumm(expenses) {
+    if (!expenses) return -1;
 
-            return sortedObj;
-        }
-    }, {
-        key: 'shiftDate',
-        value: function shiftDate(dateString, shift) {
+    var dates = sortDates(Object.keys(expenses)),
+        i = dates.length - 1,
+        lastDate = dates[i];
 
-            var dateMs = new Date(dateString).getTime();
-            dateMs += shift * (1000 * 60 * 60 * 24);
+    while (i >= 0 && expenses[lastDate] === 0) {
+        lastDate = dates[--i];
+    }
+    return lastDate;
+}
 
-            return new Date(dateMs);
-        }
-    }]);
+function getNextFreeDate(obj) {
+    var lastDateString = getLastDateWithSumm(obj),
+        date = shiftDate(lastDateString, 1);
 
-    return DateUtil;
-}();
+    return date;
+}
 
-/* harmony default export */ __webpack_exports__["a"] = (DateUtil);
+function getDaysInPeriod(period) {
+    if (!period) return -1;
+
+    return (new Date(period.end) - new Date(period.begin)) / (1000 * 60 * 60 * 24);
+}
+
+function sortObjectByDates(obj) {
+    var sortedObj = {};
+
+    var dates = sortDates(Object.keys(obj)).forEach(function (date) {
+        sortedObj[date] = obj[date];
+    });
+
+    return sortedObj;
+}
+
+function shiftDate(dateString, shift) {
+
+    var date = new Date(dateString);
+    date.setDate(date.getDate() + shift);
+    return date;
+}
+
+function sortDates(dates) {
+    dates.sort(function (a, b) {
+        return new Date(a) - new Date(b);
+    });
+
+    return dates;
+}
 
 /***/ }),
 
@@ -109732,61 +109730,51 @@ var DateUtil = function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = calcLimitBase;
+/* harmony export (immutable) */ __webpack_exports__["b"] = calcLimitCorrected;
+/* harmony export (immutable) */ __webpack_exports__["c"] = calcLimitFact;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__DateUtil__ = __webpack_require__("./src/util/DateUtil.js");
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 
+function calcLimitBase(period, summs) {
+    var summIncomes = summs.summIncomes,
+        summExpenses = summs.summExpenses,
+        summNotIncluded = summs.summNotIncluded,
+        daysTotal = Object(__WEBPACK_IMPORTED_MODULE_0__DateUtil__["d" /* getDaysInPeriod */])(period),
+        summNetIncomes = summIncomes - summNotIncluded,
+        result = summNetIncomes / daysTotal;
 
-var LimitsUtil = function () {
-    function LimitsUtil() {
-        _classCallCheck(this, LimitsUtil);
-    }
 
-    _createClass(LimitsUtil, null, [{
-        key: 'calcLimitBase',
-        value: function calcLimitBase(period, summs) {
+    return Math.round(result);
+}
 
-            var daysTotal = __WEBPACK_IMPORTED_MODULE_0__DateUtil__["a" /* default */].getDaysInPeriod(period),
-                summNetIncomes = summs.incomes - summs.notIncluded;
+function calcLimitCorrected(period, lastDateWithExpense, summs) {
+    var summIncomes = summs.summIncomes,
+        summExpenses = summs.summExpenses,
+        summNotIncluded = summs.summNotIncluded,
+        daysRest = Object(__WEBPACK_IMPORTED_MODULE_0__DateUtil__["d" /* getDaysInPeriod */])({
+        begin: lastDateWithExpense, end: period.end
+    }) - 1,
+        summRestMoney = summIncomes - summNotIncluded - summExpenses,
+        result = summRestMoney / daysRest;
 
-            var result = summNetIncomes / daysTotal;
 
-            return Math.round(result);
-        }
-    }, {
-        key: 'calcLimitCorrected',
-        value: function calcLimitCorrected(period, lastDateWithExpense, summs) {
+    return Math.round(result);
+}
 
-            var daysRest = __WEBPACK_IMPORTED_MODULE_0__DateUtil__["a" /* default */].getDaysInPeriod({
-                begin: lastDateWithExpense, end: period.end
-            }),
-                summRestMoney = summs.incomes - summs.notIncluded - summs.expenses;
+function calcLimitFact(period, lastDateWithExpense, summs) {
+    var summIncomes = summs.summIncomes,
+        summExpenses = summs.summExpenses,
+        summNotIncluded = summs.summNotIncluded,
+        daysDone = Object(__WEBPACK_IMPORTED_MODULE_0__DateUtil__["d" /* getDaysInPeriod */])({
+        begin: period.begin, end: lastDateWithExpense
+    }) + 1,
+        summAllExpenses = summNotIncluded + summExpenses,
+        result = summAllExpenses / daysDone;
 
-            var result = summRestMoney / --daysRest;
 
-            return Math.round(result);
-        }
-    }, {
-        key: 'calcLimitFact',
-        value: function calcLimitFact(period, lastDateWithExpense, summs) {
-
-            var daysDone = __WEBPACK_IMPORTED_MODULE_0__DateUtil__["a" /* default */].getDaysInPeriod({
-                begin: period.begin, end: lastDateWithExpense
-            }),
-                summAllExpenses = summs.notIncluded + summs.expenses;
-
-            var result = summAllExpenses / ++daysDone;
-
-            return Math.round(result);
-        }
-    }]);
-
-    return LimitsUtil;
-}();
-
-/* harmony default export */ __webpack_exports__["a"] = (LimitsUtil);
+    return Math.round(result);
+}
 
 /***/ }),
 
