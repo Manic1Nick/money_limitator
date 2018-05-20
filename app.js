@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "243d2bb59e34855bf4b5"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "ff6346630178d07dcb39"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -90529,7 +90529,7 @@ var ZAxis = Object(__WEBPACK_IMPORTED_MODULE_2__util_PureRender__["a" /* default
 
 
 
-/* unused harmony default export */ var _unused_webpack_default_export = (Object(__WEBPACK_IMPORTED_MODULE_1__generateCategoricalChart__["a" /* default */])({
+/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_1__generateCategoricalChart__["a" /* default */])({
   chartName: 'PieChart',
   GraphicalChild: __WEBPACK_IMPORTED_MODULE_5__polar_Pie__["a" /* default */],
   eventType: 'item',
@@ -95329,7 +95329,7 @@ var ResponsiveContainer = (_temp = _class = function (_Component) {
 }, _temp);
 
 
-/* unused harmony default export */ var _unused_webpack_default_export = (ResponsiveContainer);
+/* harmony default export */ __webpack_exports__["a"] = (ResponsiveContainer);
 
 /***/ }),
 
@@ -95953,17 +95953,17 @@ Surface.propTypes = propTypes;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__container_Layer__ = __webpack_require__("./node_modules/recharts/es6/container/Layer.js");
 /* unused harmony reexport Layer */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__component_Legend__ = __webpack_require__("./node_modules/recharts/es6/component/Legend.js");
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_3__component_Legend__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_3__component_Legend__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__component_Tooltip__ = __webpack_require__("./node_modules/recharts/es6/component/Tooltip.js");
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_4__component_Tooltip__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return __WEBPACK_IMPORTED_MODULE_4__component_Tooltip__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__component_ResponsiveContainer__ = __webpack_require__("./node_modules/recharts/es6/component/ResponsiveContainer.js");
-/* unused harmony reexport ResponsiveContainer */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return __WEBPACK_IMPORTED_MODULE_5__component_ResponsiveContainer__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__component_Cell__ = __webpack_require__("./node_modules/recharts/es6/component/Cell.js");
-/* unused harmony reexport Cell */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_6__component_Cell__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__component_Text__ = __webpack_require__("./node_modules/recharts/es6/component/Text.js");
 /* unused harmony reexport Text */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__component_Label__ = __webpack_require__("./node_modules/recharts/es6/component/Label.js");
-/* unused harmony reexport Label */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_8__component_Label__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__component_LabelList__ = __webpack_require__("./node_modules/recharts/es6/component/LabelList.js");
 /* unused harmony reexport LabelList */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__shape_Sector__ = __webpack_require__("./node_modules/recharts/es6/shape/Sector.js");
@@ -95987,7 +95987,7 @@ Surface.propTypes = propTypes;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__polar_PolarAngleAxis__ = __webpack_require__("./node_modules/recharts/es6/polar/PolarAngleAxis.js");
 /* unused harmony reexport PolarAngleAxis */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__polar_Pie__ = __webpack_require__("./node_modules/recharts/es6/polar/Pie.js");
-/* unused harmony reexport Pie */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_20__polar_Pie__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__polar_Radar__ = __webpack_require__("./node_modules/recharts/es6/polar/Radar.js");
 /* unused harmony reexport Radar */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__polar_RadialBar__ = __webpack_require__("./node_modules/recharts/es6/polar/RadialBar.js");
@@ -96005,7 +96005,7 @@ Surface.propTypes = propTypes;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__cartesian_CartesianGrid__ = __webpack_require__("./node_modules/recharts/es6/cartesian/CartesianGrid.js");
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_28__cartesian_CartesianGrid__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__cartesian_Line__ = __webpack_require__("./node_modules/recharts/es6/cartesian/Line.js");
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_29__cartesian_Line__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_29__cartesian_Line__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__cartesian_Area__ = __webpack_require__("./node_modules/recharts/es6/cartesian/Area.js");
 /* unused harmony reexport Area */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__cartesian_Bar__ = __webpack_require__("./node_modules/recharts/es6/cartesian/Bar.js");
@@ -96013,9 +96013,9 @@ Surface.propTypes = propTypes;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__cartesian_Scatter__ = __webpack_require__("./node_modules/recharts/es6/cartesian/Scatter.js");
 /* unused harmony reexport Scatter */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__cartesian_XAxis__ = __webpack_require__("./node_modules/recharts/es6/cartesian/XAxis.js");
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_33__cartesian_XAxis__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return __WEBPACK_IMPORTED_MODULE_33__cartesian_XAxis__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__cartesian_YAxis__ = __webpack_require__("./node_modules/recharts/es6/cartesian/YAxis.js");
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_34__cartesian_YAxis__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return __WEBPACK_IMPORTED_MODULE_34__cartesian_YAxis__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__cartesian_ZAxis__ = __webpack_require__("./node_modules/recharts/es6/cartesian/ZAxis.js");
 /* unused harmony reexport ZAxis */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__cartesian_ErrorBar__ = __webpack_require__("./node_modules/recharts/es6/cartesian/ErrorBar.js");
@@ -96025,7 +96025,7 @@ Surface.propTypes = propTypes;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__chart_BarChart__ = __webpack_require__("./node_modules/recharts/es6/chart/BarChart.js");
 /* unused harmony reexport BarChart */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__chart_PieChart__ = __webpack_require__("./node_modules/recharts/es6/chart/PieChart.js");
-/* unused harmony reexport PieChart */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_39__chart_PieChart__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__chart_Treemap__ = __webpack_require__("./node_modules/recharts/es6/chart/Treemap.js");
 /* unused harmony reexport Treemap */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__chart_Sankey__ = __webpack_require__("./node_modules/recharts/es6/chart/Sankey.js");
@@ -96039,7 +96039,7 @@ Surface.propTypes = propTypes;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__chart_RadialBarChart__ = __webpack_require__("./node_modules/recharts/es6/chart/RadialBarChart.js");
 /* unused harmony reexport RadialBarChart */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__chart_ComposedChart__ = __webpack_require__("./node_modules/recharts/es6/chart/ComposedChart.js");
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_46__chart_ComposedChart__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_46__chart_ComposedChart__["a"]; });
 
 
 
@@ -107376,7 +107376,7 @@ var mapStateToProps = function mapStateToProps(state, ownProps) {
     }),
         daysRest = Object(__WEBPACK_IMPORTED_MODULE_3__util_DateUtil__["d" /* getDaysInPeriod */])({
         begin: lastDateWithExpense, end: state.period.end
-    });
+    }) - 1;
 
     return {
         limits: state.limits,
@@ -107384,7 +107384,7 @@ var mapStateToProps = function mapStateToProps(state, ownProps) {
         period: state.period,
         daysTotal: daysTotal,
         daysDone: daysDone,
-        daysRest: daysRest - 1,
+        daysRest: daysRest,
         lastDateWithExpense: lastDateWithExpense
     };
 };
@@ -107472,18 +107472,18 @@ var Chart = function Chart(_ref) {
     __WEBPACK_IMPORTED_MODULE_2_material_ui_Paper___default.a,
     { className: 'Chart', zDepth: 3 },
     React.createElement(
-      __WEBPACK_IMPORTED_MODULE_1_recharts__["c" /* ComposedChart */],
+      __WEBPACK_IMPORTED_MODULE_1_recharts__["d" /* ComposedChart */],
       { width: 800, height: 400, data: data,
         margin: { top: 20, right: 20, bottom: 20, left: 20 } },
-      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["g" /* XAxis */], { dataKey: 'name' }),
-      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["h" /* YAxis */], { yAxisId: 'left' }),
-      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["h" /* YAxis */], { yAxisId: 'right', orientation: 'right' }),
-      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["f" /* Tooltip */], null),
-      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["d" /* Legend */], null),
+      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["l" /* XAxis */], { dataKey: 'name' }),
+      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["m" /* YAxis */], { yAxisId: 'left' }),
+      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["m" /* YAxis */], { yAxisId: 'right', orientation: 'right' }),
+      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["k" /* Tooltip */], null),
+      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["f" /* Legend */], null),
       React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["b" /* CartesianGrid */], { stroke: '#f5f5f5' }),
-      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["e" /* Line */], { yAxisId: 'left', type: 'monotone', dataKey: 'base', stroke: '#00BFFF' }),
-      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["e" /* Line */], { yAxisId: 'left', type: 'monotone', dataKey: 'corrected', stroke: '#9932CC' }),
-      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["e" /* Line */], { yAxisId: 'left', type: 'monotone', dataKey: 'fact', stroke: '#FF6347' }),
+      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["g" /* Line */], { yAxisId: 'left', type: 'monotone', dataKey: 'base', stroke: '#00BFFF' }),
+      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["g" /* Line */], { yAxisId: 'left', type: 'monotone', dataKey: 'corrected', stroke: '#9932CC' }),
+      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["g" /* Line */], { yAxisId: 'left', type: 'monotone', dataKey: 'fact', stroke: '#FF6347' }),
       React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["a" /* Bar */], { yAxisId: 'right', dataKey: 'expense', barSize: 10, fill: '#9ACD32' })
     )
   );
@@ -108259,7 +108259,7 @@ var HeadMoney = function HeadMoney(props) {
 	var daysRest = Object(__WEBPACK_IMPORTED_MODULE_3__util_DateUtil__["d" /* getDaysInPeriod */])({
 		begin: Object(__WEBPACK_IMPORTED_MODULE_3__util_DateUtil__["f" /* getLastDateWithSumm */])(expenses),
 		end: period.end
-	}),
+	}) - 1,
 	    labelIncomes = 'incomes: ' + (summIncomes - summNotIncluded),
 	    labelExpenses = 'expenses: ' + summExpenses,
 	    labelSumm = 'balance: ' + (summIncomes - summNotIncluded - summExpenses) + ' / days: ' + daysRest;
@@ -108746,6 +108746,339 @@ var HeadResult = _wrapComponent('HeadResult')(function (_Component) {
 
 /***/ }),
 
+/***/ "./src/components/ui/LimitChart.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_prop_types__ = __webpack_require__("./node_modules/prop-types/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_recharts__ = __webpack_require__("./node_modules/recharts/es6/index.js");
+
+
+
+
+var LimitChart = function LimitChart(_ref) {
+    var daysDone = _ref.daysDone,
+        daysRest = _ref.daysRest,
+        _ref$summs = _ref.summs,
+        summs = _ref$summs === undefined ? {} : _ref$summs;
+    var summIncomes = summs.summIncomes,
+        summExpenses = summs.summExpenses,
+        summNotIncluded = summs.summNotIncluded,
+        currentBalance = summIncomes - summNotIncluded - summExpenses;
+
+
+    var data = [{
+        name: "Money",
+        data: [{ name: 'Money done', value: summExpenses }, { name: 'Money rest', value: currentBalance }]
+    }, {
+        name: "Days",
+        data: [{ name: 'Days done', value: daysDone + 1 }, { name: 'Days rest', value: daysRest }]
+    }],
+        COLORS = ['#00C49F', '#FF8042'],
+        MARGINS_X = [150, 450],
+        RADIAN = Math.PI / 180,
+        NAMES = ['Money', 'Days'],
+        HEIGHT = currentBalance > -200 ? 140 : 200;
+
+    return React.createElement(
+        __WEBPACK_IMPORTED_MODULE_1_recharts__["j" /* ResponsiveContainer */],
+        { height: HEIGHT },
+        React.createElement(
+            __WEBPACK_IMPORTED_MODULE_1_recharts__["i" /* PieChart */],
+            null,
+            data.map(function (obj, i) {
+                return React.createElement(
+                    __WEBPACK_IMPORTED_MODULE_1_recharts__["h" /* Pie */],
+                    {
+                        key: i,
+                        data: obj.data,
+                        cx: MARGINS_X[i % MARGINS_X.length],
+                        cy: 120,
+                        dataKey: 'value',
+                        startAngle: 180,
+                        endAngle: 0,
+                        innerRadius: 60,
+                        outerRadius: 80,
+                        fill: '#8884d8',
+                        paddingAngle: 5,
+                        label: true
+                    },
+                    obj.data.map(function (obj2, i) {
+                        return React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["c" /* Cell */], {
+                            key: i,
+                            fill: COLORS[i % COLORS.length]
+                        });
+                    }),
+                    React.createElement(
+                        __WEBPACK_IMPORTED_MODULE_1_recharts__["e" /* Label */],
+                        { position: 'center' },
+                        NAMES[i % NAMES.length]
+                    )
+                );
+            })
+        )
+    );
+};
+
+LimitChart.propTypes = {
+    daysDone: __WEBPACK_IMPORTED_MODULE_0_prop_types__["PropTypes"].number,
+    daysRest: __WEBPACK_IMPORTED_MODULE_0_prop_types__["PropTypes"].number,
+    summs: __WEBPACK_IMPORTED_MODULE_0_prop_types__["PropTypes"].object
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (LimitChart);
+
+/***/ }),
+
+/***/ "./src/components/ui/LimitDialog.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_nick_dev_JS_react_redux_money_limitator_node_modules_redbox_react_lib_index_js__ = __webpack_require__("./node_modules/redbox-react/lib/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_nick_dev_JS_react_redux_money_limitator_node_modules_redbox_react_lib_index_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__home_nick_dev_JS_react_redux_money_limitator_node_modules_redbox_react_lib_index_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_catch_errors_lib_index_js__ = __webpack_require__("./node_modules/react-transform-catch-errors/lib/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_catch_errors_lib_index_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_catch_errors_lib_index_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__("./node_modules/react/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js__ = __webpack_require__("./node_modules/react-transform-hmr/lib/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__LimitChart__ = __webpack_require__("./src/components/ui/LimitChart.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_material_ui_Dialog__ = __webpack_require__("./node_modules/material-ui/Dialog/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_material_ui_Dialog___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_material_ui_Dialog__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_material_ui_FlatButton__ = __webpack_require__("./node_modules/material-ui/FlatButton/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_material_ui_FlatButton___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_material_ui_FlatButton__);
+
+
+
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _components = {
+    LimitDialog: {
+        displayName: 'LimitDialog'
+    }
+};
+
+var _homeNickDevJSReact_reduxMoney_limitatorNode_modulesReactTransformHmrLibIndexJs2 = __WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js___default()({
+    filename: '/home/nick/dev/JS/react_redux/money_limitator/src/components/ui/LimitDialog.js',
+    components: _components,
+    locals: [module],
+    imports: [__WEBPACK_IMPORTED_MODULE_2_react___default.a]
+});
+
+var _homeNickDevJSReact_reduxMoney_limitatorNode_modulesReactTransformCatchErrorsLibIndexJs2 = __WEBPACK_IMPORTED_MODULE_1__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_catch_errors_lib_index_js___default()({
+    filename: '/home/nick/dev/JS/react_redux/money_limitator/src/components/ui/LimitDialog.js',
+    components: _components,
+    locals: [],
+    imports: [__WEBPACK_IMPORTED_MODULE_2_react___default.a, __WEBPACK_IMPORTED_MODULE_0__home_nick_dev_JS_react_redux_money_limitator_node_modules_redbox_react_lib_index_js___default.a]
+});
+
+function _wrapComponent(id) {
+    return function (Component) {
+        return _homeNickDevJSReact_reduxMoney_limitatorNode_modulesReactTransformHmrLibIndexJs2(_homeNickDevJSReact_reduxMoney_limitatorNode_modulesReactTransformCatchErrorsLibIndexJs2(Component, id), id);
+    };
+}
+
+
+
+
+
+
+
+
+var LimitDialog = _wrapComponent('LimitDialog')(function (_Component) {
+    _inherits(LimitDialog, _Component);
+
+    function LimitDialog() {
+        _classCallCheck(this, LimitDialog);
+
+        return _possibleConstructorReturn(this, (LimitDialog.__proto__ || Object.getPrototypeOf(LimitDialog)).apply(this, arguments));
+    }
+
+    _createClass(LimitDialog, [{
+        key: 'renderLimitData',
+        value: function renderLimitData(limitName) {
+            var _props$limitsData = this.props.limitsData,
+                begin = _props$limitsData.period.begin,
+                daysTotal = _props$limitsData.daysTotal,
+                daysDone = _props$limitsData.daysDone,
+                daysRest = _props$limitsData.daysRest,
+                lastDateWithExpense = _props$limitsData.lastDateWithExpense,
+                _props$limitsData$sum = _props$limitsData.summs,
+                summIncomes = _props$limitsData$sum.summIncomes,
+                summExpenses = _props$limitsData$sum.summExpenses,
+                summNotIncluded = _props$limitsData$sum.summNotIncluded,
+                _props$limitsData$lim = _props$limitsData.limits,
+                base = _props$limitsData$lim.base,
+                corrected = _props$limitsData$lim.corrected,
+                fact = _props$limitsData$lim.fact,
+                currentBalance = summIncomes - summNotIncluded - summExpenses;
+
+
+            switch (limitName) {
+                case 'base':
+                    return React.createElement(
+                        'div',
+                        null,
+                        React.createElement(
+                            'h4',
+                            null,
+                            'Incomes total: $',
+                            summIncomes
+                        ),
+                        React.createElement(
+                            'h4',
+                            null,
+                            'Days total: ',
+                            daysTotal
+                        ),
+                        React.createElement(
+                            'h4',
+                            null,
+                            'Base limit: $',
+                            base,
+                            ' in day'
+                        )
+                    );
+
+                case 'corrected':
+                    return React.createElement(
+                        'div',
+                        null,
+                        React.createElement(
+                            'h4',
+                            null,
+                            'Current balance: $',
+                            currentBalance
+                        ),
+                        React.createElement(
+                            'h4',
+                            null,
+                            'Days remaining: ',
+                            daysRest
+                        ),
+                        React.createElement(
+                            'h4',
+                            null,
+                            'Corrected limit: $',
+                            corrected,
+                            ' in day'
+                        )
+                    );
+
+                case 'fact':
+                    return React.createElement(
+                        'div',
+                        null,
+                        React.createElement(
+                            'h4',
+                            null,
+                            'Spent money: $',
+                            summExpenses
+                        ),
+                        React.createElement(
+                            'h4',
+                            null,
+                            'Days past: ',
+                            daysDone + 1
+                        ),
+                        React.createElement(
+                            'h4',
+                            null,
+                            'Fact limit: $',
+                            fact,
+                            ' in day'
+                        )
+                    );
+            }
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _props = this.props,
+                open = _props.open,
+                activeLimit = _props.activeLimit,
+                limitsData = _props.limitsData,
+                closeDialog = _props.closeDialog,
+                limitInfoTitle = 'Limit ' + activeLimit + ' info';
+
+
+            var actions = [React.createElement(__WEBPACK_IMPORTED_MODULE_6_material_ui_FlatButton___default.a, {
+                label: 'Ok',
+                primary: true,
+                onClick: function onClick() {
+                    return closeDialog();
+                }
+            })];
+
+            return React.createElement(
+                __WEBPACK_IMPORTED_MODULE_5_material_ui_Dialog___default.a,
+                {
+                    className: 'Dialog',
+                    open: open,
+                    title: limitInfoTitle,
+                    actions: actions,
+                    modal: false,
+                    onRequestClose: function onRequestClose() {
+                        return closeDialog();
+                    }
+                },
+                React.createElement(__WEBPACK_IMPORTED_MODULE_4__LimitChart__["a" /* default */], {
+                    daysDone: limitsData.daysDone,
+                    daysRest: limitsData.daysRest,
+                    summs: limitsData.summs
+                }),
+                this.renderLimitData(activeLimit),
+                this._generateResultMessage()
+            );
+        }
+    }, {
+        key: '_generateResultMessage',
+        value: function _generateResultMessage() {
+            var _props$limitsData2 = this.props.limitsData,
+                begin = _props$limitsData2.period.begin,
+                daysRest = _props$limitsData2.daysRest,
+                lastDateWithExpense = _props$limitsData2.lastDateWithExpense,
+                _props$limitsData2$su = _props$limitsData2.summs,
+                summIncomes = _props$limitsData2$su.summIncomes,
+                summExpenses = _props$limitsData2$su.summExpenses,
+                summNotIncluded = _props$limitsData2$su.summNotIncluded,
+                corrected = _props$limitsData2.limits.corrected,
+                currentBalance = summIncomes - summNotIncluded - summExpenses;
+
+
+            var resultMessage = '';
+
+            if (daysRest && currentBalance > 0) {
+                resultMessage = '\n                You spent $' + summExpenses + ' for the past period from ' + begin + ' to ' + lastDateWithExpense + '.\n                Your current balance is $' + currentBalance + ' for remaining period ' + daysRest + ' days.\n                Now you should not spend more than $' + corrected + ' a day.\n                This is your corrected limit which should be followed in the remainder of the period.\n            ';
+            } else if (currentBalance < 0) {
+                resultMessage = '   \n                Unfortunately, you did not save money in the current period. \n                Try to follow our recommendations in the following periods. \n            ';
+            } else if (currentBalance > 0) {
+                resultMessage = ' \n                Congratulations, you have completed the current period with a cash saving of ' + currentBalance + '. \n            ';
+            } else {
+                //currentBalance = 0
+                resultMessage = ' \n                Wow! You very accurately adhered to money limits in the current period! \n                Try to save money in the next period.\n            ';
+            }
+            return resultMessage;
+        }
+    }]);
+
+    return LimitDialog;
+}(__WEBPACK_IMPORTED_MODULE_2_react__["Component"]));
+
+/* harmony default export */ __webpack_exports__["a"] = (LimitDialog);
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/webpack/buildin/harmony-module.js")(module)))
+
+/***/ }),
+
 /***/ "./src/components/ui/LimitsBlock.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -108760,10 +109093,7 @@ var HeadResult = _wrapComponent('HeadResult')(function (_Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_material_ui_RaisedButton__ = __webpack_require__("./node_modules/material-ui/RaisedButton/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_material_ui_RaisedButton___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_material_ui_RaisedButton__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_material_ui_Dialog__ = __webpack_require__("./node_modules/material-ui/Dialog/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_material_ui_Dialog___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_material_ui_Dialog__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_material_ui_FlatButton__ = __webpack_require__("./node_modules/material-ui/FlatButton/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_material_ui_FlatButton___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_material_ui_FlatButton__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__LimitDialog__ = __webpack_require__("./src/components/ui/LimitDialog.js");
 
 
 
@@ -108817,32 +109147,27 @@ var LimitsBlock = _wrapComponent('LimitsBlock')(function (_Component) {
 
 		var _this = _possibleConstructorReturn(this, (LimitsBlock.__proto__ || Object.getPrototypeOf(LimitsBlock)).call(this));
 
-		_this.state = {
-			activeLimit: ''
-		};
+		_this.state = { activeLimit: '' };
 		return _this;
 	}
 
 	_createClass(LimitsBlock, [{
 		key: 'handleOpenDialog',
 		value: function handleOpenDialog(limitName) {
-			this.setState({
-				activeLimit: limitName
-			});
+			this.setState({ activeLimit: limitName });
 		}
 	}, {
 		key: 'handleCloseDialog',
 		value: function handleCloseDialog() {
-			this.setState({
-				activeLimit: ''
-			});
+			this.setState({ activeLimit: '' });
 		}
 	}, {
 		key: 'render',
 		value: function render() {
 			var _this2 = this;
 
-			var _props$limits = this.props.limits,
+			var activeLimit = this.state.activeLimit,
+			    _props$limits = this.props.limits,
 			    base = _props$limits.base,
 			    corrected = _props$limits.corrected,
 			    fact = _props$limits.fact,
@@ -108850,7 +109175,8 @@ var LimitsBlock = _wrapComponent('LimitsBlock')(function (_Component) {
 				'base': 'Base ' + base + ' in day',
 				'corrected': 'Corrected ' + corrected + ' in day',
 				'fact': 'Fact ' + fact + ' in day'
-			};
+			},
+			    limitsData = this.props;
 
 
 			return React.createElement(
@@ -108891,173 +109217,14 @@ var LimitsBlock = _wrapComponent('LimitsBlock')(function (_Component) {
 						return _this2.handleOpenDialog('fact');
 					}
 				}),
-				this.renderDialog()
-			);
-		}
-	}, {
-		key: 'renderDialog',
-		value: function renderDialog() {
-			var activeLimit = this.state.activeLimit,
-			    limitInfoTitle = 'Limit ' + activeLimit + ' info';
-
-
-			var actions = [React.createElement(__WEBPACK_IMPORTED_MODULE_6_material_ui_FlatButton___default.a, {
-				label: 'Ok',
-				primary: true,
-				onClick: this.handleCloseDialog.bind(this)
-			})];
-
-			return React.createElement(
-				__WEBPACK_IMPORTED_MODULE_5_material_ui_Dialog___default.a,
-				{
-					title: limitInfoTitle,
-					actions: actions,
-					modal: false,
+				React.createElement(__WEBPACK_IMPORTED_MODULE_5__LimitDialog__["a" /* default */], {
 					open: activeLimit !== '',
-					onRequestClose: this.handleCloseDialog.bind(this)
-				},
-				this.renderDialogText(activeLimit)
+					activeLimit: activeLimit,
+					limitsData: limitsData,
+					modal: false,
+					closeDialog: this.handleCloseDialog.bind(this)
+				})
 			);
-		}
-	}, {
-		key: 'renderDialogText',
-		value: function renderDialogText(limitName) {
-			var _props = this.props,
-			    begin = _props.period.begin,
-			    daysTotal = _props.daysTotal,
-			    daysDone = _props.daysDone,
-			    daysRest = _props.daysRest,
-			    lastDateWithExpense = _props.lastDateWithExpense,
-			    _props$summs = _props.summs,
-			    summIncomes = _props$summs.summIncomes,
-			    summExpenses = _props$summs.summExpenses,
-			    summNotIncluded = _props$summs.summNotIncluded,
-			    _props$limits2 = _props.limits,
-			    base = _props$limits2.base,
-			    corrected = _props$limits2.corrected,
-			    fact = _props$limits2.fact;
-
-
-			var summNetIncome = summIncomes - summNotIncluded,
-			    currentBalance = summNetIncome - summExpenses,
-			    result = currentBalance - daysRest * fact;
-
-			switch (limitName) {
-				case 'base':
-					return React.createElement(
-						'div',
-						null,
-						React.createElement(
-							'p',
-							null,
-							'Your income is $',
-							summNetIncome,
-							' for the selected period.'
-						),
-						React.createElement(
-							'p',
-							null,
-							'The full period includes ',
-							daysTotal,
-							' days.'
-						),
-						React.createElement(
-							'p',
-							null,
-							'You should have spent no more than $',
-							base,
-							' a day.'
-						),
-						React.createElement(
-							'p',
-							null,
-							'This is your base limit for a full period.'
-						)
-					);
-
-				case 'corrected':
-					return React.createElement(
-						'div',
-						null,
-						React.createElement(
-							'p',
-							null,
-							'You spent $',
-							summExpenses,
-							' for the past period from ',
-							begin,
-							' to ',
-							lastDateWithExpense,
-							'.'
-						),
-						React.createElement(
-							'p',
-							null,
-							'Your current balance is $',
-							currentBalance,
-							' for remaining period ',
-							daysRest,
-							' days.'
-						),
-						React.createElement(
-							'p',
-							null,
-							'Now you can not spend more than $',
-							corrected,
-							' a day.'
-						),
-						React.createElement(
-							'p',
-							null,
-							'This is your corrected limit which should be followed in the remainder of the period.'
-						)
-					);
-
-				case 'fact':
-					return React.createElement(
-						'div',
-						null,
-						React.createElement(
-							'p',
-							null,
-							'You spent $',
-							summExpenses,
-							' for the past period from ',
-							begin,
-							' to ',
-							lastDateWithExpense,
-							'.'
-						),
-						React.createElement(
-							'p',
-							null,
-							'It is $',
-							fact,
-							' for a day in average.'
-						),
-						React.createElement(
-							'p',
-							null,
-							'If you will spend $',
-							fact,
-							' in day for remaining period ',
-							daysRest,
-							' days, expected balance wil be $',
-							result,
-							' on end of period.'
-						),
-						React.createElement(
-							'p',
-							null,
-							'It is recommended to adhere to the corrected limit $',
-							corrected,
-							' for a day.'
-						)
-					);
-
-				default:
-					return '';
-			}
 		}
 	}]);
 
@@ -109198,8 +109365,8 @@ var handleError = function handleError(error) {
 };
 
 var store = Object(__WEBPACK_IMPORTED_MODULE_3__store__["a" /* default */])(initialState);
-store.subscribe(saveState);
 store.dispatch(Object(__WEBPACK_IMPORTED_MODULE_6__actions__["a" /* activateApp */])());
+store.subscribe(saveState);
 
 window.React = __WEBPACK_IMPORTED_MODULE_0_react___default.a;
 window.store = store;
@@ -109346,7 +109513,6 @@ var expenses = function expenses() {
 			if (Object.keys(newState).length > 0) {
 				newState = Object(__WEBPACK_IMPORTED_MODULE_3__util_CalcUtil__["e" /* formatListSumms */])(newState);
 			}
-
 			return newState;
 
 		default:
@@ -109513,29 +109679,31 @@ function formatListSumms(listSumms) {
 }
 
 function fillEmptyDates(listSumms, begin, end) {
-    var dates = Object.keys(listSumms);
+    var resultListSumms = Object.assign({}, listSumms),
+        dates = Object.keys(resultListSumms);
 
     if (!begin) begin = dates[0];
     if (!end) end = dates[dates.length - 1];
 
     dates = Object(__WEBPACK_IMPORTED_MODULE_0__DateUtil__["a" /* createArrayDates */])(begin, end);
     dates.forEach(function (date) {
-        if (!listSumms[date]) listSumms[date] = 0;
+        if (!resultListSumms[date]) resultListSumms[date] = 0;
     });
-    return listSumms;
+    return resultListSumms;
 }
 
 function deleteZeroDates(listSumms, begin, end) {
-    var dates = Object.keys(listSumms);
+    var resultListSumms = Object.assign({}, listSumms),
+        dates = Object.keys(resultListSumms);
 
     if (!begin) begin = dates[0];
     if (!end) end = dates[dates.length - 1];
 
     dates = Object(__WEBPACK_IMPORTED_MODULE_0__DateUtil__["a" /* createArrayDates */])(begin, end);
     dates.forEach(function (date) {
-        if (listSumms[date] === 0) delete listSumms[date];
+        if (resultListSumms[date] === 0) delete resultListSumms[date];
     });
-    return listSumms;
+    return resultListSumms;
 }
 
 function calcExpectedResult(_ref) {
@@ -109742,8 +109910,10 @@ function calcLimitBase(period, summs) {
         summNotIncluded = summs.summNotIncluded,
         daysTotal = Object(__WEBPACK_IMPORTED_MODULE_0__DateUtil__["d" /* getDaysInPeriod */])(period),
         summNetIncomes = summIncomes - summNotIncluded,
-        result = summNetIncomes / daysTotal;
+        result = 0;
 
+
+    if (daysTotal) result = summNetIncomes / daysTotal;
 
     return Math.round(result);
 }
@@ -109756,8 +109926,10 @@ function calcLimitCorrected(period, lastDateWithExpense, summs) {
         begin: lastDateWithExpense, end: period.end
     }) - 1,
         summRestMoney = summIncomes - summNotIncluded - summExpenses,
-        result = summRestMoney / daysRest;
+        result = 0;
 
+
+    if (daysRest) result = summRestMoney / daysRest;
 
     return Math.round(result);
 }
@@ -109770,8 +109942,10 @@ function calcLimitFact(period, lastDateWithExpense, summs) {
         begin: period.begin, end: lastDateWithExpense
     }) + 1,
         summAllExpenses = summNotIncluded + summExpenses,
-        result = summAllExpenses / daysDone;
+        result = 0;
 
+
+    if (daysDone) result = summAllExpenses / daysDone;
 
     return Math.round(result);
 }
