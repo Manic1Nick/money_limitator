@@ -23,8 +23,8 @@ const handleError = error => {
 }
 
 const store = storeFactory(initialState)
-store.subscribe(saveState)
 store.dispatch(activateApp())
+store.subscribe(saveState)
 
 window.React = React
 window.store = store

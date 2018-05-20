@@ -44,7 +44,6 @@ export const expenses = (state={}, action) => {
 			if (Object.keys(newState).length > 0) {
 				newState = formatListSumms(newState)
 			}
-
 			return newState
 
 		default:

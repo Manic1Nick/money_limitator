@@ -16,7 +16,7 @@ const mapStateToProps = (state, ownProps) => {
         }),
 		daysRest = getDaysInPeriod({ 
             begin: lastDateWithExpense, end: state.period.end,  
-        })
+        }) - 1
 
     return {
     	limits: state.limits,
@@ -24,7 +24,7 @@ const mapStateToProps = (state, ownProps) => {
     	period: state.period,
     	daysTotal,
     	daysDone,
-    	daysRest: daysRest - 1,
+    	daysRest,
     	lastDateWithExpense
     }
 }

@@ -25,7 +25,7 @@ const HeadMoney = (props) => {
 	let daysRest = getDaysInPeriod({ 
     	    begin: getLastDateWithSumm(expenses), 
     	    end: period.end,  
-    	}),
+    	}) - 1,
 		labelIncomes = `incomes: ${ summIncomes - summNotIncluded }`,
 		labelExpenses = `expenses: ${ summExpenses }`,
 		labelSumm = `balance: ${ summIncomes - summNotIncluded - summExpenses } / days: ${ daysRest }`

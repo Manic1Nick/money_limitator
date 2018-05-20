@@ -38,38 +38,40 @@ export function concatListsSumms(...listsSumms) {
 export function formatListSumms(listSumms) {
     let formattedSumms = sortObjectByDates(listSumms),
         firstDate = Object.keys(formattedSumms)[0],
-        lastDateWithSumm = getLastDateWithSumm(formattedSumms)    
+        lastDateWithSumm = getLastDateWithSumm(formattedSumms)
         
-    formattedSumms = fillEmptyDates(formattedSumms, firstDate, lastDateWithSumm)        
+    formattedSumms = fillEmptyDates(formattedSumms, firstDate, lastDateWithSumm) 
     formattedSumms = deleteZeroDates(formattedSumms, lastDateWithSumm, null)
     
     return formattedSumms
 }
 
 export function fillEmptyDates(listSumms, begin, end) {
-    let dates = Object.keys(listSumms)
+    let resultListSumms = Object.assign({}, listSumms),
+        dates = Object.keys(resultListSumms)
 
     if (!begin) begin = dates[0]
     if (!end) end = dates[dates.length - 1]
 
     dates = createArrayDates(begin, end)
     dates.forEach(date => {
-        if (!listSumms[date]) listSumms[date] = 0
+        if (!resultListSumms[date]) resultListSumms[date] = 0
     })
-    return listSumms
+    return resultListSumms
 }
 
 export function deleteZeroDates(listSumms, begin, end) {
-    let dates = Object.keys(listSumms)
+    let resultListSumms = Object.assign({}, listSumms),
+        dates = Object.keys(resultListSumms)
 
     if (!begin) begin = dates[0]
     if (!end) end = dates[dates.length - 1]
 
     dates = createArrayDates(begin, end)
     dates.forEach(date => {
-        if (listSumms[date] === 0) delete listSumms[date]
+        if (resultListSumms[date] === 0) delete resultListSumms[date]
     })
-    return listSumms
+    return resultListSumms
 }
 
 export function calcExpectedResult({ period, expenses, summs, limits }) {
