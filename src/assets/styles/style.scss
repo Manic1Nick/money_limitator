@@ -15,13 +15,13 @@ body {
 	padding: 16px;
     box-sizing: border-box;
 
-    .HeadBlock {
+    .HeadBlock__PeriodResultMoney {
 		display: flex;
         justify-content: space-between;
         width: 100%;
   		height: 100%;
 
-        .HeadControl {
+        .HeadBlock__PeriodResult {
             display: flex;
             flex-direction: column;
             width: 66%;
@@ -69,7 +69,7 @@ body {
 		}
     }
 
-    .LimitsBlock {
+    .Limits {
     	padding: 16px;
 
     	display: flex;

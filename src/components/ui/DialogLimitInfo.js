@@ -1,11 +1,11 @@
 import { Component } from 'react'
 
-import LimitChart from './LimitChart'
+import BalanceChart from './BalanceChart'
 
 import Dialog from 'material-ui/Dialog'
 import FlatButton from 'material-ui/FlatButton'
 
-export default class LimitDialog extends Component {
+export default class DialogLimitInfo extends Component {
 
     renderLimitData(limitName) {
         const { 
@@ -71,7 +71,7 @@ export default class LimitDialog extends Component {
         	  	modal={ false }
                 onRequestClose={ () => closeDialog() }
         	>
-                <LimitChart 
+                <BalanceChart 
                     daysDone={ limitsData.daysDone }
                     daysRest={ limitsData.daysRest }
                     summs={ limitsData.summs }

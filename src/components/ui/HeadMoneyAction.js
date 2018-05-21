@@ -75,12 +75,12 @@ export default class HeadMoneyAction extends Component {
                 <FlatButton
                     className='HeadMoney__button'
                     label={ label }
-                    onClick={ this.openListSumms }
+                    onClick={ () => this.openListSumms() }
                 />
                 <AddBoxIcon 
                     className='HeadMoney__icon' 
                     style={{ color: '#A9A9A9' }}
-                    onClick={ this.openInputSumm }
+                    onClick={ () => this.openInputSumm() }
                 /> 
                 <DrawerListSumms
                     open={ this.state.openListSumms }

@@ -2,7 +2,7 @@ import { PropTypes } from 'prop-types'
 
 import { ResponsiveContainer, PieChart, Pie, Sector, Cell, Legend, Label } from 'recharts'
 
-const LimitChart = ({ daysDone, daysRest, summs={} }) => {
+const BalanceChart = ({ daysDone, daysRest, summs={} }) => {
     
     const { summIncomes, summExpenses, summNotIncluded } = summs,
         currentBalance = summIncomes - summNotIncluded - summExpenses
@@ -69,10 +69,10 @@ const LimitChart = ({ daysDone, daysRest, summs={} }) => {
     )
 }
 
-LimitChart.propTypes = {
+BalanceChart.propTypes = {
 	daysDone: PropTypes.number,
 	daysRest: PropTypes.number,
 	summs: PropTypes.object
 }
 
-export default LimitChart
+export default BalanceChart

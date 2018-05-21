@@ -2,9 +2,9 @@ import { Component } from 'react'
 
 import RaisedButton from 'material-ui/RaisedButton'
 
-import LimitDialog from './LimitDialog'
+import DialogLimitInfo from './DialogLimitInfo'
 
-export default class LimitsBlock extends Component {
+export default class Limits extends Component {
 
 	constructor() {
 		super()
@@ -31,7 +31,7 @@ export default class LimitsBlock extends Component {
 			limitsData = this.props
 
 		return (
-			<div className='LimitsBlock'>
+			<div className='Limits'>
 				<div className='limits__title'>
 					<span>LIMITS:</span>
 				</div>
@@ -56,7 +56,7 @@ export default class LimitsBlock extends Component {
 					onClick={ () => this.handleOpenDialog('fact') }
 				/>
 				
-				<LimitDialog
+				<DialogLimitInfo
 					open={ activeLimit !== '' }
 					activeLimit={ activeLimit }
 					limitsData={ limitsData }
