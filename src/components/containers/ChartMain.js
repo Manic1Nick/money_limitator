@@ -1,4 +1,4 @@
-import Chart from '../ui/Chart'
+import ChartMain from '../ui/ChartMain'
 import { bindActionCreators as action } from 'redux'
 import { connect } from 'react-redux'
 
@@ -11,4 +11,4 @@ const mapStateToProps = (state, ownProps) => {
     }
 }
 
-export default connect(mapStateToProps)(Chart)
+export default connect(mapStateToProps)(ChartMain)

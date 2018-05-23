@@ -1,11 +1,11 @@
 import HeadBlock from './containers/HeadBlock'
-import Chart from './containers/Chart'
+import ChartMain from './containers/ChartMain'
 import ShowErrors from './containers/ShowErrors'
 
 const MainPage = () =>
 	<div className='App'>
 		<HeadBlock />
-		<Chart />
+		<ChartMain />
 		<ShowErrors />
 	</div>
 

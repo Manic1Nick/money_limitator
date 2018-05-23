@@ -1,6 +1,6 @@
 import { Component } from 'react'
 
-import BalanceChart from './BalanceChart'
+import ChartBalance from './ChartBalance'
 
 import Dialog from 'material-ui/Dialog'
 import FlatButton from 'material-ui/FlatButton'
@@ -71,7 +71,7 @@ export default class DialogLimitInfo extends Component {
         	  	modal={ false }
                 onRequestClose={ () => closeDialog() }
         	>
-                <BalanceChart 
+                <ChartBalance 
                     daysDone={ limitsData.daysDone }
                     daysRest={ limitsData.daysRest }
                     summs={ limitsData.summs }
@@ -111,7 +111,7 @@ export default class DialogLimitInfo extends Component {
         
         } else if (currentBalance > 0) {
             resultMessage = ` 
-                Congratulations, you have completed the current period with a cash saving of ${currentBalance}. 
+                Congratulations, you have completed the current period with a cash saving of $${currentBalance}. 
             `
         
         } else { //currentBalance = 0

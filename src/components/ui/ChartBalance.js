@@ -2,7 +2,9 @@ import { PropTypes } from 'prop-types'
 
 import { ResponsiveContainer, PieChart, Pie, Sector, Cell, Legend, Label } from 'recharts'
 
-const BalanceChart = ({ daysDone, daysRest, summs={} }) => {
+import { COLORS_BALANCE as COLORS_C } from '../../constants'
+
+const ChartBalance = ({ daysDone, daysRest, summs={} }) => {
     
     const { summIncomes, summExpenses, summNotIncluded } = summs,
         currentBalance = summIncomes - summNotIncluded - summExpenses
@@ -23,14 +25,13 @@ const BalanceChart = ({ daysDone, daysRest, summs={} }) => {
                 ]
             }
         ],
-        COLORS = ['#00C49F', '#FF8042'],
+        COLORS = [ COLORS_C.money, COLORS_C.days ],
         MARGINS_X = [ 150, 450 ],
         RADIAN = Math.PI / 180,
-        NAMES = [ 'Money', 'Days' ],
-        HEIGHT = currentBalance > -200 ? 140 : 200
+        NAMES = data.map(obj => obj.name)
 
     return (
-        <ResponsiveContainer height={ HEIGHT }>
+        <ResponsiveContainer height={ currentBalance > -200 ? 140 : 200 }>
             <PieChart>
             {
                 data.map((obj, i) =>
@@ -69,10 +70,10 @@ const BalanceChart = ({ daysDone, daysRest, summs={} }) => {
     )
 }
 
-BalanceChart.propTypes = {
+ChartBalance.propTypes = {
 	daysDone: PropTypes.number,
 	daysRest: PropTypes.number,
 	summs: PropTypes.object
 }
 
-export default BalanceChart
+export default ChartBalance

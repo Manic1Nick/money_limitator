@@ -27,7 +27,7 @@ export default class HeadResult extends Component {
 
 		return (
 			<div className='HeadResult' style={ style }>
-				{ text }
+				<h2>{ text }</h2>
 			</div>
 		)
 	}

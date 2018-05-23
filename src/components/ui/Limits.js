@@ -3,57 +3,71 @@ import { Component } from 'react'
 import RaisedButton from 'material-ui/RaisedButton'
 
 import DialogLimitInfo from './DialogLimitInfo'
+import DialogLimits from './DialogLimits'
 
 export default class Limits extends Component {
 
 	constructor() {
 		super()
-		this.state = { activeLimit: '' }
+		this.state = { 
+			activeLimit: '',
+			openChartLimits: false 
+		}
 	}
 
-	handleOpenDialog(limitName) {
+	handleOpenDialogLimitInfo(limitName) {
 		this.setState({ activeLimit: limitName })
 	}
 
-	handleCloseDialog() {
+	handleCloseDialogLimitInfo() {
 		this.setState({ activeLimit: '' })
+	}
+
+	handleOpenDialogLimits() {
+		this.setState({ openChartLimits: true })
+	}
+
+	handleCloseDialogLimits() {
+		this.setState({ openChartLimits: false })
 	}
 
 	render() {
 
-		const { activeLimit } = this.state,
-			{ base, corrected, fact } = this.props.limits,
+		const { activeLimit, openChartLimits } = this.state,
+			{ limits } = this.props,
 			limitLabel = {
-				'base': `Base ${base} in day`,
-				'corrected': `Corrected ${corrected} in day`,
-				'fact': `Fact ${fact} in day`
+				'base': `Base ${limits.base} in day`,
+				'corrected': `Corrected ${limits.corrected} in day`,
+				'fact': `Fact ${limits.fact} in day`
 			},
 			limitsData = this.props
 
 		return (
 			<div className='Limits'>
 				<div className='limits__title'>
-					<span>LIMITS:</span>
+					<span onClick={ () => this.handleOpenDialogLimits() }>
+						LIMITS:
+					</span>
 				</div>
 				<RaisedButton 
 					className='limits__button'
 					label={ limitLabel.base } 
 					primary={true} 
-					onClick={ () => this.handleOpenDialog('base') }
+					onClick={ () => this.handleOpenDialogLimitInfo('base') }
 				/>
 				<RaisedButton 
 					className='limits__button'
 					label={ limitLabel.corrected } 
 					backgroundColor="#9932CC" 
 					labelColor="#FFFFFF" 
-					onClick={ () => this.handleOpenDialog('corrected') }
+					onClick={ () => this.handleOpenDialogLimitInfo('corrected') }
 				/>
 				<RaisedButton 
 					className='limits__button'
 					label={ limitLabel.fact } 
 					backgroundColor="#FF6347" 
 					labelColor="#FFFFFF" 
-					onClick={ () => this.handleOpenDialog('fact') }
+					onClick={ () => this.handleOpenDialogLimitInfo('fact') }
 				/>
 				
 				<DialogLimitInfo
@@ -61,7 +75,14 @@ export default class Limits extends Component {
 					activeLimit={ activeLimit }
 					limitsData={ limitsData }
 					modal={ false }
-					closeDialog={ this.handleCloseDialog.bind(this) }
+					closeDialog={ this.handleCloseDialogLimitInfo.bind(this) }
+				/>
+
+				<DialogLimits 
+					open={ openChartLimits }
+					limits={ limits }
+					modal={ false }
+					closeDialog={ this.handleCloseDialogLimits.bind(this) }
 				/>
 			</div>
 		)

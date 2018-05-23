@@ -22,3 +22,15 @@ export default keyMirror({
 	CLEAR_ERROR 		: null,
 	CLEAR_ALL_ERRORS 	: null
 })
+
+export const COLORS_CHART = {
+	base: '#00BFFF',
+	corrected: '#9932CC',
+	fact: '#FF6347',
+	expense: '#9ACD32'
+}
+
+export const COLORS_BALANCE = {
+	money: '#00C49F', 
+	days: '#FF8042'
+}
