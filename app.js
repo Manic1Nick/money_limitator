@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "975e5d04c09039a45f56"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "3ae1432c7dc035c94761"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -5342,7 +5342,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Arimo);", ""]);
 
 // module
-exports.push([module.i, "body {\n  margin: 0;\n  padding: 0;\n  font-family: Arimo, sans-serif;\n  background-color: #F8F8FF; }\n\n.App {\n  max-width: 800px;\n  margin: auto;\n  height: 100%;\n  padding: 16px;\n  box-sizing: border-box; }\n  .App .HeadBlock__PeriodResultMoney {\n    display: flex;\n    justify-content: space-between; }\n    .App .HeadBlock__PeriodResultMoney .HeadBlock__PeriodResult {\n      display: flex;\n      flex-direction: column;\n      width: 66%; }\n      .App .HeadBlock__PeriodResultMoney .HeadBlock__PeriodResult .HeadPeriod {\n        display: flex;\n        justify-content: space-between;\n        align-items: center;\n        width: 100%;\n        height: 30%; }\n      .App .HeadBlock__PeriodResultMoney .HeadBlock__PeriodResult .HeadResult {\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        width: 100%;\n        height: 70%; }\n    .App .HeadBlock__PeriodResultMoney .HeadMoney {\n      display: flex;\n      flex-direction: column;\n      width: 33%;\n      height: 100%; }\n      .App .HeadBlock__PeriodResultMoney .HeadMoney .HeadMoney__action {\n        display: flex;\n        width: 100%; }\n        .App .HeadBlock__PeriodResultMoney .HeadMoney .HeadMoney__action .HeadMoney__button {\n          width: 80%; }\n        .App .HeadBlock__PeriodResultMoney .HeadMoney .HeadMoney__action .HeadMoney__icon {\n          margin: auto;\n          width: 20%;\n          height: 100%;\n          cursor: pointer; }\n  .App .Limits {\n    padding: 16px;\n    display: flex;\n    justify-content: space-between; }\n    .App .Limits .limits__title {\n      color: #A9A9A9;\n      display: flex;\n      align-items: center;\n      justify-content: center;\n      cursor: pointer; }\n  .App .Chart {\n    min-height: 400px;\n    padding: 16px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    height: 100%; }\n\ninput {\n  font-size: 16px;\n  width: 30%; }\n  input:focus {\n    outline: 0; }\n\n.Drawer .Drawer__head {\n  display: flex;\n  justify-content: space-between; }\n  .Drawer .Drawer__head .Drawer__title {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 50%; }\n  .Drawer .Drawer__head .Drawer__buttons {\n    display: flex;\n    justify-content: flex-end;\n    width: 50%; }\n\n.Drawer .ListItem .ListItem__input {\n  display: flex;\n  align-items: center;\n  justify-content: space-between; }\n  .Drawer .ListItem .ListItem__input .ListItem__data {\n    width: 60%; }\n  .Drawer .ListItem .ListItem__input .ListItem__actions {\n    display: flex;\n    justify-content: space-around;\n    width: 40%; }\n\n.Drawer .Drawer__foot {\n  display: flex;\n  justify-content: center;\n  width: 100%; }\n\n.DialogInputSumm .InputSumm__date {\n  display: flex;\n  justify-content: space-between; }\n  .DialogInputSumm .InputSumm__date .InputSumm__icon {\n    margin: auto;\n    cursor: pointer; }\n\ndiv.show-errors {\n  width: 100%;\n  font-size: 1.5em; }\n  div.show-errors div {\n    position: absolute;\n    width: 100%;\n    text-align: center;\n    bottom: 0;\n    color: red;\n    font-family: verdana, sans-serif;\n    display: flex;\n    justify-content: space-between;\n    align-items: center; }\n    div.show-errors div p {\n      margin-left: 1em; }\n    div.show-errors div svg {\n      font-size: 2em; }\n", ""]);
+exports.push([module.i, "body {\n  margin: 0;\n  padding: 0;\n  font-family: Arimo, sans-serif;\n  background-color: #F8F8FF; }\n\n.App {\n  max-width: 800px;\n  margin: auto;\n  height: 100%;\n  padding: 16px;\n  box-sizing: border-box; }\n  .App .HeadBlock__PeriodResultMoney {\n    display: flex;\n    justify-content: space-between; }\n    .App .HeadBlock__PeriodResultMoney .HeadBlock__PeriodResult {\n      display: flex;\n      flex-direction: column;\n      width: 66%; }\n      .App .HeadBlock__PeriodResultMoney .HeadBlock__PeriodResult .HeadPeriod {\n        display: flex;\n        justify-content: space-between;\n        align-items: center;\n        width: 100%;\n        height: 30%; }\n      .App .HeadBlock__PeriodResultMoney .HeadBlock__PeriodResult .HeadResult {\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        width: 100%;\n        height: 70%; }\n    .App .HeadBlock__PeriodResultMoney .HeadMoney {\n      display: flex;\n      flex-direction: column;\n      width: 33%;\n      height: 100%; }\n      .App .HeadBlock__PeriodResultMoney .HeadMoney .HeadMoney__action {\n        display: flex;\n        width: 100%; }\n        .App .HeadBlock__PeriodResultMoney .HeadMoney .HeadMoney__action .HeadMoney__button {\n          width: 80%; }\n        .App .HeadBlock__PeriodResultMoney .HeadMoney .HeadMoney__action .HeadMoney__icon {\n          margin: auto;\n          width: 20%;\n          height: 100%;\n          cursor: pointer; }\n  .App .Limits {\n    padding: 16px;\n    display: flex;\n    justify-content: space-between; }\n    .App .Limits .limits__title {\n      color: #A9A9A9;\n      display: flex;\n      align-items: center;\n      justify-content: center;\n      cursor: pointer; }\n  .App .ChartBlock {\n    min-height: 400px;\n    padding: 16px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    flex-wrap: wrap;\n    height: 100%; }\n    .App .ChartBlock span {\n      color: #aaaaaa; }\n    .App .ChartBlock .ChartBlock__editor {\n      width: 100%;\n      height: 25px;\n      display: flex;\n      align-items: center;\n      justify-content: center; }\n      .App .ChartBlock .ChartBlock__editor .SummEditor {\n        max-width: 300px; }\n\ninput {\n  font-size: 16px; }\n  input:focus {\n    outline: 0; }\n\n.Drawer .Drawer__head {\n  display: flex;\n  justify-content: space-between; }\n  .Drawer .Drawer__head .Drawer__title {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 50%; }\n  .Drawer .Drawer__head .Drawer__buttons {\n    display: flex;\n    justify-content: flex-end;\n    width: 50%; }\n\n.Drawer .Drawer__foot {\n  display: flex;\n  justify-content: center;\n  width: 100%; }\n\n.SummEditor {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  flex-wrap: nowrap; }\n  .SummEditor .SummEditor__data {\n    width: 33%; }\n    .SummEditor .SummEditor__data input {\n      width: 80%; }\n  .SummEditor .SummEditor__actions {\n    display: flex;\n    justify-content: space-around;\n    width: 33%;\n    cursor: pointer; }\n\n.DialogInputSumm .InputSumm__date {\n  display: flex;\n  justify-content: space-between; }\n  .DialogInputSumm .InputSumm__date .InputSumm__icon {\n    margin: auto;\n    cursor: pointer; }\n\ndiv.show-errors {\n  width: 100%;\n  font-size: 1.5em; }\n  div.show-errors div {\n    position: absolute;\n    width: 100%;\n    text-align: center;\n    bottom: 0;\n    color: red;\n    font-family: verdana, sans-serif;\n    display: flex;\n    justify-content: space-between;\n    align-items: center; }\n    div.show-errors div p {\n      margin-left: 1em; }\n    div.show-errors div svg {\n      font-size: 2em; }\n", ""]);
 
 // exports
 
@@ -107104,12 +107104,14 @@ module.exports = function(module) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return addNewIncome; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return addNewExpense; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return addNotIncluded; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return deleteIncome; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return deleteExpense; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return deleteNotIncluded; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return deleteIncome; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return deleteExpense; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return deleteNotIncluded; });
 /* unused harmony export fillGaps */
 /* unused harmony export updateSumms */
 /* unused harmony export updateLimits */
+/* unused harmony export showNotification */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return clearNotification; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return addError; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return clearError; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return clearAllErrors; });
@@ -107135,6 +107137,9 @@ var addNewIncome = function addNewIncome(income) {
             payload: income
         });
 
+        var message = 'Income of $' + income.summ + ' from ' + income.date + ' was saved succesfully.';
+        dispatch(showNotification(message));
+
         dispatch(updateSumms());
         dispatch(updateLimits());
     };
@@ -107146,6 +107151,9 @@ var addNewExpense = function addNewExpense(expense) {
             type: __WEBPACK_IMPORTED_MODULE_0__constants__["c" /* default */].ADD_EXPENSE,
             payload: expense
         });
+
+        var message = 'Expense of $' + expense.summ + ' from ' + expense.date + ' was saved succesfully.';
+        dispatch(showNotification(message));
 
         dispatch(fillGaps());
         dispatch(updateSumms());
@@ -107160,6 +107168,9 @@ var addNotIncluded = function addNotIncluded(expense) {
             payload: expense
         });
 
+        var message = 'Expense of $' + expense.summ + ' from ' + expense.date + ' was saved succesfully.';
+        dispatch(showNotification(message));
+
         dispatch(updateSumms());
         dispatch(updateLimits());
     };
@@ -107171,6 +107182,9 @@ var deleteIncome = function deleteIncome(income) {
             type: __WEBPACK_IMPORTED_MODULE_0__constants__["c" /* default */].DELETE_INCOME,
             payload: income
         });
+
+        var message = 'Income of $' + income.summ + ' from ' + income.date + ' was deleted succesfully.';
+        dispatch(showNotification(message));
 
         dispatch(updateSumms());
         dispatch(updateLimits());
@@ -107184,6 +107198,9 @@ var deleteExpense = function deleteExpense(expense) {
             payload: expense
         });
 
+        var message = 'Expense of $' + expense.summ + ' from ' + expense.date + ' was deleted succesfully.';
+        dispatch(showNotification(message));
+
         dispatch(fillGaps());
         dispatch(updateSumms());
         dispatch(updateLimits());
@@ -107196,6 +107213,9 @@ var deleteNotIncluded = function deleteNotIncluded(expense) {
             type: __WEBPACK_IMPORTED_MODULE_0__constants__["c" /* default */].DELETE_NOT_INCLUDED,
             payload: expense
         });
+
+        var message = 'Expense of $' + expense.summ + ' from ' + expense.date + ' was deleted succesfully.';
+        dispatch(showNotification(message));
 
         dispatch(updateSumms());
         dispatch(updateLimits());
@@ -107232,6 +107252,19 @@ var updateLimits = function updateLimits() {
             type: __WEBPACK_IMPORTED_MODULE_0__constants__["c" /* default */].UPDATE_LIMITS,
             payload: state
         });
+    };
+};
+
+var showNotification = function showNotification(message) {
+    return {
+        type: __WEBPACK_IMPORTED_MODULE_0__constants__["c" /* default */].SHOW_NOTIFICATION,
+        payload: message
+    };
+};
+
+var clearNotification = function clearNotification() {
+    return {
+        type: __WEBPACK_IMPORTED_MODULE_0__constants__["c" /* default */].CLEAR_NOTIFICATION
     };
 };
 
@@ -107289,14 +107322,19 @@ if(true) {
 
 /***/ }),
 
-/***/ "./src/components/containers/ChartMain.js":
+/***/ "./src/components/containers/ChartBlock.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ui_ChartMain__ = __webpack_require__("./src/components/ui/ChartMain.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ui_ChartBlock__ = __webpack_require__("./src/components/ui/ChartBlock.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_redux__ = __webpack_require__("./node_modules/redux/es/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_redux__ = __webpack_require__("./node_modules/react-redux/es/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util_ChartUtil__ = __webpack_require__("./src/util/ChartUtil.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util_DateUtil__ = __webpack_require__("./src/util/DateUtil.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__util_ChartUtil__ = __webpack_require__("./src/util/ChartUtil.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__actions__ = __webpack_require__("./src/actions.js");
+
+
+
 
 
 
@@ -107304,13 +107342,27 @@ if(true) {
 
 
 var mapStateToProps = function mapStateToProps(state, ownProps) {
+    var _state$period = state.period,
+        begin = _state$period.begin,
+        end = _state$period.end,
+        dates = Object(__WEBPACK_IMPORTED_MODULE_3__util_DateUtil__["a" /* createArrayDates */])(begin, end);
+
 
     return {
-        data: Object(__WEBPACK_IMPORTED_MODULE_3__util_ChartUtil__["a" /* createDataChart */])(state)
+        dates: dates,
+        expenses: state.expenses,
+        data: Object(__WEBPACK_IMPORTED_MODULE_4__util_ChartUtil__["a" /* createDataChart */])(state)
     };
 };
 
-/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_2_react_redux__["b" /* connect */])(mapStateToProps)(__WEBPACK_IMPORTED_MODULE_0__ui_ChartMain__["a" /* default */]));
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+    return {
+        addSumm: Object(__WEBPACK_IMPORTED_MODULE_1_redux__["b" /* bindActionCreators */])(__WEBPACK_IMPORTED_MODULE_5__actions__["c" /* addNewExpense */], dispatch),
+        deleteSumm: Object(__WEBPACK_IMPORTED_MODULE_1_redux__["b" /* bindActionCreators */])(__WEBPACK_IMPORTED_MODULE_5__actions__["i" /* deleteExpense */], dispatch)
+    };
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_2_react_redux__["b" /* connect */])(mapStateToProps, mapDispatchToProps)(__WEBPACK_IMPORTED_MODULE_0__ui_ChartBlock__["a" /* default */]));
 
 /***/ }),
 
@@ -107362,7 +107414,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 			if (!summ.isExpense) dispatch(Object(__WEBPACK_IMPORTED_MODULE_3__actions__["d" /* addNewIncome */])(summ));else if (!summ.notIncluded) dispatch(Object(__WEBPACK_IMPORTED_MODULE_3__actions__["c" /* addNewExpense */])(summ));else dispatch(Object(__WEBPACK_IMPORTED_MODULE_3__actions__["e" /* addNotIncluded */])(summ));
 		},
 		deleteSumm: function deleteSumm(summ) {
-			if (!summ.isExpense) dispatch(Object(__WEBPACK_IMPORTED_MODULE_3__actions__["i" /* deleteIncome */])(summ));else if (!summ.notIncluded) dispatch(Object(__WEBPACK_IMPORTED_MODULE_3__actions__["h" /* deleteExpense */])(summ));else dispatch(Object(__WEBPACK_IMPORTED_MODULE_3__actions__["j" /* deleteNotIncluded */])(summ));
+			if (!summ.isExpense) dispatch(Object(__WEBPACK_IMPORTED_MODULE_3__actions__["j" /* deleteIncome */])(summ));else if (!summ.notIncluded) dispatch(Object(__WEBPACK_IMPORTED_MODULE_3__actions__["i" /* deleteExpense */])(summ));else dispatch(Object(__WEBPACK_IMPORTED_MODULE_3__actions__["k" /* deleteNotIncluded */])(summ));
 		}
 	};
 };
@@ -107401,13 +107453,47 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 
 /***/ }),
 
+/***/ "./src/components/containers/ShowNotification.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ui_ShowNotification__ = __webpack_require__("./src/components/ui/ShowNotification.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_redux__ = __webpack_require__("./node_modules/redux/es/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_redux__ = __webpack_require__("./node_modules/react-redux/es/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__actions__ = __webpack_require__("./src/actions.js");
+
+
+
+
+
+
+var mapStateToProps = function mapStateToProps(state, ownProps) {
+
+    return {
+        show: state.notifications.show,
+        message: state.notifications.message
+    };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+    return {
+        onClose: Object(__WEBPACK_IMPORTED_MODULE_1_redux__["b" /* bindActionCreators */])(__WEBPACK_IMPORTED_MODULE_3__actions__["h" /* clearNotification */], dispatch)
+    };
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_2_react_redux__["b" /* connect */])(mapStateToProps, mapDispatchToProps)(__WEBPACK_IMPORTED_MODULE_0__ui_ShowNotification__["a" /* default */]));
+
+/***/ }),
+
 /***/ "./src/components/index.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__containers_HeadBlock__ = __webpack_require__("./src/components/containers/HeadBlock.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__containers_ChartMain__ = __webpack_require__("./src/components/containers/ChartMain.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__containers_ShowErrors__ = __webpack_require__("./src/components/containers/ShowErrors.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__containers_ChartBlock__ = __webpack_require__("./src/components/containers/ChartBlock.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__containers_ShowNotification__ = __webpack_require__("./src/components/containers/ShowNotification.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__containers_ShowErrors__ = __webpack_require__("./src/components/containers/ShowErrors.js");
+
 
 
 
@@ -107417,8 +107503,9 @@ var MainPage = function MainPage() {
 		'div',
 		{ className: 'App' },
 		React.createElement(__WEBPACK_IMPORTED_MODULE_0__containers_HeadBlock__["a" /* default */], null),
-		React.createElement(__WEBPACK_IMPORTED_MODULE_1__containers_ChartMain__["a" /* default */], null),
-		React.createElement(__WEBPACK_IMPORTED_MODULE_2__containers_ShowErrors__["a" /* default */], null)
+		React.createElement(__WEBPACK_IMPORTED_MODULE_1__containers_ChartBlock__["a" /* default */], null),
+		React.createElement(__WEBPACK_IMPORTED_MODULE_2__containers_ShowNotification__["a" /* default */], null),
+		React.createElement(__WEBPACK_IMPORTED_MODULE_3__containers_ShowErrors__["a" /* default */], null)
 	);
 };
 
@@ -107515,6 +107602,152 @@ ChartBalance.propTypes = {
 
 /***/ }),
 
+/***/ "./src/components/ui/ChartBlock.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_nick_dev_JS_react_redux_money_limitator_node_modules_redbox_react_lib_index_js__ = __webpack_require__("./node_modules/redbox-react/lib/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_nick_dev_JS_react_redux_money_limitator_node_modules_redbox_react_lib_index_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__home_nick_dev_JS_react_redux_money_limitator_node_modules_redbox_react_lib_index_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_catch_errors_lib_index_js__ = __webpack_require__("./node_modules/react-transform-catch-errors/lib/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_catch_errors_lib_index_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_catch_errors_lib_index_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__("./node_modules/react/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js__ = __webpack_require__("./node_modules/react-transform-hmr/lib/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_material_ui_Paper__ = __webpack_require__("./node_modules/material-ui/Paper/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_material_ui_Paper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_material_ui_Paper__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__DialogInputSumm__ = __webpack_require__("./src/components/ui/DialogInputSumm.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ChartMain__ = __webpack_require__("./src/components/ui/ChartMain.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__SummEditor__ = __webpack_require__("./src/components/ui/SummEditor.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__util_DateUtil__ = __webpack_require__("./src/util/DateUtil.js");
+
+
+
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _components = {
+    ChartBlock: {
+        displayName: 'ChartBlock'
+    }
+};
+
+var _homeNickDevJSReact_reduxMoney_limitatorNode_modulesReactTransformHmrLibIndexJs2 = __WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js___default()({
+    filename: '/home/nick/dev/JS/react_redux/money_limitator/src/components/ui/ChartBlock.js',
+    components: _components,
+    locals: [module],
+    imports: [__WEBPACK_IMPORTED_MODULE_2_react___default.a]
+});
+
+var _homeNickDevJSReact_reduxMoney_limitatorNode_modulesReactTransformCatchErrorsLibIndexJs2 = __WEBPACK_IMPORTED_MODULE_1__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_catch_errors_lib_index_js___default()({
+    filename: '/home/nick/dev/JS/react_redux/money_limitator/src/components/ui/ChartBlock.js',
+    components: _components,
+    locals: [],
+    imports: [__WEBPACK_IMPORTED_MODULE_2_react___default.a, __WEBPACK_IMPORTED_MODULE_0__home_nick_dev_JS_react_redux_money_limitator_node_modules_redbox_react_lib_index_js___default.a]
+});
+
+function _wrapComponent(id) {
+    return function (Component) {
+        return _homeNickDevJSReact_reduxMoney_limitatorNode_modulesReactTransformHmrLibIndexJs2(_homeNickDevJSReact_reduxMoney_limitatorNode_modulesReactTransformCatchErrorsLibIndexJs2(Component, id), id);
+    };
+}
+
+
+
+
+
+
+
+
+
+var ChartBlock = _wrapComponent('ChartBlock')(function (_Component) {
+    _inherits(ChartBlock, _Component);
+
+    function ChartBlock(props) {
+        _classCallCheck(this, ChartBlock);
+
+        var _this = _possibleConstructorReturn(this, (ChartBlock.__proto__ || Object.getPrototypeOf(ChartBlock)).call(this));
+
+        _this.openEditSumm = function (index) {
+            var editingDate = _this.props.dates[index];
+
+            _this.setState({ editingDate: editingDate });
+        };
+
+        _this.onSaveSumm = function (data) {
+            _this.props.addSumm(data);
+
+            _this.closeInputSumm();
+        };
+
+        _this.onDeleteSumm = function (data) {
+            _this.props.deleteSumm(data);
+
+            _this.closeInputSumm();
+        };
+
+        _this.closeInputSumm = function () {
+            _this.setState({ editingDate: '' });
+        };
+
+        _this.state = {
+            editingDate: ''
+        };
+        return _this;
+    }
+
+    _createClass(ChartBlock, [{
+        key: 'render',
+        value: function render() {
+            var _props = this.props,
+                data = _props.data,
+                expenses = _props.expenses,
+                editingDate = this.state.editingDate;
+
+
+            return React.createElement(
+                __WEBPACK_IMPORTED_MODULE_4_material_ui_Paper___default.a,
+                { className: 'ChartBlock', zDepth: 3 },
+                React.createElement(
+                    'div',
+                    { className: 'ChartBlock__editor' },
+                    editingDate ? React.createElement(__WEBPACK_IMPORTED_MODULE_7__SummEditor__["a" /* default */], {
+                        editingDate: editingDate,
+                        editingSumm: expenses[editingDate],
+                        isExpense: true,
+                        saveSumm: this.onSaveSumm.bind(this),
+                        deleteSumm: this.onDeleteSumm.bind(this),
+                        cancelEditing: this.closeInputSumm.bind(this)
+                    }) : React.createElement(
+                        'span',
+                        null,
+                        'Click on tab for change expense'
+                    )
+                ),
+                React.createElement(__WEBPACK_IMPORTED_MODULE_6__ChartMain__["a" /* default */], {
+                    className: 'ChartBlock__chart',
+                    data: data,
+                    openEditing: this.openEditSumm
+                })
+            );
+        }
+    }]);
+
+    return ChartBlock;
+}(__WEBPACK_IMPORTED_MODULE_2_react__["Component"]));
+
+/* harmony default export */ __webpack_exports__["a"] = (ChartBlock);
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/webpack/buildin/harmony-module.js")(module)))
+
+/***/ }),
+
 /***/ "./src/components/ui/ChartLimits.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -107597,54 +107830,141 @@ ChartLimits.propTypes = {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_prop_types__ = __webpack_require__("./node_modules/prop-types/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_recharts__ = __webpack_require__("./node_modules/recharts/es6/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_material_ui_Paper__ = __webpack_require__("./node_modules/material-ui/Paper/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_material_ui_Paper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_material_ui_Paper__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__constants__ = __webpack_require__("./src/constants.js");
+/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_nick_dev_JS_react_redux_money_limitator_node_modules_redbox_react_lib_index_js__ = __webpack_require__("./node_modules/redbox-react/lib/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_nick_dev_JS_react_redux_money_limitator_node_modules_redbox_react_lib_index_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__home_nick_dev_JS_react_redux_money_limitator_node_modules_redbox_react_lib_index_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_catch_errors_lib_index_js__ = __webpack_require__("./node_modules/react-transform-catch-errors/lib/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_catch_errors_lib_index_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_catch_errors_lib_index_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__("./node_modules/react/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js__ = __webpack_require__("./node_modules/react-transform-hmr/lib/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_recharts__ = __webpack_require__("./node_modules/recharts/es6/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__constants__ = __webpack_require__("./src/constants.js");
 
 
 
 
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var styleBarLabel = {
-  position: 'top',
-  fontSize: 10,
-  fill: __WEBPACK_IMPORTED_MODULE_3__constants__["b" /* COLORS_CHART */].expense
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _components = {
+	ChartMain: {
+		displayName: 'ChartMain'
+	}
 };
 
-var Chart = function Chart(_ref) {
-  var _ref$data = _ref.data,
-      data = _ref$data === undefined ? [] : _ref$data;
-  return React.createElement(
-    __WEBPACK_IMPORTED_MODULE_2_material_ui_Paper___default.a,
-    { className: 'Chart', zDepth: 3 },
-    React.createElement(
-      __WEBPACK_IMPORTED_MODULE_1_recharts__["d" /* ComposedChart */],
-      { width: 800, height: 400, data: data,
-        margin: { top: 20, right: 20, bottom: 20, left: 20 } },
-      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["n" /* XAxis */], { dataKey: 'name' }),
-      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["o" /* YAxis */], { yAxisId: 'left' }),
-      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["o" /* YAxis */], { yAxisId: 'right', orientation: 'right' }),
-      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["m" /* Tooltip */], null),
-      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["f" /* Legend */], null),
-      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["b" /* CartesianGrid */], { stroke: '#f5f5f5' }),
-      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["g" /* Line */], { yAxisId: 'left', type: 'monotone', dataKey: 'base', stroke: __WEBPACK_IMPORTED_MODULE_3__constants__["b" /* COLORS_CHART */].base }),
-      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["g" /* Line */], { yAxisId: 'left', type: 'monotone', dataKey: 'corrected', stroke: __WEBPACK_IMPORTED_MODULE_3__constants__["b" /* COLORS_CHART */].corrected }),
-      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["g" /* Line */], { yAxisId: 'left', type: 'monotone', dataKey: 'fact', stroke: __WEBPACK_IMPORTED_MODULE_3__constants__["b" /* COLORS_CHART */].fact }),
-      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["a" /* Bar */], { yAxisId: 'right', dataKey: 'expense', barSize: 10, fill: __WEBPACK_IMPORTED_MODULE_3__constants__["b" /* COLORS_CHART */].expense, label: styleBarLabel })
-    )
-  );
-};
+var _homeNickDevJSReact_reduxMoney_limitatorNode_modulesReactTransformHmrLibIndexJs2 = __WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js___default()({
+	filename: '/home/nick/dev/JS/react_redux/money_limitator/src/components/ui/ChartMain.js',
+	components: _components,
+	locals: [module],
+	imports: [__WEBPACK_IMPORTED_MODULE_2_react___default.a]
+});
 
-Chart.propTypes = {
-  data: __WEBPACK_IMPORTED_MODULE_0_prop_types__["PropTypes"].array
-};
+var _homeNickDevJSReact_reduxMoney_limitatorNode_modulesReactTransformCatchErrorsLibIndexJs2 = __WEBPACK_IMPORTED_MODULE_1__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_catch_errors_lib_index_js___default()({
+	filename: '/home/nick/dev/JS/react_redux/money_limitator/src/components/ui/ChartMain.js',
+	components: _components,
+	locals: [],
+	imports: [__WEBPACK_IMPORTED_MODULE_2_react___default.a, __WEBPACK_IMPORTED_MODULE_0__home_nick_dev_JS_react_redux_money_limitator_node_modules_redbox_react_lib_index_js___default.a]
+});
 
-/* harmony default export */ __webpack_exports__["a"] = (Chart);
+function _wrapComponent(id) {
+	return function (Component) {
+		return _homeNickDevJSReact_reduxMoney_limitatorNode_modulesReactTransformHmrLibIndexJs2(_homeNickDevJSReact_reduxMoney_limitatorNode_modulesReactTransformCatchErrorsLibIndexJs2(Component, id), id);
+	};
+}
+
+
+
+
+
+
+
+var ChartMain = _wrapComponent('ChartMain')(function (_Component) {
+	_inherits(ChartMain, _Component);
+
+	function ChartMain(props) {
+		_classCallCheck(this, ChartMain);
+
+		var _this = _possibleConstructorReturn(this, (ChartMain.__proto__ || Object.getPrototypeOf(ChartMain)).call(this, props));
+
+		_this.state = {
+			data: props.data,
+			activeIndex: -1
+		};
+		return _this;
+	}
+
+	_createClass(ChartMain, [{
+		key: 'componentWillReceiveProps',
+		value: function componentWillReceiveProps(nextProps) {
+			if (this.props !== nextProps) {
+				this.setState({ data: nextProps.data });
+			}
+		}
+	}, {
+		key: 'handleClickOnBar',
+		value: function handleClickOnBar(data, index) {
+			this.setState({
+				activeIndex: index
+			});
+
+			this.props.openEditing(index);
+		}
+	}, {
+		key: 'render',
+		value: function render() {
+			var _state = this.state,
+			    data = _state.data,
+			    activeIndex = _state.activeIndex,
+			    styleBarLabel = {
+				position: 'top',
+				fontSize: 10,
+				fill: __WEBPACK_IMPORTED_MODULE_5__constants__["b" /* COLORS_CHART */].expenseActive
+			};
+
+
+			return React.createElement(
+				__WEBPACK_IMPORTED_MODULE_4_recharts__["d" /* ComposedChart */],
+				{ width: 800, height: 400,
+					data: data,
+					margin: { top: 20, right: 20, bottom: 20, left: 20 }
+				},
+				React.createElement(__WEBPACK_IMPORTED_MODULE_4_recharts__["n" /* XAxis */], { dataKey: 'name' }),
+				React.createElement(__WEBPACK_IMPORTED_MODULE_4_recharts__["o" /* YAxis */], { yAxisId: 'left' }),
+				React.createElement(__WEBPACK_IMPORTED_MODULE_4_recharts__["o" /* YAxis */], { yAxisId: 'right', orientation: 'right' }),
+				React.createElement(__WEBPACK_IMPORTED_MODULE_4_recharts__["m" /* Tooltip */], null),
+				React.createElement(__WEBPACK_IMPORTED_MODULE_4_recharts__["f" /* Legend */], null),
+				React.createElement(__WEBPACK_IMPORTED_MODULE_4_recharts__["b" /* CartesianGrid */], { stroke: '#f5f5f5' }),
+				React.createElement(__WEBPACK_IMPORTED_MODULE_4_recharts__["g" /* Line */], { yAxisId: 'left', type: 'monotone', dataKey: 'base', stroke: __WEBPACK_IMPORTED_MODULE_5__constants__["b" /* COLORS_CHART */].base }),
+				React.createElement(__WEBPACK_IMPORTED_MODULE_4_recharts__["g" /* Line */], { yAxisId: 'left', type: 'monotone', dataKey: 'corrected', stroke: __WEBPACK_IMPORTED_MODULE_5__constants__["b" /* COLORS_CHART */].corrected }),
+				React.createElement(__WEBPACK_IMPORTED_MODULE_4_recharts__["g" /* Line */], { yAxisId: 'left', type: 'monotone', dataKey: 'fact', stroke: __WEBPACK_IMPORTED_MODULE_5__constants__["b" /* COLORS_CHART */].fact }),
+				React.createElement(
+					__WEBPACK_IMPORTED_MODULE_4_recharts__["a" /* Bar */],
+					{ yAxisId: 'right', dataKey: 'expense', barSize: 10, label: styleBarLabel,
+						onClick: this.handleClickOnBar.bind(this)
+					},
+					data.map(function (entry, index) {
+						return React.createElement(__WEBPACK_IMPORTED_MODULE_4_recharts__["c" /* Cell */], { cursor: 'pointer',
+							fill: index === activeIndex ? __WEBPACK_IMPORTED_MODULE_5__constants__["b" /* COLORS_CHART */].expenseActive : __WEBPACK_IMPORTED_MODULE_5__constants__["b" /* COLORS_CHART */].expense,
+							key: 'cell-' + index
+						});
+					})
+				)
+			);
+		}
+	}]);
+
+	return ChartMain;
+}(__WEBPACK_IMPORTED_MODULE_2_react__["Component"]));
+
+/* harmony default export */ __webpack_exports__["a"] = (ChartMain);
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/webpack/buildin/harmony-module.js")(module)))
 
 /***/ }),
 
@@ -108458,8 +108778,8 @@ var DialogBalanceInfo = _wrapComponent('DialogBalanceInfo')(function (_Component
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js__ = __webpack_require__("./node_modules/react-transform-hmr/lib/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__util_CalcUtil__ = __webpack_require__("./src/util/CalcUtil.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__util_DateUtil__ = __webpack_require__("./src/util/DateUtil.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__SummEditor__ = __webpack_require__("./src/components/ui/SummEditor.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__util_CalcUtil__ = __webpack_require__("./src/util/CalcUtil.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_material_ui_Drawer__ = __webpack_require__("./node_modules/material-ui/Drawer/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_material_ui_Drawer___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_material_ui_Drawer__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_material_ui_FlatButton__ = __webpack_require__("./node_modules/material-ui/FlatButton/index.js");
@@ -108529,8 +108849,6 @@ function _wrapComponent(id) {
 
 
 
-var ENTER_KEY = 13;
-var ESC_KEY = 27;
 
 var DrawerListSumms = _wrapComponent('DrawerListSumms')(function (_Component) {
     _inherits(DrawerListSumms, _Component);
@@ -108561,45 +108879,25 @@ var DrawerListSumms = _wrapComponent('DrawerListSumms')(function (_Component) {
         }
     }, {
         key: 'onSaveSumm',
-        value: function onSaveSumm() {
-            var data = this._createDataFromState();
+        value: function onSaveSumm(data) {
             this.props.saveSumm(data);
 
             this.clearEditingDate();
         }
     }, {
-        key: 'onClearSumm',
-        value: function onClearSumm() {
-            this.fieldSumm.value = 0;
-        }
-    }, {
         key: 'onDeleteSumm',
-        value: function onDeleteSumm() {
-            var data = this._createDataFromState();
+        value: function onDeleteSumm(data) {
             this.props.deleteSumm(data);
         }
     }, {
         key: 'onOpenInput',
         value: function onOpenInput() {
             this.props.openInput();
-
-            this.clearEditingDate();
         }
     }, {
         key: 'onClose',
         value: function onClose() {
             this.props.onClose();
-
-            this.clearEditingDate();
-        }
-    }, {
-        key: 'handleSummEditKeyDown',
-        value: function handleSummEditKeyDown(e) {
-            if (e.keyCode === ENTER_KEY) {
-                this.onSaveSumm();
-            } else if (e.keyCode === ESC_KEY) {
-                this.clearEditingDate();
-            }
         }
     }, {
         key: 'clearEditingDate',
@@ -108616,9 +108914,12 @@ var DrawerListSumms = _wrapComponent('DrawerListSumms')(function (_Component) {
             });
         }
     }, {
-        key: 'renderListItemEditing',
-        value: function renderListItemEditing(key, index) {
-            var _this2 = this;
+        key: 'renderItemEditing',
+        value: function renderItemEditing(date, index) {
+            var _props = this.props,
+                listSumms = _props.listSumms,
+                isExpense = _props.isExpense;
+
 
             return React.createElement(
                 __WEBPACK_IMPORTED_MODULE_8_material_ui_List__["ListItem"],
@@ -108626,53 +108927,23 @@ var DrawerListSumms = _wrapComponent('DrawerListSumms')(function (_Component) {
                     key: index,
                     className: 'ListItem'
                 },
-                React.createElement(
-                    'div',
-                    { className: 'ListItem__input' },
-                    React.createElement(
-                        'div',
-                        { className: 'ListItem__data' },
-                        key,
-                        ':',
-                        React.createElement('input', {
-                            type: 'text',
-                            defaultValue: this.props.listSumms[key],
-                            onKeyDown: this.handleSummEditKeyDown.bind(this),
-                            ref: function ref(c) {
-                                return _this2.fieldSumm = c;
-                            },
-                            autoFocus: true
-                        })
-                    ),
-                    React.createElement(
-                        'div',
-                        { className: 'ListItem__actions' },
-                        React.createElement(__WEBPACK_IMPORTED_MODULE_11_react_material_icons_icons_content_save___default.a, {
-                            style: { color: '#00BFFF' },
-                            onClick: function onClick() {
-                                return _this2.onSaveSumm();
-                            }
-                        }),
-                        React.createElement(__WEBPACK_IMPORTED_MODULE_12_react_material_icons_icons_content_backspace___default.a, {
-                            style: { color: '#A9A9A9' },
-                            onClick: function onClick() {
-                                return _this2.onClearSumm();
-                            }
-                        }),
-                        React.createElement(__WEBPACK_IMPORTED_MODULE_13_react_material_icons_icons_action_delete___default.a, {
-                            style: { color: '#FF6347' },
-                            onClick: function onClick() {
-                                return _this2.onDeleteSumm();
-                            }
-                        })
-                    )
-                )
+                React.createElement(__WEBPACK_IMPORTED_MODULE_4__SummEditor__["a" /* default */], {
+                    editingDate: date,
+                    editingSumm: listSumms[date],
+                    isExpense: isExpense,
+                    saveSumm: this.onSaveSumm.bind(this),
+                    deleteSumm: this.onDeleteSumm.bind(this),
+                    cancelEditing: this.clearEditingDate.bind(this)
+                })
             );
         }
     }, {
-        key: 'renderListItem',
-        value: function renderListItem(key, index) {
-            var _this3 = this;
+        key: 'renderItem',
+        value: function renderItem(date, index) {
+            var _this2 = this;
+
+            var listSumms = this.props.listSumms;
+
 
             return React.createElement(
                 __WEBPACK_IMPORTED_MODULE_8_material_ui_List__["ListItem"],
@@ -108682,42 +108953,37 @@ var DrawerListSumms = _wrapComponent('DrawerListSumms')(function (_Component) {
                     , rightIcon: React.createElement(__WEBPACK_IMPORTED_MODULE_10_react_material_icons_icons_image_edit___default.a, {
                         style: { color: '#A9A9A9' },
                         onClick: function onClick() {
-                            return _this3.handleEditSumm(key);
+                            return _this2.handleEditSumm(date);
                         }
                     })
                 },
                 React.createElement(
                     'div',
                     { className: 'ListItem__text' },
-                    key,
+                    date,
                     ': ',
-                    this.props.listSumms[key]
+                    listSumms[date]
                 )
             );
         }
     }, {
         key: 'render',
         value: function render() {
-            var _this4 = this;
+            var _this3 = this;
 
-            var _props = this.props,
-                open = _props.open,
-                _props$listName = _props.listName,
-                listName = _props$listName === undefined ? '' : _props$listName,
-                _props$listSumms = _props.listSumms,
-                listSumms = _props$listSumms === undefined ? {} : _props$listSumms;
-
-
-            var showingListSumms = this.state.showEmptyDates ? listSumms : Object(__WEBPACK_IMPORTED_MODULE_4__util_CalcUtil__["d" /* deleteZeroDates */])(listSumms);
-
-            var styles = {
-                block: {
-                    maxWidth: 250
-                },
-                toggle: {
-                    marginBottom: 16
-                }
+            var _props2 = this.props,
+                open = _props2.open,
+                _props2$listName = _props2.listName,
+                listName = _props2$listName === undefined ? '' : _props2$listName,
+                _props2$listSumms = _props2.listSumms,
+                listSumms = _props2$listSumms === undefined ? {} : _props2$listSumms,
+                showEmptyDates = this.state.showEmptyDates,
+                showingListSumms = showEmptyDates ? listSumms : Object(__WEBPACK_IMPORTED_MODULE_5__util_CalcUtil__["d" /* deleteZeroDates */])(listSumms),
+                stylesDrawerFoot = {
+                block: { maxWidth: 250 },
+                toggle: { marginBottom: 16 }
             };
+
 
             return React.createElement(
                 __WEBPACK_IMPORTED_MODULE_6_material_ui_Drawer___default.a,
@@ -108728,7 +108994,7 @@ var DrawerListSumms = _wrapComponent('DrawerListSumms')(function (_Component) {
                     open: open,
                     width: 333,
                     onRequestChange: function onRequestChange(open) {
-                        return _this4.handleOpening(open);
+                        return _this3.handleOpening(open);
                     },
                     autoScrollBodyContent: true
                 },
@@ -108747,7 +109013,7 @@ var DrawerListSumms = _wrapComponent('DrawerListSumms')(function (_Component) {
                             label: 'Add new',
                             primary: true,
                             onClick: function onClick() {
-                                return _this4.onOpenInput();
+                                return _this3.onOpenInput();
                             }
                         })
                     )
@@ -108755,8 +109021,8 @@ var DrawerListSumms = _wrapComponent('DrawerListSumms')(function (_Component) {
                 React.createElement(
                     __WEBPACK_IMPORTED_MODULE_8_material_ui_List__["List"],
                     null,
-                    Object.keys(showingListSumms).map(function (key, index) {
-                        return _this4.state.editingDate === key ? _this4.renderListItemEditing(key, index) : _this4.renderListItem(key, index);
+                    Object.keys(showingListSumms).map(function (date, index) {
+                        return _this3.state.editingDate === date ? _this3.renderItemEditing(date, index) : _this3.renderItem(date, index);
                     })
                 ),
                 React.createElement(
@@ -108764,27 +109030,17 @@ var DrawerListSumms = _wrapComponent('DrawerListSumms')(function (_Component) {
                     { className: 'Drawer__foot' },
                     React.createElement(
                         'div',
-                        { style: styles.block },
+                        { style: stylesDrawerFoot.block },
                         React.createElement(__WEBPACK_IMPORTED_MODULE_9_material_ui_Toggle___default.a, {
                             label: 'Show empty dates',
-                            style: styles.toggle,
+                            style: stylesDrawerFoot.toggle,
                             onToggle: function onToggle() {
-                                return _this4.updateToggle();
+                                return _this3.updateToggle();
                             }
                         })
                     )
                 )
             );
-        }
-    }, {
-        key: '_createDataFromState',
-        value: function _createDataFromState() {
-            var data = {};
-            data.date = Object(__WEBPACK_IMPORTED_MODULE_5__util_DateUtil__["c" /* formatDate */])(this.state.editingDate);
-            data.summ = this.fieldSumm.value ? parseInt(this.fieldSumm.value) : 0;
-            data.isExpense = this.props.isExpense;
-
-            return data;
         }
     }]);
 
@@ -109115,8 +109371,6 @@ HeadMoney.propTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_material_ui_List___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_material_ui_List__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_react_material_icons_icons_content_add_box__ = __webpack_require__("./node_modules/react-material-icons/icons/content/add-box.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_react_material_icons_icons_content_add_box___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_react_material_icons_icons_content_add_box__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_material_ui_Snackbar__ = __webpack_require__("./node_modules/material-ui/Snackbar/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_material_ui_Snackbar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_material_ui_Snackbar__);
 
 
 
@@ -109165,7 +109419,6 @@ function _wrapComponent(id) {
 
 
 
-
 var HeadMoneyAction = _wrapComponent('HeadMoneyAction')(function (_Component) {
     _inherits(HeadMoneyAction, _Component);
 
@@ -109190,42 +109443,22 @@ var HeadMoneyAction = _wrapComponent('HeadMoneyAction')(function (_Component) {
             _this.setState({ openInputSumm: false });
         };
 
-        _this.openSnackbar = function (message) {
-            _this.setState({
-                openSnackbar: true,
-                messageSnackbar: message
-            });
-        };
-
         _this.onAddSumm = function (data) {
             _this.props.addSumm(data);
-
-            var message = 'Summ ' + data.summ + ' from ' + data.date + ' was saved succesfully.';
-            _this.openSnackbar(message);
         };
 
         _this.onDeleteSumm = function (data) {
             _this.props.deleteSumm(data);
-
-            var message = 'Summ ' + data.summ + ' from ' + data.date + ' was deleted succesfully.';
-            _this.openSnackbar(message);
         };
 
         _this.state = {
             openListSumms: false,
-            openInputSumm: false,
-            openSnackbar: false,
-            messageSnackbar: ''
+            openInputSumm: false
         };
         return _this;
     }
 
     _createClass(HeadMoneyAction, [{
-        key: 'closeSnackbar',
-        value: function closeSnackbar() {
-            this.setState({ openSnackbar: false });
-        }
-    }, {
         key: 'closeListAndOpenInput',
         value: function closeListAndOpenInput() {
             this.closeListSumms();
@@ -109278,14 +109511,6 @@ var HeadMoneyAction = _wrapComponent('HeadMoneyAction')(function (_Component) {
                     listSumms: listSumms,
                     addSumm: this.onAddSumm,
                     onClose: this.closeInputSumm
-                }),
-                React.createElement(__WEBPACK_IMPORTED_MODULE_9_material_ui_Snackbar___default.a, {
-                    open: this.state.openSnackbar,
-                    message: this.state.messageSnackbar,
-                    autoHideDuration: 3000,
-                    onRequestClose: function onRequestClose() {
-                        return _this2.closeSnackbar();
-                    }
                 })
             );
         }
@@ -109779,6 +110004,236 @@ ShowErrors.propTypes = {
 
 /***/ }),
 
+/***/ "./src/components/ui/ShowNotification.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_prop_types__ = __webpack_require__("./node_modules/prop-types/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_material_ui_Snackbar__ = __webpack_require__("./node_modules/material-ui/Snackbar/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_material_ui_Snackbar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_material_ui_Snackbar__);
+
+
+
+
+var ShowNotification = function ShowNotification(_ref) {
+	var _ref$show = _ref.show,
+	    show = _ref$show === undefined ? false : _ref$show,
+	    _ref$message = _ref.message,
+	    message = _ref$message === undefined ? '' : _ref$message,
+	    _ref$onClose = _ref.onClose,
+	    onClose = _ref$onClose === undefined ? function (f) {
+		return f;
+	} : _ref$onClose;
+	return React.createElement(__WEBPACK_IMPORTED_MODULE_1_material_ui_Snackbar___default.a, {
+		open: show,
+		message: message,
+		autoHideDuration: 3000,
+		onRequestClose: onClose
+	});
+};
+
+ShowNotification.propTypes = {
+	show: __WEBPACK_IMPORTED_MODULE_0_prop_types___default.a.bool,
+	message: __WEBPACK_IMPORTED_MODULE_0_prop_types___default.a.string,
+	onClose: __WEBPACK_IMPORTED_MODULE_0_prop_types___default.a.func
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (ShowNotification);
+
+/***/ }),
+
+/***/ "./src/components/ui/SummEditor.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_nick_dev_JS_react_redux_money_limitator_node_modules_redbox_react_lib_index_js__ = __webpack_require__("./node_modules/redbox-react/lib/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_nick_dev_JS_react_redux_money_limitator_node_modules_redbox_react_lib_index_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__home_nick_dev_JS_react_redux_money_limitator_node_modules_redbox_react_lib_index_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_catch_errors_lib_index_js__ = __webpack_require__("./node_modules/react-transform-catch-errors/lib/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_catch_errors_lib_index_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_catch_errors_lib_index_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__("./node_modules/react/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js__ = __webpack_require__("./node_modules/react-transform-hmr/lib/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_material_icons_icons_content_save__ = __webpack_require__("./node_modules/react-material-icons/icons/content/save.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_material_icons_icons_content_save___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_react_material_icons_icons_content_save__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react_material_icons_icons_content_backspace__ = __webpack_require__("./node_modules/react-material-icons/icons/content/backspace.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react_material_icons_icons_content_backspace___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_react_material_icons_icons_content_backspace__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react_material_icons_icons_action_delete__ = __webpack_require__("./node_modules/react-material-icons/icons/action/delete.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react_material_icons_icons_action_delete___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_react_material_icons_icons_action_delete__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__util_DateUtil__ = __webpack_require__("./src/util/DateUtil.js");
+
+
+
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _components = {
+    SummEditor: {
+        displayName: 'SummEditor'
+    }
+};
+
+var _homeNickDevJSReact_reduxMoney_limitatorNode_modulesReactTransformHmrLibIndexJs2 = __WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js___default()({
+    filename: '/home/nick/dev/JS/react_redux/money_limitator/src/components/ui/SummEditor.js',
+    components: _components,
+    locals: [module],
+    imports: [__WEBPACK_IMPORTED_MODULE_2_react___default.a]
+});
+
+var _homeNickDevJSReact_reduxMoney_limitatorNode_modulesReactTransformCatchErrorsLibIndexJs2 = __WEBPACK_IMPORTED_MODULE_1__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_catch_errors_lib_index_js___default()({
+    filename: '/home/nick/dev/JS/react_redux/money_limitator/src/components/ui/SummEditor.js',
+    components: _components,
+    locals: [],
+    imports: [__WEBPACK_IMPORTED_MODULE_2_react___default.a, __WEBPACK_IMPORTED_MODULE_0__home_nick_dev_JS_react_redux_money_limitator_node_modules_redbox_react_lib_index_js___default.a]
+});
+
+function _wrapComponent(id) {
+    return function (Component) {
+        return _homeNickDevJSReact_reduxMoney_limitatorNode_modulesReactTransformHmrLibIndexJs2(_homeNickDevJSReact_reduxMoney_limitatorNode_modulesReactTransformCatchErrorsLibIndexJs2(Component, id), id);
+    };
+}
+
+
+
+
+
+
+
+
+
+var ENTER_KEY = 13;
+var ESC_KEY = 27;
+
+var SummEditor = _wrapComponent('SummEditor')(function (_Component) {
+    _inherits(SummEditor, _Component);
+
+    function SummEditor(props) {
+        _classCallCheck(this, SummEditor);
+
+        var _this = _possibleConstructorReturn(this, (SummEditor.__proto__ || Object.getPrototypeOf(SummEditor)).call(this, props));
+
+        _this.state = {
+            date: props.editingDate,
+            summ: props.editingSumm
+        };
+        return _this;
+    }
+
+    _createClass(SummEditor, [{
+        key: 'componentWillReceiveProps',
+        value: function componentWillReceiveProps(nextProps) {
+            if (this.props !== nextProps) {
+                this.setState({
+                    date: nextProps.editingDate,
+                    summ: nextProps.editingSumm
+                });
+            }
+        }
+    }, {
+        key: 'handleEditSumm',
+        value: function handleEditSumm(e) {
+            this.setState({ summ: e.target.value });
+        }
+    }, {
+        key: 'handleSaveSumm',
+        value: function handleSaveSumm() {
+            var data = this._createSummData(this.state.summ);
+            this.props.saveSumm(data);
+        }
+    }, {
+        key: 'handleDeleteSumm',
+        value: function handleDeleteSumm() {
+            var data = this._createSummData(this.state.summ);
+            this.props.deleteSumm(data);
+        }
+    }, {
+        key: 'handleSummEditKeyDown',
+        value: function handleSummEditKeyDown(e) {
+            if (e.keyCode === ENTER_KEY) {
+                this.handleSaveSumm();
+            } else if (e.keyCode === ESC_KEY) {
+                this.props.cancelEditing();
+            }
+        }
+    }, {
+        key: 'handleClearSumm',
+        value: function handleClearSumm() {
+            this.setState({ summ: 0 });
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _state = this.state,
+                date = _state.date,
+                summ = _state.summ;
+
+
+            return React.createElement(
+                'div',
+                { className: 'SummEditor' },
+                React.createElement(
+                    'div',
+                    { className: 'SummEditor__date' },
+                    date,
+                    ' :'
+                ),
+                React.createElement(
+                    'div',
+                    { className: 'SummEditor__data' },
+                    React.createElement('input', {
+                        type: 'number',
+                        value: summ,
+                        onKeyDown: this.handleSummEditKeyDown.bind(this),
+                        onChange: this.handleEditSumm.bind(this),
+                        autoFocus: true
+                    })
+                ),
+                React.createElement(
+                    'div',
+                    { className: 'SummEditor__actions' },
+                    React.createElement(__WEBPACK_IMPORTED_MODULE_4_react_material_icons_icons_content_save___default.a, {
+                        style: { color: '#00BFFF' },
+                        onClick: this.handleSaveSumm.bind(this)
+                    }),
+                    React.createElement(__WEBPACK_IMPORTED_MODULE_5_react_material_icons_icons_content_backspace___default.a, {
+                        style: { color: '#A9A9A9' },
+                        onClick: this.handleClearSumm.bind(this)
+                    }),
+                    React.createElement(__WEBPACK_IMPORTED_MODULE_6_react_material_icons_icons_action_delete___default.a, {
+                        style: { color: '#FF6347' },
+                        onClick: this.handleDeleteSumm.bind(this)
+                    })
+                )
+            );
+        }
+    }, {
+        key: '_createSummData',
+        value: function _createSummData(summ) {
+            var data = {};
+            data.date = this.state.date;
+            data.summ = summ ? parseInt(summ) : 0;
+            data.isExpense = this.props.isExpense;
+
+            return data;
+        }
+    }]);
+
+    return SummEditor;
+}(__WEBPACK_IMPORTED_MODULE_2_react__["Component"]));
+
+/* harmony default export */ __webpack_exports__["a"] = (SummEditor);
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/webpack/buildin/harmony-module.js")(module)))
+
+/***/ }),
+
 /***/ "./src/constants.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -109807,6 +110262,9 @@ ShowErrors.propTypes = {
 	UPDATE_SUMMS: null,
 	UPDATE_LIMITS: null,
 
+	SHOW_NOTIFICATION: null,
+	CLEAR_NOTIFICATION: null,
+
 	ADD_ERROR: null,
 	CLEAR_ERROR: null,
 	CLEAR_ALL_ERRORS: null
@@ -109816,7 +110274,8 @@ var COLORS_CHART = {
 	base: '#00BFFF',
 	corrected: '#9932CC',
 	fact: '#FF6347',
-	expense: '#9ACD32'
+	expense: '#9ACD32',
+	expenseActive: '#7ba428'
 };
 
 var COLORS_BALANCE = {
@@ -109890,7 +110349,7 @@ Object(__WEBPACK_IMPORTED_MODULE_1_react_dom__["render"])(__WEBPACK_IMPORTED_MOD
 /***/ "./src/initialState.json":
 /***/ (function(module, exports) {
 
-module.exports = {"period":{"begin":"2018-01-20","end":"2018-02-20"},"incomes":{"2018-01-20":4500},"expenses":{"2018-01-20":390,"2018-01-21":115,"2018-01-22":276,"2018-01-23":150,"2018-01-24":100,"2018-01-25":350,"2018-01-26":0,"2018-01-27":0,"2018-01-28":180,"2018-01-29":130,"2018-01-30":220,"2018-01-31":62,"2018-02-01":110,"2018-02-02":250,"2018-02-03":0,"2018-02-04":500,"2018-02-05":222,"2018-02-06":60},"notIncluded":{"2018-01-20":0},"summs":{"summIncomes":0,"summExpenses":0,"summNotIncluded":0},"limits":{"base":0,"corrected":0,"fact":0},"errors":[]}
+module.exports = {"period":{"begin":"2018-01-20","end":"2018-02-20"},"incomes":{"2018-01-20":4500},"expenses":{"2018-01-20":390,"2018-01-21":115,"2018-01-22":276,"2018-01-23":150,"2018-01-24":100,"2018-01-25":350,"2018-01-26":0,"2018-01-27":0,"2018-01-28":180,"2018-01-29":130,"2018-01-30":220,"2018-01-31":62,"2018-02-01":110,"2018-02-02":250,"2018-02-03":0,"2018-02-04":500,"2018-02-05":222,"2018-02-06":60},"notIncluded":{"2018-01-20":0},"summs":{"summIncomes":0,"summExpenses":0,"summNotIncluded":0},"limits":{"base":0,"corrected":0,"fact":0},"notifications":{"show":false,"message":""},"errors":[]}
 
 /***/ }),
 
@@ -109922,12 +110381,13 @@ var consoleMessages = function consoleMessages(store) {
 			    expenses = _store$getState.expenses,
 			    limits = _store$getState.limits,
 			    errors = _store$getState.errors,
+			    notifications = _store$getState.notifications,
 			    _store$getState$summs = _store$getState.summs,
 			    summIncomes = _store$getState$summs.summIncomes,
 			    summExpenses = _store$getState$summs.summExpenses,
 			    summNotIncluded = _store$getState$summs.summNotIncluded;
 
-			console.log('\n\n\t\tincomes: ' + Object.keys(incomes).length + '\n\t\texpenses: ' + Object.keys(expenses).length + '\n\t\tsumms: ' + summIncomes + ' ' + summExpenses + ' ' + summNotIncluded + '\n\t\tlimits: ' + limits.base + ' ' + limits.corrected + ' ' + limits.fact + '\n\t\terrors: ' + errors.length + '\n\n\t');
+			console.log('\n\n\t\tincomes: ' + Object.keys(incomes).length + '\n\t\texpenses: ' + Object.keys(expenses).length + '\n\t\tsumms: ' + summIncomes + ' ' + summExpenses + ' ' + summNotIncluded + '\n\t\tlimits: ' + limits.base + ' ' + limits.corrected + ' ' + limits.fact + '\n\t\tnotifications: ' + notifications.show + '\n\t\terrors: ' + errors.length + '\n\n\t');
 
 			console.groupEnd();
 
@@ -109954,6 +110414,7 @@ var consoleMessages = function consoleMessages(store) {
 /* unused harmony export notIncluded */
 /* unused harmony export summs */
 /* unused harmony export limits */
+/* unused harmony export notifications */
 /* unused harmony export errors */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__constants__ = __webpack_require__("./src/constants.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_redux__ = __webpack_require__("./node_modules/redux/es/index.js");
@@ -110087,6 +110548,29 @@ var limits = function limits() {
 	}
 };
 
+var notifications = function notifications() {
+	var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+	var action = arguments[1];
+
+
+	switch (action.type) {
+		case __WEBPACK_IMPORTED_MODULE_0__constants__["c" /* default */].SHOW_NOTIFICATION:
+			return {
+				show: true,
+				message: action.payload
+			};
+
+		case __WEBPACK_IMPORTED_MODULE_0__constants__["c" /* default */].CLEAR_NOTIFICATION:
+			return {
+				show: false,
+				message: ''
+			};
+
+		default:
+			return state;
+	}
+};
+
 var errors = function errors() {
 	var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
 	var action = arguments[1];
@@ -110117,6 +110601,7 @@ var errors = function errors() {
 	notIncluded: notIncluded,
 	summs: summs,
 	limits: limits,
+	notifications: notifications,
 	errors: errors
 }));
 
