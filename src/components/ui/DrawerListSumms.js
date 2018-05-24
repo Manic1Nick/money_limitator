@@ -1,7 +1,8 @@
 import { Component } from 'react'
 
+import SummEditor from './SummEditor'
+
 import { deleteZeroDates } from '../../util/CalcUtil'
-import { formatDate } from '../../util/DateUtil'
 
 import Drawer from 'material-ui/Drawer'
 import FlatButton from 'material-ui/FlatButton'
@@ -11,9 +12,6 @@ import EditIcon from 'react-material-icons/icons/image/edit'
 import SaveIcon from 'react-material-icons/icons/content/save'
 import ClearIcon from 'react-material-icons/icons/content/backspace'
 import DeleteIcon from 'react-material-icons/icons/action/delete'
-
-const ENTER_KEY = 13
-const ESC_KEY = 27
 
 export default class DrawerListSumms extends Component {
 
@@ -36,41 +34,22 @@ export default class DrawerListSumms extends Component {
         this.setState({ editingDate })
     }
 
-    onSaveSumm() {    
-        let data = this._createDataFromState()
+    onSaveSumm(data) {
         this.props.saveSumm(data)
 
         this.clearEditingDate()
     }
 
-    onClearSumm() {
-        this.fieldSumm.value = 0
-    }
-
-    onDeleteSumm() {
-        let data = this._createDataFromState()
+    onDeleteSumm(data) {
         this.props.deleteSumm(data)
     }
 
     onOpenInput() {
         this.props.openInput()
-
-        this.clearEditingDate()
     }
 
     onClose() {
         this.props.onClose()
-
-        this.clearEditingDate()
-    }
-
-    handleSummEditKeyDown(e) {
-        if (e.keyCode === ENTER_KEY) { 
-            this.onSaveSumm()
-            
-        } else if (e.keyCode === ESC_KEY) { 
-            this.clearEditingDate()
-        }
     }
 
     clearEditingDate() {
@@ -85,43 +64,29 @@ export default class DrawerListSumms extends Component {
         })
     }
 
-    renderListItemEditing(key, index) {
+    renderItemEditing(date, index) {
+        const { listSumms, isExpense } = this.props
+
         return (
             <ListItem 
                 key={index}
                 className='ListItem'
             >
-                <div className='ListItem__input'>
-                    <div className='ListItem__data'>
-                        { key }: 
-                        <input
-                            type='text'
-                            defaultValue={ this.props.listSumms[key] }
-                            onKeyDown={ this.handleSummEditKeyDown.bind(this) }
-                            ref={ c => this.fieldSumm = c }
-                            autoFocus
-                        />
-                    </div>
-                    <div className='ListItem__actions'>
-                        <SaveIcon 
-                            style={{ color: '#00BFFF' }}
-                            onClick={ () => this.onSaveSumm() }
-                        />
-                        <ClearIcon 
-                            style={{ color: '#A9A9A9' }}
-                            onClick={ () => this.onClearSumm() }
-                        />
-                        <DeleteIcon 
-                            style={{ color: '#FF6347' }}
-                            onClick={ () => this.onDeleteSumm() }
-                        />
-                    </div>
-                </div>
+                <SummEditor 
+                    editingDate={ date }
+                    editingSumm={ listSumms[date] }
+                    isExpense={ isExpense }
+                    saveSumm={ this.onSaveSumm.bind(this) }
+                    deleteSumm={ this.onDeleteSumm.bind(this) }
+                    cancelEditing={ this.clearEditingDate.bind(this) }
+                />
             </ListItem>
         )
     }
 
-    renderListItem(key, index) {
+    renderItem(date, index) {
+        const { listSumms } = this.props
+
         return (
             <ListItem 
                 key={index} 
@@ -129,32 +94,29 @@ export default class DrawerListSumms extends Component {
                 rightIcon={
                     <EditIcon 
                         style={{ color: '#A9A9A9' }}
-                        onClick={ () => this.handleEditSumm(key) }
+                        onClick={ () => this.handleEditSumm(date) }
                     />
                 } 
             >           
                 <div className='ListItem__text' > 
-                    { key }: { this.props.listSumms[key] }
+                    { date }: { listSumms[date] }
                 </div>
             </ListItem>
         )
     }
 
     render() {
-        const { open, listName='', listSumms={} } = this.props
+        const { open, listName='', listSumms={} } = this.props,
+            { showEmptyDates } = this.state,
 
-        const showingListSumms = this.state.showEmptyDates 
-            ? listSumms 
-            : deleteZeroDates(listSumms)
+            showingListSumms = showEmptyDates 
+                ? listSumms 
+                : deleteZeroDates(listSumms),
 
-        const styles = {
-            block: {
-                maxWidth: 250,
-            },
-            toggle: {
-                marginBottom: 16,
-            },
-        }
+            stylesDrawerFoot = {
+                block: { maxWidth: 250 },
+                toggle: { marginBottom: 16 }
+            }
 
         return (
             <Drawer
@@ -181,33 +143,26 @@ export default class DrawerListSumms extends Component {
 
                 <List>
                 {
-                    Object.keys(showingListSumms).map((key, index) => {
-                        return (this.state.editingDate === key) ? 
-                            this.renderListItemEditing(key, index) :
-                            this.renderListItem(key, index)
+                    Object.keys(showingListSumms).map((date, index) => {
+                        return (this.state.editingDate === date) 
+                            ?
+                                this.renderItemEditing(date, index) 
+                            : 
+                                this.renderItem(date, index)
                     })
                 }
                 </List>
                     
                 <div className='Drawer__foot'>
-                    <div style={ styles.block }>
+                    <div style={ stylesDrawerFoot.block }>
                         <Toggle
                             label="Show empty dates"
-                            style={ styles.toggle }
+                            style={ stylesDrawerFoot.toggle }
                             onToggle={ () => this.updateToggle() }
                         />
                     </div>
                 </div>
             </Drawer>
         )               
-    }
-
-    _createDataFromState() {
-        let data = {}
-        data.date = formatDate(this.state.editingDate)
-        data.summ = this.fieldSumm.value ? parseInt(this.fieldSumm.value) : 0
-        data.isExpense = this.props.isExpense
-
-        return data
     }
 }

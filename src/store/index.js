@@ -15,6 +15,7 @@ const consoleMessages = store => next => action => {
 		expenses, 
 		limits, 
 		errors, 
+		notifications,
 		summs: { summIncomes, summExpenses, summNotIncluded } 
 	} = store.getState()
 
@@ -24,6 +25,7 @@ const consoleMessages = store => next => action => {
 		expenses: ${Object.keys(expenses).length}
 		summs: ${summIncomes} ${summExpenses} ${summNotIncluded}
 		limits: ${limits.base} ${limits.corrected} ${limits.fact}
+		notifications: ${notifications.show}
 		errors: ${errors.length}
 
 	`)

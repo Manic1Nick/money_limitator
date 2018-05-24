@@ -39,5 +39,9 @@
 		"corrected": 0,
 		"fact": 0
 	},
+	"notifications": {
+		"show": false,
+		"message": ""
+	},
 	"errors": []
 }

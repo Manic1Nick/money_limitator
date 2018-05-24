@@ -103,6 +103,27 @@ export const limits = (state={}, action) => {
 	}
 }
 
+export const notifications = (state={}, action) => {
+
+	switch(action.type) {
+		case C.SHOW_NOTIFICATION:
+			return { 
+				show: true,
+				message: action.payload 
+			}
+
+		case C.CLEAR_NOTIFICATION:
+			return {
+				show: false,
+				message: ''
+			}
+		
+		default:
+			return state
+	}
+
+}
+
 export const errors = (state=[], action) => {
 
 	switch (action.type) {
@@ -128,5 +149,6 @@ export default combineReducers({
 	notIncluded,
 	summs,
 	limits,
+	notifications,
 	errors
 })

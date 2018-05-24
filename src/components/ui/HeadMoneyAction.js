@@ -6,7 +6,6 @@ import DialogInputSumm from './DialogInputSumm'
 import FlatButton from 'material-ui/FlatButton'
 import { List, ListItem } from 'material-ui/List'
 import AddBoxIcon from 'react-material-icons/icons/content/add-box'
-import Snackbar from 'material-ui/Snackbar'
 
 export default class HeadMoneyAction extends Component {
 
@@ -14,9 +13,7 @@ export default class HeadMoneyAction extends Component {
         super()
         this.state = {
             openListSumms: false,
-            openInputSumm: false,
-            openSnackbar: false,
-            messageSnackbar: ''
+            openInputSumm: false
         }
     }
 
@@ -36,29 +33,12 @@ export default class HeadMoneyAction extends Component {
         this.setState({ openInputSumm: false })
     }
 
-    openSnackbar = (message) => {
-        this.setState({ 
-            openSnackbar: true,
-            messageSnackbar: message
-        })
-    }
-
-    closeSnackbar() {
-        this.setState({ openSnackbar: false })
-    }
-
     onAddSumm = (data) => {
         this.props.addSumm(data)
-
-        let message = `Summ ${data.summ} from ${data.date} was saved succesfully.`
-        this.openSnackbar(message)
     }
 
     onDeleteSumm = (data) => {
         this.props.deleteSumm(data)
-
-        let message = `Summ ${data.summ} from ${data.date} was deleted succesfully.`
-        this.openSnackbar(message)
     }
 
     closeListAndOpenInput() {
@@ -82,6 +62,7 @@ export default class HeadMoneyAction extends Component {
                     style={{ color: '#A9A9A9' }}
                     onClick={ () => this.openInputSumm() }
                 /> 
+                
                 <DrawerListSumms
                     open={ this.state.openListSumms }
                     listName={ listName }
@@ -93,18 +74,13 @@ export default class HeadMoneyAction extends Component {
                     onOpen={ this.openListSumms }
                     onClose={ this.closeListSumms }
                 /> 
+
                 <DialogInputSumm
                     open={ this.state.openInputSumm }
                     isExpense={ listName === 'Expenses' }
                     listSumms={ listSumms }
                     addSumm={ this.onAddSumm }
                     onClose={ this.closeInputSumm }
-                />
-                <Snackbar
-                    open={ this.state.openSnackbar }
-                    message={ this.state.messageSnackbar }
-                    autoHideDuration={ 3000 }
-                    onRequestClose={ () => this.closeSnackbar() }
                 />
             </div>
         )

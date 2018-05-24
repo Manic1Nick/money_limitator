@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "6a63812dd093d0f6f776"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "975e5d04c09039a45f56"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -5342,7 +5342,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Arimo);", ""]);
 
 // module
-exports.push([module.i, "body {\n  margin: 0;\n  padding: 0;\n  font-family: sans-serif;\n  background-color: #F8F8FF; }\n\n.App {\n  max-width: 800px;\n  margin: auto;\n  height: 100%;\n  padding: 16px;\n  box-sizing: border-box; }\n  .App .HeadBlock__PeriodResultMoney {\n    display: flex;\n    justify-content: space-between;\n    width: 100%;\n    height: 100%; }\n    .App .HeadBlock__PeriodResultMoney .HeadBlock__PeriodResult {\n      display: flex;\n      flex-direction: column;\n      width: 66%; }\n      .App .HeadBlock__PeriodResultMoney .HeadBlock__PeriodResult .HeadPeriod {\n        display: flex;\n        justify-content: space-between;\n        align-items: center;\n        width: 100%;\n        height: 30%; }\n      .App .HeadBlock__PeriodResultMoney .HeadBlock__PeriodResult .HeadResult {\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        width: 100%;\n        height: 70%;\n        font-size: 36px; }\n    .App .HeadBlock__PeriodResultMoney .HeadMoney {\n      display: flex;\n      flex-direction: column;\n      width: 33%;\n      height: 100%; }\n      .App .HeadBlock__PeriodResultMoney .HeadMoney .HeadMoney__action {\n        display: flex;\n        width: 100%; }\n        .App .HeadBlock__PeriodResultMoney .HeadMoney .HeadMoney__action .HeadMoney__button {\n          width: 80%; }\n        .App .HeadBlock__PeriodResultMoney .HeadMoney .HeadMoney__action .HeadMoney__icon {\n          margin: auto;\n          width: 20%;\n          height: 100%;\n          cursor: pointer; }\n  .App .Limits {\n    padding: 16px;\n    display: flex;\n    justify-content: space-between; }\n    .App .Limits .limits__title {\n      color: #A9A9A9;\n      display: flex;\n      align-items: center;\n      justify-content: center; }\n  .App .Chart {\n    min-height: 400px;\n    padding: 16px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    height: 100%; }\n\ninput {\n  font-size: 16px;\n  width: 30%; }\n  input:focus {\n    outline: 0; }\n\n.Drawer .Drawer__head {\n  display: flex;\n  justify-content: space-between; }\n  .Drawer .Drawer__head .Drawer__title {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 50%; }\n  .Drawer .Drawer__head .Drawer__buttons {\n    display: flex;\n    justify-content: flex-end;\n    width: 50%; }\n\n.Drawer .ListItem .ListItem__input {\n  display: flex;\n  align-items: center;\n  justify-content: space-between; }\n  .Drawer .ListItem .ListItem__input .ListItem__data {\n    width: 60%; }\n  .Drawer .ListItem .ListItem__input .ListItem__actions {\n    display: flex;\n    justify-content: space-around;\n    width: 40%; }\n\n.Drawer .Drawer__foot {\n  display: flex;\n  justify-content: center;\n  width: 100%; }\n\n.DialogInputSumm .InputSumm__date {\n  display: flex;\n  justify-content: space-between; }\n  .DialogInputSumm .InputSumm__date .InputSumm__icon {\n    margin: auto;\n    cursor: pointer; }\n\ndiv.show-errors {\n  width: 100%;\n  font-size: 1.5em; }\n  div.show-errors div {\n    position: absolute;\n    width: 100%;\n    text-align: center;\n    bottom: 0;\n    color: red;\n    font-family: verdana, sans-serif;\n    display: flex;\n    justify-content: space-between;\n    align-items: center; }\n    div.show-errors div p {\n      margin-left: 1em; }\n    div.show-errors div svg {\n      font-size: 2em; }\n", ""]);
+exports.push([module.i, "body {\n  margin: 0;\n  padding: 0;\n  font-family: Arimo, sans-serif;\n  background-color: #F8F8FF; }\n\n.App {\n  max-width: 800px;\n  margin: auto;\n  height: 100%;\n  padding: 16px;\n  box-sizing: border-box; }\n  .App .HeadBlock__PeriodResultMoney {\n    display: flex;\n    justify-content: space-between; }\n    .App .HeadBlock__PeriodResultMoney .HeadBlock__PeriodResult {\n      display: flex;\n      flex-direction: column;\n      width: 66%; }\n      .App .HeadBlock__PeriodResultMoney .HeadBlock__PeriodResult .HeadPeriod {\n        display: flex;\n        justify-content: space-between;\n        align-items: center;\n        width: 100%;\n        height: 30%; }\n      .App .HeadBlock__PeriodResultMoney .HeadBlock__PeriodResult .HeadResult {\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        width: 100%;\n        height: 70%; }\n    .App .HeadBlock__PeriodResultMoney .HeadMoney {\n      display: flex;\n      flex-direction: column;\n      width: 33%;\n      height: 100%; }\n      .App .HeadBlock__PeriodResultMoney .HeadMoney .HeadMoney__action {\n        display: flex;\n        width: 100%; }\n        .App .HeadBlock__PeriodResultMoney .HeadMoney .HeadMoney__action .HeadMoney__button {\n          width: 80%; }\n        .App .HeadBlock__PeriodResultMoney .HeadMoney .HeadMoney__action .HeadMoney__icon {\n          margin: auto;\n          width: 20%;\n          height: 100%;\n          cursor: pointer; }\n  .App .Limits {\n    padding: 16px;\n    display: flex;\n    justify-content: space-between; }\n    .App .Limits .limits__title {\n      color: #A9A9A9;\n      display: flex;\n      align-items: center;\n      justify-content: center;\n      cursor: pointer; }\n  .App .Chart {\n    min-height: 400px;\n    padding: 16px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    height: 100%; }\n\ninput {\n  font-size: 16px;\n  width: 30%; }\n  input:focus {\n    outline: 0; }\n\n.Drawer .Drawer__head {\n  display: flex;\n  justify-content: space-between; }\n  .Drawer .Drawer__head .Drawer__title {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 50%; }\n  .Drawer .Drawer__head .Drawer__buttons {\n    display: flex;\n    justify-content: flex-end;\n    width: 50%; }\n\n.Drawer .ListItem .ListItem__input {\n  display: flex;\n  align-items: center;\n  justify-content: space-between; }\n  .Drawer .ListItem .ListItem__input .ListItem__data {\n    width: 60%; }\n  .Drawer .ListItem .ListItem__input .ListItem__actions {\n    display: flex;\n    justify-content: space-around;\n    width: 40%; }\n\n.Drawer .Drawer__foot {\n  display: flex;\n  justify-content: center;\n  width: 100%; }\n\n.DialogInputSumm .InputSumm__date {\n  display: flex;\n  justify-content: space-between; }\n  .DialogInputSumm .InputSumm__date .InputSumm__icon {\n    margin: auto;\n    cursor: pointer; }\n\ndiv.show-errors {\n  width: 100%;\n  font-size: 1.5em; }\n  div.show-errors div {\n    position: absolute;\n    width: 100%;\n    text-align: center;\n    bottom: 0;\n    color: red;\n    font-family: verdana, sans-serif;\n    display: flex;\n    justify-content: space-between;\n    align-items: center; }\n    div.show-errors div p {\n      margin-left: 1em; }\n    div.show-errors div svg {\n      font-size: 2em; }\n", ""]);
 
 // exports
 
@@ -90627,7 +90627,7 @@ var ZAxis = Object(__WEBPACK_IMPORTED_MODULE_2__util_PureRender__["a" /* default
 
 
 
-/* unused harmony default export */ var _unused_webpack_default_export = (Object(__WEBPACK_IMPORTED_MODULE_1__generateCategoricalChart__["a" /* default */])({
+/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_1__generateCategoricalChart__["a" /* default */])({
   chartName: 'RadialBarChart',
   GraphicalChild: __WEBPACK_IMPORTED_MODULE_5__polar_RadialBar__["a" /* default */],
   legendContent: 'children',
@@ -95955,9 +95955,9 @@ Surface.propTypes = propTypes;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__component_Legend__ = __webpack_require__("./node_modules/recharts/es6/component/Legend.js");
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_3__component_Legend__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__component_Tooltip__ = __webpack_require__("./node_modules/recharts/es6/component/Tooltip.js");
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return __WEBPACK_IMPORTED_MODULE_4__component_Tooltip__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return __WEBPACK_IMPORTED_MODULE_4__component_Tooltip__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__component_ResponsiveContainer__ = __webpack_require__("./node_modules/recharts/es6/component/ResponsiveContainer.js");
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return __WEBPACK_IMPORTED_MODULE_5__component_ResponsiveContainer__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return __WEBPACK_IMPORTED_MODULE_5__component_ResponsiveContainer__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__component_Cell__ = __webpack_require__("./node_modules/recharts/es6/component/Cell.js");
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_6__component_Cell__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__component_Text__ = __webpack_require__("./node_modules/recharts/es6/component/Text.js");
@@ -95991,7 +95991,7 @@ Surface.propTypes = propTypes;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__polar_Radar__ = __webpack_require__("./node_modules/recharts/es6/polar/Radar.js");
 /* unused harmony reexport Radar */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__polar_RadialBar__ = __webpack_require__("./node_modules/recharts/es6/polar/RadialBar.js");
-/* unused harmony reexport RadialBar */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return __WEBPACK_IMPORTED_MODULE_22__polar_RadialBar__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__cartesian_Brush__ = __webpack_require__("./node_modules/recharts/es6/cartesian/Brush.js");
 /* unused harmony reexport Brush */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__cartesian_ReferenceLine__ = __webpack_require__("./node_modules/recharts/es6/cartesian/ReferenceLine.js");
@@ -96013,9 +96013,9 @@ Surface.propTypes = propTypes;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__cartesian_Scatter__ = __webpack_require__("./node_modules/recharts/es6/cartesian/Scatter.js");
 /* unused harmony reexport Scatter */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__cartesian_XAxis__ = __webpack_require__("./node_modules/recharts/es6/cartesian/XAxis.js");
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return __WEBPACK_IMPORTED_MODULE_33__cartesian_XAxis__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return __WEBPACK_IMPORTED_MODULE_33__cartesian_XAxis__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__cartesian_YAxis__ = __webpack_require__("./node_modules/recharts/es6/cartesian/YAxis.js");
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return __WEBPACK_IMPORTED_MODULE_34__cartesian_YAxis__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "o", function() { return __WEBPACK_IMPORTED_MODULE_34__cartesian_YAxis__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__cartesian_ZAxis__ = __webpack_require__("./node_modules/recharts/es6/cartesian/ZAxis.js");
 /* unused harmony reexport ZAxis */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__cartesian_ErrorBar__ = __webpack_require__("./node_modules/recharts/es6/cartesian/ErrorBar.js");
@@ -96037,7 +96037,7 @@ Surface.propTypes = propTypes;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__chart_AreaChart__ = __webpack_require__("./node_modules/recharts/es6/chart/AreaChart.js");
 /* unused harmony reexport AreaChart */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__chart_RadialBarChart__ = __webpack_require__("./node_modules/recharts/es6/chart/RadialBarChart.js");
-/* unused harmony reexport RadialBarChart */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return __WEBPACK_IMPORTED_MODULE_45__chart_RadialBarChart__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__chart_ComposedChart__ = __webpack_require__("./node_modules/recharts/es6/chart/ComposedChart.js");
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_46__chart_ComposedChart__["a"]; });
 
@@ -107131,7 +107131,7 @@ var activateApp = function activateApp() {
 var addNewIncome = function addNewIncome(income) {
     return function (dispatch) {
         dispatch({
-            type: __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].ADD_INCOME,
+            type: __WEBPACK_IMPORTED_MODULE_0__constants__["c" /* default */].ADD_INCOME,
             payload: income
         });
 
@@ -107143,7 +107143,7 @@ var addNewIncome = function addNewIncome(income) {
 var addNewExpense = function addNewExpense(expense) {
     return function (dispatch) {
         dispatch({
-            type: __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].ADD_EXPENSE,
+            type: __WEBPACK_IMPORTED_MODULE_0__constants__["c" /* default */].ADD_EXPENSE,
             payload: expense
         });
 
@@ -107156,7 +107156,7 @@ var addNewExpense = function addNewExpense(expense) {
 var addNotIncluded = function addNotIncluded(expense) {
     return function (dispatch) {
         dispatch({
-            type: __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].ADD_NOT_INCLUDED,
+            type: __WEBPACK_IMPORTED_MODULE_0__constants__["c" /* default */].ADD_NOT_INCLUDED,
             payload: expense
         });
 
@@ -107168,7 +107168,7 @@ var addNotIncluded = function addNotIncluded(expense) {
 var deleteIncome = function deleteIncome(income) {
     return function (dispatch) {
         dispatch({
-            type: __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].DELETE_INCOME,
+            type: __WEBPACK_IMPORTED_MODULE_0__constants__["c" /* default */].DELETE_INCOME,
             payload: income
         });
 
@@ -107180,7 +107180,7 @@ var deleteIncome = function deleteIncome(income) {
 var deleteExpense = function deleteExpense(expense) {
     return function (dispatch) {
         dispatch({
-            type: __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].DELETE_EXPENSE,
+            type: __WEBPACK_IMPORTED_MODULE_0__constants__["c" /* default */].DELETE_EXPENSE,
             payload: expense
         });
 
@@ -107193,7 +107193,7 @@ var deleteExpense = function deleteExpense(expense) {
 var deleteNotIncluded = function deleteNotIncluded(expense) {
     return function (dispatch) {
         dispatch({
-            type: __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].DELETE_NOT_INCLUDED,
+            type: __WEBPACK_IMPORTED_MODULE_0__constants__["c" /* default */].DELETE_NOT_INCLUDED,
             payload: expense
         });
 
@@ -107207,7 +107207,7 @@ var fillGaps = function fillGaps() {
         var state = getState();
 
         dispatch({
-            type: __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].FILL_GAPS,
+            type: __WEBPACK_IMPORTED_MODULE_0__constants__["c" /* default */].FILL_GAPS,
             payload: state
         });
     };
@@ -107218,7 +107218,7 @@ var updateSumms = function updateSumms() {
         var state = getState();
 
         dispatch({
-            type: __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].UPDATE_SUMMS,
+            type: __WEBPACK_IMPORTED_MODULE_0__constants__["c" /* default */].UPDATE_SUMMS,
             payload: state
         });
     };
@@ -107229,7 +107229,7 @@ var updateLimits = function updateLimits() {
         var state = getState();
 
         dispatch({
-            type: __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].UPDATE_LIMITS,
+            type: __WEBPACK_IMPORTED_MODULE_0__constants__["c" /* default */].UPDATE_LIMITS,
             payload: state
         });
     };
@@ -107237,21 +107237,21 @@ var updateLimits = function updateLimits() {
 
 var addError = function addError(message) {
     return {
-        type: __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].ADD_ERROR,
+        type: __WEBPACK_IMPORTED_MODULE_0__constants__["c" /* default */].ADD_ERROR,
         payload: message
     };
 };
 
 var clearError = function clearError(index) {
     return {
-        type: __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].CLEAR_ERROR,
+        type: __WEBPACK_IMPORTED_MODULE_0__constants__["c" /* default */].CLEAR_ERROR,
         payload: index
     };
 };
 
 var clearAllErrors = function clearAllErrors() {
     return {
-        type: __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].CLEAR_ALL_ERRORS
+        type: __WEBPACK_IMPORTED_MODULE_0__constants__["c" /* default */].CLEAR_ALL_ERRORS
     };
 };
 
@@ -107289,11 +107289,11 @@ if(true) {
 
 /***/ }),
 
-/***/ "./src/components/containers/Chart.js":
+/***/ "./src/components/containers/ChartMain.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ui_Chart__ = __webpack_require__("./src/components/ui/Chart.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ui_ChartMain__ = __webpack_require__("./src/components/ui/ChartMain.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_redux__ = __webpack_require__("./node_modules/redux/es/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_redux__ = __webpack_require__("./node_modules/react-redux/es/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util_ChartUtil__ = __webpack_require__("./src/util/ChartUtil.js");
@@ -107310,7 +107310,7 @@ var mapStateToProps = function mapStateToProps(state, ownProps) {
     };
 };
 
-/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_2_react_redux__["b" /* connect */])(mapStateToProps)(__WEBPACK_IMPORTED_MODULE_0__ui_Chart__["a" /* default */]));
+/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_2_react_redux__["b" /* connect */])(mapStateToProps)(__WEBPACK_IMPORTED_MODULE_0__ui_ChartMain__["a" /* default */]));
 
 /***/ }),
 
@@ -107406,7 +107406,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__containers_HeadBlock__ = __webpack_require__("./src/components/containers/HeadBlock.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__containers_Chart__ = __webpack_require__("./src/components/containers/Chart.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__containers_ChartMain__ = __webpack_require__("./src/components/containers/ChartMain.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__containers_ShowErrors__ = __webpack_require__("./src/components/containers/ShowErrors.js");
 
 
@@ -107417,7 +107417,7 @@ var MainPage = function MainPage() {
 		'div',
 		{ className: 'App' },
 		React.createElement(__WEBPACK_IMPORTED_MODULE_0__containers_HeadBlock__["a" /* default */], null),
-		React.createElement(__WEBPACK_IMPORTED_MODULE_1__containers_Chart__["a" /* default */], null),
+		React.createElement(__WEBPACK_IMPORTED_MODULE_1__containers_ChartMain__["a" /* default */], null),
 		React.createElement(__WEBPACK_IMPORTED_MODULE_2__containers_ShowErrors__["a" /* default */], null)
 	);
 };
@@ -107426,18 +107426,21 @@ var MainPage = function MainPage() {
 
 /***/ }),
 
-/***/ "./src/components/ui/BalanceChart.js":
+/***/ "./src/components/ui/ChartBalance.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_prop_types__ = __webpack_require__("./node_modules/prop-types/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_recharts__ = __webpack_require__("./node_modules/recharts/es6/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__("./src/constants.js");
 
 
 
 
-var BalanceChart = function BalanceChart(_ref) {
+
+
+var ChartBalance = function ChartBalance(_ref) {
     var daysDone = _ref.daysDone,
         daysRest = _ref.daysRest,
         _ref$summs = _ref.summs,
@@ -107455,15 +107458,16 @@ var BalanceChart = function BalanceChart(_ref) {
         name: "Days",
         data: [{ name: 'Days done', value: daysDone + 1 }, { name: 'Days rest', value: daysRest }]
     }],
-        COLORS = ['#00C49F', '#FF8042'],
+        COLORS = [__WEBPACK_IMPORTED_MODULE_2__constants__["a" /* COLORS_BALANCE */].money, __WEBPACK_IMPORTED_MODULE_2__constants__["a" /* COLORS_BALANCE */].days],
         MARGINS_X = [150, 450],
         RADIAN = Math.PI / 180,
-        NAMES = ['Money', 'Days'],
-        HEIGHT = currentBalance > -200 ? 140 : 200;
+        NAMES = data.map(function (obj) {
+        return obj.name;
+    });
 
     return React.createElement(
-        __WEBPACK_IMPORTED_MODULE_1_recharts__["j" /* ResponsiveContainer */],
-        { height: HEIGHT },
+        __WEBPACK_IMPORTED_MODULE_1_recharts__["l" /* ResponsiveContainer */],
+        { height: currentBalance > -200 ? 140 : 200 },
         React.createElement(
             __WEBPACK_IMPORTED_MODULE_1_recharts__["i" /* PieChart */],
             null,
@@ -107501,17 +107505,95 @@ var BalanceChart = function BalanceChart(_ref) {
     );
 };
 
-BalanceChart.propTypes = {
+ChartBalance.propTypes = {
     daysDone: __WEBPACK_IMPORTED_MODULE_0_prop_types__["PropTypes"].number,
     daysRest: __WEBPACK_IMPORTED_MODULE_0_prop_types__["PropTypes"].number,
     summs: __WEBPACK_IMPORTED_MODULE_0_prop_types__["PropTypes"].object
 };
 
-/* harmony default export */ __webpack_exports__["a"] = (BalanceChart);
+/* harmony default export */ __webpack_exports__["a"] = (ChartBalance);
 
 /***/ }),
 
-/***/ "./src/components/ui/Chart.js":
+/***/ "./src/components/ui/ChartLimits.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_prop_types__ = __webpack_require__("./node_modules/prop-types/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_recharts__ = __webpack_require__("./node_modules/recharts/es6/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__("./src/constants.js");
+
+
+
+
+
+
+var ChartLimits = function ChartLimits(_ref) {
+    var _ref$limits = _ref.limits,
+        limits = _ref$limits === undefined ? {} : _ref$limits;
+
+
+    var data = genData(limits),
+        maxLimit = findMaxLimit(limits),
+        maxAngle = 180 - 180 * maxLimit / limits.base,
+        styleLegend = {
+        top: 0,
+        left: 350,
+        lineHeight: '24px'
+    };
+
+    return React.createElement(
+        __WEBPACK_IMPORTED_MODULE_1_recharts__["k" /* RadialBarChart */],
+        {
+            width: 500, height: maxAngle >= 0 ? 140 : 280, cx: 150, cy: 150,
+            innerRadius: 20, outerRadius: 140, barSize: 20,
+            startAngle: 180, endAngle: maxAngle,
+            data: data
+        },
+        React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["j" /* RadialBar */], {
+            minAngle: 15,
+            label: { position: 'insideStart', fill: '#fff' },
+            background: true, clockWise: true, dataKey: 'uv'
+        }),
+        React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["f" /* Legend */], {
+            iconSize: 10, width: 160, height: 140,
+            layout: 'vertical', verticalAlign: 'middle', wrapperStyle: styleLegend
+        })
+    );
+};
+
+var findMaxLimit = function findMaxLimit(limits) {
+    var maxLimit = 0;
+
+    Object.keys(limits).forEach(function (name) {
+        if (limits[name] > maxLimit) maxLimit = limits[name];
+    });
+    return maxLimit;
+};
+
+var genData = function genData(limits) {
+    var data = [];
+
+    Object.keys(limits).forEach(function (name) {
+        data.push({
+            name: name + ' limit',
+            uv: limits[name],
+            fill: __WEBPACK_IMPORTED_MODULE_2__constants__["b" /* COLORS_CHART */][name]
+        });
+    });
+    return data;
+};
+
+ChartLimits.propTypes = {
+    limits: __WEBPACK_IMPORTED_MODULE_0_prop_types__["PropTypes"].object
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (ChartLimits);
+
+/***/ }),
+
+/***/ "./src/components/ui/ChartMain.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -107520,10 +107602,19 @@ BalanceChart.propTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_recharts__ = __webpack_require__("./node_modules/recharts/es6/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_material_ui_Paper__ = __webpack_require__("./node_modules/material-ui/Paper/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_material_ui_Paper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_material_ui_Paper__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__constants__ = __webpack_require__("./src/constants.js");
 
 
 
 
+
+
+
+var styleBarLabel = {
+  position: 'top',
+  fontSize: 10,
+  fill: __WEBPACK_IMPORTED_MODULE_3__constants__["b" /* COLORS_CHART */].expense
+};
 
 var Chart = function Chart(_ref) {
   var _ref$data = _ref.data,
@@ -107535,16 +107626,16 @@ var Chart = function Chart(_ref) {
       __WEBPACK_IMPORTED_MODULE_1_recharts__["d" /* ComposedChart */],
       { width: 800, height: 400, data: data,
         margin: { top: 20, right: 20, bottom: 20, left: 20 } },
-      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["l" /* XAxis */], { dataKey: 'name' }),
-      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["m" /* YAxis */], { yAxisId: 'left' }),
-      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["m" /* YAxis */], { yAxisId: 'right', orientation: 'right' }),
-      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["k" /* Tooltip */], null),
+      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["n" /* XAxis */], { dataKey: 'name' }),
+      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["o" /* YAxis */], { yAxisId: 'left' }),
+      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["o" /* YAxis */], { yAxisId: 'right', orientation: 'right' }),
+      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["m" /* Tooltip */], null),
       React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["f" /* Legend */], null),
       React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["b" /* CartesianGrid */], { stroke: '#f5f5f5' }),
-      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["g" /* Line */], { yAxisId: 'left', type: 'monotone', dataKey: 'base', stroke: '#00BFFF' }),
-      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["g" /* Line */], { yAxisId: 'left', type: 'monotone', dataKey: 'corrected', stroke: '#9932CC' }),
-      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["g" /* Line */], { yAxisId: 'left', type: 'monotone', dataKey: 'fact', stroke: '#FF6347' }),
-      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["a" /* Bar */], { yAxisId: 'right', dataKey: 'expense', barSize: 10, fill: '#9ACD32' })
+      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["g" /* Line */], { yAxisId: 'left', type: 'monotone', dataKey: 'base', stroke: __WEBPACK_IMPORTED_MODULE_3__constants__["b" /* COLORS_CHART */].base }),
+      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["g" /* Line */], { yAxisId: 'left', type: 'monotone', dataKey: 'corrected', stroke: __WEBPACK_IMPORTED_MODULE_3__constants__["b" /* COLORS_CHART */].corrected }),
+      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["g" /* Line */], { yAxisId: 'left', type: 'monotone', dataKey: 'fact', stroke: __WEBPACK_IMPORTED_MODULE_3__constants__["b" /* COLORS_CHART */].fact }),
+      React.createElement(__WEBPACK_IMPORTED_MODULE_1_recharts__["a" /* Bar */], { yAxisId: 'right', dataKey: 'expense', barSize: 10, fill: __WEBPACK_IMPORTED_MODULE_3__constants__["b" /* COLORS_CHART */].expense, label: styleBarLabel })
     )
   );
 };
@@ -107569,7 +107660,7 @@ Chart.propTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js__ = __webpack_require__("./node_modules/react-transform-hmr/lib/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__BalanceChart__ = __webpack_require__("./src/components/ui/BalanceChart.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ChartBalance__ = __webpack_require__("./src/components/ui/ChartBalance.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_material_ui_Dialog__ = __webpack_require__("./node_modules/material-ui/Dialog/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_material_ui_Dialog___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_material_ui_Dialog__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_material_ui_FlatButton__ = __webpack_require__("./node_modules/material-ui/FlatButton/index.js");
@@ -107661,12 +107752,46 @@ var DialogBalanceInfo = _wrapComponent('DialogBalanceInfo')(function (_Component
                         return closeDialog();
                     }
                 },
-                React.createElement(__WEBPACK_IMPORTED_MODULE_4__BalanceChart__["a" /* default */], {
+                React.createElement(__WEBPACK_IMPORTED_MODULE_4__ChartBalance__["a" /* default */], {
                     daysDone: daysDone,
                     daysRest: daysRest,
                     summs: summs
-                })
+                }),
+                React.createElement(
+                    'div',
+                    null,
+                    React.createElement(
+                        'h4',
+                        null,
+                        this._gendMessageAboutBalance(daysRest, summs)
+                    )
+                )
             );
+        }
+    }, {
+        key: '_gendMessageAboutBalance',
+        value: function _gendMessageAboutBalance(daysRest, summs) {
+            var summIncomes = summs.summIncomes,
+                summExpenses = summs.summExpenses,
+                summNotIncluded = summs.summNotIncluded,
+                currentBalance = summIncomes - summNotIncluded - summExpenses;
+
+
+            var message = void 0;
+
+            if (daysRest && currentBalance > 0) {
+                message = 'You have $' + currentBalance + ' for ' + daysRest + ' days.';
+            } else if (daysRest && currentBalance < 0) {
+                message = 'Unfortunately, you don\'t have money already for ' + daysRest + ' days.';
+            } else if (daysRest === 0 && currentBalance > 0) {
+                message = 'Congratulations! Your economy is ' + currentBalance + ' for past period.';
+            } else if (daysRest === 0 && currentBalance < 0) {
+                message = '\n                Unfortunately, this period ended with balance $' + currentBalance + ' for you. \n                Try to save money in the next period.\n            ';
+            } else if (daysRest === 0 && currentBalance === 0) {
+                message = '\n                Wow! You very accurately adhered to money limits. \n                Your balance is 0. But you can try to save money in the next period.\n            ';
+            }
+
+            return message;
         }
     }]);
 
@@ -107969,7 +108094,7 @@ var DialogInputSumm = _wrapComponent('DialogInputSumm')(function (_Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js__ = __webpack_require__("./node_modules/react-transform-hmr/lib/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__BalanceChart__ = __webpack_require__("./src/components/ui/BalanceChart.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ChartBalance__ = __webpack_require__("./src/components/ui/ChartBalance.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_material_ui_Dialog__ = __webpack_require__("./node_modules/material-ui/Dialog/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_material_ui_Dialog___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_material_ui_Dialog__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_material_ui_FlatButton__ = __webpack_require__("./node_modules/material-ui/FlatButton/index.js");
@@ -108157,7 +108282,7 @@ var DialogLimitInfo = _wrapComponent('DialogLimitInfo')(function (_Component) {
                         return closeDialog();
                     }
                 },
-                React.createElement(__WEBPACK_IMPORTED_MODULE_4__BalanceChart__["a" /* default */], {
+                React.createElement(__WEBPACK_IMPORTED_MODULE_4__ChartBalance__["a" /* default */], {
                     daysDone: limitsData.daysDone,
                     daysRest: limitsData.daysRest,
                     summs: limitsData.summs
@@ -108188,7 +108313,7 @@ var DialogLimitInfo = _wrapComponent('DialogLimitInfo')(function (_Component) {
             } else if (currentBalance < 0) {
                 resultMessage = '   \n                Unfortunately, you did not save money in the current period. \n                Try to follow our recommendations in the following periods. \n            ';
             } else if (currentBalance > 0) {
-                resultMessage = ' \n                Congratulations, you have completed the current period with a cash saving of ' + currentBalance + '. \n            ';
+                resultMessage = ' \n                Congratulations, you have completed the current period with a cash saving of $' + currentBalance + '. \n            ';
             } else {
                 //currentBalance = 0
                 resultMessage = ' \n                Wow! You very accurately adhered to money limits in the current period! \n                Try to save money in the next period.\n            ';
@@ -108201,6 +108326,122 @@ var DialogLimitInfo = _wrapComponent('DialogLimitInfo')(function (_Component) {
 }(__WEBPACK_IMPORTED_MODULE_2_react__["Component"]));
 
 /* harmony default export */ __webpack_exports__["a"] = (DialogLimitInfo);
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/webpack/buildin/harmony-module.js")(module)))
+
+/***/ }),
+
+/***/ "./src/components/ui/DialogLimits.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_nick_dev_JS_react_redux_money_limitator_node_modules_redbox_react_lib_index_js__ = __webpack_require__("./node_modules/redbox-react/lib/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_nick_dev_JS_react_redux_money_limitator_node_modules_redbox_react_lib_index_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__home_nick_dev_JS_react_redux_money_limitator_node_modules_redbox_react_lib_index_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_catch_errors_lib_index_js__ = __webpack_require__("./node_modules/react-transform-catch-errors/lib/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_catch_errors_lib_index_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_catch_errors_lib_index_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__("./node_modules/react/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js__ = __webpack_require__("./node_modules/react-transform-hmr/lib/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ChartLimits__ = __webpack_require__("./src/components/ui/ChartLimits.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_material_ui_Dialog__ = __webpack_require__("./node_modules/material-ui/Dialog/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_material_ui_Dialog___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_material_ui_Dialog__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_material_ui_FlatButton__ = __webpack_require__("./node_modules/material-ui/FlatButton/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_material_ui_FlatButton___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_material_ui_FlatButton__);
+
+
+
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _components = {
+    DialogBalanceInfo: {
+        displayName: 'DialogBalanceInfo'
+    }
+};
+
+var _homeNickDevJSReact_reduxMoney_limitatorNode_modulesReactTransformHmrLibIndexJs2 = __WEBPACK_IMPORTED_MODULE_3__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_hmr_lib_index_js___default()({
+    filename: '/home/nick/dev/JS/react_redux/money_limitator/src/components/ui/DialogLimits.js',
+    components: _components,
+    locals: [module],
+    imports: [__WEBPACK_IMPORTED_MODULE_2_react___default.a]
+});
+
+var _homeNickDevJSReact_reduxMoney_limitatorNode_modulesReactTransformCatchErrorsLibIndexJs2 = __WEBPACK_IMPORTED_MODULE_1__home_nick_dev_JS_react_redux_money_limitator_node_modules_react_transform_catch_errors_lib_index_js___default()({
+    filename: '/home/nick/dev/JS/react_redux/money_limitator/src/components/ui/DialogLimits.js',
+    components: _components,
+    locals: [],
+    imports: [__WEBPACK_IMPORTED_MODULE_2_react___default.a, __WEBPACK_IMPORTED_MODULE_0__home_nick_dev_JS_react_redux_money_limitator_node_modules_redbox_react_lib_index_js___default.a]
+});
+
+function _wrapComponent(id) {
+    return function (Component) {
+        return _homeNickDevJSReact_reduxMoney_limitatorNode_modulesReactTransformHmrLibIndexJs2(_homeNickDevJSReact_reduxMoney_limitatorNode_modulesReactTransformCatchErrorsLibIndexJs2(Component, id), id);
+    };
+}
+
+
+
+
+
+
+
+
+var DialogBalanceInfo = _wrapComponent('DialogBalanceInfo')(function (_Component) {
+    _inherits(DialogBalanceInfo, _Component);
+
+    function DialogBalanceInfo() {
+        _classCallCheck(this, DialogBalanceInfo);
+
+        return _possibleConstructorReturn(this, (DialogBalanceInfo.__proto__ || Object.getPrototypeOf(DialogBalanceInfo)).apply(this, arguments));
+    }
+
+    _createClass(DialogBalanceInfo, [{
+        key: 'render',
+        value: function render() {
+            var _props = this.props,
+                open = _props.open,
+                limits = _props.limits,
+                closeDialog = _props.closeDialog;
+
+
+            var actions = [React.createElement(__WEBPACK_IMPORTED_MODULE_6_material_ui_FlatButton___default.a, {
+                label: 'Ok',
+                primary: true,
+                onClick: function onClick() {
+                    return closeDialog();
+                }
+            })];
+
+            return React.createElement(
+                __WEBPACK_IMPORTED_MODULE_5_material_ui_Dialog___default.a,
+                {
+                    className: 'Dialog',
+                    open: open,
+                    title: 'Limits info',
+                    actions: actions,
+                    modal: false,
+                    onRequestClose: function onRequestClose() {
+                        return closeDialog();
+                    }
+                },
+                React.createElement(__WEBPACK_IMPORTED_MODULE_4__ChartLimits__["a" /* default */], {
+                    limits: limits
+                })
+            );
+        }
+    }]);
+
+    return DialogBalanceInfo;
+}(__WEBPACK_IMPORTED_MODULE_2_react__["Component"]));
+
+/* harmony default export */ __webpack_exports__["a"] = (DialogBalanceInfo);
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/webpack/buildin/harmony-module.js")(module)))
 
 /***/ }),
@@ -109269,7 +109510,11 @@ var HeadResult = _wrapComponent('HeadResult')(function (_Component) {
 			return React.createElement(
 				'div',
 				{ className: 'HeadResult', style: style },
-				text
+				React.createElement(
+					'h2',
+					null,
+					text
+				)
 			);
 		}
 	}, {
@@ -109315,6 +109560,7 @@ var HeadResult = _wrapComponent('HeadResult')(function (_Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_material_ui_RaisedButton__ = __webpack_require__("./node_modules/material-ui/RaisedButton/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_material_ui_RaisedButton___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_material_ui_RaisedButton__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__DialogLimitInfo__ = __webpack_require__("./src/components/ui/DialogLimitInfo.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__DialogLimits__ = __webpack_require__("./src/components/ui/DialogLimits.js");
 
 
 
@@ -109360,6 +109606,7 @@ function _wrapComponent(id) {
 
 
 
+
 var Limits = _wrapComponent('Limits')(function (_Component) {
 	_inherits(Limits, _Component);
 
@@ -109368,34 +109615,46 @@ var Limits = _wrapComponent('Limits')(function (_Component) {
 
 		var _this = _possibleConstructorReturn(this, (Limits.__proto__ || Object.getPrototypeOf(Limits)).call(this));
 
-		_this.state = { activeLimit: '' };
+		_this.state = {
+			activeLimit: '',
+			openChartLimits: false
+		};
 		return _this;
 	}
 
 	_createClass(Limits, [{
-		key: 'handleOpenDialog',
-		value: function handleOpenDialog(limitName) {
+		key: 'handleOpenDialogLimitInfo',
+		value: function handleOpenDialogLimitInfo(limitName) {
 			this.setState({ activeLimit: limitName });
 		}
 	}, {
-		key: 'handleCloseDialog',
-		value: function handleCloseDialog() {
+		key: 'handleCloseDialogLimitInfo',
+		value: function handleCloseDialogLimitInfo() {
 			this.setState({ activeLimit: '' });
+		}
+	}, {
+		key: 'handleOpenDialogLimits',
+		value: function handleOpenDialogLimits() {
+			this.setState({ openChartLimits: true });
+		}
+	}, {
+		key: 'handleCloseDialogLimits',
+		value: function handleCloseDialogLimits() {
+			this.setState({ openChartLimits: false });
 		}
 	}, {
 		key: 'render',
 		value: function render() {
 			var _this2 = this;
 
-			var activeLimit = this.state.activeLimit,
-			    _props$limits = this.props.limits,
-			    base = _props$limits.base,
-			    corrected = _props$limits.corrected,
-			    fact = _props$limits.fact,
+			var _state = this.state,
+			    activeLimit = _state.activeLimit,
+			    openChartLimits = _state.openChartLimits,
+			    limits = this.props.limits,
 			    limitLabel = {
-				'base': 'Base ' + base + ' in day',
-				'corrected': 'Corrected ' + corrected + ' in day',
-				'fact': 'Fact ' + fact + ' in day'
+				'base': 'Base ' + limits.base + ' in day',
+				'corrected': 'Corrected ' + limits.corrected + ' in day',
+				'fact': 'Fact ' + limits.fact + ' in day'
 			},
 			    limitsData = this.props;
 
@@ -109408,7 +109667,9 @@ var Limits = _wrapComponent('Limits')(function (_Component) {
 					{ className: 'limits__title' },
 					React.createElement(
 						'span',
-						null,
+						{ onClick: function onClick() {
+								return _this2.handleOpenDialogLimits();
+							} },
 						'LIMITS:'
 					)
 				),
@@ -109417,7 +109678,7 @@ var Limits = _wrapComponent('Limits')(function (_Component) {
 					label: limitLabel.base,
 					primary: true,
 					onClick: function onClick() {
-						return _this2.handleOpenDialog('base');
+						return _this2.handleOpenDialogLimitInfo('base');
 					}
 				}),
 				React.createElement(__WEBPACK_IMPORTED_MODULE_4_material_ui_RaisedButton___default.a, {
@@ -109426,7 +109687,7 @@ var Limits = _wrapComponent('Limits')(function (_Component) {
 					backgroundColor: '#9932CC',
 					labelColor: '#FFFFFF',
 					onClick: function onClick() {
-						return _this2.handleOpenDialog('corrected');
+						return _this2.handleOpenDialogLimitInfo('corrected');
 					}
 				}),
 				React.createElement(__WEBPACK_IMPORTED_MODULE_4_material_ui_RaisedButton___default.a, {
@@ -109435,7 +109696,7 @@ var Limits = _wrapComponent('Limits')(function (_Component) {
 					backgroundColor: '#FF6347',
 					labelColor: '#FFFFFF',
 					onClick: function onClick() {
-						return _this2.handleOpenDialog('fact');
+						return _this2.handleOpenDialogLimitInfo('fact');
 					}
 				}),
 				React.createElement(__WEBPACK_IMPORTED_MODULE_5__DialogLimitInfo__["a" /* default */], {
@@ -109443,7 +109704,13 @@ var Limits = _wrapComponent('Limits')(function (_Component) {
 					activeLimit: activeLimit,
 					limitsData: limitsData,
 					modal: false,
-					closeDialog: this.handleCloseDialog.bind(this)
+					closeDialog: this.handleCloseDialogLimitInfo.bind(this)
+				}),
+				React.createElement(__WEBPACK_IMPORTED_MODULE_6__DialogLimits__["a" /* default */], {
+					open: openChartLimits,
+					limits: limits,
+					modal: false,
+					closeDialog: this.handleCloseDialogLimits.bind(this)
 				})
 			);
 		}
@@ -109516,11 +109783,13 @@ ShowErrors.propTypes = {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return COLORS_CHART; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return COLORS_BALANCE; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_key_mirror__ = __webpack_require__("./node_modules/key-mirror/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_key_mirror___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_key_mirror__);
 
 
-/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_key_mirror___default()({
+/* harmony default export */ __webpack_exports__["c"] = (__WEBPACK_IMPORTED_MODULE_0_key_mirror___default()({
 	ADD_PERIOD: null,
 	CHANGE_PERIOD: null,
 	DELETE_PERIOD: null,
@@ -109542,6 +109811,18 @@ ShowErrors.propTypes = {
 	CLEAR_ERROR: null,
 	CLEAR_ALL_ERRORS: null
 }));
+
+var COLORS_CHART = {
+	base: '#00BFFF',
+	corrected: '#9932CC',
+	fact: '#FF6347',
+	expense: '#9ACD32'
+};
+
+var COLORS_BALANCE = {
+	money: '#00C49F',
+	days: '#FF8042'
+};
 
 /***/ }),
 
@@ -109701,11 +109982,11 @@ var incomes = function incomes() {
 	var newState = Object.assign({}, state);
 
 	switch (action.type) {
-		case __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].ADD_INCOME:
+		case __WEBPACK_IMPORTED_MODULE_0__constants__["c" /* default */].ADD_INCOME:
 			newState[action.payload.date] = action.payload.summ;
 			return newState;
 
-		case __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].DELETE_INCOME:
+		case __WEBPACK_IMPORTED_MODULE_0__constants__["c" /* default */].DELETE_INCOME:
 			delete newState[action.payload.date];
 			return newState;
 
@@ -109722,15 +110003,15 @@ var expenses = function expenses() {
 	var newState = Object.assign({}, state);
 
 	switch (action.type) {
-		case __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].ADD_EXPENSE:
+		case __WEBPACK_IMPORTED_MODULE_0__constants__["c" /* default */].ADD_EXPENSE:
 			newState[action.payload.date] = action.payload.summ;
 			return newState;
 
-		case __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].DELETE_EXPENSE:
+		case __WEBPACK_IMPORTED_MODULE_0__constants__["c" /* default */].DELETE_EXPENSE:
 			delete newState[action.payload.date];
 			return newState;
 
-		case __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].FILL_GAPS:
+		case __WEBPACK_IMPORTED_MODULE_0__constants__["c" /* default */].FILL_GAPS:
 			if (Object.keys(newState).length > 0) {
 				newState = Object(__WEBPACK_IMPORTED_MODULE_3__util_CalcUtil__["e" /* formatListSumms */])(newState);
 			}
@@ -109749,11 +110030,11 @@ var notIncluded = function notIncluded() {
 	var newState = Object.assign({}, state);
 
 	switch (action.type) {
-		case __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].ADD_NOT_INCLUDED:
+		case __WEBPACK_IMPORTED_MODULE_0__constants__["c" /* default */].ADD_NOT_INCLUDED:
 			newState[action.payload.date] = action.payload.summ;
 			return newState;
 
-		case __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].DELETE_NOT_INCLUDED:
+		case __WEBPACK_IMPORTED_MODULE_0__constants__["c" /* default */].DELETE_NOT_INCLUDED:
 			delete newState[action.payload.date];
 			return newState;
 
@@ -109770,7 +110051,7 @@ var summs = function summs() {
 	var newState = Object.assign({}, state);
 
 	switch (action.type) {
-		case __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].UPDATE_SUMMS:
+		case __WEBPACK_IMPORTED_MODULE_0__constants__["c" /* default */].UPDATE_SUMMS:
 			newState.summIncomes = Object(__WEBPACK_IMPORTED_MODULE_3__util_CalcUtil__["b" /* calcSumm */])(action.payload.incomes);
 			newState.summExpenses = Object(__WEBPACK_IMPORTED_MODULE_3__util_CalcUtil__["b" /* calcSumm */])(action.payload.expenses);
 			newState.summNotIncluded = Object(__WEBPACK_IMPORTED_MODULE_3__util_CalcUtil__["b" /* calcSumm */])(action.payload.notIncluded);
@@ -109788,7 +110069,7 @@ var limits = function limits() {
 	var newState = Object.assign({}, state);
 
 	switch (action.type) {
-		case __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].UPDATE_LIMITS:
+		case __WEBPACK_IMPORTED_MODULE_0__constants__["c" /* default */].UPDATE_LIMITS:
 			var _action$payload = action.payload,
 			    _period = _action$payload.period,
 			    _expenses = _action$payload.expenses,
@@ -109812,16 +110093,16 @@ var errors = function errors() {
 
 
 	switch (action.type) {
-		case __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].ADD_ERROR:
+		case __WEBPACK_IMPORTED_MODULE_0__constants__["c" /* default */].ADD_ERROR:
 			return [].concat(state, action.payload);
 		//return [ ..state, action.payload ]
 
-		case __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].CLEAR_ERROR:
+		case __WEBPACK_IMPORTED_MODULE_0__constants__["c" /* default */].CLEAR_ERROR:
 			return state.filter(function (message, i) {
 				return i !== action.payload;
 			});
 
-		case __WEBPACK_IMPORTED_MODULE_0__constants__["a" /* default */].CLEAR_ALL_ERRORS:
+		case __WEBPACK_IMPORTED_MODULE_0__constants__["c" /* default */].CLEAR_ALL_ERRORS:
 			return [];
 
 		default:

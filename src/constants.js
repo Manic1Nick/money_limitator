@@ -18,6 +18,9 @@ export default keyMirror({
 	UPDATE_SUMMS		: null,
 	UPDATE_LIMITS		: null,
 
+	SHOW_NOTIFICATION	: null,
+	CLEAR_NOTIFICATION	: null,
+
 	ADD_ERROR			: null,
 	CLEAR_ERROR 		: null,
 	CLEAR_ALL_ERRORS 	: null
@@ -27,7 +30,8 @@ export const COLORS_CHART = {
 	base: '#00BFFF',
 	corrected: '#9932CC',
 	fact: '#FF6347',
-	expense: '#9ACD32'
+	expense: '#9ACD32',
+	expenseActive: '#7ba428'
 }
 
 export const COLORS_BALANCE = {

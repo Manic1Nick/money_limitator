@@ -20,6 +20,9 @@ export const addNewIncome = income => {
             payload: income
         })
 
+        let message = `Income of $${income.summ} from ${income.date} was saved succesfully.`
+        dispatch(showNotification(message))
+
         dispatch(updateSumms())
         dispatch(updateLimits())
     }
@@ -30,7 +33,10 @@ export const addNewExpense = expense => {
         dispatch({
             type: C.ADD_EXPENSE,
             payload: expense
-        })      
+        })
+        
+        let message = `Expense of $${expense.summ} from ${expense.date} was saved succesfully.`
+        dispatch(showNotification(message))
 
         dispatch(fillGaps())
         dispatch(updateSumms())
@@ -45,6 +51,9 @@ export const addNotIncluded = expense => {
             payload: expense
         })
 
+        let message = `Expense of $${expense.summ} from ${expense.date} was saved succesfully.`
+        dispatch(showNotification(message))
+
         dispatch(updateSumms())
         dispatch(updateLimits())
     }
@@ -56,6 +65,9 @@ export const deleteIncome = income => {
             type: C.DELETE_INCOME,
             payload: income
         })
+
+        let message = `Income of $${income.summ} from ${income.date} was deleted succesfully.`
+        dispatch(showNotification(message))
 
         dispatch(updateSumms())
         dispatch(updateLimits())
@@ -69,6 +81,9 @@ export const deleteExpense = expense => {
             payload: expense
         })      
 
+        let message = `Expense of $${expense.summ} from ${expense.date} was deleted succesfully.`
+        dispatch(showNotification(message))
+
         dispatch(fillGaps())
         dispatch(updateSumms())
         dispatch(updateLimits())
@@ -81,6 +96,9 @@ export const deleteNotIncluded = expense => {
             type: C.DELETE_NOT_INCLUDED,
             payload: expense
         })
+
+        let message = `Expense of $${expense.summ} from ${expense.date} was deleted succesfully.`
+        dispatch(showNotification(message))
 
         dispatch(updateSumms())
         dispatch(updateLimits())
@@ -119,6 +137,15 @@ export const updateLimits = () => {
         })
     }
 }
+
+export const showNotification = message => ({
+    type: C.SHOW_NOTIFICATION,
+    payload: message
+})
+
+export const clearNotification = () => ({
+    type: C.CLEAR_NOTIFICATION
+})
 
 export const addError = message => ({
     type: C.ADD_ERROR,
