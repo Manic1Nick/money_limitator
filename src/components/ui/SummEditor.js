@@ -29,6 +29,11 @@ export default class SummEditor extends Component {
                 date: nextProps.editingDate,
                 summ: nextProps.editingSumm
             })
+        }
+    }
+
+    componentWillUpdate(nextProps, nextState) {
+        if (this.props !== nextProps || this.state !== nextState) {
             this.inputField.focus()
         }
     }
@@ -57,7 +62,7 @@ export default class SummEditor extends Component {
     }
 
     handleClearSumm() {
-        this.setState({ summ: 0 })
+        this.setState({ summ: '' })
     }
 
     render() {
