@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "9e63bb250fae190ad699"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "7ae3203b60b7e4e953ba"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -112104,6 +112104,12 @@ var SummEditor = _wrapComponent('SummEditor')(function (_Component) {
                     date: nextProps.editingDate,
                     summ: nextProps.editingSumm
                 });
+            }
+        }
+    }, {
+        key: 'componentWillUpdate',
+        value: function componentWillUpdate(nextProps, nextState) {
+            if (this.props !== nextProps || this.state !== nextState) {
                 this.inputField.focus();
             }
         }
@@ -112136,7 +112142,7 @@ var SummEditor = _wrapComponent('SummEditor')(function (_Component) {
     }, {
         key: 'handleClearSumm',
         value: function handleClearSumm() {
-            this.setState({ summ: 0 });
+            this.setState({ summ: '' });
         }
     }, {
         key: 'render',
