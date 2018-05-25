@@ -19,12 +19,17 @@ export default class SummEditor extends Component {
         }
     }
 
+    componentDidMount() {
+        this.inputField.focus()
+    }
+
     componentWillReceiveProps(nextProps) {
         if (this.props !== nextProps) {
             this.setState({
                 date: nextProps.editingDate,
                 summ: nextProps.editingSumm
             })
+            this.inputField.focus()
         }
     }
 
@@ -69,7 +74,7 @@ export default class SummEditor extends Component {
                         value={ summ }
                         onKeyDown={ this.handleSummEditKeyDown.bind(this) }
                         onChange={ this.handleEditSumm.bind(this) }
-                        autoFocus
+                        ref={ (input) => this.inputField = input }
                     />
                 </div>
                 <div className='SummEditor__actions'>

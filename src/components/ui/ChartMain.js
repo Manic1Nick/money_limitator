@@ -1,6 +1,7 @@
 import { Component } from 'react'
 
 import { ComposedChart, Line, Area, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Cell } from 'recharts' 
+import Paper from 'material-ui/Paper'
 
 import { COLORS_CHART as COLORS } from '../../constants'
 
@@ -18,13 +19,14 @@ export default class ChartMain extends Component {
 	componentWillReceiveProps(nextProps) {
         if (this.props !== nextProps) {
             this.setState({ data: nextProps.data })
-        }
+		}
+		if (nextProps.stopEditing) {
+			this.setState({ activeIndex: -1 })
+		}
     }
 	
 	handleClickOnBar(data, index) {
-		this.setState({
-			activeIndex: index
-		})
+		this.setState({ activeIndex: index })
 
 		this.props.openEditing(index)
 	}
@@ -35,37 +37,71 @@ export default class ChartMain extends Component {
 				position: 'top',
 				fontSize: 10,
 				fill: COLORS.expenseActive
-			}
+			},
+			styleAxis = { fontSize: 12 }
 
 		return(
 			<ComposedChart width={800} height={400} 
 				data={data} 
 				margin={{top: 20, right: 20, bottom: 20, left: 20}}
 			>
-				<XAxis dataKey="name" />
-				<YAxis yAxisId="left" />
-				<YAxis yAxisId="right" orientation="right" />
-				<Tooltip />
-				<Legend />
+				<XAxis dataKey="name" tick={ styleAxis } />
+				<YAxis yAxisId="left" tick={ styleAxis } />
+				<YAxis yAxisId="right" orientation="right" tick={ styleAxis } />
+				<Tooltip content={ this._tooltipContent } />
+				<Legend payload={ this._legendPayload() } />
 				<CartesianGrid stroke='#f5f5f5'/>	
 
 				<Line yAxisId="left" type='monotone' dataKey='base' stroke={ COLORS.base }/>
 				<Line yAxisId="left" type='monotone' dataKey='corrected' stroke={ COLORS.corrected }/>
 				<Line yAxisId="left" type='monotone' dataKey='fact' stroke={ COLORS.fact }/>
 
-				<Bar yAxisId="right" dataKey='expense' barSize={10} label={ styleBarLabel } 
+				<Bar yAxisId="right" dataKey='expense' barSize={10} label={ styleBarLabel }
 					onClick={ this.handleClickOnBar.bind(this) } 
 				>
 				{
 					data.map((entry, index) => (
-							<Cell cursor="pointer" 
-								fill={ index === activeIndex ? COLORS.expenseActive : COLORS.expense } 
-								key={`cell-${index}`}
-							/>
+						<Cell cursor="pointer" 
+							fill={ index === activeIndex ? COLORS.expenseActive : COLORS.expense } 
+							key={`cell-${index}`}
+						/>
 					))
 				}
 				</Bar>
 			</ComposedChart>
 		)
+	}
+
+	_tooltipContent = (tooltipProps) => {
+		return(
+			<Paper className='ChartTooltip' zDepth={3}>
+				<ul className='ChartTooltip'>
+					<li>{ tooltipProps.label }</li>
+					{
+						tooltipProps.payload.map((data, i) =>
+							<li key={i} 
+								style={	
+									data.name === 'expense' 
+									? { color: COLORS.expenseActive } 
+									: { color: `${data.color}` }
+								}
+							>
+								{data.name} : {data.value}
+							</li>
+						)
+					}
+				</ul>
+			</Paper>
+		)
+	}
+
+	_legendPayload = () => {
+		let payload = [
+			{ dataKey: 'base', value: 'base', type: 'line', color: `${COLORS.base}` },
+			{ dataKey: 'corrected', value: 'corrected', type: 'line', color: `${COLORS.corrected}` },
+			{ dataKey: 'fact', value: 'fact', type: 'line', color: `${COLORS.fact}` },
+			{ dataKey: 'expense', value: 'expense', type: 'square', color: `${COLORS.expense}` }
+		]
+		return payload
 	}
 }

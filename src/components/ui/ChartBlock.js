@@ -57,11 +57,12 @@ export default class ChartBlock extends Component {
                         cancelEditing={ this.closeInputSumm.bind(this) }
                     />
                 :
-                    <span>Click on tab for change expense</span>
+                    <span>Click on any bar below to change expense</span>
                 }
                 </div>
                 <ChartMain 
                     className='ChartBlock__chart'
+                    stopEditing={ editingDate === '' }
                     data={ data } 
                     openEditing={ this.openEditSumm }
                 />

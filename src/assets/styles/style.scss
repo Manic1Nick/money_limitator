@@ -91,9 +91,7 @@ body {
         flex-wrap: wrap;
         height: 100%;
 
-        span {
-            color: rgb(170, 170, 170);
-        }
+        span { color: rgb(170, 170, 170); }
 
         .ChartBlock__editor {
             width: 100%;
@@ -103,11 +101,25 @@ body {
 		    align-items: center;
             justify-content: center;
 
-            .SummEditor {
-                max-width: 300px;
+            .SummEditor { max-width: 300px; }            
+        }
+
+        .ChartTooltip {
+            opacity: 0.8;
+
+            ul { 
+                list-style-type: none; 
+                //float: left;
+                padding: 10px;
+
+                li {
+                    padding-top: 5px;
+                    font-size: 80%;
+                }
             }
         }
 
+        
 	}
 }
 
@@ -204,4 +216,18 @@ div.show-errors {
         font-size: 2em;
     }
   }
+}
+
+/* ANIMATIONS--------------------- */
+.fadein { animation: fadein 2s; }
+.fadeout { animation: fadeout 2s; }
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
 }
