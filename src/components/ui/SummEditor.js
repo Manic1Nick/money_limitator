@@ -33,7 +33,7 @@ export default class SummEditor extends Component {
     }
 
     componentWillUpdate(nextProps, nextState) {
-        if (this.props !== nextProps || this.state !== nextState) {
+        if (this.state !== nextState) {
             this.inputField.focus()
         }
     }
@@ -43,13 +43,13 @@ export default class SummEditor extends Component {
     }
 
     handleSaveSumm() {
-        let data = this._createSummData(this.state.summ)
-        this.props.saveSumm(data)
+        let objDateSumm = this._createObjDateSumm(this.state.summ)
+        this.props.saveSumm(objDateSumm)
     }
 
     handleDeleteSumm() {
-        let data = this._createSummData(this.state.summ)
-        this.props.deleteSumm(data)
+        let objDateSumm = this._createObjDateSumm(this.state.summ)
+        this.props.deleteSumm(objDateSumm)
     }
 
     handleSummEditKeyDown(e) {
@@ -84,14 +84,17 @@ export default class SummEditor extends Component {
                 </div>
                 <div className='SummEditor__actions'>
                     <SaveIcon 
+                        className='icon'
                         style={{ color: '#00BFFF' }}
                         onClick={ this.handleSaveSumm.bind(this) }
                     />
                     <ClearIcon 
+                        className='icon'
                         style={{ color: '#A9A9A9' }}
                         onClick={ this.handleClearSumm.bind(this) }
                     />
                     <DeleteIcon 
+                        className='icon'
                         style={{ color: '#FF6347' }}
                         onClick={ this.handleDeleteSumm.bind(this) }
                     />
@@ -100,12 +103,12 @@ export default class SummEditor extends Component {
         )
     }
 
-    _createSummData(summ) {
-        let data = {}
-        data.date = this.state.date
-        data.summ = summ ? parseInt(summ) : 0
-        data.isExpense = this.props.isExpense
+    _createObjDateSumm(summ) {
+        let objDateSumm = {}
+        objDateSumm.date = this.state.date
+        objDateSumm.summ = summ ? parseInt(summ) : 0
+        objDateSumm.isExpense = this.props.isExpense
 
-        return data
+        return objDateSumm
     }
 }

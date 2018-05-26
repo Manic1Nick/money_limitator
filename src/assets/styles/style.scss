@@ -59,7 +59,6 @@ body {
                     margin: auto;
                     width: 20%;
                     height: 100%;
-                    cursor: pointer;
                 }
             }
 		}
@@ -91,8 +90,6 @@ body {
         flex-wrap: wrap;
         height: 100%;
 
-        span { color: rgb(170, 170, 170); }
-
         .ChartBlock__editor {
             width: 100%;
             height: 25px;
@@ -101,7 +98,17 @@ body {
 		    align-items: center;
             justify-content: center;
 
-            .SummEditor { max-width: 300px; }            
+            .SummEditor { max-width: 300px; } 
+            
+            .ChartBlock__head { 
+                color: rgb(170, 170, 170);
+
+                display: flex;
+		        align-items: center;
+                justify-content: space-between;
+
+                .ChartBlock__undo { padding-left: 10px; }
+            }
         }
 
         .ChartTooltip {
@@ -129,6 +136,10 @@ input {
     &:focus {
         outline: 0;
     }
+}
+
+.icon {
+    cursor: pointer;
 }
 
 .Drawer {
@@ -173,7 +184,6 @@ input {
         display: flex;
         justify-content: space-around;
         width: 33%;
-        cursor: pointer;
     }
 }    
 
@@ -182,10 +192,7 @@ input {
         display: flex;
         justify-content: space-between;
 
-        .InputSumm__icon {
-            margin: auto;
-            cursor: pointer;
-        }
+        .InputSumm__icon { margin: auto; }
     }    
 }
 

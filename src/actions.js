@@ -105,6 +105,22 @@ export const deleteNotIncluded = expense => {
     }
 }
 
+export const undoLastAction = expense => {
+    return dispatch => {
+        dispatch({
+            type: C.ADD_EXPENSE,
+            payload: expense
+        })
+        
+        let message = `The last action was canceled successfully.`
+        dispatch(showNotification(message))
+
+        dispatch(fillGaps())
+        dispatch(updateSumms())
+        dispatch(updateLimits())
+    }
+}
+
 export const fillGaps = () => {
     return (dispatch, getState) => {
         const state = getState()

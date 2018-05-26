@@ -58,7 +58,7 @@ export default class HeadMoneyAction extends Component {
                     onClick={ () => this.openListSumms() }
                 />
                 <AddBoxIcon 
-                    className='HeadMoney__icon' 
+                    className='HeadMoney__icon icon' 
                     style={{ color: '#A9A9A9' }}
                     onClick={ () => this.openInputSumm() }
                 /> 
