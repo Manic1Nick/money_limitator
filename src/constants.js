@@ -26,10 +26,13 @@ export default keyMirror({
 	CLEAR_ALL_ERRORS 	: null
 })
 
-export const COLORS_CHART = {
+export const COLORS_LIMITS = {
 	base: '#00BFFF',
 	corrected: '#9932CC',
-	fact: '#FF6347',
+	fact: '#FF6347'
+}
+
+export const COLORS_CHART = {
 	expense: '#9ACD32',
 	expenseActive: '#7ba428'
 }
@@ -37,4 +40,13 @@ export const COLORS_CHART = {
 export const COLORS_BALANCE = {
 	money: '#00C49F', 
 	days: '#FF8042'
+}
+
+export const ICONS_COLORS = {
+	save: '#66d9ff',
+	saveHover: '#00BFFF',
+	clear: '#cbcbcb',
+	clearHover: '#A9A9A9',
+	delete: '#ff9d8b',
+	deleteHover: '#FF6347'
 }

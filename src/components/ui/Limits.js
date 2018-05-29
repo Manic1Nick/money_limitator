@@ -5,6 +5,8 @@ import RaisedButton from 'material-ui/RaisedButton'
 import DialogLimitInfo from './DialogLimitInfo'
 import DialogLimits from './DialogLimits'
 
+import { COLORS_LIMITS as COLORS } from '../../constants'
+
 export default class Limits extends Component {
 
 	constructor() {
@@ -44,31 +46,33 @@ export default class Limits extends Component {
 
 		return (
 			<div className='Limits'>
-				<div className='limits__title'>
+				<div className='Limits__title'>
 					<span onClick={ () => this.handleOpenDialogLimits() }>
 						LIMITS:
 					</span>
 				</div>
-				<RaisedButton 
-					className='limits__button'
-					label={ limitLabel.base } 
-					primary={true} 
-					onClick={ () => this.handleOpenDialogLimitInfo('base') }
-				/>
-				<RaisedButton 
-					className='limits__button'
-					label={ limitLabel.corrected } 
-					backgroundColor="#9932CC" 
-					labelColor="#FFFFFF" 
-					onClick={ () => this.handleOpenDialogLimitInfo('corrected') }
-				/>
-				<RaisedButton 
-					className='limits__button'
-					label={ limitLabel.fact } 
-					backgroundColor="#FF6347" 
-					labelColor="#FFFFFF" 
-					onClick={ () => this.handleOpenDialogLimitInfo('fact') }
-				/>
+				<div className='Limits__buttons'>
+					<RaisedButton 
+						className='btn_base'
+						label={ limitLabel.base } 
+						primary={true} 
+						onClick={ () => this.handleOpenDialogLimitInfo('base') }
+					/>
+					<RaisedButton 
+						className='btn_corrected'
+						label={ limitLabel.corrected } 
+						backgroundColor={ COLORS.corrected } 
+						labelColor="#FFFFFF"
+						onClick={ () => this.handleOpenDialogLimitInfo('corrected') }
+					/>
+					<RaisedButton 
+						className='btn_fact'
+						label={ limitLabel.fact } 
+						backgroundColor={ COLORS.fact }
+						labelColor="#FFFFFF" 
+						onClick={ () => this.handleOpenDialogLimitInfo('fact') }
+					/>
+				</div>
 				
 				<DialogLimitInfo
 					open={ activeLimit !== '' }

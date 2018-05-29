@@ -4,6 +4,7 @@ import { ComposedChart, Line, Area, Bar, XAxis, YAxis, CartesianGrid, Tooltip, L
 import Paper from 'material-ui/Paper'
 
 import { COLORS_CHART as COLORS } from '../../constants'
+import { COLORS_LIMITS } from '../../constants'
 
 
 export default class ChartMain extends Component {
@@ -33,6 +34,7 @@ export default class ChartMain extends Component {
 	
 	render() {
 		const { data, activeIndex } = this.state, 
+			{ base, corrected, fact } = COLORS_LIMITS,
 			styleBarLabel = {
 				position: 'top',
 				fontSize: 10,
@@ -52,16 +54,16 @@ export default class ChartMain extends Component {
 				<Legend payload={ this._legendPayload() } />
 				<CartesianGrid stroke='#f5f5f5'/>	
 
-				<Line yAxisId="left" type='monotone' dataKey='base' stroke={ COLORS.base }/>
-				<Line yAxisId="left" type='monotone' dataKey='corrected' stroke={ COLORS.corrected }/>
-				<Line yAxisId="left" type='monotone' dataKey='fact' stroke={ COLORS.fact }/>
+				<Line yAxisId="left" type='monotone' dataKey='base' stroke={ base }/>
+				<Line yAxisId="left" type='monotone' dataKey='corrected' stroke={ corrected }/>
+				<Line yAxisId="left" type='monotone' dataKey='fact' stroke={ fact }/>
 
 				<Bar yAxisId="right" dataKey='expense' barSize={10} label={ styleBarLabel }
 					onClick={ this.handleClickOnBar.bind(this) } 
 				>
 				{
 					data.map((entry, index) => (
-						<Cell cursor="pointer" 
+						<Cell cursor="pointer"
 							fill={ index === activeIndex ? COLORS.expenseActive : COLORS.expense } 
 							key={`cell-${index}`}
 						/>
@@ -96,11 +98,13 @@ export default class ChartMain extends Component {
 	}
 
 	_legendPayload = () => {
+		const { base, corrected, fact } = COLORS_LIMITS
+		
 		let payload = [
-			{ dataKey: 'base', value: 'base', type: 'line', color: `${COLORS.base}` },
-			{ dataKey: 'corrected', value: 'corrected', type: 'line', color: `${COLORS.corrected}` },
-			{ dataKey: 'fact', value: 'fact', type: 'line', color: `${COLORS.fact}` },
-			{ dataKey: 'expense', value: 'expense', type: 'square', color: `${COLORS.expense}` }
+			{ dataKey: 'base', value: 'base', type: 'line', color: `${ base }` },
+			{ dataKey: 'corrected', value: 'corrected', type: 'line', color: `${ corrected }` },
+			{ dataKey: 'fact', value: 'fact', type: 'line', color: `${ fact }` },
+			{ dataKey: 'expense', value: 'expense', type: 'square', color: `${ COLORS.expense }` }
 		]
 		return payload
 	}

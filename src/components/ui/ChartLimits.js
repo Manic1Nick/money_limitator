@@ -2,7 +2,7 @@ import { PropTypes } from 'prop-types'
 
 import { RadialBarChart, RadialBar, Legend } from 'recharts'
 
-import { COLORS_CHART as COLORS } from '../../constants'
+import { COLORS_LIMITS as COLORS } from '../../constants'
 
 const ChartLimits = ({ limits={} }) => {
 

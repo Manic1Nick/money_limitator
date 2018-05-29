@@ -2,11 +2,17 @@ import { Component } from 'react'
 import Paper from 'material-ui/Paper'
 import UndoIcon from 'react-material-icons/icons/content/undo'
 import ReactTooltip from 'react-tooltip'
+import posed from 'react-pose'
 
 import DialogInputSumm from './DialogInputSumm'
 import ChartMain from './ChartMain'
 import SummEditor from './SummEditor'
 import { formatDate } from '../../util/DateUtil'
+
+const PosedChartHead = posed.div({
+    visible: { width: '100%', height: 28 },
+    hidden: { width: 0, height: 0 }
+})
 
 export default class ChartBlock extends Component {
 
@@ -27,17 +33,18 @@ export default class ChartBlock extends Component {
     onSaveSumm = (objDateSumm) => {
         this.props.addSumm(objDateSumm)
         
+        this.savePrevSumm()
         this.closeInputSumm()
     }
     
     onDeleteSumm = (objDateSumm) => {
         this.props.deleteSumm(objDateSumm)
         
+        this.savePrevSumm()
         this.closeInputSumm()
     }
 
     closeInputSumm = () => {
-        this.savePrevSumm()
         this.setState({ editingDate: '' })
     }
 
@@ -61,12 +68,15 @@ export default class ChartBlock extends Component {
         this.setState({ prevSumms })
 
         this.props.undoLastAction(prevSumm)
+        this.savePrevSumm()
         this.closeInputSumm()
     }
 
     renderSummEditor() {
         const { expenses } = this.props,
             { editingDate } = this.state
+
+        if (!editingDate) return null
 
         return(
             <SummEditor 
@@ -80,16 +90,18 @@ export default class ChartBlock extends Component {
         )
     }
 
-    renderChartHead() {
-        const { prevSumms } = this.state,
-            tooltipMessage = `Undo last action`
+    renderChartMessage() {
+        const { prevSumms, editingDate } = this.state,
+            tooltipMessage = `Undo last action` 
+        
+        if (editingDate) return null
 
         return(
-            <div className='ChartBlock__head'>
+            <div className='ChartBlock__message'>
                 <span>Click on any bar below to change expense</span>
-                {
-                    prevSumms.length
-                ?
+                { 
+                    prevSumms.length > 0
+                ? 
                     <a data-tip={ tooltipMessage }>
                         <UndoIcon 
                             className='ChartBlock__undo icon'
@@ -98,9 +110,8 @@ export default class ChartBlock extends Component {
                         />
                         <ReactTooltip place="right" type="info" effect="solid" />
                     </a>
-                    
-                :
-                    null   
+                : 
+                    null
                 }
             </div>
         )
@@ -108,18 +119,24 @@ export default class ChartBlock extends Component {
 
     render() {
         const { data } = this.props,
-            { editingDate } = this.state
+            { editingDate } = this.state ,
+            summEditorVisible = editingDate ? 'visible' : 'hidden', 
+            chartMessageVisible = editingDate ? 'hidden' : 'visible'
 
         return (
             <Paper className='ChartBlock' zDepth={3}>
-                <div className='ChartBlock__editor'>
-                {
-                    editingDate
-                ?
-                    this.renderSummEditor()
-                :
-                    this.renderChartHead()
-                }
+                <div>
+                    <PosedChartHead pose={ summEditorVisible } className='ChartBlock__editor'>
+                    {  
+                        this.renderSummEditor() 
+                    }
+                    </PosedChartHead>
+
+                    <PosedChartHead pose={ chartMessageVisible }>
+                    { 
+                        this.renderChartMessage() 
+                    }
+                    </PosedChartHead>                
                 </div>
 
                 <ChartMain 

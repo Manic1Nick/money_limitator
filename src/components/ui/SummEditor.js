@@ -5,6 +5,7 @@ import ClearIcon from 'react-material-icons/icons/content/backspace'
 import DeleteIcon from 'react-material-icons/icons/action/delete'
 
 import { formatDate } from '../../util/DateUtil'
+import { ICONS_COLORS as COLORS } from '../../constants'
 
 const ENTER_KEY = 13
 const ESC_KEY = 27
@@ -84,18 +85,18 @@ export default class SummEditor extends Component {
                 </div>
                 <div className='SummEditor__actions'>
                     <SaveIcon 
-                        className='icon'
-                        style={{ color: '#00BFFF' }}
+                        className='icon icon__save'
+                        style={{ color: COLORS.save }}
                         onClick={ this.handleSaveSumm.bind(this) }
                     />
                     <ClearIcon 
-                        className='icon'
-                        style={{ color: '#A9A9A9' }}
+                        className='icon icon__clear'
+                        style={{ color: COLORS.clear }}
                         onClick={ this.handleClearSumm.bind(this) }
                     />
                     <DeleteIcon 
-                        className='icon'
-                        style={{ color: '#FF6347' }}
+                        className='icon icon__delete'
+                        style={{ color: COLORS.delete }}
                         onClick={ this.handleDeleteSumm.bind(this) }
                     />
                 </div>
