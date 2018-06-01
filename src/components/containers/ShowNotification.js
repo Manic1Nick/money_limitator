@@ -2,7 +2,7 @@ import ShowNotification from '../ui/ShowNotification'
 import { bindActionCreators as action } from 'redux'
 import { connect } from 'react-redux'
 
-import { clearNotification } from '../../actions'
+import { hideNotification } from '../../actions'
 
 const mapStateToProps = (state, ownProps) => {
 
@@ -14,7 +14,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		onClose: action(clearNotification, dispatch)
+		onClose: action(hideNotification, dispatch)
 	}
 }
 

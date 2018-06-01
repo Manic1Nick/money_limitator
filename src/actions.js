@@ -159,8 +159,8 @@ export const showNotification = message => ({
     payload: message
 })
 
-export const clearNotification = () => ({
-    type: C.CLEAR_NOTIFICATION
+export const hideNotification = () => ({
+    type: C.HIDE_NOTIFICATION
 })
 
 export const addError = message => ({

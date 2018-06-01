@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Arimo');
+@import "./animate.css";
 
 body {
     margin: 0;
@@ -15,14 +16,14 @@ body {
 	padding: 16px;
     box-sizing: border-box;
 
-    .HeadBlock__PeriodResultMoney {
+    .HeadBlock__main {
 		display: flex;
         justify-content: space-between;
 
         .HeadBlock__PeriodResult {
             display: flex;
             flex-direction: column;
-            width: 66%;
+            width: 65%;
 
     		.HeadPeriod {
     			display: flex;
@@ -41,39 +42,61 @@ body {
             }
         }
 
-		.HeadMoney {
-			display: flex;
-            flex-direction: column;
+        .HeadBlock__SummsActions {
             width: 33%;
-			height: 100%;
 
-            .HeadMoney__action {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .ListsSumms {
                 display: flex;
-                width: 100%;
+                flex-direction: column;
+                width: 85%;    
 
-                .HeadMoney__button {
-                    width: 80%;
+                .ListSumms,
+                .BalanceInfo .button {
+                    width: 100%;
                 }
 
-                .HeadMoney__icon {
-                    margin: auto;
-                    width: 20%;
-                    height: 100%;
-                    opacity: 0.7;
+                .ListSumms {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                 }
-                .HeadMoney__icon:hover {
-                    opacity: 1;
-                    transition: opacity 0.5s;
+            }  
+            
+            .ListsActions {
+                //width: 15%;
+                height: 100%;
+
+                display: flex;
+                flex-direction: column;
+                align-items: start;                
+
+                .ListAction {
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    width: 100%;
+                    
+                    .icon {
+                        width: 20%;
+                        opacity: 0.5;
+                    }
+                    .icon:hover {
+                        opacity: 0.7;
+                        transition: opacity 0.5s;
+                    }
                 }
-            }
-		}
+            }            
+        }
     }
 
     .Limits {
     	padding: 16px;
 
-    	display: flex;
-    	
+    	display: flex;   	
 
         .Limits__title {
             color: #A9A9A9;
@@ -114,41 +137,44 @@ body {
         flex-wrap: wrap;
         height: 100%;
 
-        .ChartBlock__editor {
-            width: 100%;
-            height: 25px;
+        .ChartBlock__head {
+            width: 350px;
 
-            display: flex;
-		    align-items: center;
-            justify-content: center;            
-        }
-
-        .ChartBlock__message { 
-            color: rgb(170, 170, 170); 
-
-            display: flex;
-		    align-items: center;
-            justify-content: center;
-
-            .ChartBlock__undo { padding-left: 10px; }
-        }
-
-        .ChartTooltip {
-            opacity: 0.8;
-
-            ul { 
-                list-style-type: none; 
-                //float: left;
-                padding: 10px;
-
-                li {
-                    padding-top: 5px;
-                    font-size: 80%;
+            .ChartBlock__editor {
+                width: 100%;
+                height: 25px;
+    
+                display: flex;
+                align-items: center;
+                justify-content: center;            
+            }
+    
+            .ChartBlock__message { 
+                color: rgb(170, 170, 170); 
+                width: 350px;
+                height: 28px;
+    
+                display: flex;
+                align-items: center;
+    
+                .ChartBlock__undo { padding-left: 10px; }
+            }
+    
+            .ChartTooltip {
+                opacity: 0.8;
+    
+                ul { 
+                    list-style-type: none; 
+                    //float: left;
+                    padding: 10px;
+    
+                    li {
+                        padding-top: 5px;
+                        font-size: 80%;
+                    }
                 }
             }
-        }
-
-        
+        }        
 	}
 }
 
@@ -160,8 +186,19 @@ input {
     }
 }
 
-.icon {
-    cursor: pointer;
+.icon { 
+    cursor: pointer; 
+    opacity: 0.5;
+}
+.icon:hover { 
+    opacity: 1; 
+    transition: opacity 0.5s;
+}
+
+.icon__button {
+    width: 36px !important;
+    height: 36px !important;
+    padding: 0 !important;
 }
 
 .Drawer {
@@ -208,10 +245,6 @@ input {
         display: flex;
         justify-content: space-around;
         width: 33%;
-
-        .icon__save:hover { color: #00BFFF !important; }
-        .icon__clear:hover { color: #A9A9A9 !important; }
-        .icon__delete:hover { color: #FF6347 !important; }
     }
 }    
 
@@ -243,17 +276,18 @@ div.show-errors {
         justify-content: space-between;
         align-items: center;
 
-    p {
-        margin-left: 1em;
-    }
+    p { margin-left: 1em; }
 
-    svg {
-        font-size: 2em;
-    }
+    svg { font-size: 2em; }
   }
 }
 
 /* ANIMATIONS--------------------- */
+.updated {
+    animation: rubberBand 0.8s;
+}
+
+
 .fadein { animation: fadein 2s; }
 .fadeout { animation: fadeout 2s; }
 

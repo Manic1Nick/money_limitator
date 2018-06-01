@@ -19,7 +19,7 @@ export default keyMirror({
 	UPDATE_LIMITS		: null,
 
 	SHOW_NOTIFICATION	: null,
-	CLEAR_NOTIFICATION	: null,
+	HIDE_NOTIFICATION	: null,
 
 	ADD_ERROR			: null,
 	CLEAR_ERROR 		: null,
@@ -42,11 +42,9 @@ export const COLORS_BALANCE = {
 	days: '#FF8042'
 }
 
-export const ICONS_COLORS = {
-	save: '#66d9ff',
-	saveHover: '#00BFFF',
-	clear: '#cbcbcb',
-	clearHover: '#A9A9A9',
-	delete: '#ff9d8b',
-	deleteHover: '#FF6347'
+export const COLORS_ICONS = {
+	save: '#00BFFF',
+	clear: '#A9A9A9',
+	delete: '#FF6347',
+	addNewSumm: '#A9A9A9'
 }

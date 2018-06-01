@@ -143,6 +143,7 @@ export default class DialogInputSumm extends Component {
     	const inputSumm =
     		<TextField
                 className='InputSumm__summ'
+                //id={ formatDate(this.state.date) }
                 value={ this.state.summ }
     		  	onChange={ this.onInputSumm }
                 autoFocus

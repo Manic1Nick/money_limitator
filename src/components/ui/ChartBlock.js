@@ -1,8 +1,9 @@
 import { Component } from 'react'
 import Paper from 'material-ui/Paper'
 import UndoIcon from 'react-material-icons/icons/content/undo'
-import ReactTooltip from 'react-tooltip'
 import posed from 'react-pose'
+
+import IconButton from 'material-ui/IconButton'
 
 import DialogInputSumm from './DialogInputSumm'
 import ChartMain from './ChartMain'
@@ -79,20 +80,21 @@ export default class ChartBlock extends Component {
         if (!editingDate) return null
 
         return(
-            <SummEditor 
-                editingDate={ editingDate }
-                editingSumm={ expenses[editingDate] }
-                isExpense={ true }
-                saveSumm={ this.onSaveSumm.bind(this) }
-                deleteSumm={ this.onDeleteSumm.bind(this) }
-                cancelEditing={ this.closeInputSumm.bind(this) }
-            />
+            <div className='ChartBlock__editor'>
+                <SummEditor 
+                    editingDate={ editingDate }
+                    editingSumm={ expenses[editingDate] }
+                    isExpense={ true }
+                    saveSumm={ this.onSaveSumm.bind(this) }
+                    deleteSumm={ this.onDeleteSumm.bind(this) }
+                    cancelEditing={ this.closeInputSumm.bind(this) }
+                />
+            </div>
         )
     }
 
     renderChartMessage() {
-        const { prevSumms, editingDate } = this.state,
-            tooltipMessage = `Undo last action` 
+        const { prevSumms, editingDate } = this.state
         
         if (editingDate) return null
 
@@ -102,14 +104,17 @@ export default class ChartBlock extends Component {
                 { 
                     prevSumms.length > 0
                 ? 
-                    <a data-tip={ tooltipMessage }>
+                    <IconButton 
+                        className='ChartBlock__undo icon__button'
+                        tooltip='Undo last action' 
+                        tooltipStyles={{ top: '30px' }}
+                    >
                         <UndoIcon 
-                            className='ChartBlock__undo icon'
+                            className='icon'
                             style={{ color: '#aaaaaa' }}
                             onClick={ this.undoEditing }
                         />
-                        <ReactTooltip place="right" type="info" effect="solid" />
-                    </a>
+                    </IconButton>
                 : 
                     null
                 }
@@ -125,8 +130,8 @@ export default class ChartBlock extends Component {
 
         return (
             <Paper className='ChartBlock' zDepth={3}>
-                <div>
-                    <PosedChartHead pose={ summEditorVisible } className='ChartBlock__editor'>
+                <div className='ChartBlock__head'>
+                    <PosedChartHead pose={ summEditorVisible }>
                     {  
                         this.renderSummEditor() 
                     }

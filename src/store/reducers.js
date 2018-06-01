@@ -112,7 +112,7 @@ export const notifications = (state={}, action) => {
 				message: action.payload 
 			}
 
-		case C.CLEAR_NOTIFICATION:
+		case C.HIDE_NOTIFICATION:
 			return {
 				show: false,
 				message: ''

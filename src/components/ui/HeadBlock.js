@@ -2,7 +2,8 @@ import { PropTypes } from 'prop-types'
 
 import HeadPeriod from './HeadPeriod'
 import HeadResult from './HeadResult'
-import HeadMoney from './HeadMoney'
+import ListsSumms from './ListsSumms'
+import ListsActions from './ListsActions'
 import Limits from './Limits'
 
 const HeadBlock = (props) => {
@@ -24,7 +25,7 @@ const HeadBlock = (props) => {
 
 	return(
 		<div className='HeadBlock'>
-			<div className='HeadBlock__PeriodResultMoney'>			
+			<div className='HeadBlock__main'>			
 				<div className='HeadBlock__PeriodResult'>
 					<HeadPeriod 
 						period={ period }
@@ -37,45 +38,34 @@ const HeadBlock = (props) => {
 						limits={ limits }
 					/>
 				</div>
-				<HeadMoney
-					period={ period }
-					incomes={ incomes }
-					expenses={ expenses }
-					notIncluded={ notIncluded }
-					summs={ summs }
-					addSumm={ addSumm }
-					deleteSumm={ deleteSumm }
-					daysRest={ daysRest }
-					daysDone={ daysDone }
-				/>
+
+				<div className='HeadBlock__SummsActions'>
+					<ListsSumms
+						props={ props }
+					/>
+					<ListsActions
+						props={ props }
+					/>
+				</div>
 			</div>
 
-			<Limits 
-				limits={ limits }
-				summs={ summs }
-				period={ period }
-				daysTotal={ daysTotal }
-				daysDone={ daysDone }
-				daysRest={ daysRest }
-				lastDateWithExpense={ lastDateWithExpense }
-			/>
+			<div className='HeadBlock__limits'>
+				<Limits 
+					limits={ limits }
+					summs={ summs }
+					period={ period }
+					daysTotal={ daysTotal }
+					daysDone={ daysDone }
+					daysRest={ daysRest }
+					lastDateWithExpense={ lastDateWithExpense }
+				/>
+			</div>
 		</div>		
 	)
 }
 
 HeadBlock.propTypes = {
-	period: PropTypes.object,
-	incomes: PropTypes.object,
-	expenses: PropTypes.object,
-	notIncluded: PropTypes.object,
-	summs: PropTypes.object,
-	limits: PropTypes.object,
-	addSumm: PropTypes.func,
-	deleteSumm: PropTypes.func,
-	daysTotal: PropTypes.number,
-	daysDone: PropTypes.number,
-	daysRest: PropTypes.number,
-	lastDateWithExpense: PropTypes.string
+	props: PropTypes.object
 }
 
 export default HeadBlock

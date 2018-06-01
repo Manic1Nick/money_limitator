@@ -13,7 +13,7 @@ export default class Limits extends Component {
 		super()
 		this.state = { 
 			activeLimit: '',
-			openChartLimits: false 
+			openChartLimits: false
 		}
 	}
 
