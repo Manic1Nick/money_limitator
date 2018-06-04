@@ -26,10 +26,16 @@ export default keyMirror({
 	CLEAR_ALL_ERRORS 	: null
 })
 
+export const LIMITS_NAMES = [ 'base', 'corrected', 'fact' ]
+
+export const SUMM_EDITOR_ACTIONS = [ 'save', 'clear', 'delete' ]
+
 export const COLORS_LIMITS = {
 	base: '#00BFFF',
 	corrected: '#9932CC',
-	fact: '#FF6347'
+	fact: '#FF6347',
+	labelButton: '#FFFFFF',
+	title: '#A9A9A9'
 }
 
 export const COLORS_CHART = {
@@ -46,5 +52,7 @@ export const COLORS_ICONS = {
 	save: '#00BFFF',
 	clear: '#A9A9A9',
 	delete: '#FF6347',
-	addNewSumm: '#A9A9A9'
+	addNewSumm: '#A9A9A9',
+	undo: '#AAAAAA',
+	edit: '#A9A9A9'
 }

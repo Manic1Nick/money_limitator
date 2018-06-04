@@ -3,6 +3,7 @@ import { Component } from 'react'
 import SummEditor from './SummEditor'
 
 import { deleteZeroDates } from '../../util/CalcUtil'
+import { COLORS_ICONS as COLORS } from '../../constants'
 
 import Drawer from 'material-ui/Drawer'
 import FlatButton from 'material-ui/FlatButton'
@@ -44,10 +45,6 @@ export default class DrawerListSumms extends Component {
         this.props.deleteSumm(data)
     }
 
-    onOpenInput() {
-        this.props.openInput()
-    }
-
     onClose() {
         this.props.onClose()
     }
@@ -65,7 +62,7 @@ export default class DrawerListSumms extends Component {
     }
 
     renderItemEditing(date, index) {
-        const { listSumms, isExpense } = this.props
+        const { listSumms, isExpenses } = this.props
 
         return (
             <ListItem 
@@ -75,7 +72,7 @@ export default class DrawerListSumms extends Component {
                 <SummEditor 
                     editingDate={ date }
                     editingSumm={ listSumms[date] }
-                    isExpense={ isExpense }
+                    isExpense={ isExpenses }
                     saveSumm={ this.onSaveSumm.bind(this) }
                     deleteSumm={ this.onDeleteSumm.bind(this) }
                     cancelEditing={ this.clearEditingDate.bind(this) }
@@ -87,13 +84,17 @@ export default class DrawerListSumms extends Component {
     renderItem(date, index) {
         const { listSumms } = this.props
 
+        const styles = {
+            icon: { color: COLORS.edit }
+        }
+
         return (
             <ListItem 
                 key={index} 
                 //onClick={ () => this.clearEditingDate() }
                 rightIcon={
                     <EditIcon 
-                        style={{ color: '#A9A9A9' }}
+                        style={ styles.icon }
                         onClick={ () => this.handleEditSumm(date) }
                     />
                 } 
@@ -106,15 +107,16 @@ export default class DrawerListSumms extends Component {
     }
 
     render() {
-        const { open, listName='', listSumms={} } = this.props,
+        const { open, listName='', listSumms={}, isExpenses=false, openInput=f=>f } = this.props,
             { showEmptyDates } = this.state,
 
             showingListSumms = showEmptyDates 
                 ? listSumms 
                 : deleteZeroDates(listSumms),
 
-            stylesDrawerFoot = {
-                block: { maxWidth: 250 },
+            styles = {
+                drawer: { width: 333 },
+                foot: { maxWidth: 250 },
                 toggle: { marginBottom: 16 }
             }
 
@@ -124,7 +126,7 @@ export default class DrawerListSumms extends Component {
                 title={ listName }
                 docked={ false }
                 open={ open }
-                width={ 333 }
+                width={ styles.drawer.width }
                 onRequestChange={ (open) => this.handleOpening(open) }
                 autoScrollBodyContent={ true }
             >
@@ -136,7 +138,7 @@ export default class DrawerListSumms extends Component {
                         <FlatButton
                             label="Add new"
                             primary={ true }
-                            onClick={ () => this.onOpenInput() }
+                            onClick={ () => openInput(isExpenses) }
                         />
                     </div>
                 </div>
@@ -154,10 +156,10 @@ export default class DrawerListSumms extends Component {
                 </List>
                     
                 <div className='Drawer__foot'>
-                    <div style={ stylesDrawerFoot.block }>
+                    <div style={ styles.foot }>
                         <Toggle
                             label="Show empty dates"
-                            style={ stylesDrawerFoot.toggle }
+                            style={ styles.toggle }
                             onToggle={ () => this.updateToggle() }
                         />
                     </div>

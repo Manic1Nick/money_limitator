@@ -1,13 +1,10 @@
 import { Component } from 'react'
 import posed from 'react-pose'
 
-import IconButton from 'material-ui/IconButton'
-import SaveIcon from 'react-material-icons/icons/content/save'
-import ClearIcon from 'react-material-icons/icons/content/backspace'
-import DeleteIcon from 'react-material-icons/icons/action/delete'
+import ButtonSummEditorAction from './buttons/ButtonSummEditorAction'
 
 import { formatDate } from '../../util/DateUtil'
-import { COLORS_ICONS as COLORS } from '../../constants'
+import { SUMM_EDITOR_ACTIONS as ACTIONS } from '../../constants'
 
 const ENTER_KEY = 13
 const ESC_KEY = 27
@@ -69,19 +66,15 @@ export default class SummEditor extends Component {
     }
 
     render() {
-        const { date, summ } = this.state,
-            iconStyles = {
-                save: { color: COLORS.save },
-                clear: { color: COLORS.clear },
-                delete: { color: COLORS.delete },
-                tooltip: { top: '25px' }
-            }
+        const { date, summ } = this.state
 
         return (
             <div className='SummEditor'>
+
                 <div className='SummEditor__date'>
                     { date } :                
                 </div>
+
                 <div className='SummEditor__data'>
                     <input
                         type='number'
@@ -91,45 +84,21 @@ export default class SummEditor extends Component {
                         ref={ (input) => this.inputField = input }
                     />
                 </div>
+
                 <div className='SummEditor__actions'>
-
-                    <IconButton
-                        className='icon__button'
-                        iconStyle={ iconStyles.save }
-                        tooltip='Save' 
-                        tooltipStyles={ iconStyles.tooltip }
-                    >
-                        <SaveIcon 
-                            className='icon icon__save'
-                            onClick={ this.handleSaveSumm.bind(this) }
+                {
+                    ACTIONS.map((actionName, index) =>
+                        <ButtonSummEditorAction
+                            key={ index }
+                            name={ actionName }
+                            onSave={ this.handleSaveSumm.bind(this) }
+                            onClear={ this.handleClearSumm.bind(this) }
+                            onDelete={ this.handleDeleteSumm.bind(this) }
                         />
-                    </IconButton>
-
-                    <IconButton
-                        className='icon__button'
-                        iconStyle={ iconStyles.clear }
-                        tooltip='Clear' 
-                        tooltipStyles={ iconStyles.tooltip }
-                    >
-                        <ClearIcon 
-                            className='icon icon__clear'
-                            onClick={ this.handleClearSumm.bind(this) }
-                        />
-                    </IconButton>
-
-                    <IconButton
-                        className='icon__button'
-                        iconStyle={ iconStyles.delete }
-                        tooltip='Delete' 
-                        tooltipStyles={ iconStyles.tooltip }
-                    >
-                        <DeleteIcon 
-                            className='icon icon__delete'
-                            onClick={ this.handleDeleteSumm.bind(this) }
-                        />
-                    </IconButton>                   
-                    
+                    )
+                }
                 </div>
+
             </div>
         )
     }
