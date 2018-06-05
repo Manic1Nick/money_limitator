@@ -46,11 +46,12 @@ export default class ChartMain extends Component {
 				width: isMobile ? 540 : 800,
 				height: isMobile ? 270 : 400
 			},
-			bar: {
+			barLabel: {
 				position: 'top',
 				fontSize: isMobile ? 8 : 10,
 				fill: COLORS.expenseActive
 			},
+			bar: { size: isMobile ? 5 : 10 },
 			axis: { fontSize: isMobile ? 8 : 12 }
 		}
 
@@ -63,14 +64,15 @@ export default class ChartMain extends Component {
 				<YAxis yAxisId="left" tick={ styles.axis } />
 				<YAxis yAxisId="right" orientation="right" tick={ styles.axis } />
 				<Tooltip content={ this._tooltipContent } />
-				<Legend payload={ this._legendPayload() } />
+				<Legend payload={ this._legendPayload() } height={5} />
 				<CartesianGrid stroke='#f5f5f5'/>	
 
 				<Line yAxisId="left" type='monotone' dataKey='base' stroke={ base }/>
 				<Line yAxisId="left" type='monotone' dataKey='corrected' stroke={ corrected }/>
 				<Line yAxisId="left" type='monotone' dataKey='fact' stroke={ fact }/>
 
-				<Bar yAxisId="right" dataKey='expense' barSize={10} label={ styles.bar }
+				<Bar yAxisId="right" dataKey='expense' 
+					barSize={ styles.bar.size } label={ styles.barLabel }
 					onClick={ this.handleClickOnBar.bind(this) } 
 				>
 				{
