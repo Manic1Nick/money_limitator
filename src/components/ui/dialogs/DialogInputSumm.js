@@ -15,13 +15,17 @@ import ArrowLeftIcon from 'react-material-icons/icons/hardware/keyboard-arrow-le
 import ArrowRightIcon from 'react-material-icons/icons/hardware/keyboard-arrow-right'
 import IconButton from 'material-ui/IconButton'
 
+const ENTER_KEY = 13
+const ESC_KEY = 27
+
 export default class DialogInputSumm extends Component {
 	constructor(props) {
 		super()
 		this.state = {
 			isExpense: props.isExpense,
 			date: new Date(getNextFreeDate(props.listSumms)),
-			summ: '',
+            summ: '',
+            errorText: '',
 			notIncluded: false
 		}
 	}
@@ -55,8 +59,15 @@ export default class DialogInputSumm extends Component {
     	this.setState({ date, summ })
     }
 
-    onInputSumm = (e) => {
-    	this.setState({ summ: e.target.value })
+    onChange = (e) => {
+        if (parseInt(e.target.value) >= 0 || e.target.value === '') {
+            this.setState({ 
+                summ: e.target.value,
+                errorText: ''
+            })
+        } else {
+            this.setState({ errorText: 'Summ must be a number' })
+        }
     }
 
     onAddSumm = () => {
@@ -93,8 +104,16 @@ export default class DialogInputSumm extends Component {
     clearState = () => {
         this.setState({
             date: new Date(getNextFreeDate(this.props.listSumms)),
-            summ: ''
+            summ: '',
+            errorText: ''
         })
+    }
+
+    handleSummEditKeyDown(e) {
+        switch (e.keyCode) {
+            case ENTER_KEY: this.handleAddSummAndGoNextDate()
+            case ESC_KEY: this.closeDialog()
+        }
     }
 
 	render() {
@@ -148,9 +167,11 @@ export default class DialogInputSumm extends Component {
                 className='InputSumm__summ'
                 //id={ formatDate(this.state.date) }
                 value={ this.state.summ }
-    		  	onChange={ this.onInputSumm }
+                onChange={ this.onChange.bind(this) }
+                errorText={ this.state.errorText }
                 autoFocus
                 refs='inputSumm'
+                onKeyDown={ this.handleSummEditKeyDown.bind(this) }
     		/>
 
     	const checkboxNotIncluded =
@@ -176,7 +197,7 @@ export default class DialogInputSumm extends Component {
                 modal={ false }
                 contentStyle={{ width: '400px' }}
     	        onRequestClose={ this.closeDialog }
-    	        autoScrollBodyContent={ true }
+                autoScrollBodyContent={ true }
     	    >
     	        Date: { inputDate } <br />
     			Summ: { inputSumm } <br />
