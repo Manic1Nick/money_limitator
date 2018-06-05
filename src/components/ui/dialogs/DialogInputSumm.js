@@ -75,7 +75,7 @@ export default class DialogInputSumm extends Component {
 
         let data = this.state
         data.date = formatDate(date)
-        data.summ = summ ? parseInt(summ) : ''
+        data.summ = summ ? parseInt(summ) : 0
         
         this.props.addSumm(data)
     }
@@ -90,9 +90,8 @@ export default class DialogInputSumm extends Component {
         this.shiftDate(1)
     }
 
-    shiftDate = (shift) => {
-        const date = shiftDate(this.state.date, shift)
-
+    shiftDate = (shifter) => {
+        const date = shiftDate(this.state.date, shifter)
         this.onEditDate(null, date)
     }
 

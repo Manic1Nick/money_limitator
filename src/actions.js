@@ -38,7 +38,7 @@ export const addNewExpense = expense => {
         let message = `Expense of $${expense.summ} from ${expense.date} was saved succesfully.`
         dispatch(showNotification(message))
 
-        dispatch(fillGaps())
+        //dispatch(fillGaps())
         dispatch(updateSumms())
         dispatch(updateLimits())
     }

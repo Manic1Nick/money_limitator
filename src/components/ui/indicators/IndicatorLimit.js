@@ -9,11 +9,13 @@ export default class IndicatorLimit extends Component {
 
 	constructor() {
 		super()
-		this.state = { updated: false }
+		this.state = {
+			updated: false
+		 }
     }
 
     componentDidMount() {
-        this.activeUpdated()
+		this.activeUpdated()
 	}
 
     componentDidUpdate(prevProps) {
@@ -43,9 +45,9 @@ export default class IndicatorLimit extends Component {
 
 		return (
 			<RaisedButton 
-				className={`${nameButton} ${animationUpdated}`}
+				className={`Limit__button ${nameButton} ${animationUpdated}`}
 				label={ label } 
-				backgroundColor={ COLORS[name] } 
+				backgroundColor={ COLORS[name] }
 				labelColor={ COLORS.labelButton } 
 				onClick={ () => this.handleOpenLimitInfo(name) }
 			/>

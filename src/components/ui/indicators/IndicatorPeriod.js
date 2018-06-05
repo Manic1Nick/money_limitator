@@ -17,7 +17,7 @@ export default class IndicatorPeriod extends Component {
 					onClick={ () =>  alert(message) }
 				/>
 
-				<div>from { begin } to { end }</div>
+				<div className='Period__title'>from { begin } to { end }</div>
 				
 				<BtnPeriod 
 					label="Next" 

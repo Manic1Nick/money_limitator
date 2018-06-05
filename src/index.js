@@ -8,6 +8,7 @@ import { addError, activateApp } from './actions'
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import './assets/styles/style.scss'
+import './assets/styles/queries.scss'
 
 const initialState = (localStorage["store-money-saver"]) 
 	? JSON.parse(localStorage["store-money-saver"])

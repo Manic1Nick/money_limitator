@@ -79,10 +79,10 @@ export function sortObjectByDates(obj) {
     return sortedObj
 }
 
-export function shiftDate(dateString, shift) {
+export function shiftDate(dateString, shifter) {
 
     let date = new Date(dateString)
-    date.setDate(date.getDate() + shift)
+    date.setDate(date.getDate() + shifter)
     return date
 }
 

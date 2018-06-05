@@ -42,12 +42,12 @@ input {
             box-sizing: border-box;
 
     .MonitorIndicators__head {
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
+		// display: -webkit-box;
+		// display: -ms-flexbox;
+		// display: flex;
+        // -webkit-box-pack: justify;
+        //     -ms-flex-pack: justify;
+        //         justify-content: space-between;
 
         .MonitorIndicators__PeriodResult {
             display: -webkit-box;
@@ -58,6 +58,8 @@ input {
                 -ms-flex-direction: column;
                     flex-direction: column;
             width: 65%;
+            //display: block;
+            float: left;
 
     		.Period {
     			display: -webkit-box;
@@ -90,6 +92,8 @@ input {
 
         .MonitorIndicators__SummsActions {
             width: 33%;
+            //display: block;
+            float: right;
 
             display: -webkit-box;
 
@@ -99,9 +103,9 @@ input {
             -webkit-box-pack: center;
                 -ms-flex-pack: center;
                     justify-content: center;
-            -webkit-box-align: center;
-                -ms-flex-align: center;
-                    align-items: center;
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: start; 
 
             .ListsSumms {
                 display: -webkit-box;
@@ -175,59 +179,57 @@ input {
     }
 
     .Limits {
-    	padding: 16px;
-
-    	display: -webkit-box;
-
-    	display: -ms-flexbox;
-
-    	display: flex;   	
-
-        .Limits__title {
-            //color: #A9A9A9;
-            cursor: pointer; 
-
-            display: -webkit-box; 
-
-            display: -ms-flexbox; 
-
-            display: flex;
-            -webkit-box-align: center;
-                -ms-flex-align: center;
-                    align-items: center;
-            -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                    justify-content: center;
-            width: 10%;
-            
-            span:hover {
-                color: #7f7f7f;
-                -webkit-transition: color 0.5s;
-                transition: color 0.5s;
-            }
-        }
-
-        .Limits__title:hover {
-            background-color: #c9c9c9;
-            -webkit-transition: background-color 0.5s;
-            transition: background-color 0.5s;
-        }
-
-        .Limits__buttons {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-align: center;
-                -ms-flex-align: center;
-                    align-items: center;
-            -ms-flex-pack: distribute;
-                justify-content: space-around;
-            width: 90%;
-
-            .btn_base button:hover { background-color: #69d9ff !important; }
-            .btn_corrected button:hover { background-color: #bb76dd !important; }
-            .btn_fact button:hover { background-color: #ff9d8b !important; }
-        }
+        width: 100%;      
+        padding: 16px;        
+                display: -webkit-box;        
+                display: -ms-flexbox;        
+                display: flex;   	
+        
+                .Limits__title {
+                    //color: #A9A9A9;
+                    cursor: pointer; 
+        
+                    display: -webkit-box; 
+        
+                    display: -ms-flexbox; 
+        
+                    display: flex;
+                    -webkit-box-align: center;
+                        -ms-flex-align: center;
+                            align-items: center;
+                    -webkit-box-pack: center;
+                        -ms-flex-pack: center;
+                            justify-content: center;
+                    width: 10%;
+                    
+                    span:hover {
+                        color: #7f7f7f;
+                        -webkit-transition: color 0.5s;
+                        transition: color 0.5s;
+                    }
+                }
+        
+                .Limits__title:hover {
+                    background-color: #c9c9c9;
+                    -webkit-transition: background-color 0.5s;
+                    transition: background-color 0.5s;
+                }
+        
+                .Limits__buttons {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-align: center;
+                        -ms-flex-align: center;
+                            align-items: center;
+                    -ms-flex-pack: distribute;
+                        justify-content: space-around;
+                    width: 90%;
+        
+                    .btn_base button:hover { background-color: #69d9ff !important; }
+                    .btn_corrected button:hover { background-color: #bb76dd !important; }
+                    .btn_fact button:hover { background-color: #ff9d8b !important; }
+                }
     }   
 
 	.MonitorChart {

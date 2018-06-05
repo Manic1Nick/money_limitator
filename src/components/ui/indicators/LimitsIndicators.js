@@ -13,8 +13,13 @@ export default class LimitsIndicators extends Component {
 		super()
 		this.state = { 
 			activeLimit: '', //if has value => open Dialog LimitInfo
-			openChartLimits: false
+			openChartLimits: false,
+			isMobile: false
 		}
+	}
+
+	componentDidMount() {
+		this.setState({ isMobile: window.innerWidth < 768 })
 	}
 
 	handleOpenDialogLimitInfo(limitName) {
@@ -35,14 +40,15 @@ export default class LimitsIndicators extends Component {
 
 	render() {
 
-		const { activeLimit, openChartLimits } = this.state,
+		const { activeLimit, openChartLimits, isMobile } = this.state,
 			{ limitsData } = this.props,
-			{ limits } = limitsData
+			{ limits } = limitsData,
+			{ base, corrected, fact } = limits
 
 		let limitsLabels = {
-				'base': `Base ${limits.base} in day`,
-				'corrected': `Corrected ${limits.corrected} in day`,
-				'fact': `Fact ${limits.fact} in day`
+				base: isMobile ? `Base: $${base}` : `Base $${base} in day`,
+				corrected: isMobile ? `Corrected: $${corrected}` : `Corrected $${corrected} in day`,
+				fact: isMobile ? `Fact: $${fact}` : `Fact $${fact} in day`
 			},
 			styleTitle = { color: `${COLORS.title}` }
 

@@ -17,8 +17,8 @@ const ListsSummsIndicators = (props) => {
     } = props
     
     const { summIncomes, summExpenses, summNotIncluded } = summs,
-        labelIncomes = `incomes: ${ summIncomes - summNotIncluded }`,
-        labelExpenses = `expenses: ${ summExpenses }`
+        labelIncomes = `incomes: $${ summIncomes - summNotIncluded }`,
+        labelExpenses = `expenses: $${ summExpenses }`
 
     return (
         <Paper className='ListsSumms' zDepth={1}>

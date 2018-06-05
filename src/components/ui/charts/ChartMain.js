@@ -13,8 +13,13 @@ export default class ChartMain extends Component {
 		super(props)
 		this.state = { 
 			data: props.data,
-			activeIndex: -1
+			activeIndex: -1,
+			isMobile: false
 		}
+	}
+
+	componentDidMount() {
+		this.setState({ isMobile: window.innerWidth < 768 })
 	}
 
 	componentWillReceiveProps(nextProps) {
@@ -33,23 +38,30 @@ export default class ChartMain extends Component {
 	}
 	
 	render() {
-		const { data, activeIndex } = this.state, 
-			{ base, corrected, fact } = COLORS_LIMITS,
-			styleBarLabel = {
+		const { data, activeIndex, isMobile } = this.state, 
+			{ base, corrected, fact } = COLORS_LIMITS
+
+		let styles = {
+			chart: {
+				width: isMobile ? 540 : 800,
+				height: isMobile ? 270 : 400
+			},
+			bar: {
 				position: 'top',
-				fontSize: 10,
+				fontSize: isMobile ? 8 : 10,
 				fill: COLORS.expenseActive
 			},
-			styleAxis = { fontSize: 12 }
+			axis: { fontSize: isMobile ? 8 : 12 }
+		}
 
 		return(
-			<ComposedChart width={800} height={400} 
+			<ComposedChart width={ styles.chart.width } height={ styles.chart.height } 
 				data={data} 
 				margin={{top: 20, right: 20, bottom: 20, left: 20}}
 			>
-				<XAxis dataKey="name" tick={ styleAxis } />
-				<YAxis yAxisId="left" tick={ styleAxis } />
-				<YAxis yAxisId="right" orientation="right" tick={ styleAxis } />
+				<XAxis dataKey="name" tick={ styles.axis } />
+				<YAxis yAxisId="left" tick={ styles.axis } />
+				<YAxis yAxisId="right" orientation="right" tick={ styles.axis } />
 				<Tooltip content={ this._tooltipContent } />
 				<Legend payload={ this._legendPayload() } />
 				<CartesianGrid stroke='#f5f5f5'/>	
@@ -58,7 +70,7 @@ export default class ChartMain extends Component {
 				<Line yAxisId="left" type='monotone' dataKey='corrected' stroke={ corrected }/>
 				<Line yAxisId="left" type='monotone' dataKey='fact' stroke={ fact }/>
 
-				<Bar yAxisId="right" dataKey='expense' barSize={10} label={ styleBarLabel }
+				<Bar yAxisId="right" dataKey='expense' barSize={10} label={ styles.bar }
 					onClick={ this.handleClickOnBar.bind(this) } 
 				>
 				{

@@ -74,19 +74,19 @@ export default class MonitorIndicators extends Component {
 						/>
 					</div>
 
-					<DialogInputSumm
-                	    open={ inputSummOpening }
-                	    isExpense={ inputSummIsExpense }
-                	    listSumms={ inputSummIsExpense ? expenses : incomes }
-                	    addSumm={ addSumm }
-                	    onClose={ this.closeInputSumm }
-                	/>
+					<LimitsIndicators 
+						className='MonitorIndicators__Limits'
+						limitsData={ this.props }
+					/>
 				</div>
 	
-				<LimitsIndicators 
-					className='MonitorIndicators__limits'
-					limitsData={ this.props }
-				/>
+				<DialogInputSumm
+                    open={ inputSummOpening }
+                    isExpense={ inputSummIsExpense }
+                    listSumms={ inputSummIsExpense ? expenses : incomes }
+                    addSumm={ addSumm }
+                    onClose={ this.closeInputSumm }
+                />
 			</div>		
 		)
 	}

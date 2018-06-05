@@ -14,12 +14,14 @@ export default class IndicatorBalanceInfo extends Component {
 		this.state = { 
 			balance: this._calcBalance(),
 			openBalanceInfo: false,
-            updated: false
+			updated: false,
+			isMobile: false
 		}
 	}
 
 	componentDidMount() {
-        this.activeUpdated()
+		this.activeUpdated()
+		this.setState({ isMobile: window.innerWidth < 768 })
 	}
 
     componentDidUpdate(prevProps) {
@@ -49,10 +51,13 @@ export default class IndicatorBalanceInfo extends Component {
 
 	render() {
 
-		const { balance, openBalanceInfo, updated } = this.state,
+		const { balance, openBalanceInfo, updated, isMobile } = this.state,
 			{ daysRest } = this.props		
 	
-        let labelSumm = `balance: ${ balance } / days: ${ daysRest }`,		
+		let labelSumm = isMobile 
+			? `balance: $${ balance }` 
+			: `balance: $${ balance } / days: ${ daysRest }`,	
+
 			animateUpdated = classNames({ 'animationUpdated': updated })
 	
 		return (
