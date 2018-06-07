@@ -107,18 +107,24 @@ export default class DrawerListSumms extends Component {
     }
 
     render() {
-        const { open, listName='', listSumms={}, isExpenses=false, openInput=f=>f } = this.props,
+        const { open, listName='', listSumms={}, isExpenses=false, openInput=f=>f, is_XS=false } = this.props,
             { showEmptyDates } = this.state,
 
             showingListSumms = showEmptyDates 
                 ? listSumms 
-                : deleteZeroDates(listSumms),
+                : deleteZeroDates(listSumms)
 
-            styles = {
-                drawer: { width: 333 },
-                foot: { maxWidth: 250 },
-                toggle: { marginBottom: 16 }
-            }
+        let styles = {
+            drawer: { width: 333 },
+            foot: { maxWidth: 250 },
+            toggle: { marginBottom: 16}
+        }
+
+        if (is_XS) {
+            styles.drawer.width = 233
+            styles.toggle.fontSize = '10px'
+            styles.addNewButton = { fontSize: '10px' }
+        }
 
         return (
             <Drawer
@@ -139,11 +145,12 @@ export default class DrawerListSumms extends Component {
                             label="Add new"
                             primary={ true }
                             onClick={ () => openInput(isExpenses) }
+                            labelStyle={ styles.addNewButton }
                         />
                     </div>
                 </div>
 
-                <List>
+                <List className='Drawer__ListItems'>
                 {
                     Object.keys(showingListSumms).map((date, index) => {
                         return (this.state.editingDate === date) 

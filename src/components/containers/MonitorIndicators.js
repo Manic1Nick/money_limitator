@@ -37,7 +37,8 @@ const mapStateToProps = (state, ownProps) => {
     	daysTotal,
     	daysDone,
     	daysRest,
-    	lastDateWithExpense
+		lastDateWithExpense,
+		screenSize: state.screenSize
     }
 }
 

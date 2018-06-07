@@ -42,12 +42,6 @@ input {
             box-sizing: border-box;
 
     .MonitorIndicators__head {
-		// display: -webkit-box;
-		// display: -ms-flexbox;
-		// display: flex;
-        // -webkit-box-pack: justify;
-        //     -ms-flex-pack: justify;
-        //         justify-content: space-between;
 
         .MonitorIndicators__PeriodResult {
             display: -webkit-box;
@@ -273,7 +267,7 @@ input {
     
             .MonitorChart__title { 
                 color: rgb(170, 170, 170); 
-                width: 350px;
+                width: 100%;
                 height: 28px;
     
                 display: -webkit-box;

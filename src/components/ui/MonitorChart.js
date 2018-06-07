@@ -138,6 +138,7 @@ export default class MonitorChart extends Component {
                     stopEditing={ !isEditing }
                     data={ data } 
                     openEditing={ this.openEditSumm }
+                    screenSize={ this.props.screenSize }
                 />
 
             </Paper>

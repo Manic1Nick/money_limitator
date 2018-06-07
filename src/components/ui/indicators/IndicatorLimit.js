@@ -39,9 +39,15 @@ export default class IndicatorLimit extends Component {
 	render() {
 
         const { updated } = this.state,
-            { name, label } = this.props,
-            nameButton = `btn_${name}`,
-            animationUpdated = classNames({ 'animationUpdated': updated })
+			{ name, label, screenSize } = this.props
+			
+        let nameButton = `btn_${name}`,
+			animationUpdated = classNames({ 'animationUpdated': updated }),
+			labelStyle = {}
+
+		if (screenSize === 'XS') {
+			labelStyle = { fontSize: '10px' }
+		}
 
 		return (
 			<RaisedButton 
@@ -49,6 +55,7 @@ export default class IndicatorLimit extends Component {
 				label={ label } 
 				backgroundColor={ COLORS[name] }
 				labelColor={ COLORS.labelButton } 
+				labelStyle={ labelStyle }
 				onClick={ () => this.handleOpenLimitInfo(name) }
 			/>
 		)

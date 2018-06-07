@@ -13,8 +13,15 @@ export default class IndicatorListSumms extends Component {
         this.state = {
             listSummsOpening: false,
             updated: false
+            //screenSize: props.screenSize
         }
     }
+
+    // componentWillReceiveProps(nextProps) {
+    //     if (this.props.screenSize !== nextProps.screenSize) {
+    //         this.setState({ screenSize: nextProps.screenSize })
+	// 	}
+    // }
 
     componentDidMount() {
         this.activeUpdated()
@@ -49,11 +56,13 @@ export default class IndicatorListSumms extends Component {
 
     render() {
 
-        const { listName, label, listSumms, addSumm, deleteSumm } = this.props
+        const { listName, label, listSumms, addSumm, deleteSumm, screenSize } = this.props
 
         const { updated, listSummsOpening } = this.state
 
-        let animateUpdated = classNames({ 'animationUpdated': updated })
+        let animateUpdated = classNames({ 'animationUpdated': updated }),
+            is_XS = screenSize === 'XS',
+            labelStyle = is_XS ? { fontSize: '10px' } : {}
 
         return (
             <div className='ListSumms'>
@@ -61,6 +70,7 @@ export default class IndicatorListSumms extends Component {
                     className={`ListSumms ${animateUpdated}`}
                     label={ label }
                     onClick={ () => this.openListSumms() }
+                    labelStyle={ labelStyle }
                 />
                 
                 <DrawerListSumms
@@ -73,6 +83,7 @@ export default class IndicatorListSumms extends Component {
                     openInput={ this.closeListAndOpenInput }
                     onOpen={ this.openListSumms }
                     onClose={ this.closeListSumms }
+                    is_XS={ is_XS }
                 />
             </div>
         )

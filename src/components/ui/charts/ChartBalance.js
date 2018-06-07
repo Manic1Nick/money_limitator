@@ -31,7 +31,7 @@ const ChartBalance = ({ daysDone, daysRest, summs={} }) => {
         NAMES = data.map(obj => obj.name)
 
     return (
-        <ResponsiveContainer height={ currentBalance > -200 ? 140 : 200 }>
+        <ResponsiveContainer className='ChartBalance' height={ currentBalance > -200 ? 140 : 200 }>
             <PieChart>
             {
                 data.map((obj, i) =>

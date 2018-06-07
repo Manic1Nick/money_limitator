@@ -15,7 +15,8 @@ const mapStateToProps = (state, ownProps) => {
     return {
         dates,
         expenses: state.expenses,
-    	data: createDataChart(state)
+        data: createDataChart(state),
+        screenSize: state.screenSize
     }
 }
 

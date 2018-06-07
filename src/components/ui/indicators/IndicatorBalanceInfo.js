@@ -14,8 +14,7 @@ export default class IndicatorBalanceInfo extends Component {
 		this.state = { 
 			balance: this._calcBalance(),
 			openBalanceInfo: false,
-			updated: false,
-			isMobile: false
+			updated: false
 		}
 	}
 
@@ -52,20 +51,24 @@ export default class IndicatorBalanceInfo extends Component {
 	render() {
 
 		const { balance, openBalanceInfo, updated, isMobile } = this.state,
-			{ daysRest } = this.props		
+			{ daysRest, screenSize } = this.props		
 	
-		let labelSumm = isMobile 
-			? `balance: $${ balance }` 
-			: `balance: $${ balance } / days: ${ daysRest }`,	
+		let labelSumm = `balance: $${ balance }`,	
+			animateUpdated = classNames({ 'animationUpdated': updated }),
+			labelStyle = { fontWeight: 'bold' }
 
-			animateUpdated = classNames({ 'animationUpdated': updated })
+		if (screenSize === 'XS') {
+			labelSumm = labelSumm.replace(/balance/i, 'bal'),
+			Object.assign(labelStyle, { fontSize: '10px' })
+		}
 	
 		return (
             <div className='BalanceInfo'>
                 <FlatButton
                     className={`button ${animateUpdated}`}
                     label={ labelSumm }
-                    onClick={ () => this.handleOpenDialog() }
+					onClick={ () => this.handleOpenDialog() }
+					labelStyle={ labelStyle}
                 />
         
                 <DialogBalanceInfo

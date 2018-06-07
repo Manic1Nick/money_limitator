@@ -52,13 +52,73 @@
         }
 
         .MonitorChart {
-            margin-top: 5px;
+            min-height: 200px;
+            margin-top: 10px;
             padding: 10px;
+
+            .recharts-legend-item-text {
+                font-size: 12px !important;
+            }
         }
     }
 }
 
 /* Small phones from 0px to 480px */
 @media only screen and (max-width: 480px) {
+    .App {
+        .MonitorIndicators__head {
+            .Period .Period__title {
+                font-size: 14px;
+                padding: 0 2%;
+            }
+        }
 
+        .MonitorChart {
+            min-height: 150px;
+    
+            .MonitorChart__head {
+                width: 80% !important;
+
+                .MonitorChart__title span {
+                    padding: 0 15%;
+                }
+
+                .MonitorChart__title span,
+                .MonitorChart__editor div,
+                .MonitorChart__editor input {
+                    font-size: 10px;
+                }
+            }
+
+            .recharts-legend-item-text {
+                font-size: 10px !important;
+            }
+        }
+    }
+
+    .Dialog {
+        .ChartBalance { display: none; }
+    }
+
+    .Drawer {
+        .Drawer__title {
+            font-size: 10px;
+        }
+
+        .Drawer__ListItems { 
+            .ListItem__text {
+                font-size: 10px; 
+            }
+
+            svg {
+                width: 16px !important;
+                height: 16px !important;
+            }
+
+            .SummEditor__date,
+            .SummEditor input {
+                font-size: 10px;
+            }
+        }
+    } 
 }

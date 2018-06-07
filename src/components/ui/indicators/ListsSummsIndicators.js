@@ -13,12 +13,18 @@ const ListsSummsIndicators = (props) => {
 
     const { 
         data: { incomes, expenses, notIncluded, summs, daysDone, daysRest, addSumm, deleteSumm },
-        inputNewSumm=f=>f    
-    } = props
+        inputNewSumm=f=>f,
+        screenSize=''
+    } = props,
+    { summIncomes, summExpenses, summNotIncluded } = summs
     
-    const { summIncomes, summExpenses, summNotIncluded } = summs,
-        labelIncomes = `incomes: $${ summIncomes - summNotIncluded }`,
+    let labelIncomes = `incomes: $${ summIncomes - summNotIncluded }`,
         labelExpenses = `expenses: $${ summExpenses }`
+
+    if (screenSize === 'XS') {
+        labelIncomes = labelIncomes.replace(/incomes/i, 'inc')
+        labelExpenses = labelExpenses.replace(/expenses/i, 'exp')
+    }
 
     return (
         <Paper className='ListsSumms' zDepth={1}>
@@ -29,6 +35,7 @@ const ListsSummsIndicators = (props) => {
                 inputNewSumm={ inputNewSumm }
                 addSumm={ addSumm }
                 deleteSumm={ deleteSumm }
+                screenSize={ screenSize }
             />
             <Divider />
             
@@ -39,6 +46,7 @@ const ListsSummsIndicators = (props) => {
                 inputNewSumm={ inputNewSumm }
                 addSumm={ addSumm }
                 deleteSumm={ deleteSumm }
+                screenSize={ screenSize }
             />
             <Divider />
 
@@ -46,6 +54,7 @@ const ListsSummsIndicators = (props) => {
                 summs={ summs }
                 daysDone={ daysDone }
                 daysRest={ daysRest }
+                screenSize={ screenSize }
             />
         </Paper>
     )

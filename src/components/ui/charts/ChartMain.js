@@ -6,20 +6,14 @@ import Paper from 'material-ui/Paper'
 import { COLORS_CHART as COLORS } from '../../../constants'
 import { COLORS_LIMITS } from '../../../constants'
 
-
 export default class ChartMain extends Component {
 	
 	constructor(props) {
 		super(props)
 		this.state = { 
 			data: props.data,
-			activeIndex: -1,
-			isMobile: false
+			activeIndex: -1
 		}
-	}
-
-	componentDidMount() {
-		this.setState({ isMobile: window.innerWidth < 768 })
 	}
 
 	componentWillReceiveProps(nextProps) {
@@ -38,21 +32,24 @@ export default class ChartMain extends Component {
 	}
 	
 	render() {
-		const { data, activeIndex, isMobile } = this.state, 
-			{ base, corrected, fact } = COLORS_LIMITS
+		const { base, corrected, fact } = COLORS_LIMITS,
+			{ data, activeIndex } = this.state, 
+			{ screenSize } = this.props,
+			is_S = screenSize === 'S',
+			is_XS = screenSize === 'XS'
 
 		let styles = {
 			chart: {
-				width: isMobile ? 540 : 800,
-				height: isMobile ? 270 : 400
+				width: is_XS ? 360 : is_S ? 540 : 800,
+				height: is_XS ? 180 : is_S ? 270 : 400
 			},
 			barLabel: {
 				position: 'top',
-				fontSize: isMobile ? 8 : 10,
+				fontSize: is_XS ? 6 : is_S ? 8 : 10,
 				fill: COLORS.expenseActive
 			},
-			bar: { size: isMobile ? 5 : 10 },
-			axis: { fontSize: isMobile ? 8 : 12 }
+			bar: { size: is_XS ? 4 : is_S ? 5 : 10 },
+			axis: { fontSize: is_XS ? 6 : is_S ? 8 : 12 }
 		}
 
 		return(
@@ -64,7 +61,7 @@ export default class ChartMain extends Component {
 				<YAxis yAxisId="left" tick={ styles.axis } />
 				<YAxis yAxisId="right" orientation="right" tick={ styles.axis } />
 				<Tooltip content={ this._tooltipContent } />
-				<Legend payload={ this._legendPayload() } height={5} />
+				<Legend payload={ this._legendPayload() } />
 				<CartesianGrid stroke='#f5f5f5'/>	
 
 				<Line yAxisId="left" type='monotone' dataKey='base' stroke={ base }/>

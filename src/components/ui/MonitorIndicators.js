@@ -15,11 +15,11 @@ import Divider from 'material-ui/Divider'
 
 export default class MonitorIndicators extends Component {
 
-	constructor() {
-		super()
+	constructor(props) {
+		super(props)
 		this.state = { 
 			inputSummOpening: false,
-			inputSummIsExpense: true		
+			inputSummIsExpense: true	
 		}
 	}
 
@@ -46,7 +46,8 @@ export default class MonitorIndicators extends Component {
 			addSumm=f=>f//
 		} = this.props
 
-		const { inputSummOpening, inputSummIsExpense } = this.state
+		const { inputSummOpening, inputSummIsExpense } = this.state,
+			{ screenSize } = this.props
 	
 		return(
 			<div className='MonitorIndicators'>
@@ -54,6 +55,7 @@ export default class MonitorIndicators extends Component {
 					<div className='MonitorIndicators__PeriodResult'>
 						<IndicatorPeriod 
 							period={ period }
+							screenSize={ screenSize }
 						/>
 						<IndicatorResult 
 							period={ period }
@@ -68,6 +70,7 @@ export default class MonitorIndicators extends Component {
 						<ListsSummsIndicators
 							data={ this.props }
 							inputNewSumm={ this.openInputSumm }
+							screenSize={ screenSize }
 						/>
 						<ListsSummsActions 
 							inputNewSumm={ this.openInputSumm }
@@ -77,6 +80,7 @@ export default class MonitorIndicators extends Component {
 					<LimitsIndicators 
 						className='MonitorIndicators__Limits'
 						limitsData={ this.props }
+						screenSize={ screenSize }
 					/>
 				</div>
 	

@@ -41,7 +41,7 @@ export default class LimitsIndicators extends Component {
 	render() {
 
 		const { activeLimit, openChartLimits, isMobile } = this.state,
-			{ limitsData } = this.props,
+			{ limitsData, screenSize } = this.props,
 			{ limits } = limitsData,
 			{ base, corrected, fact } = limits
 
@@ -67,6 +67,7 @@ export default class LimitsIndicators extends Component {
 								name={ limitName }
 								label={ limitsLabels[limitName] }
 								onOpenLimitInfo={ this.handleOpenDialogLimitInfo.bind(this) }
+								screenSize={ screenSize }
 							/>
 						)
 					}
