@@ -17,8 +17,7 @@ const DialogLimitInfo = ({ limitsData={}, open=false, activeLimit='', closeDialo
         limits: { base, corrected, fact }
     } = limitsData
     
-    let limitInfoTitle = `Limit ${ activeLimit } info`,
-        limitsInfo = generateLimitsInfo()        
+    let limitInfoTitle = `Limit ${ activeLimit } info`
     
     const dialogActions = [
         <FlatButton
@@ -42,38 +41,43 @@ const DialogLimitInfo = ({ limitsData={}, open=false, activeLimit='', closeDialo
                 daysRest={ daysRest }
                 summs={ summs }
             />
-            { limitsInfo[activeLimit] }
+            { generateLimitInfo(activeLimit) }
             { generateResultMessage(limitsData) }
         </Dialog>
     )
 
-    function generateLimitsInfo() {
-        let limits = {},
-            { summIncomes, summExpenses, summNotIncluded } = summs,
+    function generateLimitInfo(limitName) {
+        let { summIncomes, summExpenses, summNotIncluded } = summs,
             currentBalance = summIncomes - summNotIncluded - summExpenses
 
-        limits.base = 
-            <div>
-                <h4>Incomes total: ${summIncomes}</h4>
-                <h4>Days total: {daysTotal}</h4>
-                <h4>Base limit: ${base} in day</h4>
-            </div>
+        switch (limitName) {
+            case 'base':
+                return(
+                    <div className='LimitInfo'>
+                        <h4>Incomes total: ${summIncomes}</h4>
+                        <h4>Days total: {daysTotal}</h4>
+                        <h4>Base limit: ${base} in day</h4>
+                    </div>
+                ) 
 
-        limits.corrected = 
-            <div>
-                <h4>Current balance: ${currentBalance}</h4>
-                <h4>Days remaining: {daysRest}</h4>
-                <h4>Corrected limit: ${corrected} in day</h4>
-            </div>
+            case 'corrected':
+                return(
+                    <div className='LimitInfo'>
+                        <h4>Current balance: ${currentBalance}</h4>
+                        <h4>Days remaining: {daysRest}</h4>
+                        <h4>Corrected limit: ${corrected} in day</h4>
+                    </div>
+                ) 
 
-        limits.fact = 
-            <div>
-                <h4>Spent money: ${summExpenses}</h4>
-                <h4>Days past: {daysDone + 1}</h4>
-                <h4>Fact limit: ${fact} in day</h4>
-            </div>
-
-        return limits
+            case 'fact':
+                return(
+                    <div className='LimitInfo'>
+                        <h4>Spent money: ${summExpenses}</h4>
+                        <h4>Days past: {daysDone + 1}</h4>
+                        <h4>Fact limit: ${fact} in day</h4>
+                    </div>
+                ) 
+        }
     }
 }
 

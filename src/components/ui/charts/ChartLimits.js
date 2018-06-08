@@ -12,12 +12,13 @@ const ChartLimits = ({ limits={} }) => {
         
         styleLegend = {
             top: 0,
-            left: 350,
+            left: 250,
             lineHeight: '24px'
         }
 
     return (
         <RadialBarChart 
+            className='ChartLimits'
             width={500} height={ maxAngle >= 0 ? 140 : 280 } cx={150} cy={150} 
             innerRadius={20} outerRadius={140} barSize={20} 
             startAngle={180} endAngle={ maxAngle }
