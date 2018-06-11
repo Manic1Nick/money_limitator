@@ -24,8 +24,10 @@ const handleError = error => {
 }
 
 const handleResize = () => {
-	let size = getTypeScreen()
-    store.dispatch(screenResize(size))
+	let currentScreenSize = getTypeScreen()
+	if (store.getState().screenSize !== currentScreenSize) {
+		store.dispatch(screenResize(currentScreenSize))
+	}
 }
 
 function getTypeScreen() {

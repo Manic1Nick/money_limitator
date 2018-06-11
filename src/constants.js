@@ -28,9 +28,11 @@ export default keyMirror({
 	SCREEN_RESIZE		: null
 })
 
-export const LIMITS_NAMES = [ 'base', 'corrected', 'fact' ]
+export const LIMITS_NAMES = 
+	[ 'base', 'corrected', 'fact' ]
 
-export const SUMM_EDITOR_ACTIONS = [ 'save', 'clear', 'delete' ]
+export const SUMM_EDITOR_ACTIONS = 
+	[ 'save', 'clear', 'delete' ]
 
 export const COLORS_LIMITS = {
 	base: '#00BFFF',
