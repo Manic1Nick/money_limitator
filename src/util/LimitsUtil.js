@@ -67,8 +67,8 @@ export function generateResultMessage(limitsData) {
     
     } else if (currentBalance < 0) {
         resultMessage = `   
-            Unfortunately, you did not save money in the current period. 
-            Try to follow our recommendations in the following periods. 
+            Unfortunately, you will not save money in the current period already. 
+            Try to follow our recommendations in the next period. 
         `
     
     } else if (currentBalance > 0) {

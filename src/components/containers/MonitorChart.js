@@ -5,7 +5,12 @@ import { connect } from 'react-redux'
 import { createArrayDates } from '../../util/DateUtil'
 import { createDataChart } from '../../util/ChartUtil'
 
-import { addNewExpense, deleteExpense, undoLastAction } from '../../actions'
+import { 
+    addNewExpense, 
+    deleteExpense, 
+    undoLastAction, 
+    undoState
+} from '../../actions'
 
 const mapStateToProps = (state, ownProps) => {
 
@@ -16,7 +21,8 @@ const mapStateToProps = (state, ownProps) => {
         dates,
         expenses: state.expenses,
         data: createDataChart(state),
-        screenSize: state.screenSize
+        screenSize: state.screenSize,
+        historyStates: state.historyStates
     }
 }
 
@@ -24,7 +30,8 @@ const mapDispatchToProps = (dispatch) => {
     return {
 		addSumm: action(addNewExpense, dispatch),
         deleteSumm: action(deleteExpense, dispatch),
-        undoLastAction: action(undoLastAction, dispatch)
+        undoLastAction: action(undoLastAction, dispatch),
+        undoState: action(undoState, dispatch)
 	}
 }
 

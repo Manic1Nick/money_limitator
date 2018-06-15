@@ -25,7 +25,11 @@ export default keyMirror({
 	CLEAR_ERROR 		: null,
 	CLEAR_ALL_ERRORS 	: null,
 
-	SCREEN_RESIZE		: null
+	SCREEN_RESIZE		: null,
+
+	HISTORY_ADD			: null,
+	HISTORY_CLEAR		: null,
+	REPLACE_STATE		: null
 })
 
 export const LIMITS_NAMES = 

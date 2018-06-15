@@ -7,25 +7,29 @@ export const activateApp = () => {
         if (Object.keys(state.expenses).length > 0
             && state.summs.summExpenses === 0) {
 
-            _updateState(dispatch)
+            _updateIndicators(dispatch)
         }
     }
 }
 
 export const addNewIncome = income => {
-    return dispatch => {
+    return (dispatch, getState) => {
+        dispatch(addStateToHistory(getState()))
+
         dispatch({
             type: C.ADD_INCOME,
             payload: income
         })
 
         let message = `Income of $${income.summ} from ${income.date} was saved succesfully.`
-        _updateState(dispatch, message)
+        _updateIndicators(dispatch, message)
     }
 }
 
 export const addNewExpense = expense => {
-    return dispatch => {
+    return (dispatch, getState) => {
+        dispatch(addStateToHistory(getState()))
+        
         dispatch({
             type: C.ADD_EXPENSE,
             payload: expense
@@ -34,36 +38,42 @@ export const addNewExpense = expense => {
         dispatch(fillGaps())
 
         let message = `Expense of $${expense.summ} from ${expense.date} was saved succesfully.`
-        _updateState(dispatch, message)
+        _updateIndicators(dispatch, message)
     }
 }
 
 export const addNotIncluded = expense => {
-    return dispatch => {
+    return (dispatch, getState) => {
+        dispatch(addStateToHistory(getState()))
+        
         dispatch({
             type: C.ADD_NOT_INCLUDED,
             payload: expense
         })
 
         let message = `Expense of $${expense.summ} from ${expense.date} was saved succesfully.`
-        _updateState(dispatch, message)
+        _updateIndicators(dispatch, message)
     }
 }
 
 export const deleteIncome = income => {
-    return dispatch => {
+    return (dispatch, getState) => {
+        dispatch(addStateToHistory(getState()))
+        
         dispatch({
             type: C.DELETE_INCOME,
             payload: income
         })
 
         let message = `Income of $${income.summ} from ${income.date} was deleted succesfully.`
-         _updateState(dispatch, message)
+         _updateIndicators(dispatch, message)
     }
 }
 
 export const deleteExpense = expense => {
-    return dispatch => {
+    return (dispatch, getState) => {
+        dispatch(addStateToHistory(getState()))
+        
         dispatch({
             type: C.DELETE_EXPENSE,
             payload: expense
@@ -72,19 +82,47 @@ export const deleteExpense = expense => {
         dispatch(fillGaps())
         
         let message = `Expense of $${expense.summ} from ${expense.date} was deleted succesfully.`
-        _updateState(dispatch, message)
+        _updateIndicators(dispatch, message)
     }
 }
 
 export const deleteNotIncluded = expense => {
-    return dispatch => {
+    return (dispatch, getState) => {
+        dispatch(addStateToHistory(getState()))
+        
         dispatch({
             type: C.DELETE_NOT_INCLUDED,
             payload: expense
         })
 
         let message = `Expense of $${expense.summ} from ${expense.date} was deleted succesfully.`
-        _updateState(message)
+        _updateIndicators(message)
+    }
+}
+
+// historyStates actions
+export const addStateToHistory = ({ incomes, expenses, notIncluded }) => ({
+    type: C.HISTORY_ADD,
+    payload: { incomes, expenses, notIncluded }
+})
+export const clearHistoryStates = () => ({
+    type: C.HISTORY_CLEAR
+})
+
+export const undoState = () => {
+    return (dispatch, getState) => {
+        const { historyStates } = getState(),
+            prevState = historyStates.pop()
+
+        dispatch({
+            type: C.REPLACE_STATE,
+            payload: prevState
+        })
+
+        dispatch(fillGaps())
+        
+        let message = `The last action was canceled successfully.`
+        _updateIndicators(dispatch, message)
     }
 }
 
@@ -98,7 +136,7 @@ export const undoLastAction = expense => {
         dispatch(fillGaps())
         
         let message = `The last action was canceled successfully.`
-        _updateState(dispatch, message)
+        _updateIndicators(dispatch, message)
     }
 }
 
@@ -163,7 +201,7 @@ export const screenResize = size => ({
     screenSize: size
 })
 
-function _updateState(dispatch, message) {
+function _updateIndicators(dispatch, message) {
     if (message) dispatch(showNotification(message))
     
     dispatch(updateSumms())

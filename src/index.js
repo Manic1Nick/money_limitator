@@ -14,6 +14,7 @@ const appState = localStorage["store-money-limitator"],
 	initialState = appState ? JSON.parse(appState) : beginState	
 
 initialState.screenSize = typeof window === 'object' ? getTypeScreen() : null
+initialState.historyStates = []
 
 const saveState = () => 
 	localStorage["store-money-limitator"] = JSON.stringify(store.getState())

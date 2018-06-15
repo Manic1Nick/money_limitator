@@ -15,58 +15,26 @@ export default class MonitorChart extends Component {
 
     constructor(props) {
         super()
-        this.state = {
-            editingDate: '',
-            prevSumms: []
-        }
+        this.state = { editingDate: '' }
     }
     
     openEditSumm = (index) => {
         const editingDate = this.props.dates[index]
-
         this.setState({ editingDate })
     }
     
     onSaveSumm = (objDateSumm) => {
         this.props.addSumm(objDateSumm)
-        
-        this.savePrevSumm()
         this.closeInputSumm()
     }
     
     onDeleteSumm = (objDateSumm) => {
         this.props.deleteSumm(objDateSumm)
-        
-        this.savePrevSumm()
         this.closeInputSumm()
     }
 
     closeInputSumm = () => {
         this.setState({ editingDate: '' })
-    }
-
-    savePrevSumm = () => {
-        const { expenses } = this.props,
-            { prevSumms, editingDate } = this.state
-
-        if (editingDate) {
-            prevSumms.push({
-                date: editingDate,
-                summ: expenses[editingDate]
-            })
-            this.setState({ prevSumms })
-        }
-    }
-
-    undoEditing = () => {
-        const { prevSumms } = this.state,
-            prevSumm = prevSumms.pop()
-
-        this.setState({ prevSumms })
-
-        this.props.undoLastAction(prevSumm)
-        this.savePrevSumm()
-        this.closeInputSumm()
     }
 
     renderSummEditor() {
@@ -90,18 +58,19 @@ export default class MonitorChart extends Component {
     }
 
     renderChartTitle() {
-        const { prevSumms, editingDate } = this.state
+        const { editingDate } = this.state,
+            { undoState, historyStates } = this.props
         
         if (editingDate) return null
 
         return(
             <div className='MonitorChart__title'>
                 <span>Click on any bar below to change expense</span>
-                { 
-                    prevSumms.length > 0
-                ? 
-                    <ButtonUndoLastAction onUndo={ this.undoEditing.bind(this) } />
-                : 
+                {
+                    historyStates.length > 0
+                ?
+                    <ButtonUndoLastAction onUndo={ undoState } />
+                :
                     null
                 }
             </div>

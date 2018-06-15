@@ -80,7 +80,8 @@ export default class MonitorIndicators extends Component {
 				</div>
 	
 				<DialogInputSumm
-                    open={ inputSummOpening }
+					open={ inputSummOpening }
+					period={ period }
                     isExpense={ inputSummIsExpense }
                     listSumms={ inputSummIsExpense ? expenses : incomes }
                     addSumm={ addSumm }

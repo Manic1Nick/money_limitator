@@ -23,7 +23,7 @@ export default class DialogInputSumm extends Component {
 		super()
 		this.state = {
 			isExpense: props.isExpense,
-			date: new Date(getNextFreeDate(props.listSumms)),
+			date: new Date(props.period.begin),
             summ: '',
             errorText: '',
 			notIncluded: false
@@ -35,12 +35,11 @@ export default class DialogInputSumm extends Component {
     }
 
     componentDidUpdate(prevProps) {
-		if (prevProps.listSumms !== this.props.listSumms) {
-            let date = new Date(getNextFreeDate(this.props.listSumms))
-			this.setState({ 
-                date,
-                isExpense: this.props.isExpense 
-            })
+        const { listSumms, isExpense } = this.props
+
+		if (prevProps.listSumms !== listSumms) {
+            let date = this._genDate()
+			this.setState({ date, isExpense })
         }
 	}
 
@@ -102,7 +101,7 @@ export default class DialogInputSumm extends Component {
 
     clearState = () => {
         this.setState({
-            date: new Date(getNextFreeDate(this.props.listSumms)),
+            date: this._genDate(),
             summ: '',
             errorText: ''
         })
@@ -203,5 +202,13 @@ export default class DialogInputSumm extends Component {
     			{ checkboxNotIncluded }
     	    </Dialog>
     	)
+    }
+
+    _genDate() {
+        const { period, listSumms } = this.props
+
+        let date = Object.keys(listSumms).length > 0 ? getNextFreeDate(listSumms) : period.begin
+        
+        return new Date(date)
     }
 }

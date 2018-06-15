@@ -37,7 +37,7 @@ export default class ButtonUndoLastAction extends Component {
                 <UndoIcon 
                     className='icon'
                     style={ styles.icon }
-                    onClick={ () => onUndo() }
+                    onClick={ onUndo }
                 />
             </IconButton>
         )

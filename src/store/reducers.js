@@ -22,6 +22,9 @@ export const incomes = (state={}, action) => {
 			delete newState[action.payload.date]
 			return newState
 
+		case C.REPLACE_STATE:
+			return action.payload.incomes
+
 		default:
 			return state
 	}
@@ -39,6 +42,9 @@ export const expenses = (state={}, action) => {
 		case C.DELETE_EXPENSE:
 			delete newState[action.payload.date]
 			return newState
+
+		case C.REPLACE_STATE:
+			return action.payload.expenses
 
 		case C.FILL_GAPS:
 			if (Object.keys(newState).length > 0) {
@@ -63,6 +69,9 @@ export const notIncluded = (state={}, action) => {
 		case C.DELETE_NOT_INCLUDED:
 			delete newState[action.payload.date]
 			return newState
+
+		case C.REPLACE_STATE:
+			return action.payload.notIncluded
 
 		default:
 			return state
@@ -153,6 +162,20 @@ export const screenSize = (state='', action) => {
 	}
 }
 
+export const historyStates = (state=[], action) => {
+
+	switch (action.type) {
+		case C.HISTORY_ADD:
+			return [].concat(state, action.payload)
+
+		case C.HISTORY_CLEAR:
+			return []
+
+		default:
+			return state
+	}
+}
+
 export default combineReducers({
 	period,
 	incomes,
@@ -162,5 +185,6 @@ export default combineReducers({
 	limits,
 	notifications,
 	errors,
-	screenSize
+	screenSize,
+	historyStates
 })

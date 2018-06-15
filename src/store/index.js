@@ -16,7 +16,8 @@ const consoleMessages = store => next => action => {
 		errors, 
 		notifications,
 		summs: { summIncomes, summExpenses, summNotIncluded } ,
-		screenSize
+		screenSize,
+		historyStates
 	} = store.getState()
 
 	console.log(`
@@ -27,7 +28,8 @@ const consoleMessages = store => next => action => {
 		limits: ${limits.base} ${limits.corrected} ${limits.fact}
 		notifications: ${notifications.show}
 		errors: ${errors.length},
-		screenSize: ${screenSize}
+		screenSize: ${screenSize},
+		historyStates: ${historyStates.length}
 
 	`)
 
