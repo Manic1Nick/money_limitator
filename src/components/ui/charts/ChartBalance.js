@@ -1,6 +1,6 @@
 import { PropTypes } from 'prop-types'
 
-import { ResponsiveContainer, PieChart, Pie, Sector, Cell, Legend, Label } from 'recharts'
+import { ResponsiveContainer, PieChart, Pie, Cell, Label } from 'recharts'
 
 import { COLORS_BALANCE as COLORS_C } from '../../../constants'
 

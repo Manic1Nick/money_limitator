@@ -6,9 +6,8 @@ export const activateApp = () => {
 
         if (Object.keys(state.expenses).length > 0
             && state.summs.summExpenses === 0) {
-                
-            dispatch(updateSumms())
-            dispatch(updateLimits())            
+
+            _updateState(dispatch)
         }
     }
 }
@@ -21,10 +20,7 @@ export const addNewIncome = income => {
         })
 
         let message = `Income of $${income.summ} from ${income.date} was saved succesfully.`
-        dispatch(showNotification(message))
-
-        dispatch(updateSumms())
-        dispatch(updateLimits())
+        _updateState(dispatch, message)
     }
 }
 
@@ -35,12 +31,10 @@ export const addNewExpense = expense => {
             payload: expense
         })
         
-        let message = `Expense of $${expense.summ} from ${expense.date} was saved succesfully.`
-        dispatch(showNotification(message))
+        dispatch(fillGaps())
 
-        //dispatch(fillGaps())
-        dispatch(updateSumms())
-        dispatch(updateLimits())
+        let message = `Expense of $${expense.summ} from ${expense.date} was saved succesfully.`
+        _updateState(dispatch, message)
     }
 }
 
@@ -52,10 +46,7 @@ export const addNotIncluded = expense => {
         })
 
         let message = `Expense of $${expense.summ} from ${expense.date} was saved succesfully.`
-        dispatch(showNotification(message))
-
-        dispatch(updateSumms())
-        dispatch(updateLimits())
+        _updateState(dispatch, message)
     }
 }
 
@@ -67,10 +58,7 @@ export const deleteIncome = income => {
         })
 
         let message = `Income of $${income.summ} from ${income.date} was deleted succesfully.`
-        dispatch(showNotification(message))
-
-        dispatch(updateSumms())
-        dispatch(updateLimits())
+         _updateState(dispatch, message)
     }
 }
 
@@ -79,14 +67,12 @@ export const deleteExpense = expense => {
         dispatch({
             type: C.DELETE_EXPENSE,
             payload: expense
-        })      
-
-        let message = `Expense of $${expense.summ} from ${expense.date} was deleted succesfully.`
-        dispatch(showNotification(message))
-
+        })
+        
         dispatch(fillGaps())
-        dispatch(updateSumms())
-        dispatch(updateLimits())
+        
+        let message = `Expense of $${expense.summ} from ${expense.date} was deleted succesfully.`
+        _updateState(dispatch, message)
     }
 }
 
@@ -98,26 +84,21 @@ export const deleteNotIncluded = expense => {
         })
 
         let message = `Expense of $${expense.summ} from ${expense.date} was deleted succesfully.`
-        dispatch(showNotification(message))
-
-        dispatch(updateSumms())
-        dispatch(updateLimits())
+        _updateState(message)
     }
 }
 
 export const undoLastAction = expense => {
-    return dispatch => {
+    return (dispatch) => {
         dispatch({
             type: C.ADD_EXPENSE,
             payload: expense
         })
-        
-        let message = `The last action was canceled successfully.`
-        dispatch(showNotification(message))
 
         dispatch(fillGaps())
-        dispatch(updateSumms())
-        dispatch(updateLimits())
+        
+        let message = `The last action was canceled successfully.`
+        _updateState(dispatch, message)
     }
 }
 
@@ -181,3 +162,10 @@ export const screenResize = size => ({
     type: C.SCREEN_RESIZE,
     screenSize: size
 })
+
+function _updateState(dispatch, message) {
+    if (message) dispatch(showNotification(message))
+    
+    dispatch(updateSumms())
+    dispatch(updateLimits())
+}

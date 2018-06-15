@@ -1,6 +1,6 @@
 import { Component } from 'react'
 
-import { ComposedChart, Line, Area, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Cell } from 'recharts' 
+import { ComposedChart, Line, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Cell } from 'recharts' 
 import Paper from 'material-ui/Paper'
 
 import { COLORS_CHART as COLORS } from '../../../constants'

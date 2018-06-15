@@ -10,7 +10,7 @@ export default class ButtonUndoLastAction extends Component {
 
     constructor() {
         super()
-        this.state = ({ created: false })
+        this.state = { animate: false }
     }
 
     componentDidMount() {
@@ -18,7 +18,7 @@ export default class ButtonUndoLastAction extends Component {
     }
 
     render() {
-        const { created } = this.state,
+        const { animate } = this.state,
             { onUndo } = this.props
         
         const styles = {
@@ -26,11 +26,11 @@ export default class ButtonUndoLastAction extends Component {
             tooltip: { top: '30px' }
         }
 
-        let animateCreated = classNames({ 'animationCreated': created })
+        let animated = classNames({ 'animationActionsEditor': animate })
 
         return(
             <IconButton 
-                className={`icon__button ${animateCreated}`}
+                className={`icon__button ${animated}`}
                 tooltip='Undo last action' 
                 tooltipStyles={ styles.tooltip }
             >
@@ -46,11 +46,11 @@ export default class ButtonUndoLastAction extends Component {
     _activeAnimate = () => {
 
         setTimeout(() => {
-            this.setState({ created: true })
+            this.setState({ animate: true })
         }, 1000)
 
         setTimeout(() => {
-            this.setState({ created: false })
+            this.setState({ animate: false })
         }, 2000)
     }
 }

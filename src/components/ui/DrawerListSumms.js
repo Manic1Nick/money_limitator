@@ -10,9 +10,6 @@ import FlatButton from 'material-ui/FlatButton'
 import { List, ListItem } from 'material-ui/List'
 import Toggle from 'material-ui/Toggle'
 import EditIcon from 'react-material-icons/icons/image/edit'
-import SaveIcon from 'react-material-icons/icons/content/save'
-import ClearIcon from 'react-material-icons/icons/content/backspace'
-import DeleteIcon from 'react-material-icons/icons/action/delete'
 
 export default class DrawerListSumms extends Component {
 

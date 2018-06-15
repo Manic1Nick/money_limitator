@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-import dataState from './initialState'
+import beginState from './initialState'
 import storeFactory from './store'
 import { Provider } from 'react-redux'
 import MainPage from './components'
@@ -10,18 +10,16 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import './assets/styles/style.scss'
 import './assets/styles/queries.scss'
 
-const initialState = (localStorage["store-money-saver"]) 
-	? JSON.parse(localStorage["store-money-saver"])
-	: dataState
-	
+const appState = localStorage["store-money-limitator"],
+	initialState = appState ? JSON.parse(appState) : beginState	
+
 initialState.screenSize = typeof window === 'object' ? getTypeScreen() : null
 
 const saveState = () => 
-    localStorage["store-money-saver"] = JSON.stringify(store.getState())
+	localStorage["store-money-limitator"] = JSON.stringify(store.getState())
 
-const handleError = error => {
+const handleError = error =>
 	store.dispatch(addError(error.message))
-}
 
 const handleResize = () => {
 	let currentScreenSize = getTypeScreen()

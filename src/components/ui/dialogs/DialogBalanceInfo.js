@@ -1,5 +1,3 @@
-import { Component } from 'react'
-
 import ChartBalance from '../charts/ChartBalance'
 
 import Dialog from 'material-ui/Dialog'

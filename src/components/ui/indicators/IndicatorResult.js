@@ -2,8 +2,6 @@ import { Component } from 'react'
 
 import { calcExpectedResult } from '../../../util/CalcUtil'
 
-import Paper from 'material-ui/Paper'
-
 export default class IndicatorResult extends Component {
 
 	constructor(props) {

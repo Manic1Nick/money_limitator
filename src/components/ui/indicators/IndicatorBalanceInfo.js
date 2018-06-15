@@ -5,7 +5,6 @@ import classNames from 'classnames'
 import DialogBalanceInfo from '../dialogs/DialogBalanceInfo'
 
 import FlatButton from 'material-ui/FlatButton'
-import { buildStylePropertyString } from 'stylefire';
 
 export default class IndicatorBalanceInfo extends Component {
 

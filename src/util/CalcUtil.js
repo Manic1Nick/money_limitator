@@ -41,7 +41,7 @@ export function formatListSumms(listSumms) {
         lastDateWithSumm = getLastDateWithSumm(formattedSumms)
         
     formattedSumms = fillEmptyDates(formattedSumms, firstDate, lastDateWithSumm) 
-    formattedSumms = deleteZeroDates(formattedSumms, lastDateWithSumm, null)
+    //formattedSumms = deleteZeroDates(formattedSumms, lastDateWithSumm, null)
     
     return formattedSumms
 }

@@ -9,9 +9,7 @@ export default class IndicatorLimit extends Component {
 
 	constructor() {
 		super()
-		this.state = {
-			updated: false
-		 }
+		this.state = { updated: false }
     }
 
     componentDidMount() {
@@ -43,11 +41,7 @@ export default class IndicatorLimit extends Component {
 			
         let nameButton = `btn_${name}`,
 			animationUpdated = classNames({ 'animationUpdated': updated }),
-			labelStyle = {}
-
-		if (screenSize === 'XS') {
-			labelStyle = { fontSize: '10px' }
-		}
+			labelStyle = screenSize === 'XS' ? { fontSize: '10px' } : {}
 
 		return (
 			<RaisedButton 

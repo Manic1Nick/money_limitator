@@ -1,8 +1,3 @@
-import { Component } from 'react'
-import classNames from 'classnames'
-
-import DialogInputSumm from '../dialogs/DialogInputSumm'
-
 import IconButton from 'material-ui/IconButton'
 import AddBoxIcon from 'react-material-icons/icons/content/add-box'
 

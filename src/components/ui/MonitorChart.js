@@ -1,13 +1,10 @@
 import { Component } from 'react'
 import Paper from 'material-ui/Paper'
-import UndoIcon from 'react-material-icons/icons/content/undo'
 import posed from 'react-pose'
 
 import ChartMain from './charts/ChartMain'
 import ButtonUndoLastAction from './buttons/ButtonUndoLastAction'
 import SummEditor from './SummEditor'
-import DialogInputSumm from './dialogs/DialogInputSumm'
-import { formatDate } from '../../util/DateUtil'
 
 const PosedChartHead = posed.div({
     visible: { width: '100%', height: 28 },

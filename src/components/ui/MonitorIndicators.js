@@ -8,11 +8,6 @@ import LimitsIndicators from './indicators/LimitsIndicators'
 import ListsSummsActions from './ListsSummsActions'
 import DialogInputSumm from './dialogs/DialogInputSumm'
 
-import { concatIncomesAndExpenses } from '../../util/CalcUtil'
-
-import Paper from 'material-ui/Paper'
-import Divider from 'material-ui/Divider'
-
 export default class MonitorIndicators extends Component {
 
 	constructor(props) {

@@ -4,7 +4,6 @@ import classNames from 'classnames'
 import DrawerListSumms from '../DrawerListSumms'
 
 import FlatButton from 'material-ui/FlatButton'
-import { List, ListItem } from 'material-ui/List'
 
 export default class IndicatorListSumms extends Component {
 
@@ -13,15 +12,8 @@ export default class IndicatorListSumms extends Component {
         this.state = {
             listSummsOpening: false,
             updated: false
-            //screenSize: props.screenSize
         }
     }
-
-    // componentWillReceiveProps(nextProps) {
-    //     if (this.props.screenSize !== nextProps.screenSize) {
-    //         this.setState({ screenSize: nextProps.screenSize })
-	// 	}
-    // }
 
     componentDidMount() {
         this.activeUpdated()

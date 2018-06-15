@@ -6,9 +6,7 @@ import SaveIcon from 'react-material-icons/icons/content/save'
 import ClearIcon from 'react-material-icons/icons/content/backspace'
 import DeleteIcon from 'react-material-icons/icons/action/delete'
 
-import { formatDate } from '../../../util/DateUtil'
 import { COLORS_ICONS as COLORS } from '../../../constants'
-import { SUMM_EDITOR_ACTIONS as ACTIONS } from '../../../constants'
 
 const ButtonSummEditorAction = ({ name='', onSave=f=>f, onClear=f=>f, onDelete=f=>f }) => {
 

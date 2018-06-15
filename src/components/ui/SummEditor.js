@@ -1,9 +1,7 @@
 import { Component } from 'react'
-import posed from 'react-pose'
 
 import ButtonSummEditorAction from './buttons/ButtonSummEditorAction'
 
-import { formatDate } from '../../util/DateUtil'
 import { SUMM_EDITOR_ACTIONS as ACTIONS } from '../../constants'
 
 const ENTER_KEY = 13

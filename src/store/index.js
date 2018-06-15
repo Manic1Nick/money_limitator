@@ -1,7 +1,6 @@
 import appReducer from './reducers'
 import { createStore, applyMiddleware } from 'redux'
 import reduxThunk from 'redux-thunk'
-import C from '../constants'
 
 const consoleMessages = store => next => action => {
 
